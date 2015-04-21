@@ -68,13 +68,13 @@ function hk_ct_strongarm() {
           'weight' => '3',
         ),
         'language' => array(
-          'weight' => '4',
+          'weight' => '-4',
         ),
       ),
       'display' => array(
         'flag_merken' => array(
           'default' => array(
-            'weight' => '34',
+            'weight' => '36',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -149,7 +149,7 @@ function hk_ct_strongarm() {
           'weight' => '5',
         ),
         'language' => array(
-          'weight' => '17',
+          'weight' => '-4',
         ),
       ),
       'display' => array(),

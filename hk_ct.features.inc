@@ -149,11 +149,11 @@ function hk_ct_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 1,
-    'api_version' => 3,
     'module' => 'hk_ct',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   return $flags;
 

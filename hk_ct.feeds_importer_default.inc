@@ -54,103 +54,108 @@ function hk_ct_feeds_importer_default() {
             'unique' => FALSE,
           ),
           2 => array(
+            'source' => 'Überschrift Objekt',
+            'target' => 'title_field',
+            'unique' => FALSE,
+          ),
+          3 => array(
             'source' => 'Bezirk',
             'target' => 'field_bezirk',
             'term_search' => '0',
             'autocreate' => 1,
           ),
-          3 => array(
+          4 => array(
             'source' => 'Objekt ID',
             'target' => 'field_objektid_nunumeric',
             'unique' => FALSE,
           ),
-          4 => array(
+          5 => array(
             'source' => 'Bezugsfrei ab',
             'target' => 'field_moving_in_from',
             'unique' => FALSE,
           ),
-          5 => array(
+          6 => array(
             'source' => 'Objektfotos',
-            'target' => 'field_object_images',
+            'target' => 'field_object_images:uri',
             'unique' => FALSE,
           ),
-          6 => array(
+          7 => array(
             'source' => 'Etagenzahl',
             'target' => 'field_no_of_floors',
             'unique' => FALSE,
           ),
-          7 => array(
+          8 => array(
             'source' => 'Baujahr',
             'target' => 'field_year_built',
             'unique' => FALSE,
           ),
-          8 => array(
+          9 => array(
             'source' => 'Heizung',
             'target' => 'field_heating_type',
             'unique' => FALSE,
           ),
-          9 => array(
+          10 => array(
             'source' => 'Zustand',
             'target' => 'field_status_quo',
             'unique' => FALSE,
           ),
-          10 => array(
+          11 => array(
             'source' => 'Germany',
             'target' => 'field_address:country',
             'unique' => FALSE,
           ),
-          11 => array(
+          12 => array(
             'source' => 'Straße / Hausnr',
             'target' => 'field_address:thoroughfare',
             'unique' => FALSE,
           ),
-          12 => array(
+          13 => array(
             'source' => 'PLZ',
             'target' => 'field_address:postal_code',
             'unique' => FALSE,
           ),
-          13 => array(
+          14 => array(
             'source' => 'Ort',
             'target' => 'field_address:locality',
             'unique' => FALSE,
           ),
-          14 => array(
+          15 => array(
             'source' => 'Wohnungsbeschreibung',
             'target' => 'field_object_description',
             'unique' => FALSE,
           ),
-          15 => array(
+          16 => array(
             'source' => 'Lage',
             'target' => 'field_object_location',
             'unique' => FALSE,
           ),
-          16 => array(
+          17 => array(
             'source' => 'Sonstiges',
             'target' => 'field_object_other',
             'unique' => FALSE,
           ),
-          17 => array(
+          18 => array(
             'source' => 'Provision Kauf',
             'target' => 'field_rent_commission',
             'unique' => FALSE,
           ),
-          18 => array(
+          19 => array(
             'source' => 'Textkörper',
             'target' => 'body',
             'unique' => FALSE,
           ),
-          19 => array(
+          20 => array(
             'source' => 'Bundesland',
             'target' => 'field_address:administrative_area',
             'unique' => FALSE,
           ),
-          20 => array(
+          21 => array(
             'source' => 'Kategorie',
             'target' => 'field_kategorie',
             'term_search' => '0',
-            'autocreate' => 0,
+            'autocreate' => 1,
           ),
-          21 => array(
+          22 => array(
             'source' => 'Sprache',
             'target' => 'language',
             'unique' => FALSE,
@@ -160,6 +165,7 @@ function hk_ct_feeds_importer_default() {
         'input_format' => 'full_html',
         'skip_hash_check' => 0,
         'bundle' => 'objekt',
+        'update_non_existent' => 'unpublish',
       ),
     ),
     'content_type' => '',
@@ -276,12 +282,12 @@ function hk_ct_feeds_importer_default() {
           ),
           14 => array(
             'source' => 'Grundriss',
-            'target' => 'field_apart_floor_plan',
+            'target' => 'field_apart_floor_plan:uri',
             'unique' => FALSE,
           ),
           15 => array(
             'source' => 'Galerie',
-            'target' => 'field_apart_pictures',
+            'target' => 'field_apart_pictures:uri',
             'unique' => FALSE,
           ),
           16 => array(
@@ -321,6 +327,7 @@ function hk_ct_feeds_importer_default() {
         'input_format' => 'full_html',
         'skip_hash_check' => 0,
         'bundle' => 'apartment',
+        'update_non_existent' => 'skip',
       ),
     ),
     'content_type' => '',
