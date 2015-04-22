@@ -26,11 +26,7 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['css_class'] = 'apartaddress';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'time';
-  $handler->display->display_options['cache']['results_lifespan'] = '3600';
-  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
-  $handler->display->display_options['cache']['output_lifespan'] = '3600';
-  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'full';
@@ -217,9 +213,18 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_apart_pictures']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_apart_pictures']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['field_apart_pictures']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_apart_pictures']['type'] = 'picture';
   $handler->display->display_options['fields']['field_apart_pictures']['settings'] = array(
-    'image_style' => 'flexslider_thumbnail',
+    'picture_mapping' => 'flexthumb_mapping',
+    'fallback_image_style' => '',
     'image_link' => '',
+    'colorbox_settings' => array(
+      'colorbox_group' => 'flexthumb_mapping',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+      'colorbox_caption' => 'auto',
+      'colorbox_caption_custom' => '',
+    ),
   );
   $handler->display->display_options['fields']['field_apart_pictures']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_apart_pictures']['delta_offset'] = '0';
@@ -542,9 +547,18 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_apart_pictures']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_apart_pictures']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['field_apart_pictures']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_apart_pictures']['type'] = 'picture';
   $handler->display->display_options['fields']['field_apart_pictures']['settings'] = array(
-    'image_style' => 'flexslider_full',
+    'picture_mapping' => 'flexfull_mapping',
+    'fallback_image_style' => '',
     'image_link' => 'content',
+    'colorbox_settings' => array(
+      'colorbox_group' => 'flexthumb_mapping',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+      'colorbox_caption' => 'auto',
+      'colorbox_caption_custom' => '',
+    ),
   );
   $handler->display->display_options['fields']['field_apart_pictures']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_apart_pictures']['multi_type'] = 'ul';

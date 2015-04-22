@@ -597,18 +597,20 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'colorbox',
+        'module' => 'picture',
         'settings' => array(
-          'colorbox_caption' => 'auto',
-          'colorbox_caption_custom' => '',
-          'colorbox_gallery' => 'field_post',
-          'colorbox_gallery_custom' => '',
-          'colorbox_image_style' => '',
-          'colorbox_multivalue_index' => NULL,
-          'colorbox_node_style' => 'flexslider_thumbnail',
-          'colorbox_node_style_first' => '',
+          'colorbox_settings' => array(
+            'colorbox_caption' => 'auto',
+            'colorbox_caption_custom' => '',
+            'colorbox_gallery' => 'field_post',
+            'colorbox_gallery_custom' => '',
+            'colorbox_group' => 'colorbox_mapping',
+          ),
+          'fallback_image_style' => '',
+          'image_link' => 'colorbox',
+          'picture_mapping' => 'flexthumb_mapping',
         ),
-        'type' => 'colorbox',
+        'type' => 'picture',
         'weight' => 2,
       ),
       'teaser' => array(
@@ -1118,7 +1120,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'flexslider_picture',
         'settings' => array(
           'caption' => 0,
-          'image_style' => 'flexslider_full',
+          'image_style' => 'flexfullbreakpoints_theme_hk_theme_wide_1x',
           'optionset' => 'wohnungsansicht',
         ),
         'type' => 'flexslider',
@@ -1792,9 +1794,8 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
+        'type' => 'hidden',
         'weight' => 16,
       ),
       'teaser' => array(
@@ -2061,11 +2062,8 @@ function hk_ct_field_default_field_instances() {
   // Exported field_instance: 'node-objekt-field_ansprechpartner'
   $field_instances['node-objekt-field_ansprechpartner'] = array(
     'bundle' => 'objekt',
-    'default_value' => array(
-      0 => array(
-        'target_id' => 1,
-      ),
-    ),
+    'default_value' => NULL,
+    'default_value_function' => '',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -2104,7 +2102,19 @@ function hk_ct_field_default_field_instances() {
     'label' => 'Ansprechpartner',
     'required' => 0,
     'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
       'entity_translation_sync' => FALSE,
+      'select2_integration' => array(
+        'styling' => array(
+          'dropdownAutoWidth' => 0,
+          'placeholder' => '',
+        ),
+        'use_select2' => 0,
+      ),
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3651,7 +3661,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 55,
+        'weight' => 59,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -3689,7 +3699,7 @@ function hk_ct_field_default_field_instances() {
         'name_as_title' => 1,
       ),
       'type' => 'workflow_default',
-      'weight' => 46,
+      'weight' => 47,
     ),
   );
 

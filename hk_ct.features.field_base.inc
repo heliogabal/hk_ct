@@ -1244,12 +1244,7 @@ function hk_ct_field_default_field_bases() {
     'module' => 'workflowfield',
     'settings' => array(
       'allowed_values_function' => 'workflowfield_allowed_values',
-      'allowed_values_string' => '1 | (creation)
-2 | Draft
-3 | Ready
-4 | Active
-5 | Archived
-6 | Sold',
+      'allowed_values_string' => '',
       'entity_translation_sync' => FALSE,
       'history' => array(
         'history_tab_show' => 1,

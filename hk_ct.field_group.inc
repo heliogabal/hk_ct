@@ -341,7 +341,6 @@ function hk_ct_field_group_info() {
       0 => 'field_objektid_nunumeric',
       1 => 'title_field',
       2 => 'field_kategorie',
-      3 => 'language',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -591,8 +590,8 @@ function hk_ct_field_group_info() {
     'label' => 'Mehrere Apartmenttypen im Objekt',
     'weight' => '-2',
     'children' => array(
-      0 => 'field_object_description_invest',
-      1 => 'field_object_desc_commercial',
+      0 => 'field_object_desc_commercial',
+      1 => 'field_object_description_invest',
       2 => 'field_object_multi_apart_types',
     ),
     'format_type' => 'fieldset',
@@ -707,7 +706,9 @@ function hk_ct_field_group_info() {
   $field_group->data = array(
     'label' => 'Veröffentlichen',
     'weight' => '2',
-    'children' => array(),
+    'children' => array(
+      0 => 'field_save_workflow',
+    ),
     'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',
