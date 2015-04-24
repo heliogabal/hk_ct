@@ -33,5 +33,13 @@ function hk_ct_taxonomy_default_vocabularies() {
       'module' => 'taxonomy',
       'weight' => -7,
     ),
+    'vocabulary_6' => array(
+      'name' => 'Apartment type',
+      'machine_name' => 'vocabulary_6',
+      'description' => '',
+      'hierarchy' => 0,
+      'module' => 'features_wohnungstyp',
+      'weight' => -6,
+    ),
   );
 }

@@ -54,110 +54,110 @@ function hk_ct_feeds_importer_default() {
             'unique' => FALSE,
           ),
           2 => array(
-            'source' => 'Überschrift Objekt',
-            'target' => 'title_field',
-            'unique' => FALSE,
-          ),
-          3 => array(
             'source' => 'Bezirk',
             'target' => 'field_bezirk',
             'term_search' => '0',
             'autocreate' => 1,
           ),
-          4 => array(
+          3 => array(
             'source' => 'Objekt ID',
             'target' => 'field_objektid_nunumeric',
             'unique' => FALSE,
           ),
-          5 => array(
+          4 => array(
             'source' => 'Bezugsfrei ab',
             'target' => 'field_moving_in_from',
             'unique' => FALSE,
           ),
-          6 => array(
-            'source' => 'Objektfotos',
-            'target' => 'field_object_images:uri',
-            'unique' => FALSE,
-          ),
-          7 => array(
+          5 => array(
             'source' => 'Etagenzahl',
             'target' => 'field_no_of_floors',
             'unique' => FALSE,
           ),
-          8 => array(
+          6 => array(
             'source' => 'Baujahr',
             'target' => 'field_year_built',
             'unique' => FALSE,
           ),
-          9 => array(
+          7 => array(
             'source' => 'Heizung',
             'target' => 'field_heating_type',
             'unique' => FALSE,
           ),
-          10 => array(
+          8 => array(
             'source' => 'Zustand',
             'target' => 'field_status_quo',
             'unique' => FALSE,
           ),
-          11 => array(
+          9 => array(
             'source' => 'Germany',
             'target' => 'field_address:country',
             'unique' => FALSE,
           ),
-          12 => array(
+          10 => array(
             'source' => 'Straße / Hausnr',
             'target' => 'field_address:thoroughfare',
             'unique' => FALSE,
           ),
-          13 => array(
+          11 => array(
             'source' => 'PLZ',
             'target' => 'field_address:postal_code',
             'unique' => FALSE,
           ),
-          14 => array(
+          12 => array(
             'source' => 'Ort',
             'target' => 'field_address:locality',
             'unique' => FALSE,
           ),
-          15 => array(
+          13 => array(
             'source' => 'Wohnungsbeschreibung',
             'target' => 'field_object_description',
             'unique' => FALSE,
           ),
-          16 => array(
+          14 => array(
             'source' => 'Lage',
             'target' => 'field_object_location',
             'unique' => FALSE,
           ),
-          17 => array(
+          15 => array(
             'source' => 'Sonstiges',
             'target' => 'field_object_other',
             'unique' => FALSE,
           ),
-          18 => array(
-            'source' => 'Provision Kauf',
-            'target' => 'field_rent_commission',
-            'unique' => FALSE,
-          ),
-          19 => array(
-            'source' => 'Textkörper',
+          16 => array(
+            'source' => 'Textkoerper',
             'target' => 'body',
             'unique' => FALSE,
           ),
-          20 => array(
+          17 => array(
             'source' => 'Bundesland',
             'target' => 'field_address:administrative_area',
             'unique' => FALSE,
           ),
-          21 => array(
+          18 => array(
             'source' => 'Kategorie',
             'target' => 'field_kategorie',
             'term_search' => '0',
-            'autocreate' => 1,
+            'autocreate' => 0,
           ),
-          22 => array(
+          19 => array(
             'source' => 'Sprache',
             'target' => 'language',
+            'unique' => FALSE,
+          ),
+          20 => array(
+            'source' => 'Objektfotos',
+            'target' => 'field_object_images:uri',
+            'unique' => FALSE,
+          ),
+          21 => array(
+            'source' => 'Standort',
+            'target' => 'field_objekt_wkt:wkt',
+            'unique' => FALSE,
+          ),
+          22 => array(
+            'source' => 'Provision Kauf',
+            'target' => 'field_sale_commission',
             'unique' => FALSE,
           ),
         ),
@@ -217,77 +217,79 @@ function hk_ct_feeds_importer_default() {
           ),
           1 => array(
             'source' => 'Titel',
-            'target' => 'title',
+            'target' => 'title_field',
             'unique' => FALSE,
           ),
           2 => array(
-            'source' => 'Wohnungsnr.',
-            'target' => 'field_apart_no',
+            'source' => 'Titel',
+            'target' => 'title',
             'unique' => FALSE,
           ),
           3 => array(
+            'source' => 'Kategorie',
+            'target' => 'field_kategorie',
+            'term_search' => '0',
+            'autocreate' => 1,
+          ),
+          4 => array(
+            'source' => 'Typ',
+            'target' => 'field_apart_type',
+            'term_search' => '0',
+            'autocreate' => 1,
+          ),
+          5 => array(
             'source' => 'Objekt',
             'target' => 'field_object_ref:label',
             'unique' => FALSE,
           ),
-          4 => array(
+          6 => array(
+            'source' => 'Objekt-ID',
+            'target' => 'field_object_ref:objekt:text_feeds_set_target:field_objektid_nunumeric',
+            'unique' => FALSE,
+          ),
+          7 => array(
+            'source' => 'Wohnungsnr.',
+            'target' => 'field_apart_no',
+            'unique' => FALSE,
+          ),
+          8 => array(
             'source' => 'Kaufpreis',
             'target' => 'field_apart_price',
             'unique' => FALSE,
           ),
-          5 => array(
-            'source' => 'Kaufpreis Stellplatz',
-            'target' => 'field_apart_price_parking',
-            'unique' => FALSE,
-          ),
-          6 => array(
-            'source' => 'Beschreibung',
-            'target' => 'field_apart_description',
-            'unique' => FALSE,
-          ),
-          7 => array(
-            'source' => 'Lage',
-            'target' => 'field_apart_location',
-            'unique' => FALSE,
-          ),
-          8 => array(
-            'source' => 'Sonstiges',
-            'target' => 'field_apart_other',
-            'unique' => FALSE,
-          ),
           9 => array(
-            'source' => 'Etage',
-            'target' => 'field_apart_floor',
-            'unique' => FALSE,
-          ),
-          10 => array(
-            'source' => 'Wohnfläche',
-            'target' => 'field_apart_living_space',
-            'unique' => FALSE,
-          ),
-          11 => array(
             'source' => 'Hausgeld',
             'target' => 'field_apart_hoa_fee',
             'unique' => FALSE,
           ),
+          10 => array(
+            'source' => 'Kaufpreis Stellplatz',
+            'target' => 'field_apart_price_parking',
+            'unique' => FALSE,
+          ),
+          11 => array(
+            'source' => 'Rendite',
+            'target' => 'field_apart_rate_of_return',
+            'unique' => FALSE,
+          ),
           12 => array(
-            'source' => 'Zimmer',
-            'target' => 'field_apart_rooms',
+            'source' => 'NKM / Monat',
+            'target' => 'field_apart_net_rent',
             'unique' => FALSE,
           ),
           13 => array(
-            'source' => 'Badezimmer',
-            'target' => 'field_apart_bathrooms',
+            'source' => 'Provision',
+            'target' => 'field_apart_commission',
             'unique' => FALSE,
           ),
           14 => array(
-            'source' => 'Grundriss',
-            'target' => 'field_apart_floor_plan:uri',
+            'source' => 'Wohnfläche',
+            'target' => 'field_apart_living_space',
             'unique' => FALSE,
           ),
           15 => array(
-            'source' => 'Galerie',
-            'target' => 'field_apart_pictures:uri',
+            'source' => 'Zimmer',
+            'target' => 'field_apart_rooms',
             'unique' => FALSE,
           ),
           16 => array(
@@ -296,31 +298,55 @@ function hk_ct_feeds_importer_default() {
             'unique' => FALSE,
           ),
           17 => array(
-            'source' => 'Bezugsfrei ab',
-            'target' => 'field_moving_in_from',
+            'source' => 'Badezimmer',
+            'target' => 'field_apart_bathrooms',
             'unique' => FALSE,
           ),
           18 => array(
-            'source' => 'Provision',
-            'target' => 'field_apart_commission',
-            'unique' => FALSE,
-          ),
-          19 => array(
             'source' => 'Ausstattung',
             'target' => 'field_ausstattung',
             'term_search' => '0',
             'autocreate' => 1,
           ),
+          19 => array(
+            'source' => 'Bezugsfrei ab',
+            'target' => 'field_moving_in_from',
+            'unique' => FALSE,
+          ),
           20 => array(
-            'source' => 'Objekt-ID',
-            'target' => 'field_object_ref:objekt:text_feeds_set_target:field_objektid_nunumeric',
+            'source' => 'Etage',
+            'target' => 'field_apart_floor',
             'unique' => FALSE,
           ),
           21 => array(
-            'source' => 'Kategorie',
-            'target' => 'field_kategorie',
-            'term_search' => '0',
-            'autocreate' => 1,
+            'source' => 'Galerie',
+            'target' => 'field_apart_pictures:uri',
+            'unique' => FALSE,
+          ),
+          22 => array(
+            'source' => 'Beschreibung',
+            'target' => 'field_apart_description',
+            'unique' => FALSE,
+          ),
+          23 => array(
+            'source' => 'Lage',
+            'target' => 'field_apart_location',
+            'unique' => FALSE,
+          ),
+          24 => array(
+            'source' => 'Sonstiges',
+            'target' => 'field_apart_other',
+            'unique' => FALSE,
+          ),
+          25 => array(
+            'source' => 'Grundriss',
+            'target' => 'field_apart_floor_plan:uri',
+            'unique' => FALSE,
+          ),
+          26 => array(
+            'source' => 'Beitragsdatum',
+            'target' => 'created',
+            'unique' => FALSE,
           ),
         ),
         'update_existing' => '2',

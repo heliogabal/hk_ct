@@ -13,6 +13,20 @@ function hk_ct_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'd6_objekt_import-bundesland-default_value';
+  $feeds_tamper->importer = 'd6_objekt_import';
+  $feeds_tamper->source = 'Bundesland';
+  $feeds_tamper->plugin_id = 'default_value';
+  $feeds_tamper->settings = array(
+    'default_value' => 'BE',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Set default value';
+  $export['d6_objekt_import-bundesland-default_value'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'd6_objekt_import-germany-default_value';
   $feeds_tamper->importer = 'd6_objekt_import';
   $feeds_tamper->source = 'Germany';
@@ -36,9 +50,29 @@ function hk_ct_feeds_tamper_default() {
     'limit' => '',
     'real_separator' => ',',
   );
-  $feeds_tamper->weight = 0;
+  $feeds_tamper->weight = 2;
   $feeds_tamper->description = 'Explode';
   $export['d6_objekt_import-objektfotos-explode'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'd6_objekt_import-objektfotos-find_replace';
+  $feeds_tamper->importer = 'd6_objekt_import';
+  $feeds_tamper->source = 'Objektfotos';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => 'jpghttp',
+    'replace' => 'jpg,http',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'set comma between pics';
+  $export['d6_objekt_import-objektfotos-find_replace'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
@@ -92,7 +126,7 @@ function hk_ct_feeds_tamper_default() {
     'limit' => '',
     'real_separator' => ',',
   );
-  $feeds_tamper->weight = 0;
+  $feeds_tamper->weight = 2;
   $feeds_tamper->description = 'Explode';
   $export['d6_wohnung_importer-ausstattung-explode'] = $feeds_tamper;
 

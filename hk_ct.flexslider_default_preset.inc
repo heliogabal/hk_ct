@@ -138,8 +138,8 @@ function hk_ct_flexslider_default_presets() {
   $preset->name = 'wohnungsansicht';
   $preset->title = 'wohnungsansicht';
   $preset->theme = 'classic';
-  $preset->imagestyle_normal = 'flexfullbreakpoints_theme_hk_theme_wide_1x';
-  $preset->imagestyle_thumbnail = 'flexthumbbreakpoints_theme_hk_theme_wide_1x';
+  $preset->imagestyle_normal = 'flexslider_full';
+  $preset->imagestyle_thumbnail = 'flexslider_thumbnail';
   $preset->options = array(
     'namespace' => 'flex-',
     'selector' => '.slides > li',
@@ -181,12 +181,12 @@ function hk_ct_flexslider_default_presets() {
     'pauseOnAction' => 0,
     'pauseOnHover' => 0,
     'manualControls' => '',
-    'colorboxEnabled' => FALSE,
-    'colorboxImageStyle' => 'colorbox_mapping',
+    'colorboxEnabled' => TRUE,
+    'colorboxImageStyle' => 'bear_default_picture_mappings',
     'colorboxFallbackImageStyle' => 'colorbox_full',
   );
-  $preset->imagestyle_type = 'picture_mapping';
-  $preset->mapping = 'flexfull_mapping';
+  $preset->imagestyle_type = 'image_style';
+  $preset->mapping = 'bear_default_picture_mappings';
   $preset->fallback = '';
   $export['wohnungsansicht'] = $preset;
 
