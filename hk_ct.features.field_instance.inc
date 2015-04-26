@@ -202,6 +202,83 @@ function hk_ct_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-apartment-field_apart_expose'
+  $field_instances['node-apartment-field_apart_expose'] = array(
+    'bundle' => 'apartment',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'file',
+        'settings' => array(),
+        'type' => 'file_default',
+        'weight' => 41,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'tile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_apart_expose',
+    'label' => 'Exposé',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => 'exposes',
+      'file_extensions' => 'pdf',
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'private' => 0,
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 'document',
+          'image' => 0,
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 0,
+          'upload' => 'upload',
+        ),
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 0,
+        'manualcrop_inline_crop' => 0,
+        'manualcrop_instant_crop' => FALSE,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_keyboard' => 1,
+        'manualcrop_maximize_default_crop_area' => 0,
+        'manualcrop_require_cropping' => array(),
+        'manualcrop_styles_list' => array(),
+        'manualcrop_styles_mode' => 'include',
+        'manualcrop_thumblist' => 0,
+      ),
+      'type' => 'media_generic',
+      'weight' => 55,
+    ),
+  );
+
   // Exported field_instance: 'node-apartment-field_apart_floor'
   $field_instances['node-apartment-field_apart_floor'] = array(
     'bundle' => 'apartment',
@@ -267,11 +344,11 @@ function hk_ct_field_default_field_instances() {
             'colorbox_caption_custom' => '',
             'colorbox_gallery' => 'field_post',
             'colorbox_gallery_custom' => '',
-            'colorbox_group' => 'flexslider_mapping',
+            'colorbox_group' => 'colorbox_mapping',
           ),
           'fallback_image_style' => '',
           'image_link' => 'colorbox',
-          'picture_mapping' => 'flexslider_mapping',
+          'picture_mapping' => 'flexthumb_mapping',
         ),
         'type' => 'picture',
         'weight' => 2,
@@ -994,14 +1071,8 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 2,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_decimal',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 40,
       ),
       'teaser' => array(
@@ -1156,9 +1227,8 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'hidden',
         'weight' => 39,
       ),
       'teaser' => array(
@@ -1418,9 +1488,9 @@ function hk_ct_field_default_field_instances() {
       'settings' => array(
         'match_operator' => 'CONTAINS',
         'path' => '',
-        'references_dialog_add' => 0,
-        'references_dialog_edit' => 0,
-        'references_dialog_search' => 0,
+        'references_dialog_add' => 1,
+        'references_dialog_edit' => 1,
+        'references_dialog_search' => 1,
         'references_dialog_search_view' => '',
         'size' => 60,
       ),
@@ -4381,6 +4451,7 @@ function hk_ct_field_default_field_instances() {
   t('Description Investment');
   t('Developer');
   t('Dieser Text erscheint auf der Karte und beschreibt das Objekt allgemein in nicht mehr als 300 Zeichen.');
+  t('Exposé');
   t('Fittings');
   t('Floor');
   t('Floor plan');

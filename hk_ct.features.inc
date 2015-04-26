@@ -8,6 +8,12 @@
  * Implements hook_ctools_plugin_api().
  */
 function hk_ct_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "breakpoints" && $api == "default_breakpoint_group") {
+    return array("version" => "1");
+  }
+  if ($module == "breakpoints" && $api == "default_breakpoints") {
+    return array("version" => "1");
+  }
   if ($module == "ds" && $api == "ds") {
     return array("version" => "1");
   }
@@ -180,11 +186,11 @@ function hk_ct_node_info() {
       'help' => '',
     ),
     'page' => array(
-      'name' => t('Basic page'),
+      'name' => t('Einfache Seite'),
       'base' => 'node_content',
-      'description' => t('Use <em>basic pages</em> for your static content, such as an \'About us\' page.'),
+      'description' => t('Benutzen Sie <em>Einfache Seiten</em> für statischen Inhalt, wie z.B. eine „Über uns“ Seite.'),
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Titel'),
       'help' => '',
     ),
   );

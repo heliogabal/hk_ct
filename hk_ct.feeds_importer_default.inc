@@ -165,7 +165,7 @@ function hk_ct_feeds_importer_default() {
         'input_format' => 'full_html',
         'skip_hash_check' => 0,
         'bundle' => 'objekt',
-        'update_non_existent' => 'unpublish',
+        'update_non_existent' => 'skip',
       ),
     ),
     'content_type' => '',

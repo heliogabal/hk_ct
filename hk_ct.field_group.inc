@@ -206,6 +206,34 @@ function hk_ct_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_expose|node|apartment|form';
+  $field_group->group_name = 'group_expose';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'apartment';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_horizontal';
+  $field_group->data = array(
+    'label' => 'Exposé',
+    'weight' => '7',
+    'children' => array(
+      0 => 'field_apart_expose',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-expose field-group-htab',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_expose|node|apartment|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_features|node|apartment|form';
   $field_group->group_name = 'group_features';
   $field_group->entity_type = 'node';
@@ -249,12 +277,13 @@ function hk_ct_field_group_info() {
     'label' => 'Horizontal Menu',
     'weight' => '0',
     'children' => array(
-      0 => 'group_returns',
-      1 => 'group_basic',
-      2 => 'group_costs',
-      3 => 'group_features',
-      4 => 'group_images',
+      0 => 'group_basic',
+      1 => 'group_costs',
+      2 => 'group_features',
+      3 => 'group_images',
+      4 => 'group_returns',
       5 => 'group_texte',
+      6 => 'group_expose',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -536,8 +565,8 @@ function hk_ct_field_group_info() {
     'label' => 'Mehrere Apartmenttypen im Objekt',
     'weight' => '-2',
     'children' => array(
-      0 => 'field_object_description_invest',
-      1 => 'field_object_desc_commercial',
+      0 => 'field_object_desc_commercial',
+      1 => 'field_object_description_invest',
       2 => 'field_object_multi_apart_types',
     ),
     'format_type' => 'fieldset',
