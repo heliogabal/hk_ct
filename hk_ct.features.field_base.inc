@@ -1281,55 +1281,6 @@ function hk_ct_field_default_field_bases() {
     'type_name' => 'objekt',
   );
 
-  // Exported field_base: 'field_view'
-  $field_bases['field_view'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_view',
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'viewfield',
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'semantic_cck_field_settings' => array(
-        'enabled' => 0,
-        'field_class' => '',
-        'field_element' => 'div',
-        'field_prefix' => '',
-        'field_suffix' => '',
-        'first_class' => 'first',
-        'label_class_above' => '',
-        'label_class_inline' => '',
-        'label_element_above' => 'h3',
-        'label_element_inline' => 'span',
-        'label_suffix_above' => '',
-        'label_suffix_inline' => ':',
-        'last_class' => 'last',
-        'last_every_nth' => 0,
-        'multiple_item_class' => '',
-        'multiple_item_element' => 'div',
-        'multiple_item_separator' => '',
-        'multiple_items_class' => '',
-        'multiple_items_element' => 'div',
-        'single_item_class' => '',
-        'single_item_element' => 'div',
-        'striping_classes' => 'odd even',
-        'use_singlevalue_settings' => 0,
-      ),
-      'super_default' => 0,
-      'super_default_widget' => array(
-        'vargs' => '',
-        'vname' => 0,
-      ),
-      'token_enabled' => 0,
-    ),
-    'translatable' => 0,
-    'type' => 'viewfield',
-    'type_name' => 'page',
-  );
-
   // Exported field_base: 'field_year_built'
   $field_bases['field_year_built'] = array(
     'active' => 1,
