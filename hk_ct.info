@@ -231,7 +231,6 @@ features[field_instance][] = node-objekt-field_year_built
 features[field_instance][] = node-objekt-title_field
 features[field_instance][] = node-page-body
 features[field_instance][] = node-page-field_bild
-features[field_instance][] = node-page-field_view
 features[field_instance][] = node-page-title_field
 features[field_instance][] = taxonomy_term-category-description_field
 features[field_instance][] = taxonomy_term-category-name_field
