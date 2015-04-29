@@ -2866,7 +2866,7 @@ function hk_ct_field_default_field_instances() {
     'default_value' => array(
       0 => array(
         'value' => '<p>Dieses Angebot ist provisionspflichtig. Bei Zustandekommen eines Kaufvertrages berechnet die Herbert &amp; Kohlmeyer Immobilien GmbH dem Erwerber eine Provision in Höhe von <strong>7,14 %</strong> des beurkundeten Kaufpreises inkl. der gesetzlichen MwSt., sofern nicht anders vereinbart. Über die steuerlichen Aspekte informiert Sie Ihr Steuerberater. Auf Wunsch sind wir Ihnen auch gerne bei Ihrer Finanzierung behilflich. Besichtigungen sind kurzfristig möglich. Alle Angaben beruhen auf den uns vom Eigentümer zur Verfügung gestellten Informationen. Eine Haftung für die Richtigkeit bzw. Vollständigkeit können wir nicht übernehmen. Irrtum und Zwischenverkauf vorbehalten. Es gelten unsere AGB. Bitte informieren Sie sich über deren Inhalt auf unserer Homepage unter <a href="http://www.herbert-kohlmeyer.de/agb" title="www.herbert-kohlmeyer.de">www.herbert-kohlmeyer.de/agb</a>.</p>',
-        'format' => 'filtered_html',
+        'format' => 'full_html',
       ),
     ),
     'deleted' => 0,
@@ -2905,40 +2905,6 @@ function hk_ct_field_default_field_instances() {
     'label' => 'Other',
     'required' => 0,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'ds_code' => 'ds_code',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 'php_code',
-          'plain_text' => 'plain_text',
-          'redhen_activity_message' => 'redhen_activity_message',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'ds_code' => array(
-              'weight' => 12,
-            ),
-            'filtered_html' => array(
-              'weight' => -10,
-            ),
-            'full_html' => array(
-              'weight' => -9,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-            'redhen_activity_message' => array(
-              'weight' => 0,
-            ),
-          ),
-        ),
-      ),
       'entity_translation_sync' => FALSE,
       'linkit' => array(
         'enable' => 0,
