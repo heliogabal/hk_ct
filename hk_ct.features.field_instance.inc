@@ -337,7 +337,7 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'picture',
+        'module' => 'image',
         'settings' => array(
           'colorbox_settings' => array(
             'colorbox_caption' => 'auto',
@@ -348,9 +348,10 @@ function hk_ct_field_default_field_instances() {
           ),
           'fallback_image_style' => '',
           'image_link' => 'colorbox',
+          'image_style' => '',
           'picture_mapping' => 'flexthumb_mapping',
         ),
-        'type' => 'picture',
+        'type' => 'image',
         'weight' => 2,
       ),
       'teaser' => array(
@@ -3911,107 +3912,6 @@ function hk_ct_field_default_field_instances() {
     'widget_type' => 'imagefield_widget',
   );
 
-  // Exported field_instance: 'node-page-field_view'
-  $field_instances['node-page-field_view'] = array(
-    'bundle' => 'page',
-    'default_value' => array(
-      0 => array(
-        'vname' => 0,
-        'vargs' => '',
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'viewfield',
-        'settings' => array(),
-        'type' => 'viewfield_default',
-        'weight' => 2,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'module' => 'viewfield',
-        'settings' => array(),
-        'type' => 'viewfield_default',
-        'weight' => -1,
-      ),
-      'print' => array(
-        'label' => 'hidden',
-        'module' => 'viewfield',
-        'settings' => array(),
-        'type' => 'viewfield_default',
-        'weight' => -1,
-      ),
-      'rss' => array(
-        'label' => 'hidden',
-        'module' => 'viewfield',
-        'settings' => array(),
-        'type' => 'viewfield_default',
-        'weight' => -1,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'viewfield',
-        'settings' => array(),
-        'type' => 'viewfield_default',
-        'weight' => -1,
-      ),
-      'token' => array(
-        'label' => 'hidden',
-        'module' => 'viewfield',
-        'settings' => array(),
-        'type' => 'viewfield_default',
-        'weight' => -1,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_view',
-    'label' => 'View',
-    'required' => 0,
-    'settings' => array(
-      'allowed_views' => array(
-        'Karte_Test' => 0,
-        'Links' => 'Links',
-        'Links_sav' => 'Links_sav',
-        'Suche' => 0,
-        'Wohnungsliste' => 0,
-        'admin_content' => 0,
-        'admin_users' => 0,
-        'alteseite' => 0,
-        'archive' => 0,
-        'control_content' => 0,
-        'control_content_panes' => 0,
-        'control_files' => 0,
-        'control_terms' => 0,
-        'control_users' => 0,
-        'control_users_pane' => 0,
-        'frontpage' => 0,
-        'glossary' => 0,
-        'list_page_titles' => 0,
-        'semantic_demo' => 0,
-        'taxonomy_term' => 0,
-      ),
-      'entity_translation_sync' => FALSE,
-      'force_default' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'weight' => -1,
-    'widget' => array(
-      'active' => 0,
-      'module' => 'viewfield',
-      'settings' => array(
-        'semantic_cck_widget_settings' => array(
-          'use_widget_settings' => 0,
-        ),
-      ),
-      'type' => 'viewfield_select',
-      'weight' => 3,
-    ),
-    'widget_type' => 'viewfield_select',
-  );
-
   // Exported field_instance: 'node-page-title_field'
   $field_instances['node-page-title_field'] = array(
     'bundle' => 'page',
@@ -4379,7 +4279,6 @@ function hk_ct_field_default_field_instances() {
   t('Titel');
   t('Topobjekt');
   t('Type');
-  t('View');
   t('Wenn in einem Objekt mehrere Wohnungstypen vorkommen (bezugsfrei, vermietet, gewerblich), können hier zusätzliche Beschreibungtexte eingegeben werden.');
   t('Year built');
 
