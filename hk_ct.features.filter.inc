@@ -16,13 +16,8 @@ function hk_ct_filter_default_formats() {
     'name' => 'Full HTML',
     'cache' => 1,
     'status' => 1,
-    'weight' => 0,
+    'weight' => -9,
     'filters' => array(
-      'filter_autop' => array(
-        'weight' => 0,
-        'status' => 1,
-        'settings' => array(),
-      ),
       'filter_url' => array(
         'weight' => 0,
         'status' => 1,
@@ -30,8 +25,13 @@ function hk_ct_filter_default_formats() {
           'filter_url_length' => 72,
         ),
       ),
-      'picture' => array(
-        'weight' => 0,
+      'filter_autop' => array(
+        'weight' => 1,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'media_filter' => array(
+        'weight' => 2,
         'status' => 1,
         'settings' => array(),
       ),

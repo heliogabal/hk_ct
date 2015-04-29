@@ -406,6 +406,11 @@ function hk_ct_field_group_info() {
       5 => 'field_sale_commission',
       6 => 'field_status_quo',
       7 => 'field_year_built',
+      8 => 'field_wug_total_space',
+      9 => 'field_wug_opt_constrruct',
+      10 => 'field_wug_no_of_units',
+      11 => 'field_wug_act_rent',
+      12 => 'field_wug_occupancy',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -536,9 +541,16 @@ function hk_ct_field_group_info() {
       4 => 'field_no_of_floors',
       5 => 'field_objektid_nunumeric',
       6 => 'field_rent_commission',
-      7 => 'field_status_quo',
-      8 => 'field_year_built',
-      9 => 'field_address',
+      7 => 'field_sale_commission',
+      8 => 'field_status_quo',
+      9 => 'field_year_built',
+      10 => 'field_address',
+      11 => 'field_kategorie',
+      12 => 'field_wug_total_space',
+      13 => 'field_wug_opt_constrruct',
+      14 => 'field_wug_no_of_units',
+      15 => 'field_wug_act_rent',
+      16 => 'field_wug_occupancy',
     ),
     'format_type' => 'html5',
     'format_settings' => array(
@@ -681,9 +693,7 @@ function hk_ct_field_group_info() {
   $field_group->data = array(
     'label' => 'Veröffentlichen',
     'weight' => '2',
-    'children' => array(
-      0 => 'field_save_workflow',
-    ),
+    'children' => array(),
     'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',
@@ -772,6 +782,8 @@ function hk_ct_field_group_info() {
       1 => 'field_object_description',
       2 => 'field_object_location',
       3 => 'field_object_other',
+      4 => 'field_object_desc_commercial',
+      5 => 'field_object_description_invest',
     ),
     'format_type' => 'html5',
     'format_settings' => array(

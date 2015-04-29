@@ -160,16 +160,6 @@ function hk_ct_feeds_importer_default() {
             'target' => 'field_sale_commission',
             'unique' => FALSE,
           ),
-          23 => array(
-            'source' => 'Überschrift Objekt',
-            'target' => 'title_field',
-            'unique' => FALSE,
-          ),
-          24 => array(
-            'source' => 'Beitragsdatum',
-            'target' => 'created',
-            'unique' => FALSE,
-          ),
         ),
         'update_existing' => '2',
         'input_format' => 'full_html',

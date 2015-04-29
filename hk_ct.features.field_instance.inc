@@ -337,7 +337,7 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'image',
+        'module' => 'picture',
         'settings' => array(
           'colorbox_settings' => array(
             'colorbox_caption' => 'auto',
@@ -348,10 +348,9 @@ function hk_ct_field_default_field_instances() {
           ),
           'fallback_image_style' => '',
           'image_link' => 'colorbox',
-          'image_style' => '',
           'picture_mapping' => 'flexthumb_mapping',
         ),
-        'type' => 'image',
+        'type' => 'picture',
         'weight' => 2,
       ),
       'teaser' => array(
@@ -1871,7 +1870,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 14,
       ),
       'map_popup' => array(
         'label' => 'hidden',
@@ -1928,7 +1927,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 37,
+        'weight' => 35,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -2013,7 +2012,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 38,
+        'weight' => 37,
       ),
       'map_popup' => array(
         'label' => 'inline',
@@ -2051,7 +2050,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 45,
+      'weight' => 37,
     ),
   );
 
@@ -2067,7 +2066,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 43,
+        'weight' => 45,
       ),
       'map_popup' => array(
         'label' => 'inline',
@@ -2089,23 +2088,30 @@ function hk_ct_field_default_field_instances() {
         'weight' => 21,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_heating_type',
     'label' => 'Heating type',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
+      'select2_integration' => array(
+        'styling' => array(
+          'dropdownAutoWidth' => 0,
+          'placeholder' => '',
+        ),
+        'use_select2' => 0,
+      ),
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'content_taxonomy_opt_groups' => FALSE,
         'use_select2' => FALSE,
       ),
       'type' => 'options_select',
-      'weight' => 35,
+      'weight' => 33,
     ),
   );
 
@@ -2118,9 +2124,10 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 17,
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 36,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -2182,7 +2189,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 41,
+        'weight' => 39,
       ),
       'map_popup' => array(
         'label' => 'inline',
@@ -2220,7 +2227,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 43,
+      'weight' => 36,
     ),
   );
 
@@ -2236,7 +2243,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 42,
+        'weight' => 40,
       ),
       'map_popup' => array(
         'label' => 'inline',
@@ -2274,7 +2281,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 40,
+      'weight' => 35,
     ),
   );
 
@@ -2360,7 +2367,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 57,
+        'weight' => 55,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -2545,7 +2552,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 56,
+        'weight' => 54,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -2628,6 +2635,7 @@ function hk_ct_field_default_field_instances() {
   // Exported field_instance: 'node-objekt-field_object_images'
   $field_instances['node-objekt-field_object_images'] = array(
     'bundle' => 'objekt',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -2674,6 +2682,7 @@ function hk_ct_field_default_field_instances() {
         'weight' => 3,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_object_images',
     'label' => 'Object images',
@@ -2682,7 +2691,7 @@ function hk_ct_field_default_field_instances() {
       'alt_field' => 0,
       'default_image' => 0,
       'entity_translation_sync' => FALSE,
-      'file_directory' => '',
+      'file_directory' => 'objektbilder/[node_nid]',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
@@ -2692,24 +2701,38 @@ function hk_ct_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'image',
+      'module' => 'media',
       'settings' => array(
-        'manualcrop_crop_info' => TRUE,
-        'manualcrop_default_crop_area' => TRUE,
-        'manualcrop_enable' => FALSE,
-        'manualcrop_inline_crop' => FALSE,
+        'allowed_schemes' => array(
+          'private' => 0,
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'media_internet' => 0,
+          'upload' => 0,
+        ),
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 0,
+        'manualcrop_inline_crop' => 0,
         'manualcrop_instant_crop' => FALSE,
-        'manualcrop_instant_preview' => TRUE,
-        'manualcrop_keyboard' => TRUE,
-        'manualcrop_maximize_default_crop_area' => FALSE,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_keyboard' => 1,
+        'manualcrop_maximize_default_crop_area' => 0,
         'manualcrop_require_cropping' => array(),
         'manualcrop_styles_list' => array(),
         'manualcrop_styles_mode' => 'exclude',
-        'manualcrop_thumblist' => FALSE,
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
+        'manualcrop_thumblist' => 0,
       ),
-      'type' => 'image_image',
+      'type' => 'media_generic',
       'weight' => 6,
     ),
   );
@@ -2816,10 +2839,9 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'list',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 58,
+        'type' => 'hidden',
+        'weight' => 6,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -2866,7 +2888,7 @@ function hk_ct_field_default_field_instances() {
     'default_value' => array(
       0 => array(
         'value' => '<p>Dieses Angebot ist provisionspflichtig. Bei Zustandekommen eines Kaufvertrages berechnet die Herbert &amp; Kohlmeyer Immobilien GmbH dem Erwerber eine Provision in Höhe von <strong>7,14 %</strong> des beurkundeten Kaufpreises inkl. der gesetzlichen MwSt., sofern nicht anders vereinbart. Über die steuerlichen Aspekte informiert Sie Ihr Steuerberater. Auf Wunsch sind wir Ihnen auch gerne bei Ihrer Finanzierung behilflich. Besichtigungen sind kurzfristig möglich. Alle Angaben beruhen auf den uns vom Eigentümer zur Verfügung gestellten Informationen. Eine Haftung für die Richtigkeit bzw. Vollständigkeit können wir nicht übernehmen. Irrtum und Zwischenverkauf vorbehalten. Es gelten unsere AGB. Bitte informieren Sie sich über deren Inhalt auf unserer Homepage unter <a href="http://www.herbert-kohlmeyer.de/agb" title="www.herbert-kohlmeyer.de">www.herbert-kohlmeyer.de/agb</a>.</p>',
-        'format' => 'full_html',
+        'format' => 'filtered_html',
       ),
     ),
     'deleted' => 0,
@@ -2877,7 +2899,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 54,
+        'weight' => 56,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -2905,6 +2927,40 @@ function hk_ct_field_default_field_instances() {
     'label' => 'Other',
     'required' => 0,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'ds_code' => 'ds_code',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'php_code' => 'php_code',
+          'plain_text' => 'plain_text',
+          'redhen_activity_message' => 'redhen_activity_message',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'ds_code' => array(
+              'weight' => 12,
+            ),
+            'filtered_html' => array(
+              'weight' => -10,
+            ),
+            'full_html' => array(
+              'weight' => -9,
+            ),
+            'php_code' => array(
+              'weight' => 11,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+            'redhen_activity_message' => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+      ),
       'entity_translation_sync' => FALSE,
       'linkit' => array(
         'enable' => 0,
@@ -3113,7 +3169,7 @@ function hk_ct_field_default_field_instances() {
         ),
       ),
       'type' => 'geocoder',
-      'weight' => 4,
+      'weight' => 3,
     ),
     'widget_type' => 'geofield_wkt',
   );
@@ -3231,7 +3287,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 46,
+        'weight' => 47,
       ),
       'map_popup' => array(
         'label' => 'inline',
@@ -3256,7 +3312,7 @@ function hk_ct_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_rent_commission',
-    'label' => 'Commission',
+    'label' => 'Commission (Rent)',
     'required' => 0,
     'settings' => array(
       'better_formats' => array(
@@ -3321,9 +3377,14 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'inline',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 14,
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '',
+        ),
+        'type' => 'title_linked',
+        'weight' => 48,
       ),
       'map_popup' => array(
         'label' => 'inline',
@@ -3415,7 +3476,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 39,
+        'weight' => 38,
       ),
       'map_popup' => array(
         'label' => 'inline',
@@ -3460,7 +3521,7 @@ function hk_ct_field_default_field_instances() {
         'use_select2' => FALSE,
       ),
       'type' => 'options_select',
-      'weight' => 34,
+      'weight' => 32,
     ),
   );
 
@@ -3585,6 +3646,306 @@ function hk_ct_field_default_field_instances() {
     'widget_type' => 'text_textarea',
   );
 
+  // Exported field_instance: 'node-objekt-field_wug_act_rent'
+  $field_instances['node-objekt-field_wug_act_rent'] = array(
+    'bundle' => 'objekt',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 49,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_wug_act_rent',
+    'label' => 'Actual net rental income p.a.',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => ' €',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 42,
+    ),
+  );
+
+  // Exported field_instance: 'node-objekt-field_wug_no_of_units'
+  $field_instances['node-objekt-field_wug_no_of_units'] = array(
+    'bundle' => 'objekt',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 43,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_wug_no_of_units',
+    'label' => 'No. of units',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 40,
+    ),
+  );
+
+  // Exported field_instance: 'node-objekt-field_wug_occupancy'
+  $field_instances['node-objekt-field_wug_occupancy'] = array(
+    'bundle' => 'objekt',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 44,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_wug_occupancy',
+    'label' => 'Occupancy',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 41,
+    ),
+  );
+
+  // Exported field_instance: 'node-objekt-field_wug_opt_constrruct'
+  $field_instances['node-objekt-field_wug_opt_constrruct'] = array(
+    'bundle' => 'objekt',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 42,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_wug_opt_constrruct',
+    'label' => 'Optional construction site',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max' => '',
+      'min' => '',
+      'prefix' => 'ca. ',
+      'suffix' => 'm²',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 39,
+    ),
+  );
+
+  // Exported field_instance: 'node-objekt-field_wug_total_space'
+  $field_instances['node-objekt-field_wug_total_space'] = array(
+    'bundle' => 'objekt',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 41,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_wug_total_space',
+    'label' => 'Total space',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max' => '',
+      'min' => '',
+      'prefix' => 'ca. ',
+      'suffix' => 'm²',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 38,
+    ),
+  );
+
   // Exported field_instance: 'node-objekt-field_year_built'
   $field_instances['node-objekt-field_year_built'] = array(
     'bundle' => 'objekt',
@@ -3602,7 +3963,7 @@ function hk_ct_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_integer',
-        'weight' => 45,
+        'weight' => 46,
       ),
       'map_popup' => array(
         'label' => 'inline',
@@ -3647,7 +4008,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 38,
+      'weight' => 34,
     ),
   );
 
@@ -4198,6 +4559,7 @@ function hk_ct_field_default_field_instances() {
   t('1 Satz zur Beschreibung des Topobjekts, das auf der Startseite angezeigt wird. Beschränkt auf 100 Zeichen.');
   t('3 Großbuchstaben plus Hausnummer');
   t('A <em>page</em>, similar in form to a <em>story</em>, is a simple method for creating and displaying information that rarely changes, such as an "About us" section of a website. By default, a <em>page</em> entry does not allow visitor comments and is not featured on the site\'s initial home page.');
+  t('Actual net rental income p.a.');
   t('Address');
   t('Ansprechpartner');
   t('Apartment No.');
@@ -4211,6 +4573,7 @@ function hk_ct_field_default_field_instances() {
   t('Borough');
   t('Category');
   t('Commission');
+  t('Commission (Rent)');
   t('Description');
   t('Description Commercial');
   t('Description Investment');
@@ -4229,9 +4592,12 @@ function hk_ct_field_default_field_instances() {
   t('Name');
   t('Net rent');
   t('No. of floors');
+  t('No. of units');
   t('Object');
   t('Object images');
   t('Objekt ID');
+  t('Occupancy');
+  t('Optional construction site');
   t('Other');
   t('Pictures');
   t('Purchasing price');
@@ -4244,6 +4610,7 @@ function hk_ct_field_default_field_instances() {
   t('Teasertext Karten-Popup');
   t('Titel');
   t('Topobjekt');
+  t('Total space');
   t('Type');
   t('Wenn in einem Objekt mehrere Wohnungstypen vorkommen (bezugsfrei, vermietet, gewerblich), können hier zusätzliche Beschreibungtexte eingegeben werden.');
   t('Year built');
