@@ -13,6 +13,34 @@ function hk_ct_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_akkordeon|node|apartment|default';
+  $field_group->group_name = 'group_akkordeon';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'apartment';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_text';
+  $field_group->data = array(
+    'label' => 'Akkordeon',
+    'weight' => '2',
+    'children' => array(
+      0 => 'group_lage',
+      1 => 'group_sonstiges',
+    ),
+    'format_type' => 'accordion',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-akkordeon field-group-accordion',
+        'effect' => 'bounceslide',
+      ),
+    ),
+  );
+  $export['group_akkordeon|node|apartment|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_ansprechpartner|node|objekt|form';
   $field_group->group_name = 'group_ansprechpartner';
   $field_group->entity_type = 'node';
@@ -490,6 +518,31 @@ function hk_ct_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_lage|node|apartment|default';
+  $field_group->group_name = 'group_lage';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'apartment';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_akkordeon';
+  $field_group->data = array(
+    'label' => 'Lage',
+    'weight' => '7',
+    'children' => array(
+      0 => 'lage_von_wohnung_oder_objekt',
+    ),
+    'format_type' => 'accordion-item',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'classes' => 'group-lage field-group-accordion-item',
+      ),
+    ),
+  );
+  $export['group_lage|node|apartment|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_merkmale|node|apartment|default';
   $field_group->group_name = 'group_merkmale';
   $field_group->entity_type = 'node';
@@ -738,6 +791,32 @@ function hk_ct_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_sonstiges|node|apartment|default';
+  $field_group->group_name = 'group_sonstiges';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'apartment';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_akkordeon';
+  $field_group->data = array(
+    'label' => 'Sonstiges',
+    'weight' => '8',
+    'children' => array(
+      0 => 'sonstiges_von_wohnung_oder_objek',
+    ),
+    'format_type' => 'accordion-item',
+    'format_settings' => array(
+      'label' => 'Sonstiges',
+      'instance_settings' => array(
+        'classes' => 'group-sonstiges field-group-accordion-item',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_sonstiges|node|apartment|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_texte|node|apartment|form';
   $field_group->group_name = 'group_texte';
   $field_group->entity_type = 'node';
@@ -764,6 +843,34 @@ function hk_ct_field_group_info() {
     ),
   );
   $export['group_texte|node|apartment|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_text|node|apartment|default';
+  $field_group->group_name = 'group_text';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'apartment';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Text',
+    'weight' => '4',
+    'children' => array(
+      0 => 'texte_von_wohnung_oder_objekt',
+      1 => 'group_akkordeon',
+    ),
+    'format_type' => 'html5',
+    'format_settings' => array(
+      'label' => 'Text',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-text',
+        'wrapper' => 'article',
+      ),
+    ),
+  );
+  $export['group_text|node|apartment|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -796,6 +903,30 @@ function hk_ct_field_group_info() {
     ),
   );
   $export['group_text|node|objekt|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_wrapper|node|apartment|teaser';
+  $field_group->group_name = 'group_wrapper';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'apartment';
+  $field_group->mode = 'teaser';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Wrapper',
+    'weight' => '36',
+    'children' => array(),
+    'format_type' => 'fieldset',
+    'format_settings' => array(
+      'formatter' => 'collapsible',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-wrapper field-group-fieldset',
+      ),
+    ),
+  );
+  $export['group_wrapper|node|apartment|teaser'] = $field_group;
 
   return $export;
 }

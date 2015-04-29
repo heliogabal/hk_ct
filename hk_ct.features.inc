@@ -35,6 +35,9 @@ function hk_ct_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "flexslider_picture" && $api == "flexslider_picture_optionset") {
     return array("version" => "1");
   }
+  if ($module == "picture" && $api == "default_picture_mapping") {
+    return array("version" => "2");
+  }
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -45,6 +48,134 @@ function hk_ct_ctools_plugin_api($module = NULL, $api = NULL) {
  */
 function hk_ct_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
+}
+
+/**
+ * Implements hook_default_entity_rule_setting().
+ */
+function hk_ct_default_entity_rule_setting() {
+  $items = array();
+  $items['3'] = entity_import('entity_rule_setting', '{
+    "id" : "3",
+    "entity_type" : "node",
+    "bundle" : "apartment",
+    "op" : "update",
+    "rules_config" : "rules_kopiere_objekt_id_vom_objekt_update",
+    "weight" : "0",
+    "args" : null,
+    "false_msg" : null
+  }');
+  $items['4'] = entity_import('entity_rule_setting', '{
+    "id" : "4",
+    "entity_type" : "node",
+    "bundle" : "apartment",
+    "op" : "update",
+    "rules_config" : "rules_kopiere_standort_vom_objekt",
+    "weight" : "1",
+    "args" : null,
+    "false_msg" : null
+  }');
+  $items['7'] = entity_import('entity_rule_setting', '{
+    "id" : "7",
+    "entity_type" : "node",
+    "bundle" : "apartment",
+    "op" : "create",
+    "rules_config" : "rules_kopiere_objekt_id_vom_objekt",
+    "weight" : "-7",
+    "args" : null,
+    "false_msg" : null
+  }');
+  $items['8'] = entity_import('entity_rule_setting', '{
+    "id" : "8",
+    "entity_type" : "node",
+    "bundle" : "apartment",
+    "op" : "create",
+    "rules_config" : "rules_kopiere_kategorie_vom_objekt",
+    "weight" : "-6",
+    "args" : null,
+    "false_msg" : null
+  }');
+  $items['9'] = entity_import('entity_rule_setting', '{
+    "id" : "9",
+    "entity_type" : "node",
+    "bundle" : "apartment",
+    "op" : "create",
+    "rules_config" : "rules_kopiere_beschreibung_vom_objekt_falls_leer",
+    "weight" : "-10",
+    "args" : null,
+    "false_msg" : null
+  }');
+  $items['10'] = entity_import('entity_rule_setting', '{
+    "id" : "10",
+    "entity_type" : "node",
+    "bundle" : "apartment",
+    "op" : "create",
+    "rules_config" : "rules_kopiere_lage_vom_objekt_falls_leer",
+    "weight" : "-9",
+    "args" : null,
+    "false_msg" : null
+  }');
+  $items['11'] = entity_import('entity_rule_setting', '{
+    "id" : "11",
+    "entity_type" : "node",
+    "bundle" : "apartment",
+    "op" : "create",
+    "rules_config" : "rules_kopiere_sonstiges_vom_objekt_falls_leer",
+    "weight" : "-8",
+    "args" : null,
+    "false_msg" : null
+  }');
+  $items['12'] = entity_import('entity_rule_setting', '{
+    "id" : "12",
+    "entity_type" : "node",
+    "bundle" : "apartment",
+    "op" : "create",
+    "rules_config" : "rules_kopiere_standort_vom_objekt_create",
+    "weight" : "-5",
+    "args" : null,
+    "false_msg" : null
+  }');
+  $items['13'] = entity_import('entity_rule_setting', '{
+    "id" : "13",
+    "entity_type" : "node",
+    "bundle" : "apartment",
+    "op" : "update",
+    "rules_config" : "rules_kopiere_kategorie_vom_objekt_falls_leer",
+    "weight" : "2",
+    "args" : null,
+    "false_msg" : null
+  }');
+  $items['14'] = entity_import('entity_rule_setting', '{
+    "id" : "14",
+    "entity_type" : "node",
+    "bundle" : "apartment",
+    "op" : "update",
+    "rules_config" : "rules_kopiere_beschreibung_vom_objekt_falls_leer_update_",
+    "weight" : "3",
+    "args" : null,
+    "false_msg" : null
+  }');
+  $items['17'] = entity_import('entity_rule_setting', '{
+    "id" : "17",
+    "entity_type" : "node",
+    "bundle" : "apartment",
+    "op" : "update",
+    "rules_config" : "rules_kopiere_lage_vom_objekt_falls_leer_update_",
+    "weight" : "4",
+    "args" : null,
+    "false_msg" : null
+  }');
+  $items['18'] = entity_import('entity_rule_setting', '{
+    "id" : "18",
+    "entity_type" : "node",
+    "bundle" : "apartment",
+    "op" : "update",
+    "rules_config" : "rules_kopiere_sonstiges_vom_objekt_falls_leer_update_",
+    "weight" : "5",
+    "args" : null,
+    "false_msg" : null
+  }');
+  return $items;
 }
 
 /**
@@ -103,6 +234,209 @@ function hk_ct_flag_default_flags() {
 function hk_ct_image_default_styles() {
   $styles = array();
 
+  // Exported image style: colorbox_full.
+  $styles['colorbox_full'] = array(
+    'label' => 'colorbox_full',
+    'effects' => array(
+      14 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 1200,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: colorboxbreakpoints_theme_hk_theme_desk_1x.
+  $styles['colorboxbreakpoints_theme_hk_theme_desk_1x'] = array(
+    'label' => 'colorboxbreakpoints_theme_hk_theme_desk_1x',
+    'effects' => array(
+      27 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 900,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: colorboxbreakpoints_theme_hk_theme_mobile_1x.
+  $styles['colorboxbreakpoints_theme_hk_theme_mobile_1x'] = array(
+    'label' => 'colorboxbreakpoints_theme_hk_theme_mobile_1x',
+    'effects' => array(
+      29 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 500,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: colorboxbreakpoints_theme_hk_theme_narrow_1x.
+  $styles['colorboxbreakpoints_theme_hk_theme_narrow_1x'] = array(
+    'label' => 'colorboxbreakpoints_theme_hk_theme_narrow_1x',
+    'effects' => array(
+      28 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 750,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: colorboxbreakpoints_theme_hk_theme_wide_1x.
+  $styles['colorboxbreakpoints_theme_hk_theme_wide_1x'] = array(
+    'label' => 'colorboxbreakpoints_theme_hk_theme_wide_1x',
+    'effects' => array(
+      26 => array(
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => 1200,
+          'height' => '',
+          'upscale' => 0,
+        ),
+        'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: flexfullbreakpoints_theme_hk_theme_desk_1x.
+  $styles['flexfullbreakpoints_theme_hk_theme_desk_1x'] = array(
+    'label' => 'flexfullbreakpoints_theme_hk_theme_desk_1x',
+    'effects' => array(
+      24 => array(
+        'name' => 'smartcrop_scale_and_crop',
+        'data' => array(
+          'width' => 644,
+          'height' => 403,
+          'upscale' => 0,
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
+  // Exported image style: flexfullbreakpoints_theme_hk_theme_mobile_1x.
+  $styles['flexfullbreakpoints_theme_hk_theme_mobile_1x'] = array(
+    'label' => 'flexfullbreakpoints_theme_hk_theme_mobile_1x',
+    'effects' => array(
+      25 => array(
+        'name' => 'smartcrop_scale_and_crop',
+        'data' => array(
+          'width' => 439,
+          'height' => 274,
+          'upscale' => 0,
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
+  // Exported image style: flexfullbreakpoints_theme_hk_theme_narrow_1x.
+  $styles['flexfullbreakpoints_theme_hk_theme_narrow_1x'] = array(
+    'label' => 'flexfullbreakpoints_theme_hk_theme_narrow_1x',
+    'effects' => array(
+      21 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 800,
+          'height' => 500,
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
+  // Exported image style: flexfullbreakpoints_theme_hk_theme_wide_1x.
+  $styles['flexfullbreakpoints_theme_hk_theme_wide_1x'] = array(
+    'label' => 'flexfullbreakpoints_theme_hk_theme_wide_1x',
+    'effects' => array(
+      23 => array(
+        'name' => 'smartcrop_scale_and_crop',
+        'data' => array(
+          'width' => 1016,
+          'height' => 635,
+          'upscale' => 0,
+        ),
+        'weight' => 2,
+      ),
+    ),
+  );
+
+  // Exported image style: flexthumbbreakpoints_theme_hk_theme_desk_1x.
+  $styles['flexthumbbreakpoints_theme_hk_theme_desk_1x'] = array(
+    'label' => 'flexthumbbreakpoints_theme_hk_theme_desk_1x',
+    'effects' => array(
+      16 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 135,
+          'height' => 135,
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
+  // Exported image style: flexthumbbreakpoints_theme_hk_theme_mobile_1x.
+  $styles['flexthumbbreakpoints_theme_hk_theme_mobile_1x'] = array(
+    'label' => 'flexthumbbreakpoints_theme_hk_theme_mobile_1x',
+    'effects' => array(
+      18 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 100,
+          'height' => 100,
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
+  // Exported image style: flexthumbbreakpoints_theme_hk_theme_narrow_1x.
+  $styles['flexthumbbreakpoints_theme_hk_theme_narrow_1x'] = array(
+    'label' => 'flexthumbbreakpoints_theme_hk_theme_narrow_1x',
+    'effects' => array(
+      17 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 115,
+          'height' => 115,
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
+  // Exported image style: flexthumbbreakpoints_theme_hk_theme_wide_1x.
+  $styles['flexthumbbreakpoints_theme_hk_theme_wide_1x'] = array(
+    'label' => 'flexthumbbreakpoints_theme_hk_theme_wide_1x',
+    'effects' => array(
+      15 => array(
+        'name' => 'image_scale_and_crop',
+        'data' => array(
+          'width' => 150,
+          'height' => 150,
+        ),
+        'weight' => 0,
+      ),
+    ),
+  );
+
   // Exported image style: makler_thumbnail.
   $styles['makler_thumbnail'] = array(
     'label' => 'Makler Thumbnail',
@@ -141,6 +475,22 @@ function hk_ct_image_default_styles() {
           'upscale' => 0,
         ),
         'weight' => 2,
+      ),
+    ),
+  );
+
+  // Exported image style: projektbild.
+  $styles['projektbild'] = array(
+    'label' => 'Projektbild',
+    'effects' => array(
+      8 => array(
+        'name' => 'smartcrop_scale_and_crop',
+        'data' => array(
+          'width' => 478,
+          'height' => 299,
+          'upscale' => 0,
+        ),
+        'weight' => 1,
       ),
     ),
   );

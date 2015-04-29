@@ -298,6 +298,26 @@ function hk_ct_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'd6_wohnung_importer-objektfotos-find_replace';
+  $feeds_tamper->importer = 'd6_wohnung_importer';
+  $feeds_tamper->source = 'Objektfotos';
+  $feeds_tamper->plugin_id = 'find_replace';
+  $feeds_tamper->settings = array(
+    'find' => 'jpghttp',
+    'replace' => 'jpg,http',
+    'case_sensitive' => 0,
+    'word_boundaries' => 0,
+    'whole' => 0,
+    'regex' => FALSE,
+    'func' => 'str_ireplace',
+  );
+  $feeds_tamper->weight = 1;
+  $feeds_tamper->description = 'Find replace';
+  $export['d6_wohnung_importer-objektfotos-find_replace'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'd6_wohnung_importer-ort-default_value';
   $feeds_tamper->importer = 'd6_wohnung_importer';
   $feeds_tamper->source = 'Ort';

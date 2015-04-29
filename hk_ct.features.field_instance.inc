@@ -1923,7 +1923,7 @@ function hk_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
@@ -2008,7 +2008,7 @@ function hk_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -2062,7 +2062,7 @@ function hk_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
@@ -2126,7 +2126,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'taxonomy_term_reference_plain',
         'weight' => 36,
       ),
       'map_popup' => array(
@@ -2185,7 +2185,7 @@ function hk_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -2239,7 +2239,7 @@ function hk_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -3177,17 +3177,12 @@ function hk_ct_field_default_field_instances() {
   // Exported field_instance: 'node-objekt-field_objektid_nunumeric'
   $field_instances['node-objekt-field_objektid_nunumeric'] = array(
     'bundle' => 'objekt',
-    'default_value' => array(
-      0 => array(
-        'value' => '',
-        '_error_element' => 'default_value_widget][field_objektid_nunumeric][0][value',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '3 Großbuchstaben plus Hausnummer',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -3241,28 +3236,59 @@ function hk_ct_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_objektid_nunumeric',
-    'label' => 'Objekt ID',
+    'label' => 'Object ID',
     'required' => 1,
     'settings' => array(
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'ds_code' => 'ds_code',
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'php_code' => 'php_code',
+          'plain_text' => 'plain_text',
+          'redhen_activity_message' => 'redhen_activity_message',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'ds_code' => array(
+              'weight' => 12,
+            ),
+            'filtered_html' => array(
+              'weight' => -10,
+            ),
+            'full_html' => array(
+              'weight' => -9,
+            ),
+            'php_code' => array(
+              'weight' => 11,
+            ),
+            'plain_text' => array(
+              'weight' => -8,
+            ),
+            'redhen_activity_message' => array(
+              'weight' => 0,
+            ),
+          ),
+        ),
+      ),
       'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'weight' => 0,
     'widget' => array(
-      'active' => 0,
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'default_value_php' => NULL,
-        'field_inherit' => 0,
-        'field_inherit_nodereference' => '',
-        'field_inherit_source' => 'menu',
-        'rows' => 5,
-        'semantic_cck_widget_settings' => array(
-          'use_widget_settings' => 0,
-        ),
         'size' => 10,
       ),
       'type' => 'text_textfield',
@@ -3283,7 +3309,7 @@ function hk_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -3376,14 +3402,10 @@ function hk_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
-        'module' => 'title',
-        'settings' => array(
-          'title_class' => '',
-          'title_link' => '',
-          'title_style' => '',
-        ),
-        'type' => 'title_linked',
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
         'weight' => 48,
       ),
       'map_popup' => array(
@@ -3472,7 +3494,7 @@ function hk_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
@@ -3658,7 +3680,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
+          'prefix_suffix' => 1,
           'scale' => 2,
           'thousand_separator' => ' ',
         ),
@@ -3718,7 +3740,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
+          'prefix_suffix' => 1,
           'scale' => 0,
           'thousand_separator' => ' ',
         ),
@@ -3778,7 +3800,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
+          'prefix_suffix' => 1,
           'scale' => 0,
           'thousand_separator' => ' ',
         ),
@@ -3838,7 +3860,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
+          'prefix_suffix' => 1,
           'scale' => 0,
           'thousand_separator' => ' ',
         ),
@@ -3898,7 +3920,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
+          'prefix_suffix' => 1,
           'scale' => 0,
           'thousand_separator' => ' ',
         ),
@@ -3954,7 +3976,7 @@ function hk_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'inline',
+        'label' => 'above',
         'module' => 'number',
         'settings' => array(
           'decimal_separator' => '.',
@@ -4594,6 +4616,7 @@ function hk_ct_field_default_field_instances() {
   t('No. of floors');
   t('No. of units');
   t('Object');
+  t('Object ID');
   t('Object images');
   t('Objekt ID');
   t('Occupancy');
