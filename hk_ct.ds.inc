@@ -22,56 +22,6 @@ function hk_ct_ds_field_settings_info() {
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
-        ),
-      ),
-    ),
-    'lage_von_wohnung_oder_objekt' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'show_title' => 0,
-        'title_wrapper' => '',
-        'ctools' => 'a:3:{s:4:"conf";a:0:{}s:4:"type";s:11:"views_panes";s:7:"subtype";s:22:"apartment-panel_pane_3";}',
-        'load_terms' => 0,
-        'ft' => array(),
-      ),
-    ),
-    'objekt_id_vom_objekt' => array(
-      'weight' => '6',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'show_title' => 0,
-        'title_wrapper' => '',
-        'ctools' => 'a:3:{s:4:"conf";a:0:{}s:4:"type";s:11:"views_panes";s:7:"subtype";s:22:"apartment-panel_pane_2";}',
-        'load_terms' => 0,
-        'ft' => array(),
-      ),
-    ),
-    'sonstiges_von_wohnung_oder_objek' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'show_title' => 0,
-        'title_wrapper' => '',
-        'ctools' => 'a:3:{s:4:"conf";a:0:{}s:4:"type";s:11:"views_panes";s:7:"subtype";s:22:"apartment-panel_pane_4";}',
-        'load_terms' => 0,
-        'ft' => array(),
-      ),
-    ),
-    'texte_von_wohnung_oder_objekt' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'show_title' => 0,
-        'title_wrapper' => '',
-        'ctools' => 'a:3:{s:4:"conf";a:0:{}s:4:"type";s:11:"views_panes";s:7:"subtype";s:22:"apartment-panel_pane_1";}',
-        'load_terms' => 0,
         'ft' => array(),
       ),
     ),
@@ -142,31 +92,6 @@ function hk_ct_ds_field_settings_info() {
     'field_apart_living_space' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
-          'lb-col' => TRUE,
-        ),
-      ),
-    ),
-    'field_apart_no' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
-        ),
-      ),
-    ),
-    'field_apart_price' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
-          'lb' => 'Price',
-          'lb-col' => TRUE,
-        ),
-      ),
-    ),
-    'field_apart_rooms' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
           'lb-col' => TRUE,
         ),
       ),
@@ -180,10 +105,18 @@ function hk_ct_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_apart_commission' => array(
+    'field_apart_price' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
+          'lb' => 'Price',
+          'lb-col' => TRUE,
+        ),
+      ),
+    ),
+    'field_apart_rooms' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb-col' => TRUE,
         ),
       ),
     ),
@@ -209,13 +142,6 @@ function hk_ct_ds_field_settings_info() {
           'fi-at' => '',
           'fi-def-at' => FALSE,
           'fi-odd-even' => FALSE,
-        ),
-      ),
-    ),
-    'field_apart_floor_plan' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
         ),
       ),
     ),
@@ -278,102 +204,43 @@ function hk_ct_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'objekt';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'field_bezirk' => array(
+    'thumbslider' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'show_title' => 0,
+        'title_wrapper' => '',
+        'ctools' => 'a:3:{s:4:"conf";a:16:{s:23:"override_pager_settings";i:0;s:9:"use_pager";i:0;s:14:"nodes_per_page";s:1:"0";s:8:"pager_id";s:1:"0";s:6:"offset";s:1:"0";s:9:"more_link";i:0;s:10:"feed_icons";i:0;s:10:"panel_args";i:0;s:12:"link_to_view";i:0;s:4:"args";s:0:"";s:3:"url";s:0:"";s:7:"display";s:7:"block_1";s:7:"context";a:1:{i:0;s:0:"";}s:14:"override_title";i:0;s:19:"override_title_text";s:0:"";s:22:"override_title_heading";s:2:"h2";}s:4:"type";s:5:"views";s:7:"subtype";s:9:"apartment";}',
+        'load_terms' => 0,
+        'ft' => array(),
+      ),
+    ),
+    'field_address' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
           'lb-col' => TRUE,
         ),
       ),
     ),
-    'field_developer' => array(
+    'field_bezirk' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
+          'lb-col' => TRUE,
         ),
       ),
     ),
     'field_heating_type' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
           'lb-col' => TRUE,
-        ),
-      ),
-    ),
-    'field_moving_in_from' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
         ),
       ),
     ),
     'field_no_of_floors' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
           'lb-col' => TRUE,
-        ),
-      ),
-    ),
-    'field_object_images' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-        ),
-      ),
-    ),
-    'field_objektid_nunumeric' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
-          'lb-col' => TRUE,
-        ),
-      ),
-    ),
-    'field_rent_commission' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
-        ),
-      ),
-    ),
-    'field_sale_commission' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
-          'lb-col' => TRUE,
-        ),
-      ),
-    ),
-    'field_status_quo' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
-          'lb-col' => TRUE,
-        ),
-      ),
-    ),
-    'field_year_built' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
-          'lb-col' => TRUE,
-        ),
-      ),
-    ),
-    'field_address' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
-          'lb-col' => TRUE,
-        ),
-      ),
-    ),
-    'field_kategorie' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_minimal',
         ),
       ),
     ),
@@ -384,26 +251,43 @@ function hk_ct_ds_field_settings_info() {
         ),
       ),
     ),
-    'field_wug_total_space' => array(
+    'field_object_images' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
+          'func' => 'theme_ds_field_expert',
+        ),
+      ),
+    ),
+    'field_objekt_wkt' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'objectmap',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+        ),
+      ),
+    ),
+    'field_objektid_nunumeric' => array(
+      'formatter_settings' => array(
+        'ft' => array(
           'lb-col' => TRUE,
         ),
       ),
     ),
-    'field_wug_opt_constrruct' => array(
+    'field_sale_commission' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
           'lb-col' => TRUE,
         ),
       ),
     ),
-    'field_wug_no_of_units' => array(
+    'field_status_quo' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
           'lb-col' => TRUE,
         ),
       ),
@@ -411,7 +295,13 @@ function hk_ct_ds_field_settings_info() {
     'field_wug_act_rent' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
+          'lb-col' => TRUE,
+        ),
+      ),
+    ),
+    'field_wug_no_of_units' => array(
+      'formatter_settings' => array(
+        'ft' => array(
           'lb-col' => TRUE,
         ),
       ),
@@ -419,7 +309,27 @@ function hk_ct_ds_field_settings_info() {
     'field_wug_occupancy' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'func' => 'theme_ds_field_minimal',
+          'lb-col' => TRUE,
+        ),
+      ),
+    ),
+    'field_wug_opt_constrruct' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb-col' => TRUE,
+        ),
+      ),
+    ),
+    'field_wug_total_space' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'lb-col' => TRUE,
+        ),
+      ),
+    ),
+    'field_year_built' => array(
+      'formatter_settings' => array(
+        'ft' => array(
           'lb-col' => TRUE,
         ),
       ),
@@ -446,18 +356,13 @@ function hk_ct_ds_field_settings_info() {
       ),
     ),
     'node_link' => array(
-      'weight' => '10',
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
         'link text' => 'Details',
         'wrapper' => 'div',
         'class' => 'flat',
-        'ft' => array(),
-      ),
-    ),
-    'field_object_images' => array(
-      'formatter_settings' => array(
         'ft' => array(),
       ),
     ),
@@ -607,7 +512,7 @@ function hk_ct_ds_custom_fields_info() {
   $ds_field->ui_limit = 'apartment|*';
   $ds_field->properties = array(
     'code' => array(
-      'value' => '<a href="/node/[node:nid]/exposes?template=colorbox&width=800&height=800" class="colorbox-node expose"><?php print t("Print exposé") ?></a>',
+      'value' => '<a href="/node/[node:nid]/exposes?width=800&height=800" class="colorbox-node expose"><?php print t("Print exposé") ?></a>',
       'format' => 'ds_code',
     ),
     'use_token' => 1,
@@ -646,7 +551,8 @@ function hk_ct_ds_custom_fields_info() {
   $ds_field->entities = array(
     'node' => 'node',
   );
-  $ds_field->ui_limit = 'apartment|*';
+  $ds_field->ui_limit = 'apartment|*
+objekt|*';
   $ds_field->properties = array(
     'default' => array(),
     'settings' => array(
@@ -686,48 +592,42 @@ function hk_ct_ds_layout_settings_info() {
         0 => 'adresse',
       ),
       'left' => array(
-        1 => 'texte_von_wohnung_oder_objekt',
-        2 => 'lage_von_wohnung_oder_objekt',
-        3 => 'sonstiges_von_wohnung_oder_objek',
-        4 => 'field_apart_pictures',
-        5 => 'field_apart_floor_plan',
-        6 => 'group_akkordeon',
-        7 => 'thumbslider',
-        8 => 'group_text',
-        12 => 'group_lage',
-        14 => 'group_sonstiges',
+        1 => 'field_apart_pictures',
+        2 => 'field_apart_floor_plan',
+        3 => 'thumbslider',
+        4 => 'group_text',
+        7 => 'group_lage',
+        8 => 'group_sonstiges',
+        18 => 'field_apart_location',
+        19 => 'field_apart_description',
+        20 => 'field_apart_other',
+        21 => 'group_akkordeon',
       ),
       'right' => array(
-        9 => 'apartmentkarte',
-        10 => 'objekt_id_vom_objekt',
-        11 => 'field_apart_no',
-        13 => 'field_apart_living_space',
-        15 => 'field_apart_rooms',
-        16 => 'field_apart_price',
-        17 => 'field_apart_commission',
-        18 => 'anfrage_button',
-        19 => 'ds_flag_merken',
-        20 => 'expose_drucken',
-        21 => 'apartment_characteristics',
-        22 => 'field_ausstattung',
+        5 => 'apartmentkarte',
+        6 => 'field_apart_no',
+        9 => 'field_apart_living_space',
+        10 => 'field_apart_rooms',
+        11 => 'field_apart_price',
+        12 => 'field_apart_commission',
+        13 => 'anfrage_button',
+        14 => 'ds_flag_merken',
+        15 => 'expose_drucken',
+        16 => 'apartment_characteristics',
+        17 => 'field_ausstattung',
       ),
     ),
     'fields' => array(
       'adresse' => 'header',
-      'texte_von_wohnung_oder_objekt' => 'left',
-      'lage_von_wohnung_oder_objekt' => 'left',
-      'sonstiges_von_wohnung_oder_objek' => 'left',
       'field_apart_pictures' => 'left',
       'field_apart_floor_plan' => 'left',
-      'group_akkordeon' => 'left',
       'thumbslider' => 'left',
       'group_text' => 'left',
       'apartmentkarte' => 'right',
-      'objekt_id_vom_objekt' => 'right',
       'field_apart_no' => 'right',
       'group_lage' => 'left',
-      'field_apart_living_space' => 'right',
       'group_sonstiges' => 'left',
+      'field_apart_living_space' => 'right',
       'field_apart_rooms' => 'right',
       'field_apart_price' => 'right',
       'field_apart_commission' => 'right',
@@ -736,6 +636,10 @@ function hk_ct_ds_layout_settings_info() {
       'expose_drucken' => 'right',
       'apartment_characteristics' => 'right',
       'field_ausstattung' => 'right',
+      'field_apart_location' => 'left',
+      'field_apart_description' => 'left',
+      'field_apart_other' => 'left',
+      'group_akkordeon' => 'left',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -769,30 +673,29 @@ function hk_ct_ds_layout_settings_info() {
         4 => 'field_apart_living_space',
         5 => 'field_apart_rooms',
         6 => 'group_horizontal',
-        7 => 'group_apart_publish',
-        8 => 'field_apart_price',
-        9 => 'group_basic',
-        10 => 'field_kategorie',
+        7 => 'field_apart_price',
+        8 => 'group_basic',
+        9 => 'group_apart_publish',
+        10 => 'path',
         11 => 'group_costs',
-        12 => 'path',
-        13 => 'redirect',
+        12 => 'field_kategorie',
+        13 => 'field_object_ref',
         14 => 'group_returns',
-        15 => 'field_object_ref',
-        16 => 'group_texte',
-        17 => 'group_features',
+        15 => 'group_texte',
+        18 => 'group_features',
         19 => 'group_images',
-        20 => 'group_expose',
-        21 => 'field_apart_description',
-        22 => 'field_apart_location',
-        23 => 'field_apart_other',
-        24 => 'field_apart_hoa_fee',
-        25 => 'field_apart_net_rent',
-        26 => 'field_apart_rate_of_return',
-        27 => 'field_apart_price_parking',
-        28 => 'field_apart_commission',
-        29 => 'field_apart_floor_plan',
-        30 => 'field_apart_pictures',
-        31 => 'field_save_workflow',
+        20 => 'field_save_workflow',
+        21 => 'group_expose',
+        22 => 'field_apart_description',
+        23 => 'field_apart_location',
+        24 => 'field_apart_other',
+        25 => 'field_apart_hoa_fee',
+        26 => 'field_apart_net_rent',
+        27 => 'field_apart_rate_of_return',
+        28 => 'field_apart_price_parking',
+        29 => 'field_apart_commission',
+        30 => 'field_apart_floor_plan',
+        31 => 'field_apart_pictures',
         32 => 'field_apart_type',
         33 => 'field_moving_in_from',
         34 => 'field_apart_floor',
@@ -802,8 +705,8 @@ function hk_ct_ds_layout_settings_info() {
         38 => 'field_apart_expose',
       ),
       'hidden' => array(
-        18 => 'field_objekt_wkt',
-        39 => '_add_existing_field',
+        16 => 'field_objekt_wkt',
+        17 => '_add_existing_field',
       ),
     ),
     'fields' => array(
@@ -814,19 +717,20 @@ function hk_ct_ds_layout_settings_info() {
       'field_apart_living_space' => 'ds_content',
       'field_apart_rooms' => 'ds_content',
       'group_horizontal' => 'ds_content',
-      'group_apart_publish' => 'ds_content',
       'field_apart_price' => 'ds_content',
       'group_basic' => 'ds_content',
-      'field_kategorie' => 'ds_content',
-      'group_costs' => 'ds_content',
+      'group_apart_publish' => 'ds_content',
       'path' => 'ds_content',
-      'redirect' => 'ds_content',
-      'group_returns' => 'ds_content',
+      'group_costs' => 'ds_content',
+      'field_kategorie' => 'ds_content',
       'field_object_ref' => 'ds_content',
+      'group_returns' => 'ds_content',
       'group_texte' => 'ds_content',
-      'group_features' => 'ds_content',
       'field_objekt_wkt' => 'hidden',
+      '_add_existing_field' => 'hidden',
+      'group_features' => 'ds_content',
       'group_images' => 'ds_content',
+      'field_save_workflow' => 'ds_content',
       'group_expose' => 'ds_content',
       'field_apart_description' => 'ds_content',
       'field_apart_location' => 'ds_content',
@@ -838,7 +742,6 @@ function hk_ct_ds_layout_settings_info() {
       'field_apart_commission' => 'ds_content',
       'field_apart_floor_plan' => 'ds_content',
       'field_apart_pictures' => 'ds_content',
-      'field_save_workflow' => 'ds_content',
       'field_apart_type' => 'ds_content',
       'field_moving_in_from' => 'ds_content',
       'field_apart_floor' => 'ds_content',
@@ -846,7 +749,6 @@ function hk_ct_ds_layout_settings_info() {
       'field_apart_bathrooms' => 'ds_content',
       'field_ausstattung' => 'ds_content',
       'field_apart_expose' => 'ds_content',
-      '_add_existing_field' => 'hidden',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -959,37 +861,40 @@ function hk_ct_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'field_object_images',
-        1 => 'group_merkmale',
-        2 => 'group_text',
-        3 => 'field_obj_apartments',
-        4 => 'field_objekt_wkt',
-        5 => 'field_objektid_nunumeric',
-        6 => 'field_address',
-        7 => 'field_bezirk',
-        8 => 'field_kategorie',
-        9 => 'field_developer',
-        10 => 'field_status_quo',
-        11 => 'field_moving_in_from',
-        12 => 'field_no_of_floors',
-        13 => 'field_wug_total_space',
-        14 => 'field_wug_opt_constrruct',
-        15 => 'field_wug_no_of_units',
-        16 => 'field_wug_occupancy',
-        17 => 'field_heating_type',
-        18 => 'field_year_built',
-        19 => 'field_rent_commission',
-        20 => 'field_sale_commission',
-        21 => 'field_wug_act_rent',
-        22 => 'body',
-        23 => 'field_object_location',
-        24 => 'field_object_description',
-        25 => 'field_object_description_invest',
-        26 => 'field_object_desc_commercial',
-        27 => 'field_object_other',
+        1 => 'thumbslider',
+        2 => 'field_object_txt_map_popup',
+        3 => 'group_merkmale',
+        4 => 'group_text',
+        5 => 'field_obj_apartments',
+        6 => 'field_objekt_wkt',
+        7 => 'field_objektid_nunumeric',
+        8 => 'field_address',
+        9 => 'field_bezirk',
+        10 => 'field_kategorie',
+        11 => 'field_developer',
+        12 => 'field_status_quo',
+        13 => 'field_moving_in_from',
+        14 => 'field_no_of_floors',
+        15 => 'field_wug_total_space',
+        16 => 'field_wug_opt_constrruct',
+        17 => 'field_wug_no_of_units',
+        18 => 'field_wug_occupancy',
+        19 => 'field_heating_type',
+        20 => 'field_year_built',
+        21 => 'field_rent_commission',
+        22 => 'field_sale_commission',
+        23 => 'field_wug_act_rent',
+        24 => 'field_object_location',
+        25 => 'field_object_description',
+        26 => 'field_object_description_invest',
+        27 => 'field_object_desc_commercial',
+        28 => 'field_object_other',
       ),
     ),
     'fields' => array(
       'field_object_images' => 'ds_content',
+      'thumbslider' => 'ds_content',
+      'field_object_txt_map_popup' => 'ds_content',
       'group_merkmale' => 'ds_content',
       'group_text' => 'ds_content',
       'field_obj_apartments' => 'ds_content',
@@ -1011,7 +916,6 @@ function hk_ct_ds_layout_settings_info() {
       'field_rent_commission' => 'ds_content',
       'field_sale_commission' => 'ds_content',
       'field_wug_act_rent' => 'ds_content',
-      'body' => 'ds_content',
       'field_object_location' => 'ds_content',
       'field_object_description' => 'ds_content',
       'field_object_description_invest' => 'ds_content',
@@ -1041,81 +945,88 @@ function hk_ct_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'title_field',
-        1 => 'body',
-        2 => 'field_object_description',
+        1 => 'language',
+        2 => 'field_objektid_nunumeric',
         3 => 'field_bezirk',
-        4 => 'field_address',
-        5 => 'field_objektid_nunumeric',
-        6 => 'group_multiapart',
-        7 => 'field_kategorie',
-        8 => 'field_object_multi_apart_types',
-        9 => 'field_object_description_invest',
+        4 => 'field_object_txt_map_popup',
+        5 => 'field_address',
+        6 => 'field_kategorie',
+        7 => 'field_object_description',
+        8 => 'field_objekt_wkt',
+        9 => 'field_object_multi_apart_types',
         10 => 'group_horizontal',
         11 => 'field_ansprechpartner',
-        12 => 'group_ht_basis',
-        13 => 'path',
-        14 => 'field_object_desc_commercial',
-        15 => 'field_object_location',
-        16 => 'group_publish',
-        17 => 'group_ort',
-        18 => 'field_object_other',
+        12 => 'field_object_description_invest',
+        13 => 'field_object_desc_commercial',
+        14 => 'path',
+        15 => 'group_ht_basis',
+        16 => 'group_ort',
+        18 => 'group_publish',
+        19 => 'field_object_location',
         20 => 'group_ht_texte',
         21 => 'group_ht_merkmale',
-        22 => 'field_topobjekt',
+        22 => 'field_object_other',
         23 => 'group_ht_bilder',
+        24 => 'field_topobjekt',
         25 => 'field_object_images',
         26 => 'group_obj_apartments',
         27 => 'group_ansprechpartner',
-        28 => 'field_obj_apartments',
-        29 => 'field_sale_commission',
-        30 => 'field_rent_commission',
-        31 => 'field_status_quo',
-        32 => 'field_heating_type',
-        33 => 'field_year_built',
-        34 => 'field_no_of_floors',
-        35 => 'field_moving_in_from',
-        36 => 'field_developer',
-        37 => 'field_wug_total_space',
-        38 => 'field_wug_opt_constrruct',
-        39 => 'field_wug_no_of_units',
-        40 => 'field_wug_occupancy',
-        41 => 'field_wug_act_rent',
+        28 => 'group_energieausweis',
+        29 => 'field_obj_apartments',
+        30 => 'field_sale_commission',
+        31 => 'field_rent_commission',
+        32 => 'field_status_quo',
+        33 => 'field_heating_type',
+        34 => 'field_year_built',
+        35 => 'field_no_of_floors',
+        36 => 'field_moving_in_from',
+        37 => 'field_developer',
+        38 => 'field_wug_total_space',
+        39 => 'field_wug_opt_constrruct',
+        40 => 'field_wug_no_of_units',
+        41 => 'field_wug_occupancy',
+        42 => 'field_wug_act_rent',
+        43 => 'field_objekt_energieausweistyp',
+        44 => 'field_objekt_energietraeger',
+        45 => 'field_objekt_endenergiebedarf',
+        46 => 'field_objekt_effizienzklasse',
+        47 => 'field_save_workflow',
       ),
       'hidden' => array(
-        19 => 'field_objekt_wkt',
-        24 => 'redirect',
-        42 => '_add_existing_field',
+        17 => 'group_multiapart',
+        48 => '_add_existing_field',
       ),
     ),
     'fields' => array(
       'title_field' => 'ds_content',
-      'body' => 'ds_content',
-      'field_object_description' => 'ds_content',
-      'field_bezirk' => 'ds_content',
-      'field_address' => 'ds_content',
+      'language' => 'ds_content',
       'field_objektid_nunumeric' => 'ds_content',
-      'group_multiapart' => 'ds_content',
+      'field_bezirk' => 'ds_content',
+      'field_object_txt_map_popup' => 'ds_content',
+      'field_address' => 'ds_content',
       'field_kategorie' => 'ds_content',
+      'field_object_description' => 'ds_content',
+      'field_objekt_wkt' => 'ds_content',
       'field_object_multi_apart_types' => 'ds_content',
-      'field_object_description_invest' => 'ds_content',
       'group_horizontal' => 'ds_content',
       'field_ansprechpartner' => 'ds_content',
-      'group_ht_basis' => 'ds_content',
-      'path' => 'ds_content',
+      'field_object_description_invest' => 'ds_content',
       'field_object_desc_commercial' => 'ds_content',
-      'field_object_location' => 'ds_content',
-      'group_publish' => 'ds_content',
+      'path' => 'ds_content',
+      'group_ht_basis' => 'ds_content',
       'group_ort' => 'ds_content',
-      'field_object_other' => 'ds_content',
-      'field_objekt_wkt' => 'hidden',
+      'group_multiapart' => 'hidden',
+      'group_publish' => 'ds_content',
+      'field_object_location' => 'ds_content',
       'group_ht_texte' => 'ds_content',
       'group_ht_merkmale' => 'ds_content',
-      'field_topobjekt' => 'ds_content',
+      'field_object_other' => 'ds_content',
       'group_ht_bilder' => 'ds_content',
-      'redirect' => 'hidden',
+      'field_topobjekt' => 'ds_content',
       'field_object_images' => 'ds_content',
       'group_obj_apartments' => 'ds_content',
       'group_ansprechpartner' => 'ds_content',
+      'group_energieausweis' => 'ds_content',
       'field_obj_apartments' => 'ds_content',
       'field_sale_commission' => 'ds_content',
       'field_rent_commission' => 'ds_content',
@@ -1130,6 +1041,11 @@ function hk_ct_ds_layout_settings_info() {
       'field_wug_no_of_units' => 'ds_content',
       'field_wug_occupancy' => 'ds_content',
       'field_wug_act_rent' => 'ds_content',
+      'field_objekt_energieausweistyp' => 'ds_content',
+      'field_objekt_energietraeger' => 'ds_content',
+      'field_objekt_endenergiebedarf' => 'ds_content',
+      'field_objekt_effizienzklasse' => 'ds_content',
+      'field_save_workflow' => 'ds_content',
       '_add_existing_field' => 'hidden',
     ),
     'classes' => array(),
@@ -1156,13 +1072,15 @@ function hk_ct_ds_layout_settings_info() {
       'ds_content' => array(
         0 => 'field_object_images',
         1 => 'title_field',
-        2 => 'body',
+        2 => 'field_object_txt_map_popup',
+        3 => 'field_obj_apartments',
       ),
     ),
     'fields' => array(
       'field_object_images' => 'ds_content',
       'title_field' => 'ds_content',
-      'body' => 'ds_content',
+      'field_object_txt_map_popup' => 'ds_content',
+      'field_obj_apartments' => 'ds_content',
     ),
     'limit' => array(
       'field_object_images' => '1',
@@ -1189,21 +1107,21 @@ function hk_ct_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'group_project_card',
-        1 => 'title',
-        2 => 'field_object_images',
-        3 => 'group_card_content',
-        4 => 'body',
-        5 => 'node_link',
+        0 => 'field_object_txt_map_popup',
+        1 => 'group_project_card',
+        2 => 'node_link',
+        3 => 'title',
+        4 => 'field_object_images',
+        5 => 'group_card_content',
       ),
     ),
     'fields' => array(
+      'field_object_txt_map_popup' => 'ds_content',
       'group_project_card' => 'ds_content',
+      'node_link' => 'ds_content',
       'title' => 'ds_content',
       'field_object_images' => 'ds_content',
       'group_card_content' => 'ds_content',
-      'body' => 'ds_content',
-      'node_link' => 'ds_content',
     ),
     'limit' => array(
       'field_object_images' => '1',

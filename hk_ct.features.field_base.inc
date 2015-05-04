@@ -566,60 +566,6 @@ function hk_ct_field_default_field_bases() {
     'type_name' => 'residential_commercial_building',
   );
 
-  // Exported field_base: 'field_bild'
-  $field_bases['field_bild'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_bild',
-    'indexes' => array(
-      'fid' => array(
-        0 => 'fid',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'image',
-    'settings' => array(
-      'default_image' => 0,
-      'description_field' => 0,
-      'entity_translation_sync' => array(
-        0 => 'fid',
-      ),
-      'list_default' => 1,
-      'list_field' => 0,
-      'semantic_cck_field_settings' => array(
-        'enabled' => 0,
-        'field_class' => 'right',
-        'field_element' => 'div',
-        'field_prefix' => '',
-        'field_suffix' => '',
-        'first_class' => 'first',
-        'label_class_above' => '',
-        'label_class_inline' => '',
-        'label_element_above' => 'h3',
-        'label_element_inline' => 'span',
-        'label_suffix_above' => '',
-        'label_suffix_inline' => ':',
-        'last_class' => 'last',
-        'last_every_nth' => 0,
-        'multiple_item_class' => '',
-        'multiple_item_element' => 'div',
-        'multiple_item_separator' => '',
-        'multiple_items_class' => '',
-        'multiple_items_element' => 'div',
-        'single_item_class' => '',
-        'single_item_element' => 'div',
-        'striping_classes' => 'odd even',
-        'use_singlevalue_settings' => 0,
-      ),
-      'uri_scheme' => 'public',
-    ),
-    'translatable' => 1,
-    'type' => 'image',
-    'type_name' => 'page',
-  );
-
   // Exported field_base: 'field_developer'
   $field_bases['field_developer'] = array(
     'active' => 1,
@@ -971,6 +917,135 @@ function hk_ct_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'entityreference',
+  );
+
+  // Exported field_base: 'field_object_txt_map_popup'
+  $field_bases['field_object_txt_map_popup'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_object_txt_map_popup',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_objekt_effizienzklasse'
+  $field_bases['field_objekt_effizienzklasse'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_objekt_effizienzklasse',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'A+' => 'A+',
+        'A' => 'A',
+        'B' => 'B',
+        'C' => 'C',
+        'D' => 'D',
+        'E' => 'E',
+        'F' => 'F',
+        'G' => 'G',
+        'H' => 'H',
+      ),
+      'allowed_values_function' => '',
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_objekt_endenergiebedarf'
+  $field_bases['field_objekt_endenergiebedarf'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_objekt_endenergiebedarf',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'number',
+    'settings' => array(
+      'decimal_separator' => ',',
+      'entity_translation_sync' => FALSE,
+      'precision' => 10,
+      'scale' => 1,
+    ),
+    'translatable' => 0,
+    'type' => 'number_decimal',
+  );
+
+  // Exported field_base: 'field_objekt_energieausweistyp'
+  $field_bases['field_objekt_energieausweistyp'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_objekt_energieausweistyp',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Bedarfsausweis' => 'Bedarfsausweis',
+        'Verbrauchsausweis' => 'Verbrauchsausweis',
+      ),
+      'allowed_values_function' => '',
+      'allowed_values_no_localization' => 0,
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_objekt_energietraeger'
+  $field_bases['field_objekt_energietraeger'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_objekt_energietraeger',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Gas' => 'Gas',
+        'Öl' => 'Öl',
+        'Holz' => 'Holz',
+      ),
+      'allowed_values_function' => '',
+      'allowed_values_no_localization' => 0,
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
   );
 
   // Exported field_base: 'field_objekt_wkt'

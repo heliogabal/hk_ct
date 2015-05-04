@@ -125,6 +125,56 @@ function hk_ct_default_entity_rule_setting() {
     "args" : null,
     "false_msg" : null
   }');
+  $items['19'] = entity_import('entity_rule_setting', '{
+    "id" : "19",
+    "entity_type" : "node",
+    "bundle" : "apartment",
+    "op" : "update",
+    "rules_config" : "rules_kopiere_beschreibung_vom_objekt_falls_leer_update_",
+    "weight" : "-7",
+    "args" : null,
+    "false_msg" : null
+  }');
+  $items['20'] = entity_import('entity_rule_setting', '{
+    "id" : "20",
+    "entity_type" : "node",
+    "bundle" : "apartment",
+    "op" : "update",
+    "rules_config" : "rules_kopiere_kategorie_vom_objekt_falls_leer",
+    "weight" : "-8",
+    "args" : null,
+    "false_msg" : null
+  }');
+  $items['21'] = entity_import('entity_rule_setting', '{
+    "id" : "21",
+    "entity_type" : "node",
+    "bundle" : "apartment",
+    "op" : "update",
+    "rules_config" : "rules_kopiere_lage_vom_objekt_falls_leer_update_",
+    "weight" : "-6",
+    "args" : null,
+    "false_msg" : null
+  }');
+  $items['22'] = entity_import('entity_rule_setting', '{
+    "id" : "22",
+    "entity_type" : "node",
+    "bundle" : "apartment",
+    "op" : "update",
+    "rules_config" : "rules_kopiere_sonstiges_vom_objekt_falls_leer_update_",
+    "weight" : "-5",
+    "args" : null,
+    "false_msg" : null
+  }');
+  $items['23'] = entity_import('entity_rule_setting', '{
+    "id" : "23",
+    "entity_type" : "node",
+    "bundle" : "apartment",
+    "op" : "create",
+    "rules_config" : "rules_kopiere_standort_vom_objekt_create",
+    "weight" : "5",
+    "args" : null,
+    "false_msg" : null
+  }');
   return $items;
 }
 

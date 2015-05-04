@@ -14,7 +14,6 @@ function hk_ct_user_default_permissions() {
   $permissions['create apartment content'] = array(
     'name' => 'create apartment content',
     'roles' => array(
-      'Editor' => 'Editor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -24,7 +23,6 @@ function hk_ct_user_default_permissions() {
   $permissions['create objekt content'] = array(
     'name' => 'create objekt content',
     'roles' => array(
-      'Editor' => 'Editor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -52,7 +50,6 @@ function hk_ct_user_default_permissions() {
   $permissions['edit any apartment content'] = array(
     'name' => 'edit any apartment content',
     'roles' => array(
-      'Editor' => 'Editor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -62,7 +59,6 @@ function hk_ct_user_default_permissions() {
   $permissions['edit any objekt content'] = array(
     'name' => 'edit any objekt content',
     'roles' => array(
-      'Editor' => 'Editor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',
@@ -72,7 +68,6 @@ function hk_ct_user_default_permissions() {
   $permissions['edit any page content'] = array(
     'name' => 'edit any page content',
     'roles' => array(
-      'Editor' => 'Editor',
       'administrator' => 'administrator',
     ),
     'module' => 'node',

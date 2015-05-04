@@ -448,7 +448,7 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Lage */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_lage']['id'] = 'field_lage';
   $handler->display->display_options['fields']['field_lage']['table'] = 'field_data_field_lage';
   $handler->display->display_options['fields']['field_lage']['field'] = 'field_lage';

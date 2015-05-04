@@ -21,7 +21,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = 'group_text';
   $field_group->data = array(
     'label' => 'Akkordeon',
-    'weight' => '2',
+    'weight' => '30',
     'children' => array(
       0 => 'group_lage',
       1 => 'group_sonstiges',
@@ -110,10 +110,10 @@ function hk_ct_field_group_info() {
       1 => 'field_apart_no',
       2 => 'field_apart_price',
       3 => 'field_apart_rooms',
-      4 => 'field_object_ref',
-      5 => 'title_field',
-      6 => 'field_kategorie',
-      7 => 'field_objektid_nunumeric',
+      4 => 'field_kategorie',
+      5 => 'field_object_ref',
+      6 => 'field_objektid_nunumeric',
+      7 => 'title_field',
       8 => 'language',
     ),
     'format_type' => 'htab',
@@ -142,7 +142,7 @@ function hk_ct_field_group_info() {
     'label' => 'card-content',
     'weight' => '4',
     'children' => array(
-      0 => 'body',
+      0 => 'field_object_txt_map_popup',
       1 => 'node_link',
     ),
     'format_type' => 'div',
@@ -214,9 +214,9 @@ function hk_ct_field_group_info() {
     'label' => 'Costs',
     'weight' => '2',
     'children' => array(
-      0 => 'field_apart_hoa_fee',
-      1 => 'field_apart_price_parking',
-      2 => 'field_apart_commission',
+      0 => 'field_apart_commission',
+      1 => 'field_apart_hoa_fee',
+      2 => 'field_apart_price_parking',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -234,6 +234,37 @@ function hk_ct_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_energieausweis|node|objekt|form';
+  $field_group->group_name = 'group_energieausweis';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'objekt';
+  $field_group->mode = 'form';
+  $field_group->parent_name = 'group_horizontal';
+  $field_group->data = array(
+    'label' => 'Energieausweis',
+    'weight' => '8',
+    'children' => array(
+      0 => 'field_objekt_energieausweistyp',
+      1 => 'field_objekt_energietraeger',
+      2 => 'field_objekt_endenergiebedarf',
+      3 => 'field_objekt_effizienzklasse',
+    ),
+    'format_type' => 'htab',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-energieausweis field-group-htab',
+        'required_fields' => 1,
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_energieausweis|node|objekt|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_expose|node|apartment|form';
   $field_group->group_name = 'group_expose';
   $field_group->entity_type = 'node';
@@ -242,7 +273,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = 'group_horizontal';
   $field_group->data = array(
     'label' => 'Exposé',
-    'weight' => '7',
+    'weight' => '8',
     'children' => array(
       0 => 'field_apart_expose',
     ),
@@ -275,9 +306,9 @@ function hk_ct_field_group_info() {
       0 => 'field_apart_bathrooms',
       1 => 'field_apart_floor',
       2 => 'field_apart_sleeping_rooms',
-      3 => 'field_moving_in_from',
+      3 => 'field_apart_type',
       4 => 'field_ausstattung',
-      5 => 'field_apart_type',
+      5 => 'field_moving_in_from',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -307,11 +338,11 @@ function hk_ct_field_group_info() {
     'children' => array(
       0 => 'group_basic',
       1 => 'group_costs',
-      2 => 'group_features',
-      3 => 'group_images',
-      4 => 'group_returns',
-      5 => 'group_texte',
-      6 => 'group_expose',
+      2 => 'group_expose',
+      3 => 'group_features',
+      4 => 'group_images',
+      5 => 'group_returns',
+      6 => 'group_texte',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -343,6 +374,7 @@ function hk_ct_field_group_info() {
       4 => 'group_ht_texte',
       5 => 'group_obj_apartments',
       6 => 'group_ort',
+      7 => 'group_energieausweis',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -367,9 +399,10 @@ function hk_ct_field_group_info() {
     'label' => 'Basisdaten',
     'weight' => '1',
     'children' => array(
-      0 => 'field_objektid_nunumeric',
-      1 => 'title_field',
-      2 => 'field_kategorie',
+      0 => 'field_kategorie',
+      1 => 'field_objektid_nunumeric',
+      2 => 'title_field',
+      3 => 'language',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -433,12 +466,12 @@ function hk_ct_field_group_info() {
       4 => 'field_rent_commission',
       5 => 'field_sale_commission',
       6 => 'field_status_quo',
-      7 => 'field_year_built',
-      8 => 'field_wug_total_space',
-      9 => 'field_wug_opt_constrruct',
-      10 => 'field_wug_no_of_units',
-      11 => 'field_wug_act_rent',
-      12 => 'field_wug_occupancy',
+      7 => 'field_wug_act_rent',
+      8 => 'field_wug_no_of_units',
+      9 => 'field_wug_occupancy',
+      10 => 'field_wug_opt_constrruct',
+      11 => 'field_wug_total_space',
+      12 => 'field_year_built',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -466,12 +499,14 @@ function hk_ct_field_group_info() {
     'label' => 'Texte',
     'weight' => '3',
     'children' => array(
-      0 => 'body',
+      0 => 'field_object_desc_commercial',
       1 => 'field_object_description',
-      2 => 'field_object_location',
-      3 => 'field_object_other',
-      4 => 'field_topobjekt',
-      5 => 'group_multiapart',
+      2 => 'field_object_description_invest',
+      3 => 'field_object_location',
+      4 => 'field_object_multi_apart_types',
+      5 => 'field_object_other',
+      6 => 'field_topobjekt',
+      7 => 'field_object_txt_map_popup',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -499,8 +534,8 @@ function hk_ct_field_group_info() {
     'label' => 'Images',
     'weight' => '6',
     'children' => array(
-      0 => 'field_apart_pictures',
-      1 => 'field_apart_floor_plan',
+      0 => 'field_apart_floor_plan',
+      1 => 'field_apart_pictures',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -528,7 +563,7 @@ function hk_ct_field_group_info() {
     'label' => 'Lage',
     'weight' => '7',
     'children' => array(
-      0 => 'lage_von_wohnung_oder_objekt',
+      0 => 'field_apart_location',
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(
@@ -585,25 +620,25 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Merkmale',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
-      0 => 'field_bezirk',
-      1 => 'field_developer',
-      2 => 'field_heating_type',
-      3 => 'field_moving_in_from',
-      4 => 'field_no_of_floors',
-      5 => 'field_objektid_nunumeric',
-      6 => 'field_rent_commission',
-      7 => 'field_sale_commission',
-      8 => 'field_status_quo',
-      9 => 'field_year_built',
-      10 => 'field_address',
-      11 => 'field_kategorie',
-      12 => 'field_wug_total_space',
-      13 => 'field_wug_opt_constrruct',
-      14 => 'field_wug_no_of_units',
-      15 => 'field_wug_act_rent',
-      16 => 'field_wug_occupancy',
+      0 => 'field_address',
+      1 => 'field_bezirk',
+      2 => 'field_developer',
+      3 => 'field_heating_type',
+      4 => 'field_kategorie',
+      5 => 'field_moving_in_from',
+      6 => 'field_no_of_floors',
+      7 => 'field_objektid_nunumeric',
+      8 => 'field_rent_commission',
+      9 => 'field_sale_commission',
+      10 => 'field_status_quo',
+      11 => 'field_wug_act_rent',
+      12 => 'field_wug_no_of_units',
+      13 => 'field_wug_occupancy',
+      14 => 'field_wug_opt_constrruct',
+      15 => 'field_wug_total_space',
+      16 => 'field_year_built',
     ),
     'format_type' => 'html5',
     'format_settings' => array(
@@ -625,15 +660,11 @@ function hk_ct_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'objekt';
   $field_group->mode = 'form';
-  $field_group->parent_name = 'group_ht_texte';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Mehrere Apartmenttypen im Objekt',
-    'weight' => '-2',
-    'children' => array(
-      0 => 'field_object_desc_commercial',
-      1 => 'field_object_description_invest',
-      2 => 'field_object_multi_apart_types',
-    ),
+    'weight' => '2',
+    'children' => array(),
     'format_type' => 'fieldset',
     'format_settings' => array(
       'formatter' => 'collapsible',
@@ -687,8 +718,9 @@ function hk_ct_field_group_info() {
     'label' => 'Ort',
     'weight' => '2',
     'children' => array(
-      0 => 'field_bezirk',
-      1 => 'field_address',
+      0 => 'field_address',
+      1 => 'field_bezirk',
+      2 => 'field_objekt_wkt',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -746,7 +778,9 @@ function hk_ct_field_group_info() {
   $field_group->data = array(
     'label' => 'Veröffentlichen',
     'weight' => '2',
-    'children' => array(),
+    'children' => array(
+      0 => 'field_save_workflow',
+    ),
     'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',
@@ -801,7 +835,7 @@ function hk_ct_field_group_info() {
     'label' => 'Sonstiges',
     'weight' => '8',
     'children' => array(
-      0 => 'sonstiges_von_wohnung_oder_objek',
+      0 => 'field_apart_other',
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(
@@ -857,7 +891,7 @@ function hk_ct_field_group_info() {
     'label' => 'Text',
     'weight' => '4',
     'children' => array(
-      0 => 'texte_von_wohnung_oder_objekt',
+      0 => 'field_apart_description',
       1 => 'group_akkordeon',
     ),
     'format_type' => 'html5',
@@ -883,14 +917,13 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Text',
-    'weight' => '2',
+    'weight' => '3',
     'children' => array(
-      0 => 'body',
+      0 => 'field_object_desc_commercial',
       1 => 'field_object_description',
-      2 => 'field_object_location',
-      3 => 'field_object_other',
-      4 => 'field_object_desc_commercial',
-      5 => 'field_object_description_invest',
+      2 => 'field_object_description_invest',
+      3 => 'field_object_location',
+      4 => 'field_object_other',
     ),
     'format_type' => 'html5',
     'format_settings' => array(

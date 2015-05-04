@@ -149,7 +149,7 @@ function hk_ct_strongarm() {
           'weight' => '5',
         ),
         'language' => array(
-          'weight' => '17',
+          'weight' => '-4',
         ),
       ),
       'display' => array(),
