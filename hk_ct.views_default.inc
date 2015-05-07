@@ -13,7 +13,7 @@ function hk_ct_views_default_views() {
   $view = new view();
   $view->name = 'apartment';
   $view->description = '';
-  $view->tag = 'default';
+  $view->tag = 'hk';
   $view->base_table = 'node';
   $view->human_name = 'Apartment';
   $view->core = 7;
@@ -65,7 +65,7 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_address_thoroughfare']['label'] = '';
   $handler->display->display_options['fields']['field_address_thoroughfare']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_address_thoroughfare']['element_label_colon'] = FALSE;
-  /* Field: Content: Address - Postal code */
+  /* Field: Content: Address - PLZ */
   $handler->display->display_options['fields']['field_address_postal_code']['id'] = 'field_address_postal_code';
   $handler->display->display_options['fields']['field_address_postal_code']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address_postal_code']['field'] = 'field_address_postal_code';
@@ -74,7 +74,7 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_address_postal_code']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_address_postal_code']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_address_postal_code']['element_default_classes'] = FALSE;
-  /* Field: Content: Address - Locality (i.e. City) */
+  /* Field: Content: Address - Ort (z.B. Stadt) */
   $handler->display->display_options['fields']['field_address_locality']['id'] = 'field_address_locality';
   $handler->display->display_options['fields']['field_address_locality']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address_locality']['field'] = 'field_address_locality';
@@ -264,20 +264,18 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_apart_living_space']['id'] = 'field_apart_living_space';
   $handler->display->display_options['fields']['field_apart_living_space']['table'] = 'field_data_field_apart_living_space';
   $handler->display->display_options['fields']['field_apart_living_space']['field'] = 'field_apart_living_space';
-  $handler->display->display_options['fields']['field_apart_living_space']['label'] = 'Wohnfläche';
   $handler->display->display_options['fields']['field_apart_living_space']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_apart_living_space']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_apart_living_space']['settings'] = array(
     'thousand_separator' => ' ',
-    'decimal_separator' => '.',
-    'scale' => '2',
+    'decimal_separator' => ',',
+    'scale' => '0',
     'prefix_suffix' => 1,
   );
   /* Field: Content: Rooms */
   $handler->display->display_options['fields']['field_apart_rooms']['id'] = 'field_apart_rooms';
   $handler->display->display_options['fields']['field_apart_rooms']['table'] = 'field_data_field_apart_rooms';
   $handler->display->display_options['fields']['field_apart_rooms']['field'] = 'field_apart_rooms';
-  $handler->display->display_options['fields']['field_apart_rooms']['label'] = 'Zimmer';
   $handler->display->display_options['fields']['field_apart_rooms']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_apart_rooms']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_apart_rooms']['settings'] = array(
@@ -288,7 +286,6 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_apart_bathrooms']['id'] = 'field_apart_bathrooms';
   $handler->display->display_options['fields']['field_apart_bathrooms']['table'] = 'field_data_field_apart_bathrooms';
   $handler->display->display_options['fields']['field_apart_bathrooms']['field'] = 'field_apart_bathrooms';
-  $handler->display->display_options['fields']['field_apart_bathrooms']['label'] = 'Badezimmer';
   $handler->display->display_options['fields']['field_apart_bathrooms']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_apart_bathrooms']['settings'] = array(
     'thousand_separator' => ' ',
@@ -298,7 +295,6 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_apart_sleeping_rooms']['id'] = 'field_apart_sleeping_rooms';
   $handler->display->display_options['fields']['field_apart_sleeping_rooms']['table'] = 'field_data_field_apart_sleeping_rooms';
   $handler->display->display_options['fields']['field_apart_sleeping_rooms']['field'] = 'field_apart_sleeping_rooms';
-  $handler->display->display_options['fields']['field_apart_sleeping_rooms']['label'] = 'Schlafzimmer';
   $handler->display->display_options['fields']['field_apart_sleeping_rooms']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_apart_sleeping_rooms']['settings'] = array(
     'thousand_separator' => ' ',
@@ -308,43 +304,37 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_heating_type']['id'] = 'field_heating_type';
   $handler->display->display_options['fields']['field_heating_type']['table'] = 'field_data_field_heating_type';
   $handler->display->display_options['fields']['field_heating_type']['field'] = 'field_heating_type';
-  $handler->display->display_options['fields']['field_heating_type']['label'] = 'Heizung';
   $handler->display->display_options['fields']['field_heating_type']['element_label_colon'] = FALSE;
   /* Field: Content: HOA fee */
   $handler->display->display_options['fields']['field_apart_hoa_fee']['id'] = 'field_apart_hoa_fee';
   $handler->display->display_options['fields']['field_apart_hoa_fee']['table'] = 'field_data_field_apart_hoa_fee';
   $handler->display->display_options['fields']['field_apart_hoa_fee']['field'] = 'field_apart_hoa_fee';
-  $handler->display->display_options['fields']['field_apart_hoa_fee']['label'] = 'Hausgeld';
   $handler->display->display_options['fields']['field_apart_hoa_fee']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_apart_hoa_fee']['hide_empty'] = TRUE;
   $handler->display->display_options['fields']['field_apart_hoa_fee']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['field_apart_hoa_fee']['settings'] = array(
     'thousand_separator' => ' ',
-    'decimal_separator' => '.',
+    'decimal_separator' => ',',
     'scale' => '0',
     'prefix_suffix' => 1,
   );
   /* Field: Content: Moving in from */
-  $handler->display->display_options['fields']['field_moving_in_from']['id'] = 'field_moving_in_from';
-  $handler->display->display_options['fields']['field_moving_in_from']['table'] = 'field_data_field_moving_in_from';
-  $handler->display->display_options['fields']['field_moving_in_from']['field'] = 'field_moving_in_from';
-  $handler->display->display_options['fields']['field_moving_in_from']['relationship'] = 'field_object_ref_target_id';
-  $handler->display->display_options['fields']['field_moving_in_from']['label'] = 'Bezugsfrei ab';
-  $handler->display->display_options['fields']['field_moving_in_from']['element_label_colon'] = FALSE;
-  /* Field: Content: Year built */
-  $handler->display->display_options['fields']['field_year_built']['id'] = 'field_year_built';
-  $handler->display->display_options['fields']['field_year_built']['table'] = 'field_data_field_year_built';
-  $handler->display->display_options['fields']['field_year_built']['field'] = 'field_year_built';
-  $handler->display->display_options['fields']['field_year_built']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_year_built']['settings'] = array(
-    'thousand_separator' => '',
-    'prefix_suffix' => 1,
-  );
+  $handler->display->display_options['fields']['field_moving_in_from_1']['id'] = 'field_moving_in_from_1';
+  $handler->display->display_options['fields']['field_moving_in_from_1']['table'] = 'field_data_field_moving_in_from';
+  $handler->display->display_options['fields']['field_moving_in_from_1']['field'] = 'field_moving_in_from';
+  $handler->display->display_options['fields']['field_moving_in_from_1']['element_label_colon'] = FALSE;
+  /* Field: Content: Type */
+  $handler->display->display_options['fields']['field_apart_type']['id'] = 'field_apart_type';
+  $handler->display->display_options['fields']['field_apart_type']['table'] = 'field_data_field_apart_type';
+  $handler->display->display_options['fields']['field_apart_type']['field'] = 'field_apart_type';
+  $handler->display->display_options['fields']['field_apart_type']['label'] = 'Apartment type';
+  $handler->display->display_options['fields']['field_apart_type']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['field_apart_type']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['field_apart_type']['type'] = 'taxonomy_term_reference_plain';
   /* Field: Content: Purchasing price parking lot */
   $handler->display->display_options['fields']['field_apart_price_parking']['id'] = 'field_apart_price_parking';
   $handler->display->display_options['fields']['field_apart_price_parking']['table'] = 'field_data_field_apart_price_parking';
   $handler->display->display_options['fields']['field_apart_price_parking']['field'] = 'field_apart_price_parking';
-  $handler->display->display_options['fields']['field_apart_price_parking']['label'] = 'Kaufpreis Garage/Stellplatz';
   $handler->display->display_options['fields']['field_apart_price_parking']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_apart_price_parking']['settings'] = array(
     'thousand_separator' => ' ',
@@ -357,21 +347,54 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_status_quo']['table'] = 'field_data_field_status_quo';
   $handler->display->display_options['fields']['field_status_quo']['field'] = 'field_status_quo';
   $handler->display->display_options['fields']['field_status_quo']['relationship'] = 'field_object_ref_target_id';
-  $handler->display->display_options['fields']['field_status_quo']['label'] = 'Zustand';
   $handler->display->display_options['fields']['field_status_quo']['element_label_colon'] = FALSE;
   /* Field: Content: Floor */
   $handler->display->display_options['fields']['field_apart_floor']['id'] = 'field_apart_floor';
   $handler->display->display_options['fields']['field_apart_floor']['table'] = 'field_data_field_apart_floor';
   $handler->display->display_options['fields']['field_apart_floor']['field'] = 'field_apart_floor';
-  $handler->display->display_options['fields']['field_apart_floor']['label'] = 'Etage';
   $handler->display->display_options['fields']['field_apart_floor']['element_label_colon'] = FALSE;
   /* Field: Content: No. of floors */
   $handler->display->display_options['fields']['field_no_of_floors']['id'] = 'field_no_of_floors';
   $handler->display->display_options['fields']['field_no_of_floors']['table'] = 'field_data_field_no_of_floors';
   $handler->display->display_options['fields']['field_no_of_floors']['field'] = 'field_no_of_floors';
   $handler->display->display_options['fields']['field_no_of_floors']['relationship'] = 'field_object_ref_target_id';
-  $handler->display->display_options['fields']['field_no_of_floors']['label'] = 'Etagenzahl';
   $handler->display->display_options['fields']['field_no_of_floors']['element_label_colon'] = FALSE;
+  /* Field: Content: Year built */
+  $handler->display->display_options['fields']['field_year_built']['id'] = 'field_year_built';
+  $handler->display->display_options['fields']['field_year_built']['table'] = 'field_data_field_year_built';
+  $handler->display->display_options['fields']['field_year_built']['field'] = 'field_year_built';
+  $handler->display->display_options['fields']['field_year_built']['relationship'] = 'field_object_ref_target_id';
+  $handler->display->display_options['fields']['field_year_built']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_year_built']['settings'] = array(
+    'thousand_separator' => '',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Content: Endenergiebedarf */
+  $handler->display->display_options['fields']['field_objekt_endenergiebedarf']['id'] = 'field_objekt_endenergiebedarf';
+  $handler->display->display_options['fields']['field_objekt_endenergiebedarf']['table'] = 'field_data_field_objekt_endenergiebedarf';
+  $handler->display->display_options['fields']['field_objekt_endenergiebedarf']['field'] = 'field_objekt_endenergiebedarf';
+  $handler->display->display_options['fields']['field_objekt_endenergiebedarf']['relationship'] = 'field_object_ref_target_id';
+  $handler->display->display_options['fields']['field_objekt_endenergiebedarf']['settings'] = array(
+    'thousand_separator' => ' ',
+    'decimal_separator' => ',',
+    'scale' => '2',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Content: Energieausweistyp */
+  $handler->display->display_options['fields']['field_objekt_energieausweistyp']['id'] = 'field_objekt_energieausweistyp';
+  $handler->display->display_options['fields']['field_objekt_energieausweistyp']['table'] = 'field_data_field_objekt_energieausweistyp';
+  $handler->display->display_options['fields']['field_objekt_energieausweistyp']['field'] = 'field_objekt_energieausweistyp';
+  $handler->display->display_options['fields']['field_objekt_energieausweistyp']['relationship'] = 'field_object_ref_target_id';
+  /* Field: Content: Energieeffizienzklasse */
+  $handler->display->display_options['fields']['field_objekt_effizienzklasse']['id'] = 'field_objekt_effizienzklasse';
+  $handler->display->display_options['fields']['field_objekt_effizienzklasse']['table'] = 'field_data_field_objekt_effizienzklasse';
+  $handler->display->display_options['fields']['field_objekt_effizienzklasse']['field'] = 'field_objekt_effizienzklasse';
+  $handler->display->display_options['fields']['field_objekt_effizienzklasse']['relationship'] = 'field_object_ref_target_id';
+  /* Field: Content: Energieträger */
+  $handler->display->display_options['fields']['field_objekt_energietraeger']['id'] = 'field_objekt_energietraeger';
+  $handler->display->display_options['fields']['field_objekt_energietraeger']['table'] = 'field_data_field_objekt_energietraeger';
+  $handler->display->display_options['fields']['field_objekt_energietraeger']['field'] = 'field_objekt_energietraeger';
+  $handler->display->display_options['fields']['field_objekt_energietraeger']['relationship'] = 'field_object_ref_target_id';
   $handler->display->display_options['pane_category']['name'] = 'Panel-Ansichten';
 
   /* Display: Objekt ID */
@@ -500,6 +523,35 @@ function hk_ct_views_default_views() {
 
   /* Display: Objektadresse */
   $handler = $view->new_display('panel_pane', 'Objektadresse', 'objektadresse');
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Address - Thoroughfare (i.e. Street address) */
+  $handler->display->display_options['fields']['field_address_thoroughfare']['id'] = 'field_address_thoroughfare';
+  $handler->display->display_options['fields']['field_address_thoroughfare']['table'] = 'field_data_field_address';
+  $handler->display->display_options['fields']['field_address_thoroughfare']['field'] = 'field_address_thoroughfare';
+  $handler->display->display_options['fields']['field_address_thoroughfare']['relationship'] = 'field_object_ref_target_id';
+  $handler->display->display_options['fields']['field_address_thoroughfare']['label'] = '';
+  $handler->display->display_options['fields']['field_address_thoroughfare']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_address_thoroughfare']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_address_thoroughfare']['alter']['text'] = '<i class="icon-hk-icon-location"></i>[field_address_thoroughfare]';
+  $handler->display->display_options['fields']['field_address_thoroughfare']['element_label_colon'] = FALSE;
+  /* Field: Content: Address - PLZ */
+  $handler->display->display_options['fields']['field_address_postal_code']['id'] = 'field_address_postal_code';
+  $handler->display->display_options['fields']['field_address_postal_code']['table'] = 'field_data_field_address';
+  $handler->display->display_options['fields']['field_address_postal_code']['field'] = 'field_address_postal_code';
+  $handler->display->display_options['fields']['field_address_postal_code']['relationship'] = 'field_object_ref_target_id';
+  $handler->display->display_options['fields']['field_address_postal_code']['label'] = '';
+  $handler->display->display_options['fields']['field_address_postal_code']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_address_postal_code']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_address_postal_code']['element_default_classes'] = FALSE;
+  /* Field: Content: Address - Ort (z.B. Stadt) */
+  $handler->display->display_options['fields']['field_address_locality']['id'] = 'field_address_locality';
+  $handler->display->display_options['fields']['field_address_locality']['table'] = 'field_data_field_address';
+  $handler->display->display_options['fields']['field_address_locality']['field'] = 'field_address_locality';
+  $handler->display->display_options['fields']['field_address_locality']['relationship'] = 'field_object_ref_target_id';
+  $handler->display->display_options['fields']['field_address_locality']['label'] = '';
+  $handler->display->display_options['fields']['field_address_locality']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_address_locality']['alter']['text'] = '[field_address_thoroughfare], [field_address_postal_code] [field_address_locality] ';
+  $handler->display->display_options['fields']['field_address_locality']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Content: Nid */
   $handler->display->display_options['arguments']['nid']['id'] = 'nid';
@@ -586,7 +638,7 @@ function hk_ct_views_default_views() {
   $view = new view();
   $view->name = 'merkliste';
   $view->description = 'Merkliste von mit Flags erzeugten Favoriten';
-  $view->tag = 'default';
+  $view->tag = 'hk';
   $view->base_table = 'node';
   $view->human_name = 'Favoriten';
   $view->core = 7;

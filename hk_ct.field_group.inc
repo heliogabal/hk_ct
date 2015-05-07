@@ -114,7 +114,8 @@ function hk_ct_field_group_info() {
       5 => 'field_object_ref',
       6 => 'field_objektid_nunumeric',
       7 => 'title_field',
-      8 => 'language',
+      8 => 'field_bezirk',
+      9 => 'language',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -586,7 +587,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Merkmale',
-    'weight' => '32',
+    'weight' => '28',
     'children' => array(
       0 => 'field_apart_bathrooms',
       1 => 'field_apart_floor',

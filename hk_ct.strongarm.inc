@@ -74,7 +74,7 @@ function hk_ct_strongarm() {
       'display' => array(
         'flag_merken' => array(
           'default' => array(
-            'weight' => '34',
+            'weight' => '31',
             'visible' => FALSE,
           ),
           'teaser' => array(

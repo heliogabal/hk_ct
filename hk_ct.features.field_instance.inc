@@ -213,7 +213,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 41,
+        'weight' => 36,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -650,7 +650,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 38,
+        'weight' => 33,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1099,7 +1099,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 40,
+        'weight' => 35,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1255,7 +1255,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 39,
+        'weight' => 34,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1358,6 +1358,58 @@ function hk_ct_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-apartment-field_bezirk'
+  $field_instances['node-apartment-field_bezirk'] = array(
+    'bundle' => 'apartment',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 38,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'tile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_bezirk',
+    'label' => 'Borough',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'autocomplete_deluxe',
+      'settings' => array(
+        'autocomplete_deluxe_path' => 'autocomplete_deluxe/taxonomy',
+        'delimiter' => '',
+        'limit' => 10,
+        'min_length' => 0,
+        'not_found_message' => 'The term \'@term\' will be added.',
+        'size' => 60,
+      ),
+      'type' => 'autocomplete_deluxe_taxonomy',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-apartment-field_kategorie'
   $field_instances['node-apartment-field_kategorie'] = array(
     'bundle' => 'apartment',
@@ -1369,7 +1421,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 34,
+        'weight' => 30,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -1477,7 +1529,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 27,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1521,7 +1573,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -1536,7 +1588,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 36,
+        'weight' => 32,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1577,10 +1629,15 @@ function hk_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 35,
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '_none',
+        ),
+        'type' => 'title_linked',
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1665,7 +1722,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 33,
+        'weight' => 29,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -3043,7 +3100,9 @@ function hk_ct_field_default_field_instances() {
     ),
     'widget' => array(
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'use_select2' => FALSE,
+      ),
       'type' => 'options_select',
       'weight' => 46,
     ),
@@ -3147,7 +3206,9 @@ function hk_ct_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'use_select2' => FALSE,
+      ),
       'type' => 'options_select',
       'weight' => 43,
     ),
@@ -3197,7 +3258,9 @@ function hk_ct_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'use_select2' => FALSE,
+      ),
       'type' => 'options_select',
       'weight' => 44,
     ),
@@ -4543,7 +4606,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 3,
       ),
     ),
     'entity_type' => 'taxonomy_term',
@@ -4579,9 +4642,14 @@ function hk_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
+        'label' => 'hidden',
+        'module' => 'title',
+        'settings' => array(
+          'title_class' => '',
+          'title_link' => '',
+          'title_style' => '',
+        ),
+        'type' => 'title_linked',
         'weight' => 0,
       ),
     ),
