@@ -305,6 +305,7 @@ function hk_ct_field_default_field_instances() {
         'weight' => 15,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_apart_floor',
     'label' => 'Floor',
@@ -498,10 +499,10 @@ function hk_ct_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'number',
         'settings' => array(
-          'decimal_separator' => '.',
+          'decimal_separator' => ',',
           'prefix_suffix' => 1,
           'scale' => 0,
-          'thousand_separator' => ' ',
+          'thousand_separator' => '.',
         ),
         'type' => 'number_decimal',
         'weight' => 8,
@@ -540,8 +541,8 @@ function hk_ct_field_default_field_instances() {
       'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
-      'prefix' => 'ca. ',
-      'suffix' => ' sqm',
+      'prefix' => '',
+      'suffix' => ' m²',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -985,7 +986,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'number',
         'settings' => array(
-          'decimal_separator' => '.',
+          'decimal_separator' => ',',
           'prefix_suffix' => 1,
           'scale' => 0,
           'thousand_separator' => ' ',
@@ -1367,9 +1368,8 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'hidden',
         'weight' => 38,
       ),
       'teaser' => array(

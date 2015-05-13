@@ -65,7 +65,7 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_address_thoroughfare']['label'] = '';
   $handler->display->display_options['fields']['field_address_thoroughfare']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_address_thoroughfare']['element_label_colon'] = FALSE;
-  /* Field: Content: Address - PLZ */
+  /* Field: Content: Address - Postal code */
   $handler->display->display_options['fields']['field_address_postal_code']['id'] = 'field_address_postal_code';
   $handler->display->display_options['fields']['field_address_postal_code']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address_postal_code']['field'] = 'field_address_postal_code';
@@ -74,7 +74,7 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_address_postal_code']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_address_postal_code']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_address_postal_code']['element_default_classes'] = FALSE;
-  /* Field: Content: Address - Ort (z.B. Stadt) */
+  /* Field: Content: Address - Locality (i.e. City) */
   $handler->display->display_options['fields']['field_address_locality']['id'] = 'field_address_locality';
   $handler->display->display_options['fields']['field_address_locality']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address_locality']['field'] = 'field_address_locality';
@@ -276,18 +276,8 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_apart_rooms']['id'] = 'field_apart_rooms';
   $handler->display->display_options['fields']['field_apart_rooms']['table'] = 'field_data_field_apart_rooms';
   $handler->display->display_options['fields']['field_apart_rooms']['field'] = 'field_apart_rooms';
-  $handler->display->display_options['fields']['field_apart_rooms']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_apart_rooms']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_apart_rooms']['settings'] = array(
-    'thousand_separator' => ' ',
-    'prefix_suffix' => 1,
-  );
-  /* Field: Content: Bathrooms */
-  $handler->display->display_options['fields']['field_apart_bathrooms']['id'] = 'field_apart_bathrooms';
-  $handler->display->display_options['fields']['field_apart_bathrooms']['table'] = 'field_data_field_apart_bathrooms';
-  $handler->display->display_options['fields']['field_apart_bathrooms']['field'] = 'field_apart_bathrooms';
-  $handler->display->display_options['fields']['field_apart_bathrooms']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_apart_bathrooms']['settings'] = array(
     'thousand_separator' => ' ',
     'prefix_suffix' => 1,
   );
@@ -297,6 +287,15 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_apart_sleeping_rooms']['field'] = 'field_apart_sleeping_rooms';
   $handler->display->display_options['fields']['field_apart_sleeping_rooms']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_apart_sleeping_rooms']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Content: Bathrooms */
+  $handler->display->display_options['fields']['field_apart_bathrooms']['id'] = 'field_apart_bathrooms';
+  $handler->display->display_options['fields']['field_apart_bathrooms']['table'] = 'field_data_field_apart_bathrooms';
+  $handler->display->display_options['fields']['field_apart_bathrooms']['field'] = 'field_apart_bathrooms';
+  $handler->display->display_options['fields']['field_apart_bathrooms']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_apart_bathrooms']['settings'] = array(
     'thousand_separator' => ' ',
     'prefix_suffix' => 1,
   );
@@ -534,7 +533,7 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_address_thoroughfare']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['field_address_thoroughfare']['alter']['text'] = '<i class="icon-hk-icon-location"></i>[field_address_thoroughfare]';
   $handler->display->display_options['fields']['field_address_thoroughfare']['element_label_colon'] = FALSE;
-  /* Field: Content: Address - PLZ */
+  /* Field: Content: Address - Postal code */
   $handler->display->display_options['fields']['field_address_postal_code']['id'] = 'field_address_postal_code';
   $handler->display->display_options['fields']['field_address_postal_code']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address_postal_code']['field'] = 'field_address_postal_code';
@@ -543,7 +542,7 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_address_postal_code']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_address_postal_code']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_address_postal_code']['element_default_classes'] = FALSE;
-  /* Field: Content: Address - Ort (z.B. Stadt) */
+  /* Field: Content: Address - Locality (i.e. City) */
   $handler->display->display_options['fields']['field_address_locality']['id'] = 'field_address_locality';
   $handler->display->display_options['fields']['field_address_locality']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address_locality']['field'] = 'field_address_locality';

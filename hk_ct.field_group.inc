@@ -561,17 +561,18 @@ function hk_ct_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_akkordeon';
   $field_group->data = array(
-    'label' => 'Lage',
+    'label' => 'Location',
     'weight' => '7',
     'children' => array(
       0 => 'field_apart_location',
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Location',
       'instance_settings' => array(
         'classes' => 'group-lage field-group-accordion-item',
       ),
+      'formatter' => 'closed',
     ),
   );
   $export['group_lage|node|apartment|default'] = $field_group;
@@ -833,14 +834,14 @@ function hk_ct_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_akkordeon';
   $field_group->data = array(
-    'label' => 'Sonstiges',
+    'label' => 'Other',
     'weight' => '8',
     'children' => array(
       0 => 'field_apart_other',
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(
-      'label' => 'Sonstiges',
+      'label' => 'Other',
       'instance_settings' => array(
         'classes' => 'group-sonstiges field-group-accordion-item',
       ),
