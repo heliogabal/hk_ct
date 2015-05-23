@@ -9,6 +9,68 @@
  */
 function hk_ct_default_rules_configuration() {
   $items = array();
+  $items['hk_ct_kopiere_bezirk_vom_objekt_create'] = entity_import('rules_config', '{ "hk_ct_kopiere_bezirk_vom_objekt_create" : {
+      "LABEL" : "Kopiere Bezirk vom Objekt, falls leer",
+      "PLUGIN" : "rule",
+      "OWNER" : "rules",
+      "TAGS" : [ "entity_rules_create" ],
+      "REQUIRES" : [ "rules" ],
+      "USES VARIABLES" : {
+        "entity" : { "label" : "Entity", "type" : "node" },
+        "continue" : { "label" : "Continue Rules", "type" : "boolean" }
+      },
+      "IF" : [
+        { "node_is_of_type" : {
+            "node" : [ "entity" ],
+            "type" : { "value" : { "apartment" : "apartment" } }
+          }
+        },
+        { "data_is_empty" : { "data" : [ "entity:field-bezirk" ] } },
+        { "entity_has_field" : { "entity" : [ "entity" ], "field" : "field_object_ref" } },
+        { "entity_has_field" : { "entity" : [ "entity:field-object-ref" ], "field" : "field_bezirk" } }
+      ],
+      "DO" : [
+        { "data_set" : {
+            "data" : [ "entity:field-kategorie" ],
+            "value" : [ "entity:field-object-ref:field-bezirk" ]
+          }
+        },
+        { "entity_save" : { "data" : [ "entity" ] } }
+      ],
+      "PROVIDES VARIABLES" : [ "continue" ]
+    }
+  }');
+  $items['hk_ct_kopiere_bezirk_vom_objekt_falls_leer'] = entity_import('rules_config', '{ "hk_ct_kopiere_bezirk_vom_objekt_falls_leer" : {
+      "LABEL" : "Kopiere Bezirk vom Objekt, falls leer (update)",
+      "PLUGIN" : "rule",
+      "OWNER" : "rules",
+      "TAGS" : [ "entity_rules_update" ],
+      "REQUIRES" : [ "rules" ],
+      "USES VARIABLES" : {
+        "entity" : { "label" : "Entity", "type" : "node" },
+        "continue" : { "label" : "Continue Rules", "type" : "boolean" }
+      },
+      "IF" : [
+        { "node_is_of_type" : {
+            "node" : [ "entity" ],
+            "type" : { "value" : { "apartment" : "apartment" } }
+          }
+        },
+        { "data_is_empty" : { "data" : [ "entity:field-bezirk" ] } },
+        { "entity_has_field" : { "entity" : [ "entity" ], "field" : "field_object_ref" } },
+        { "entity_has_field" : { "entity" : [ "entity:field-object-ref" ], "field" : "field_bezirk" } }
+      ],
+      "DO" : [
+        { "data_set" : {
+            "data" : [ "entity:field-kategorie" ],
+            "value" : [ "entity:field-object-ref:field-bezirk" ]
+          }
+        },
+        { "entity_save" : { "data" : [ "entity" ], "immediate" : "1" } }
+      ],
+      "PROVIDES VARIABLES" : [ "continue" ]
+    }
+  }');
   $items['rules_kopiere_beschreibung_vom_objekt_falls_leer'] = entity_import('rules_config', '{ "rules_kopiere_beschreibung_vom_objekt_falls_leer" : {
       "LABEL" : "Kopiere Beschreibung vom Objekt, falls leer",
       "PLUGIN" : "rule",

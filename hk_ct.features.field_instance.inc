@@ -502,10 +502,10 @@ function hk_ct_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'number',
         'settings' => array(
-          'decimal_separator' => ',',
+          'decimal_separator' => '.',
           'prefix_suffix' => 1,
           'scale' => 0,
-          'thousand_separator' => '.',
+          'thousand_separator' => ' ',
         ),
         'type' => 'number_decimal',
         'weight' => 8,
@@ -989,7 +989,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'inline',
         'module' => 'number',
         'settings' => array(
-          'decimal_separator' => ',',
+          'decimal_separator' => '.',
           'prefix_suffix' => 1,
           'scale' => 0,
           'thousand_separator' => ' ',

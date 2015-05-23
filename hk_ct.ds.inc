@@ -33,11 +33,6 @@ function hk_ct_ds_field_settings_info() {
         'ft' => array(),
       ),
     ),
-    'expose_drucken' => array(
-      'weight' => '14',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
     'thumbslider' => array(
       'weight' => '3',
       'label' => 'hidden',
@@ -105,7 +100,6 @@ function hk_ct_ds_field_settings_info() {
     'field_apart_living_space' => array(
       'formatter_settings' => array(
         'ft' => array(
-          'lb' => 'Space (ca.)',
           'lb-col' => TRUE,
         ),
       ),
@@ -623,8 +617,8 @@ function hk_ct_ds_layout_settings_info() {
         2 => 'field_apart_floor_plan',
         3 => 'thumbslider',
         4 => 'group_text',
-        8 => 'group_lage',
-        10 => 'group_sonstiges',
+        7 => 'group_lage',
+        9 => 'group_sonstiges',
         19 => 'field_apart_location',
         20 => 'field_apart_description',
         21 => 'group_akkordeon',
@@ -633,8 +627,8 @@ function hk_ct_ds_layout_settings_info() {
       'right' => array(
         5 => 'apartmentkarte',
         6 => 'field_objektid_nunumeric',
-        7 => 'field_apart_no',
-        9 => 'field_apart_living_space',
+        8 => 'field_apart_no',
+        10 => 'field_apart_living_space',
         11 => 'field_apart_rooms',
         12 => 'field_apart_price',
         13 => 'field_apart_commission',
@@ -653,10 +647,10 @@ function hk_ct_ds_layout_settings_info() {
       'group_text' => 'left',
       'apartmentkarte' => 'right',
       'field_objektid_nunumeric' => 'right',
-      'field_apart_no' => 'right',
       'group_lage' => 'left',
-      'field_apart_living_space' => 'right',
+      'field_apart_no' => 'right',
       'group_sonstiges' => 'left',
+      'field_apart_living_space' => 'right',
       'field_apart_rooms' => 'right',
       'field_apart_price' => 'right',
       'field_apart_commission' => 'right',
