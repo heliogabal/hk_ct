@@ -55,6 +55,9 @@ function hk_ct_strongarm() {
       'workflow_tab' => array(
         'custom_settings' => FALSE,
       ),
+      'print' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -74,7 +77,7 @@ function hk_ct_strongarm() {
       'display' => array(
         'flag_merken' => array(
           'default' => array(
-            'weight' => '31',
+            'weight' => '32',
             'visible' => FALSE,
           ),
           'teaser' => array(
@@ -134,6 +137,9 @@ function hk_ct_strongarm() {
         'custom_settings' => FALSE,
       ),
       'workflow_tab' => array(
+        'custom_settings' => FALSE,
+      ),
+      'print' => array(
         'custom_settings' => FALSE,
       ),
     ),

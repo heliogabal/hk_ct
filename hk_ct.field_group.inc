@@ -561,17 +561,18 @@ function hk_ct_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_akkordeon';
   $field_group->data = array(
-    'label' => 'Lage',
+    'label' => 'Location',
     'weight' => '7',
     'children' => array(
       0 => 'field_apart_location',
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Location',
       'instance_settings' => array(
         'classes' => 'group-lage field-group-accordion-item',
       ),
+      'formatter' => 'closed',
     ),
   );
   $export['group_lage|node|apartment|default'] = $field_group;
@@ -587,7 +588,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Merkmale',
-    'weight' => '28',
+    'weight' => '29',
     'children' => array(
       0 => 'field_apart_bathrooms',
       1 => 'field_apart_floor',
@@ -833,14 +834,14 @@ function hk_ct_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_akkordeon';
   $field_group->data = array(
-    'label' => 'Sonstiges',
+    'label' => 'Other',
     'weight' => '8',
     'children' => array(
       0 => 'field_apart_other',
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(
-      'label' => 'Sonstiges',
+      'label' => 'Other',
       'instance_settings' => array(
         'classes' => 'group-sonstiges field-group-accordion-item',
       ),
@@ -918,13 +919,14 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Text',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(
       0 => 'field_object_desc_commercial',
       1 => 'field_object_description',
       2 => 'field_object_description_invest',
       3 => 'field_object_location',
       4 => 'field_object_other',
+      5 => 'field_object_txt_map_popup',
     ),
     'format_type' => 'html5',
     'format_settings' => array(
