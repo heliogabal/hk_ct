@@ -276,18 +276,8 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_apart_rooms']['id'] = 'field_apart_rooms';
   $handler->display->display_options['fields']['field_apart_rooms']['table'] = 'field_data_field_apart_rooms';
   $handler->display->display_options['fields']['field_apart_rooms']['field'] = 'field_apart_rooms';
-  $handler->display->display_options['fields']['field_apart_rooms']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_apart_rooms']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_apart_rooms']['settings'] = array(
-    'thousand_separator' => ' ',
-    'prefix_suffix' => 1,
-  );
-  /* Field: Content: Bathrooms */
-  $handler->display->display_options['fields']['field_apart_bathrooms']['id'] = 'field_apart_bathrooms';
-  $handler->display->display_options['fields']['field_apart_bathrooms']['table'] = 'field_data_field_apart_bathrooms';
-  $handler->display->display_options['fields']['field_apart_bathrooms']['field'] = 'field_apart_bathrooms';
-  $handler->display->display_options['fields']['field_apart_bathrooms']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_apart_bathrooms']['settings'] = array(
     'thousand_separator' => ' ',
     'prefix_suffix' => 1,
   );
@@ -297,6 +287,15 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_apart_sleeping_rooms']['field'] = 'field_apart_sleeping_rooms';
   $handler->display->display_options['fields']['field_apart_sleeping_rooms']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_apart_sleeping_rooms']['settings'] = array(
+    'thousand_separator' => ' ',
+    'prefix_suffix' => 1,
+  );
+  /* Field: Content: Bathrooms */
+  $handler->display->display_options['fields']['field_apart_bathrooms']['id'] = 'field_apart_bathrooms';
+  $handler->display->display_options['fields']['field_apart_bathrooms']['table'] = 'field_data_field_apart_bathrooms';
+  $handler->display->display_options['fields']['field_apart_bathrooms']['field'] = 'field_apart_bathrooms';
+  $handler->display->display_options['fields']['field_apart_bathrooms']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_apart_bathrooms']['settings'] = array(
     'thousand_separator' => ' ',
     'prefix_suffix' => 1,
   );

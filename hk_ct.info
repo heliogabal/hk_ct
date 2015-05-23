@@ -354,17 +354,21 @@ features_exclude[Workflow][draft_ready_published_archived] = draft_ready_publish
 features_exclude[dependencies][workflow] = workflow
 features_exclude[dependencies][viewfield] = viewfield
 features_exclude[dependencies][workflowfield] = workflowfield
-features_exclude[field_base][field_save_workflow] = field_save_workflow
-features_exclude[field_base][field_view] = field_view
-features_exclude[field_instance][node-apartment-field_save_workflow] = node-apartment-field_save_workflow
-features_exclude[field_instance][node-objekt-field_save_workflow] = node-objekt-field_save_workflow
 features_exclude[entity_rule_setting][] = 12
 features_exclude[entity_rule_setting][] = 13
 features_exclude[entity_rule_setting][] = 14
 features_exclude[entity_rule_setting][] = 21
 features_exclude[entity_rule_setting][] = 22
+<<<<<<< HEAD
 features_exclude[entity_rule_setting][] = 7
 features_exclude[entity_rule_setting][] = 8
 features_exclude[entity_rule_setting][] = 9
 features_exclude[entity_rule_setting][] = 10
 features_exclude[entity_rule_setting][] = 11
+=======
+features_exclude[entity_rule_setting][] = 23
+features_exclude[field_base][field_save_workflow] = field_save_workflow
+features_exclude[field_base][field_view] = field_view
+features_exclude[field_instance][node-apartment-field_save_workflow] = node-apartment-field_save_workflow
+features_exclude[field_instance][node-objekt-field_save_workflow] = node-objekt-field_save_workflow
+>>>>>>> 3cc7583bd9902a2d231a7a3638e6c17f140c33e6
