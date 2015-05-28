@@ -10,7 +10,7 @@
 function hk_ct_taxonomy_default_vocabularies() {
   return array(
     'category' => array(
-      'name' => 'Category',
+      'name' => 'Kategorie',
       'machine_name' => 'category',
       'description' => '',
       'hierarchy' => 0,
@@ -18,7 +18,7 @@ function hk_ct_taxonomy_default_vocabularies() {
       'weight' => -10,
     ),
     'vocabulary_3' => array(
-      'name' => 'Boroughs',
+      'name' => 'Bezirke',
       'machine_name' => 'vocabulary_3',
       'description' => '',
       'hierarchy' => 0,
@@ -26,7 +26,7 @@ function hk_ct_taxonomy_default_vocabularies() {
       'weight' => -5,
     ),
     'vocabulary_5' => array(
-      'name' => 'Fittings',
+      'name' => 'Ausstattung',
       'machine_name' => 'vocabulary_5',
       'description' => '',
       'hierarchy' => 0,
@@ -34,7 +34,7 @@ function hk_ct_taxonomy_default_vocabularies() {
       'weight' => -7,
     ),
     'vocabulary_6' => array(
-      'name' => 'Apartment type',
+      'name' => 'Wohnungstyp',
       'machine_name' => 'vocabulary_6',
       'description' => '',
       'hierarchy' => 0,

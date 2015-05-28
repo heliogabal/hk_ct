@@ -98,7 +98,7 @@ function hk_ct_field_default_field_bases() {
           'type' => 'none',
         ),
         'target_bundles' => array(
-          'individual' => 'individual',
+          'mitarbeiter' => 'mitarbeiter',
         ),
       ),
       'target_type' => 'crm_core_contact',
@@ -1223,6 +1223,33 @@ function hk_ct_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'text',
+  );
+
+  // Exported field_base: 'field_schattenobjekt'
+  $field_bases['field_schattenobjekt'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_schattenobjekt',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => '',
+        1 => '',
+      ),
+      'allowed_values_function' => '',
+      'allowed_values_no_localization' => 0,
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
   );
 
   // Exported field_base: 'field_status_quo'

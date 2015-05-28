@@ -487,7 +487,18 @@ function hk_ct_image_default_styles() {
   $styles['map-popup'] = array(
     'label' => 'map-popup',
     'effects' => array(
-      10 => array(
+      4 => array(
+        'name' => 'manualcrop_crop',
+        'data' => array(
+          'width' => 255,
+          'height' => 188,
+          'keepproportions' => 1,
+          'reuse_crop_style' => '',
+          'style_name' => 'map-popup',
+        ),
+        'weight' => 1,
+      ),
+      3 => array(
         'name' => 'smartcrop_scale_and_crop',
         'data' => array(
           'width' => 255,

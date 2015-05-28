@@ -142,6 +142,9 @@ function hk_ct_strongarm() {
       'print' => array(
         'custom_settings' => FALSE,
       ),
+      'mlt_image' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

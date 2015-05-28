@@ -36,6 +36,7 @@ function hk_ct_field_default_field_instances() {
         'weight' => 12,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_apart_bathrooms',
     'label' => 'Bathrooms',
@@ -346,7 +347,7 @@ function hk_ct_field_default_field_instances() {
           'colorbox_settings' => array(
             'colorbox_caption' => 'auto',
             'colorbox_caption_custom' => '',
-            'colorbox_gallery' => 'field_post',
+            'colorbox_gallery' => 'field_page',
             'colorbox_gallery_custom' => '',
             'colorbox_group' => 'colorbox_mapping',
           ),
@@ -1524,7 +1525,7 @@ function hk_ct_field_default_field_instances() {
   $field_instances['node-apartment-field_object_ref'] = array(
     'bundle' => 'apartment',
     'default_value' => NULL,
-    'default_value_function' => '',
+    'default_value_function' => 'entityreference_prepopulate_field_default_value',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -1557,7 +1558,15 @@ function hk_ct_field_default_field_instances() {
     'settings' => array(
       'behaviors' => array(
         'prepopulate' => array(
-          'status' => 0,
+          'action' => 'disable',
+          'action_on_edit' => 0,
+          'fallback' => 'hide',
+          'providers' => array(
+            'og_context' => FALSE,
+            'url' => 1,
+          ),
+          'skip_perm' => 0,
+          'status' => 1,
         ),
       ),
       'entity_translation_sync' => FALSE,
@@ -1766,9 +1775,7 @@ function hk_ct_field_default_field_instances() {
   // Exported field_instance: 'node-objekt-field_address'
   $field_instances['node-objekt-field_address'] = array(
     'bundle' => 'objekt',
-    'default_value' => array(
-      0 => array(),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -1789,6 +1796,18 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 22,
+      ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'addressfield',
+        'settings' => array(
+          'format_handlers' => array(
+            'address' => 'address',
+          ),
+          'use_widget_handlers' => 1,
+        ),
+        'type' => 'addressfield_default',
+        'weight' => 34,
       ),
       'search_result' => array(
         'label' => 'above',
@@ -1826,40 +1845,37 @@ function hk_ct_field_default_field_instances() {
           'DE' => 'DE',
         ),
         'default_country' => 'DE',
-        'draggable' => TRUE,
+        'draggable' => 1,
         'format_handlers' => array(
           'address' => 'address',
           'address-hide-country' => 'address-hide-country',
+          'address-optional' => 'address-optional',
           'address-hide-postal-code' => 0,
           'address-hide-street' => 0,
           'organisation' => 0,
           'name-full' => 0,
           'name-oneline' => 0,
-          'address-optional' => 0,
         ),
         'geolocation' => TRUE,
-        'html5_geocode' => TRUE,
-        'manual_text' => 'Enter one manually',
-        'map' => TRUE,
+        'html5_geocode' => 1,
+        'manual_text' => 'Adresse direkt eingeben',
+        'map' => 1,
         'restrict_country' => array(),
-        'reveal' => TRUE,
-        'reverse_geocode' => FALSE,
+        'reveal' => 1,
+        'reverse_geocode' => 0,
         'types' => 'geocode',
-        'visible_markers' => TRUE,
+        'visible_markers' => 1,
       ),
       'type' => 'addressfield_autocomplete',
-      'weight' => -2,
+      'weight' => 50,
     ),
   );
 
   // Exported field_instance: 'node-objekt-field_ansprechpartner'
   $field_instances['node-objekt-field_ansprechpartner'] = array(
     'bundle' => 'objekt',
-    'default_value' => array(
-      0 => array(
-        'target_id' => 1,
-      ),
-    ),
+    'default_value' => NULL,
+    'default_value_function' => '',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -1874,6 +1890,12 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 25,
+      ),
+      'mlt_image' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 16,
       ),
       'search_result' => array(
         'label' => 'hidden',
@@ -1898,7 +1920,19 @@ function hk_ct_field_default_field_instances() {
     'label' => 'Ansprechpartner',
     'required' => 0,
     'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
       'entity_translation_sync' => FALSE,
+      'select2_integration' => array(
+        'styling' => array(
+          'dropdownAutoWidth' => 0,
+          'placeholder' => '',
+        ),
+        'use_select2' => 0,
+      ),
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1937,6 +1971,13 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 23,
+      ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 35,
       ),
       'rss' => array(
         'label' => 'hidden',
@@ -1994,7 +2035,7 @@ function hk_ct_field_default_field_instances() {
         'use_select2' => FALSE,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => -3,
+      'weight' => 49,
     ),
     'widget_type' => 'options_select',
   );
@@ -2019,6 +2060,13 @@ function hk_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 30,
       ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 37,
+      ),
       'search_result' => array(
         'label' => 'inline',
         'module' => 'text',
@@ -2033,12 +2081,17 @@ function hk_ct_field_default_field_instances() {
         'weight' => 15,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_developer',
     'label' => 'Developer',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2072,6 +2125,13 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 34,
+      ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 45,
       ),
       'search_result' => array(
         'label' => 'inline',
@@ -2110,7 +2170,7 @@ function hk_ct_field_default_field_instances() {
         'use_select2' => FALSE,
       ),
       'type' => 'options_select',
-      'weight' => 33,
+      'weight' => 45,
     ),
   );
 
@@ -2133,6 +2193,13 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 18,
+      ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_plain',
+        'weight' => 36,
       ),
       'search_result' => array(
         'label' => 'above',
@@ -2196,6 +2263,13 @@ function hk_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 32,
       ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 39,
+      ),
       'search_result' => array(
         'label' => 'inline',
         'module' => 'text',
@@ -2250,6 +2324,13 @@ function hk_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 33,
       ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 40,
+      ),
       'search_result' => array(
         'label' => 'inline',
         'module' => 'text',
@@ -2264,12 +2345,17 @@ function hk_ct_field_default_field_instances() {
         'weight' => 26,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_no_of_floors',
     'label' => 'No. of floors',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2287,7 +2373,7 @@ function hk_ct_field_default_field_instances() {
   // Exported field_instance: 'node-objekt-field_obj_apartments'
   $field_instances['node-objekt-field_obj_apartments'] = array(
     'bundle' => 'objekt',
-    'default_value' => NULL,
+    'default_value' => array(),
     'default_value_function' => '',
     'deleted' => 0,
     'description' => '',
@@ -2311,6 +2397,16 @@ function hk_ct_field_default_field_instances() {
         ),
         'type' => 'entityreference_entity_view',
         'weight' => 21,
+      ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 1,
+          'view_mode' => 'teaser',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 5,
       ),
       'search_result' => array(
         'label' => 'above',
@@ -2377,6 +2473,13 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 17,
+      ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 7,
       ),
       'search_result' => array(
         'label' => 'above',
@@ -2470,6 +2573,13 @@ function hk_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 27,
       ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
       'search_result' => array(
         'label' => 'above',
         'module' => 'text',
@@ -2562,6 +2672,13 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 7,
+      ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
       ),
       'search_result' => array(
         'label' => 'above',
@@ -2663,6 +2780,16 @@ function hk_ct_field_default_field_instances() {
         'type' => 'image',
         'weight' => 0,
       ),
+      'mlt_image' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'map-popup',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
       'search_result' => array(
         'label' => 'hidden',
         'module' => 'flexslider_picture',
@@ -2742,14 +2869,16 @@ function hk_ct_field_default_field_instances() {
         ),
         'manualcrop_crop_info' => 1,
         'manualcrop_default_crop_area' => 1,
-        'manualcrop_enable' => 0,
+        'manualcrop_enable' => 1,
         'manualcrop_inline_crop' => 0,
         'manualcrop_instant_crop' => FALSE,
         'manualcrop_instant_preview' => 1,
         'manualcrop_keyboard' => 1,
         'manualcrop_maximize_default_crop_area' => 0,
         'manualcrop_require_cropping' => array(),
-        'manualcrop_styles_list' => array(),
+        'manualcrop_styles_list' => array(
+          'makler_thumbnail' => 'makler_thumbnail',
+        ),
         'manualcrop_styles_mode' => 'exclude',
         'manualcrop_thumblist' => 0,
       ),
@@ -2777,6 +2906,13 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 26,
+      ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
       ),
       'search_result' => array(
         'label' => 'above',
@@ -2870,6 +3006,12 @@ function hk_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 5,
       ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
       'search_result' => array(
         'label' => 'above',
         'settings' => array(),
@@ -2909,7 +3051,7 @@ function hk_ct_field_default_field_instances() {
     'default_value' => array(
       0 => array(
         'value' => '<p>Dieses Angebot ist provisionspflichtig. Bei Zustandekommen eines Kaufvertrages berechnet die Herbert &amp; Kohlmeyer Immobilien GmbH dem Erwerber eine Provision in Höhe von <strong>7,14 %</strong> des beurkundeten Kaufpreises inkl. der gesetzlichen MwSt., sofern nicht anders vereinbart. Über die steuerlichen Aspekte informiert Sie Ihr Steuerberater. Auf Wunsch sind wir Ihnen auch gerne bei Ihrer Finanzierung behilflich. Besichtigungen sind kurzfristig möglich. Alle Angaben beruhen auf den uns vom Eigentümer zur Verfügung gestellten Informationen. Eine Haftung für die Richtigkeit bzw. Vollständigkeit können wir nicht übernehmen. Irrtum und Zwischenverkauf vorbehalten. Es gelten unsere AGB. Bitte informieren Sie sich über deren Inhalt auf unserer Homepage unter <a href="http://www.herbert-kohlmeyer.de/agb" title="www.herbert-kohlmeyer.de">www.herbert-kohlmeyer.de/agb</a>.</p>',
-        'format' => 'filtered_html',
+        'format' => 'full_html',
       ),
     ),
     'deleted' => 0,
@@ -2927,6 +3069,13 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 29,
+      ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 8,
       ),
       'search_result' => array(
         'label' => 'above',
@@ -2948,40 +3097,6 @@ function hk_ct_field_default_field_instances() {
     'label' => 'Other',
     'required' => 0,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'ds_code' => 'ds_code',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 'php_code',
-          'plain_text' => 'plain_text',
-          'redhen_activity_message' => 'redhen_activity_message',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'ds_code' => array(
-              'weight' => 12,
-            ),
-            'filtered_html' => array(
-              'weight' => -10,
-            ),
-            'full_html' => array(
-              'weight' => -9,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-            'redhen_activity_message' => array(
-              'weight' => 0,
-            ),
-          ),
-        ),
-      ),
       'entity_translation_sync' => FALSE,
       'linkit' => array(
         'enable' => 0,
@@ -3016,6 +3131,13 @@ function hk_ct_field_default_field_instances() {
         'weight' => 3,
       ),
       'map_popup' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'mlt_image' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
@@ -3080,6 +3202,12 @@ function hk_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 22,
+      ),
       'search_result' => array(
         'label' => 'above',
         'settings' => array(),
@@ -3107,7 +3235,7 @@ function hk_ct_field_default_field_instances() {
         'use_select2' => FALSE,
       ),
       'type' => 'options_select',
-      'weight' => 46,
+      'weight' => 47,
     ),
   );
 
@@ -3129,6 +3257,12 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 21,
       ),
       'search_result' => array(
         'label' => 'above',
@@ -3161,7 +3295,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 45,
+      'weight' => 46,
     ),
   );
 
@@ -3183,6 +3317,12 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 19,
       ),
       'search_result' => array(
         'label' => 'above',
@@ -3235,6 +3375,12 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
+      ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 20,
       ),
       'search_result' => array(
         'label' => 'above',
@@ -3344,6 +3490,61 @@ function hk_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 28,
       ),
+      'mlt_image' => array(
+        'label' => 'hidden',
+        'module' => 'leaflet',
+        'settings' => array(
+          'height' => 400,
+          'icon' => array(
+            'html' => '',
+            'htmlClass' => '',
+            'iconAnchor' => array(
+              'x' => '',
+              'y' => '',
+            ),
+            'iconImageStyle' => '',
+            'iconSize' => array(
+              'x' => '',
+              'y' => '',
+            ),
+            'iconType' => 'marker',
+            'iconUrl' => '',
+            'popupAnchor' => array(
+              'x' => '',
+              'y' => '',
+            ),
+            'shadowAnchor' => array(
+              'x' => '',
+              'y' => '',
+            ),
+            'shadowUrl' => '',
+          ),
+          'leaflet_map' => 'leaflet-mapbox',
+          'popup' => array(
+            'show' => 0,
+            'text' => '',
+          ),
+          'vector_display' => array(
+            'clickable' => 0,
+            'color' => '',
+            'dashArray' => '',
+            'fill' => 0,
+            'fillColor' => '',
+            'fillOpacity' => '',
+            'opacity' => '',
+            'stroke' => 0,
+            'stroke_override' => 0,
+            'weight' => '',
+          ),
+          'zoom' => array(
+            'initialZoom' => 14,
+            'maxZoom' => -1,
+            'minZoom' => 12,
+          ),
+        ),
+        'type' => 'geofield_leaflet',
+        'weight' => 6,
+      ),
       'print' => array(
         'label' => 'above',
         'module' => 'taxonomy',
@@ -3439,26 +3640,13 @@ function hk_ct_field_default_field_instances() {
     'weight' => 28,
     'widget' => array(
       'active' => 1,
-      'module' => 'geocoder',
+      'module' => 'addressfield_autocomplete',
       'settings' => array(
+        'addressfield_autocomplete_field' => 'field_address',
         'delta_handling' => 'default',
-        'geocoder_field' => 'field_address',
-        'geocoder_handler' => 'google',
-        'handler_settings' => array(
-          'google' => array(
-            'all_results' => 0,
-            'geometry_type' => 'point',
-            'reject_results' => array(
-              'APPROXIMATE' => 'APPROXIMATE',
-              'GEOMETRIC_CENTER' => 'GEOMETRIC_CENTER',
-              'RANGE_INTERPOLATED' => 'RANGE_INTERPOLATED',
-              'ROOFTOP' => 0,
-            ),
-          ),
-        ),
       ),
-      'type' => 'geocoder',
-      'weight' => -1,
+      'type' => 'addressfield_autocomplete_latlng',
+      'weight' => 51,
     ),
     'widget_type' => 'geofield_wkt',
   );
@@ -3489,6 +3677,13 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 24,
+      ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 33,
       ),
       'rss' => array(
         'label' => 'above',
@@ -3589,13 +3784,9 @@ function hk_ct_field_default_field_instances() {
   // Exported field_instance: 'node-objekt-field_rent_commission'
   $field_instances['node-objekt-field_rent_commission'] = array(
     'bundle' => 'objekt',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Prozentzahl ohne Prozentzeichen mit Komma getrennt eingeben: z.B. 7,14',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -3609,6 +3800,13 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 38,
+      ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 47,
       ),
       'search_result' => array(
         'label' => 'inline',
@@ -3630,40 +3828,6 @@ function hk_ct_field_default_field_instances() {
     'label' => 'Commission (Rent)',
     'required' => 0,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'ds_code' => 'ds_code',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 'php_code',
-          'plain_text' => 'plain_text',
-          'redhen_activity_message' => 'redhen_activity_message',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'ds_code' => array(
-              'weight' => 12,
-            ),
-            'filtered_html' => array(
-              'weight' => -10,
-            ),
-            'full_html' => array(
-              'weight' => -9,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-            'redhen_activity_message' => array(
-              'weight' => 0,
-            ),
-          ),
-        ),
-      ),
       'entity_translation_sync' => FALSE,
       'linkit' => array(
         'enable' => 0,
@@ -3688,7 +3852,7 @@ function hk_ct_field_default_field_instances() {
     'bundle' => 'objekt',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Prozentzahl ohne Prozentzeichen mit Komma getrennt eingeben: z.B. 7,14',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -3702,6 +3866,13 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 36,
+      ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 48,
       ),
       'search_result' => array(
         'label' => 'inline',
@@ -3722,40 +3893,6 @@ function hk_ct_field_default_field_instances() {
     'label' => 'Commission',
     'required' => 0,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'ds_code' => 'ds_code',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 'php_code',
-          'plain_text' => 'plain_text',
-          'redhen_activity_message' => 'redhen_activity_message',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'ds_code' => array(
-              'weight' => 12,
-            ),
-            'filtered_html' => array(
-              'weight' => -10,
-            ),
-            'full_html' => array(
-              'weight' => -9,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-            'redhen_activity_message' => array(
-              'weight' => 0,
-            ),
-          ),
-        ),
-      ),
       'entity_translation_sync' => FALSE,
       'linkit' => array(
         'enable' => 0,
@@ -3772,6 +3909,68 @@ function hk_ct_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 30,
+    ),
+  );
+
+  // Exported field_instance: 'node-objekt-field_schattenobjekt'
+  $field_instances['node-objekt-field_schattenobjekt'] = array(
+    'bundle' => 'objekt',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Ein Schattenobjekt wird nicht an der genauen Adresse angezeigt und der Marker verschwindet von der Karte, wenn man hineinzoomt. Daher darf keine Strasse und Hausnummer eingegeben werden.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 62,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 62,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_schattenobjekt',
+    'label' => 'Schattenobjekt?',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 1,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 48,
     ),
   );
 
@@ -3794,6 +3993,13 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 31,
+      ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 38,
       ),
       'search_result' => array(
         'label' => 'inline',
@@ -3861,6 +4067,12 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 37,
+      ),
+      'mlt_image' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 17,
       ),
       'print' => array(
         'label' => 'hidden',
@@ -3982,6 +4194,18 @@ function hk_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 13,
       ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 1,
+          'scale' => 2,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 49,
+      ),
       'search_result' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4041,6 +4265,18 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 11,
+      ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 1,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 43,
       ),
       'search_result' => array(
         'label' => 'above',
@@ -4102,6 +4338,18 @@ function hk_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 8,
       ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 1,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 44,
+      ),
       'search_result' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4161,6 +4409,12 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 4,
+      ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 42,
       ),
       'search_result' => array(
         'label' => 'above',
@@ -4222,6 +4476,18 @@ function hk_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 6,
       ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 1,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 41,
+      ),
       'search_result' => array(
         'label' => 'above',
         'settings' => array(),
@@ -4282,6 +4548,18 @@ function hk_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 35,
       ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 1,
+          'scale' => 0,
+          'thousand_separator' => '',
+        ),
+        'type' => 'number_integer',
+        'weight' => 46,
+      ),
       'search_result' => array(
         'label' => 'inline',
         'module' => 'number',
@@ -4319,7 +4597,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 34,
+      'weight' => 48,
     ),
   );
 
@@ -4346,6 +4624,12 @@ function hk_ct_field_default_field_instances() {
         ),
         'type' => 'title_linked',
         'weight' => 1,
+      ),
+      'mlt_image' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
       ),
       'search_result' => array(
         'label' => 'above',
@@ -4778,6 +5062,7 @@ function hk_ct_field_default_field_instances() {
   t('Description Commercial');
   t('Description Investment');
   t('Developer');
+  t('Ein Schattenobjekt wird nicht an der genauen Adresse angezeigt und der Marker verschwindet von der Karte, wenn man hineinzoomt. Daher darf keine Strasse und Hausnummer eingegeben werden.');
   t('Endenergiebedarf');
   t('Energieausweistyp');
   t('Energieeffizienzklasse');
@@ -4804,10 +5089,12 @@ function hk_ct_field_default_field_instances() {
   t('Optional construction site');
   t('Other');
   t('Pictures');
+  t('Prozentzahl ohne Prozentzeichen mit Komma getrennt eingeben: z.B. 7,14');
   t('Purchasing price');
   t('Purchasing price parking lot');
   t('Rate Of Return');
   t('Rooms');
+  t('Schattenobjekt?');
   t('Sleeping rooms');
   t('Standort');
   t('Status quo');

@@ -211,9 +211,18 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_object_images']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_object_images']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_object_images']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_object_images']['type'] = 'picture';
   $handler->display->display_options['fields']['field_object_images']['settings'] = array(
-    'image_style' => 'flexslider_thumbnail',
+    'picture_mapping' => 'flexthumb_mapping',
+    'fallback_image_style' => '',
     'image_link' => '',
+    'colorbox_settings' => array(
+      'colorbox_group' => 'colorbox_mapping',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+      'colorbox_caption' => 'auto',
+      'colorbox_caption_custom' => '',
+    ),
   );
   $handler->display->display_options['fields']['field_object_images']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_object_images']['delta_offset'] = '0';

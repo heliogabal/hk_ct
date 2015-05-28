@@ -243,12 +243,14 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = 'group_horizontal';
   $field_group->data = array(
     'label' => 'Energieausweis',
-    'weight' => '8',
+    'weight' => '6',
     'children' => array(
-      0 => 'field_objekt_energieausweistyp',
-      1 => 'field_objekt_energietraeger',
-      2 => 'field_objekt_endenergiebedarf',
-      3 => 'field_objekt_effizienzklasse',
+      0 => 'field_heating_type',
+      1 => 'field_year_built',
+      2 => 'field_objekt_energieausweistyp',
+      3 => 'field_objekt_energietraeger',
+      4 => 'field_objekt_endenergiebedarf',
+      5 => 'field_objekt_effizienzklasse',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -369,13 +371,13 @@ function hk_ct_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'group_ansprechpartner',
-      1 => 'group_ht_basis',
-      2 => 'group_ht_bilder',
-      3 => 'group_ht_merkmale',
-      4 => 'group_ht_texte',
-      5 => 'group_obj_apartments',
-      6 => 'group_ort',
-      7 => 'group_energieausweis',
+      1 => 'group_energieausweis',
+      2 => 'group_ht_basis',
+      3 => 'group_ht_bilder',
+      4 => 'group_ht_merkmale',
+      5 => 'group_ht_texte',
+      6 => 'group_obj_apartments',
+      7 => 'group_ort',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -461,18 +463,16 @@ function hk_ct_field_group_info() {
     'weight' => '4',
     'children' => array(
       0 => 'field_developer',
-      1 => 'field_heating_type',
-      2 => 'field_moving_in_from',
-      3 => 'field_no_of_floors',
-      4 => 'field_rent_commission',
-      5 => 'field_sale_commission',
-      6 => 'field_status_quo',
-      7 => 'field_wug_act_rent',
-      8 => 'field_wug_no_of_units',
-      9 => 'field_wug_occupancy',
-      10 => 'field_wug_opt_constrruct',
-      11 => 'field_wug_total_space',
-      12 => 'field_year_built',
+      1 => 'field_moving_in_from',
+      2 => 'field_no_of_floors',
+      3 => 'field_rent_commission',
+      4 => 'field_sale_commission',
+      5 => 'field_status_quo',
+      6 => 'field_wug_act_rent',
+      7 => 'field_wug_no_of_units',
+      8 => 'field_wug_occupancy',
+      9 => 'field_wug_opt_constrruct',
+      10 => 'field_wug_total_space',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -506,8 +506,7 @@ function hk_ct_field_group_info() {
       3 => 'field_object_location',
       4 => 'field_object_multi_apart_types',
       5 => 'field_object_other',
-      6 => 'field_topobjekt',
-      7 => 'field_object_txt_map_popup',
+      6 => 'field_object_txt_map_popup',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -665,7 +664,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Mehrere Apartmenttypen im Objekt',
-    'weight' => '2',
+    'weight' => '4',
     'children' => array(),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -690,7 +689,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = 'group_horizontal';
   $field_group->data = array(
     'label' => 'Apartments',
-    'weight' => '6',
+    'weight' => '8',
     'children' => array(
       0 => 'field_obj_apartments',
     ),
@@ -723,6 +722,7 @@ function hk_ct_field_group_info() {
       0 => 'field_address',
       1 => 'field_bezirk',
       2 => 'field_objekt_wkt',
+      3 => 'field_schattenobjekt',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -778,19 +778,18 @@ function hk_ct_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = '';
   $field_group->data = array(
-    'label' => 'Veröffentlichen',
+    'label' => 'Status',
     'weight' => '2',
-    'children' => array(
-      0 => 'field_save_workflow',
-    ),
+    'children' => array(),
     'format_type' => 'tab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Status',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-publish field-group-tab',
         'required_fields' => 1,
+        'classes' => 'group-publish field-group-tab',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $export['group_publish|node|objekt|form'] = $field_group;
