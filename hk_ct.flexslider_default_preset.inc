@@ -81,7 +81,7 @@ function hk_ct_flexslider_default_presets() {
   $preset->title = 'thumbslider';
   $preset->theme = 'classic';
   $preset->imagestyle_normal = 'flexslider_full';
-  $preset->imagestyle_thumbnail = 'thumbnail';
+  $preset->imagestyle_thumbnail = 'flexslider_thumbnail';
   $preset->options = array(
     'namespace' => 'flex-',
     'selector' => '.slides > li',
@@ -102,9 +102,9 @@ function hk_ct_flexslider_default_presets() {
     'sync' => '',
     'asNavFor' => '#flexslider-1',
     'itemWidth' => '150',
-    'itemMargin' => '10',
+    'itemMargin' => '5',
     'minItems' => '3',
-    'maxItems' => '5',
+    'maxItems' => '6',
     'move' => '0',
     'animation' => 'slide',
     'slideshow' => 0,
@@ -119,16 +119,16 @@ function hk_ct_flexslider_default_presets() {
     'randomize' => 0,
     'thumbCaptions' => 0,
     'thumbCaptionsBoth' => 0,
-    'animationLoop' => 0,
+    'animationLoop' => 1,
     'pauseOnAction' => 0,
     'pauseOnHover' => 0,
     'manualControls' => '',
     'colorboxEnabled' => FALSE,
-    'colorboxImageStyle' => 'bear_default_picture_mappings',
+    'colorboxImageStyle' => 'colorbox_mapping',
     'colorboxFallbackImageStyle' => '',
   );
   $preset->imagestyle_type = 'image_style';
-  $preset->mapping = 'bear_default_picture_mappings';
+  $preset->mapping = 'colorbox_mapping';
   $preset->fallback = '';
   $export['thumbslider'] = $preset;
 
@@ -177,16 +177,18 @@ function hk_ct_flexslider_default_presets() {
     'randomize' => 0,
     'thumbCaptions' => 0,
     'thumbCaptionsBoth' => 0,
+    'carouselNavOptionset' => 'thumbslider',
+    'carouselNavImageStyle' => 'flexslider_thumbnail',
     'animationLoop' => 1,
     'pauseOnAction' => 0,
     'pauseOnHover' => 0,
     'manualControls' => '',
     'colorboxEnabled' => TRUE,
-    'colorboxImageStyle' => 'bear_default_picture_mappings',
+    'colorboxImageStyle' => 'colorbox_mapping',
     'colorboxFallbackImageStyle' => 'colorbox_full',
   );
   $preset->imagestyle_type = 'image_style';
-  $preset->mapping = 'bear_default_picture_mappings';
+  $preset->mapping = 'colorbox_mapping';
   $preset->fallback = '';
   $export['wohnungsansicht'] = $preset;
 

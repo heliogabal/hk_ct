@@ -71,10 +71,27 @@ function hk_ct_field_default_field_bases() {
     'type' => 'addressfield',
   );
 
+  // Exported field_base: 'field_address_shadow_object'
+  $field_bases['field_address_shadow_object'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_address_shadow_object',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'addressfield',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'addressfield',
+  );
+
   // Exported field_base: 'field_ansprechpartner'
   $field_bases['field_ansprechpartner'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => 3,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_ansprechpartner',
@@ -122,6 +139,26 @@ function hk_ct_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'number_integer',
+  );
+
+  // Exported field_base: 'field_apart_ceiling_height'
+  $field_bases['field_apart_ceiling_height'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_apart_ceiling_height',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'number',
+    'settings' => array(
+      'decimal_separator' => ',',
+      'entity_translation_sync' => FALSE,
+      'precision' => 10,
+      'scale' => 2,
+    ),
+    'translatable' => 0,
+    'type' => 'number_decimal',
   );
 
   // Exported field_base: 'field_apart_commission'
@@ -220,6 +257,31 @@ function hk_ct_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_apart_floor_plan',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'image',
+    'settings' => array(
+      'default_image' => 0,
+      'entity_translation_sync' => array(
+        0 => 'fid',
+      ),
+      'uri_scheme' => 'public',
+    ),
+    'translatable' => 0,
+    'type' => 'image',
+  );
+
+  // Exported field_base: 'field_apart_gallery'
+  $field_bases['field_apart_gallery'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_apart_gallery',
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -609,6 +671,11 @@ function hk_ct_field_default_field_bases() {
         'Self-contained central heating' => 'Self-contained central heating',
         'Self-contained gas heating' => 'Self-contained gas heating',
         'District heating' => 'District heating',
+        'Floor heating' => 'Floor heating',
+        'Tiled stove' => 'Tiled stove',
+        'Air / water heat pump' => 'Air / water heat pump',
+        'Stove heating' => 'Stove heating',
+        'Fireplace' => 'Fireplace',
       ),
       'allowed_values_function' => '',
       'allowed_values_no_localization' => 0,
@@ -721,6 +788,313 @@ function hk_ct_field_default_field_bases() {
         ),
       ),
       'target_type' => 'node',
+    ),
+    'translatable' => 0,
+    'type' => 'entityreference',
+  );
+
+  // Exported field_base: 'field_obj_enev_date'
+  $field_bases['field_obj_enev_date'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_obj_enev_date',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'date',
+    'settings' => array(
+      'cache_count' => 4,
+      'cache_enabled' => 1,
+      'entity_translation_sync' => FALSE,
+      'granularity' => array(
+        'day' => 'day',
+        'hour' => 0,
+        'minute' => 0,
+        'month' => 'month',
+        'second' => 0,
+        'year' => 'year',
+      ),
+      'timezone_db' => '',
+      'todate' => '',
+      'tz_handling' => 'none',
+    ),
+    'translatable' => 0,
+    'type' => 'datetime',
+  );
+
+  // Exported field_base: 'field_obj_enev_file'
+  $field_bases['field_obj_enev_file'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_obj_enev_file',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'file',
+    'settings' => array(
+      'display_default' => 0,
+      'display_field' => 0,
+      'entity_translation_sync' => array(
+        0 => 'fid',
+      ),
+      'uri_scheme' => 'public',
+    ),
+    'translatable' => 0,
+    'type' => 'file',
+  );
+
+  // Exported field_base: 'field_obj_enev_haustyp'
+  $field_bases['field_obj_enev_haustyp'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_obj_enev_haustyp',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'KfW 40' => 'KfW 40',
+        'KfW 55' => 'KfW 55',
+        'KfW 60' => 'KfW 60',
+        'KfW 70' => 'KfW 70',
+        'Minergie Bauweise' => 'Minergie construction',
+        'Minergie zertifiziert' => 'Minergie certified',
+        'Neubaustandard' => 'New standard',
+      ),
+      'allowed_values_function' => '',
+      'allowed_values_no_localization' => 0,
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_obj_gemeinschaftsgeschaeft'
+  $field_bases['field_obj_gemeinschaftsgeschaeft'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_obj_gemeinschaftsgeschaeft',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Gemeinschaftgeschäft' => 'Dieses Objekt ist ein Gemeinschaftsgeschäft',
+        'Gemeinschaftsgeschäftsfähig' => 'Dieses Objekt ist für Gemeinschaftsgeschäfte freigegeben',
+      ),
+      'allowed_values_function' => '',
+      'allowed_values_no_localization' => 0,
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_obj_kond_gemeingesch'
+  $field_bases['field_obj_kond_gemeingesch'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_obj_kond_gemeingesch',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_obj_konditionen_tipp'
+  $field_bases['field_obj_konditionen_tipp'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_obj_konditionen_tipp',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_obj_schattenobjekt'
+  $field_bases['field_obj_schattenobjekt'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_obj_schattenobjekt',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => 'nein',
+        1 => 'ja',
+      ),
+      'allowed_values_function' => '',
+      'allowed_values_no_localization' => 1,
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_obj_standort_schatten'
+  $field_bases['field_obj_standort_schatten'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_obj_standort_schatten',
+    'indexes' => array(
+      'bbox' => array(
+        0 => 'top',
+        1 => 'bottom',
+        2 => 'left',
+        3 => 'right',
+      ),
+      'bottom' => array(
+        0 => 'bottom',
+      ),
+      'centroid' => array(
+        0 => 'lat',
+        1 => 'lon',
+      ),
+      'geohash' => array(
+        0 => 'geohash',
+      ),
+      'lat' => array(
+        0 => 'lat',
+      ),
+      'left' => array(
+        0 => 'left',
+      ),
+      'lon' => array(
+        0 => 'lon',
+      ),
+      'right' => array(
+        0 => 'right',
+      ),
+      'top' => array(
+        0 => 'top',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'geofield',
+    'settings' => array(
+      'backend' => 'default',
+      'entity_translation_sync' => FALSE,
+      'srid' => 4326,
+    ),
+    'translatable' => 0,
+    'type' => 'geofield',
+  );
+
+  // Exported field_base: 'field_obj_tippgeber'
+  $field_bases['field_obj_tippgeber'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_obj_tippgeber',
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'individual' => 'individual',
+        ),
+      ),
+      'target_type' => 'crm_core_contact',
+    ),
+    'translatable' => 0,
+    'type' => 'entityreference',
+  );
+
+  // Exported field_base: 'field_obj_verkaeufer'
+  $field_bases['field_obj_verkaeufer'] = array(
+    'active' => 1,
+    'cardinality' => 2,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_obj_verkaeufer',
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'mitarbeiter' => 'mitarbeiter',
+        ),
+      ),
+      'target_type' => 'crm_core_contact',
     ),
     'translatable' => 0,
     'type' => 'entityreference',
@@ -1037,8 +1411,16 @@ function hk_ct_field_default_field_bases() {
     'settings' => array(
       'allowed_values' => array(
         'Gas' => 'Gas',
-        'Öl' => 'Öl',
-        'Holz' => 'Holz',
+        'LPG' => 'LPG',
+        'Oil' => 'Oil',
+        'Wood' => 'Wood',
+        'Coal' => 'Coal',
+        'CHP' => 'CHP',
+        'Pellets' => 'Pellets',
+        'Solar' => 'Solar',
+        'District Heating' => 'District Heating',
+        'Electricity' => 'Electricity',
+        'Geothermal' => 'Geothermal',
       ),
       'allowed_values_function' => '',
       'allowed_values_no_localization' => 0,
@@ -1225,33 +1607,6 @@ function hk_ct_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_schattenobjekt'
-  $field_bases['field_schattenobjekt'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_schattenobjekt',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'list',
-    'settings' => array(
-      'allowed_values' => array(
-        0 => '',
-        1 => '',
-      ),
-      'allowed_values_function' => '',
-      'allowed_values_no_localization' => 0,
-      'entity_translation_sync' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'list_boolean',
-  );
-
   // Exported field_base: 'field_status_quo'
   $field_bases['field_status_quo'] = array(
     'active' => 1,
@@ -1272,8 +1627,6 @@ function hk_ct_field_default_field_bases() {
         'First Occupancy after Renovation' => 'First Occupancy after Renovation',
         'Well-Tended' => 'Well-Tended',
         'Normal' => 'Normal',
-        'Well preserved' => 'Well preserved',
-        'Like New' => 'Like New',
         'Modernised' => 'Modernised',
         'Completely Refurbished' => 'Completely Refurbished',
         'Partially restored' => 'Partially restored',
@@ -1286,57 +1639,6 @@ function hk_ct_field_default_field_bases() {
     ),
     'translatable' => 1,
     'type' => 'list_text',
-  );
-
-  // Exported field_base: 'field_topobjekt'
-  $field_bases['field_topobjekt'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_topobjekt',
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'allowed_values' => '',
-      'allowed_values_php' => '',
-      'entity_translation_sync' => FALSE,
-      'max_length' => 100,
-      'semantic_cck_field_settings' => array(
-        'enabled' => 0,
-        'field_class' => '',
-        'field_element' => '',
-        'field_prefix' => '',
-        'field_suffix' => '',
-        'first_class' => 'first',
-        'label_class_above' => '',
-        'label_class_inline' => '',
-        'label_element_above' => 'h3',
-        'label_element_inline' => 'span',
-        'label_suffix_above' => '',
-        'label_suffix_inline' => ':',
-        'last_class' => 'last',
-        'last_every_nth' => 0,
-        'multiple_item_class' => '',
-        'multiple_item_element' => 'div',
-        'multiple_item_separator' => '',
-        'multiple_items_class' => '',
-        'multiple_items_element' => 'div',
-        'single_item_class' => '',
-        'single_item_element' => 'div',
-        'striping_classes' => 'odd even',
-        'use_singlevalue_settings' => 0,
-      ),
-      'text_processing' => 1,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-    'type_name' => 'objekt',
   );
 
   // Exported field_base: 'field_wug_act_rent'

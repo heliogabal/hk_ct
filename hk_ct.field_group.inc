@@ -48,20 +48,26 @@ function hk_ct_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_horizontal';
   $field_group->data = array(
-    'label' => 'Ansprechpartner',
+    'label' => 'Objektverwaltung',
     'weight' => '7',
     'children' => array(
-      0 => 'field_ansprechpartner',
+      0 => 'field_obj_verkaeufer',
+      1 => 'field_ansprechpartner',
+      2 => 'field_obj_gemeinschaftsgeschaeft',
+      3 => 'field_obj_konditionen_tipp',
+      4 => 'field_obj_tippgeber',
+      5 => 'field_obj_kond_gemeingesch',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Objektverwaltung',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-ansprechpartner field-group-tab',
         'required_fields' => 1,
         'id' => '',
+        'classes' => 'group-ansprechpartner field-group-tab',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $export['group_ansprechpartner|node|objekt|form'] = $field_group;
@@ -78,9 +84,7 @@ function hk_ct_field_group_info() {
   $field_group->data = array(
     'label' => 'Veröffentlichen',
     'weight' => '1',
-    'children' => array(
-      0 => 'field_save_workflow',
-    ),
+    'children' => array(),
     'format_type' => 'tab',
     'format_settings' => array(
       'formatter' => 'closed',
@@ -112,10 +116,8 @@ function hk_ct_field_group_info() {
       3 => 'field_apart_rooms',
       4 => 'field_kategorie',
       5 => 'field_object_ref',
-      6 => 'field_objektid_nunumeric',
-      7 => 'title_field',
-      8 => 'field_bezirk',
-      9 => 'language',
+      6 => 'title_field',
+      7 => 'language',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -212,7 +214,7 @@ function hk_ct_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_horizontal';
   $field_group->data = array(
-    'label' => 'Costs',
+    'label' => 'Costs and returns',
     'weight' => '2',
     'children' => array(
       0 => 'field_apart_commission',
@@ -221,13 +223,14 @@ function hk_ct_field_group_info() {
     ),
     'format_type' => 'htab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Costs and returns',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-costs field-group-tab',
         'required_fields' => 1,
         'id' => '',
+        'classes' => 'group-costs field-group-tab',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $export['group_costs|node|apartment|form'] = $field_group;
@@ -251,6 +254,9 @@ function hk_ct_field_group_info() {
       3 => 'field_objekt_energietraeger',
       4 => 'field_objekt_endenergiebedarf',
       5 => 'field_objekt_effizienzklasse',
+      6 => 'field_obj_enev_date',
+      7 => 'field_obj_enev_haustyp',
+      8 => 'field_obj_enev_file',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -276,7 +282,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = 'group_horizontal';
   $field_group->data = array(
     'label' => 'Exposé',
-    'weight' => '8',
+    'weight' => '6',
     'children' => array(
       0 => 'field_apart_expose',
     ),
@@ -312,6 +318,7 @@ function hk_ct_field_group_info() {
       3 => 'field_apart_type',
       4 => 'field_ausstattung',
       5 => 'field_moving_in_from',
+      6 => 'field_apart_ceiling_height',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -344,8 +351,7 @@ function hk_ct_field_group_info() {
       2 => 'group_expose',
       3 => 'group_features',
       4 => 'group_images',
-      5 => 'group_returns',
-      6 => 'group_texte',
+      5 => 'group_texte',
     ),
     'format_type' => 'htabs',
     'format_settings' => array(
@@ -432,7 +438,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = 'group_horizontal';
   $field_group->data = array(
     'label' => 'Bilder',
-    'weight' => '5',
+    'weight' => '4',
     'children' => array(
       0 => 'field_object_images',
     ),
@@ -460,7 +466,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = 'group_horizontal';
   $field_group->data = array(
     'label' => 'Merkmale',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(
       0 => 'field_developer',
       1 => 'field_moving_in_from',
@@ -532,7 +538,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = 'group_horizontal';
   $field_group->data = array(
     'label' => 'Images',
-    'weight' => '6',
+    'weight' => '4',
     'children' => array(
       0 => 'field_apart_floor_plan',
       1 => 'field_apart_pictures',
@@ -587,7 +593,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Merkmale',
-    'weight' => '29',
+    'weight' => '30',
     'children' => array(
       0 => 'field_apart_bathrooms',
       1 => 'field_apart_floor',
@@ -722,7 +728,8 @@ function hk_ct_field_group_info() {
       0 => 'field_address',
       1 => 'field_bezirk',
       2 => 'field_objekt_wkt',
-      3 => 'field_schattenobjekt',
+      3 => 'field_address_shadow_object',
+      4 => 'field_obj_schattenobjekt',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -860,13 +867,13 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = 'group_horizontal';
   $field_group->data = array(
     'label' => 'Texte',
-    'weight' => '4',
+    'weight' => '3',
     'children' => array(
       0 => 'field_apart_description',
       1 => 'field_apart_location',
       2 => 'field_apart_other',
     ),
-    'format_type' => 'htab',
+    'format_type' => 'fieldset',
     'format_settings' => array(
       'formatter' => 'closed',
       'instance_settings' => array(
@@ -918,7 +925,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Text',
-    'weight' => '4',
+    'weight' => '3',
     'children' => array(
       0 => 'field_object_desc_commercial',
       1 => 'field_object_description',

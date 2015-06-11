@@ -256,9 +256,21 @@ function hk_ct_image_default_styles() {
 
   // Exported image style: colorbox_full.
   $styles['colorbox_full'] = array(
-    'label' => 'colorbox_full',
+    'label' => 'Wohnungsbilder Galerie',
     'effects' => array(
-      14 => array(
+      6 => array(
+        'name' => 'manualcrop_crop_and_scale',
+        'data' => array(
+          'width' => 1200,
+          'height' => 750,
+          'upscale' => 0,
+          'respectminimum' => 1,
+          'onlyscaleifcrop' => 1,
+          'style_name' => 'colorbox_full',
+        ),
+        'weight' => 0,
+      ),
+      5 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 1200,

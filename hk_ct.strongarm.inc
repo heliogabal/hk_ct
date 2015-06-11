@@ -65,10 +65,10 @@ function hk_ct_strongarm() {
           'weight' => '1',
         ),
         'path' => array(
-          'weight' => '2',
+          'weight' => '3',
         ),
         'redirect' => array(
-          'weight' => '3',
+          'weight' => '7',
         ),
         'language' => array(
           'weight' => '-4',
@@ -77,7 +77,7 @@ function hk_ct_strongarm() {
       'display' => array(
         'flag_merken' => array(
           'default' => array(
-            'weight' => '32',
+            'weight' => '33',
             'visible' => FALSE,
           ),
           'teaser' => array(

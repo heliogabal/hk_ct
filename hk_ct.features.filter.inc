@@ -19,24 +19,37 @@ function hk_ct_filter_default_formats() {
     'weight' => -9,
     'filters' => array(
       'filter_url' => array(
-        'weight' => 0,
+        'weight' => -44,
         'status' => 1,
         'settings' => array(
           'filter_url_length' => 72,
         ),
       ),
       'filter_autop' => array(
-        'weight' => 1,
+        'weight' => -42,
         'status' => 1,
         'settings' => array(),
       ),
       'media_filter' => array(
-        'weight' => 2,
+        'weight' => -41,
         'status' => 1,
         'settings' => array(),
       ),
+      'image_resize_filter' => array(
+        'weight' => -40,
+        'status' => 1,
+        'settings' => array(
+          'link' => 1,
+          'link_class' => 'colorbox',
+          'link_rel' => 'colorbox',
+          'image_locations' => array(
+            'local' => 'local',
+            'remote' => 0,
+          ),
+        ),
+      ),
       'filter_htmlcorrector' => array(
-        'weight' => 10,
+        'weight' => -39,
         'status' => 1,
         'settings' => array(),
       ),

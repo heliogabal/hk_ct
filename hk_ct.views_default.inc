@@ -23,15 +23,11 @@ function hk_ct_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Adresse vom Objekt';
-  $handler->display->display_options['css_class'] = 'apartaddress';
+  $handler->display->display_options['css_class'] = 'thumbslide';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mehr';
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['cache']['type'] = 'time';
-  $handler->display->display_options['cache']['results_lifespan'] = '3600';
-  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
-  $handler->display->display_options['cache']['output_lifespan'] = '3600';
-  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Anwenden';
@@ -46,9 +42,7 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ vorherige Seite';
   $handler->display->display_options['pager']['options']['tags']['next'] = 'nächste Seite ›';
   $handler->display->display_options['pager']['options']['tags']['last'] = 'letzte Seite »';
-  $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
-  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'flexslider';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   /* Relationship: Entity Reference: Referenced Entity */
@@ -99,13 +93,6 @@ function hk_ct_views_default_views() {
     'apartment' => 'apartment',
   );
   $handler->display->display_options['arguments']['nid_1']['validate']['fail'] = 'access denied';
-  /* Filter criterion: Content: Published */
-  $handler->display->display_options['filters']['status']['id'] = 'status';
-  $handler->display->display_options['filters']['status']['table'] = 'node';
-  $handler->display->display_options['filters']['status']['field'] = 'status';
-  $handler->display->display_options['filters']['status']['value'] = 1;
-  $handler->display->display_options['filters']['status']['group'] = 1;
-  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
   /* Filter criterion: Content: Type */
   $handler->display->display_options['filters']['type']['id'] = 'type';
   $handler->display->display_options['filters']['type']['table'] = 'node';
@@ -134,22 +121,32 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['style_options']['map_height'] = '300';
   $handler->display->display_options['style_options']['ip_geoloc_views_plugin_latitude'] = array(
     'field_objekt_wkt' => 'field_objekt_wkt',
+    'field_obj_standort_schatten' => 'field_obj_standort_schatten',
   );
-  $handler->display->display_options['style_options']['ip_geoloc_views_plugin_longitude'] = 'field_objekt_wkt';
+  $handler->display->display_options['style_options']['ip_geoloc_views_plugin_longitude'] = '';
   $handler->display->display_options['style_options']['default_marker']['default_marker_color'] = 'Icon_House';
   $handler->display->display_options['style_options']['visitor_marker']['visitor_marker_color'] = 'none';
+  $handler->display->display_options['style_options']['differentiator']['differentiator_field'] = 'field_obj_schattenobjekt';
   $handler->display->display_options['style_options']['center_option'] = '0';
+  $handler->display->display_options['style_options']['sync']['2'] = 0;
+  $handler->display->display_options['style_options']['sync']['4'] = 0;
+  $handler->display->display_options['style_options']['sync']['8'] = 1;
+  $handler->display->display_options['style_options']['sync']['16'] = 1;
   $handler->display->display_options['style_options']['full_screen'] = 1;
   $handler->display->display_options['style_options']['scale_metric'] = 1;
+  $handler->display->display_options['style_options']['scale_imperial'] = 0;
+  $handler->display->display_options['style_options']['zoom_indicator'] = 0;
+  $handler->display->display_options['style_options']['map_reset'] = 0;
+  $handler->display->display_options['style_options']['map_cluster_toggle'] = 0;
+  $handler->display->display_options['style_options']['mini_map']['on'] = 0;
+  $handler->display->display_options['style_options']['mini_map']['height'] = '100';
+  $handler->display->display_options['style_options']['mini_map']['width'] = '150';
+  $handler->display->display_options['style_options']['mini_map']['toggle'] = 1;
+  $handler->display->display_options['style_options']['mini_map']['zoom_delta'] = '-5';
   $handler->display->display_options['style_options']['cluster_radius'] = '1';
   $handler->display->display_options['style_options']['cluster_differentiator']['cluster_differentiator_fields'] = array(
     '' => '',
   );
-  $handler->display->display_options['style_options']['cluster_differentiator']['zoom_ranges'] = array(
-    1 => '',
-  );
-  $handler->display->display_options['style_options']['cluster_differentiator']['cluster_tooltips'] = 0;
-  $handler->display->display_options['style_options']['cluster_differentiator']['cluster_outline'] = '0';
   $handler->display->display_options['style_options']['cluster_aggregation']['aggregation_function'] = 'average';
   $handler->display->display_options['style_options']['cluster_aggregation']['ranges']['small'] = '10';
   $handler->display->display_options['style_options']['cluster_aggregation']['ranges']['medium'] = '100';
@@ -181,77 +178,23 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_address_thoroughfare']['field'] = 'field_address_thoroughfare';
   $handler->display->display_options['fields']['field_address_thoroughfare']['label'] = '';
   $handler->display->display_options['fields']['field_address_thoroughfare']['element_label_colon'] = FALSE;
-
-  /* Display: Thumbslider */
-  $handler = $view->new_display('block', 'Thumbslider', 'block_1');
-  $handler->display->display_options['defaults']['title'] = FALSE;
-  $handler->display->display_options['defaults']['css_class'] = FALSE;
-  $handler->display->display_options['css_class'] = 'thumbslide';
-  $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'none';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
-  $handler->display->display_options['style_plugin'] = 'flexslider';
-  $handler->display->display_options['style_options']['optionset'] = 'thumbslider';
-  $handler->display->display_options['style_options']['id'] = 'thumbslide';
-  $handler->display->display_options['defaults']['style_options'] = FALSE;
-  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
-  $handler->display->display_options['row_plugin'] = 'fields';
-  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
-  $handler->display->display_options['defaults']['row_options'] = FALSE;
-  $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Object images */
-  $handler->display->display_options['fields']['field_object_images']['id'] = 'field_object_images';
-  $handler->display->display_options['fields']['field_object_images']['table'] = 'field_data_field_object_images';
-  $handler->display->display_options['fields']['field_object_images']['field'] = 'field_object_images';
-  $handler->display->display_options['fields']['field_object_images']['relationship'] = 'field_object_ref_target_id';
-  $handler->display->display_options['fields']['field_object_images']['label'] = '';
-  $handler->display->display_options['fields']['field_object_images']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_object_images']['element_class'] = 'flex-control-thumbs';
-  $handler->display->display_options['fields']['field_object_images']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_object_images']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_object_images']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_object_images']['type'] = 'picture';
-  $handler->display->display_options['fields']['field_object_images']['settings'] = array(
-    'picture_mapping' => 'flexthumb_mapping',
-    'fallback_image_style' => '',
-    'image_link' => '',
-    'colorbox_settings' => array(
-      'colorbox_group' => 'colorbox_mapping',
-      'colorbox_gallery' => 'post',
-      'colorbox_gallery_custom' => '',
-      'colorbox_caption' => 'auto',
-      'colorbox_caption_custom' => '',
-    ),
+  /* Field: Content: Standort Schattenobjekt */
+  $handler->display->display_options['fields']['field_obj_standort_schatten']['id'] = 'field_obj_standort_schatten';
+  $handler->display->display_options['fields']['field_obj_standort_schatten']['table'] = 'field_data_field_obj_standort_schatten';
+  $handler->display->display_options['fields']['field_obj_standort_schatten']['field'] = 'field_obj_standort_schatten';
+  $handler->display->display_options['fields']['field_obj_standort_schatten']['relationship'] = 'field_object_ref_target_id';
+  $handler->display->display_options['fields']['field_obj_standort_schatten']['label'] = '';
+  $handler->display->display_options['fields']['field_obj_standort_schatten']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_obj_standort_schatten']['click_sort_column'] = 'geom';
+  $handler->display->display_options['fields']['field_obj_standort_schatten']['settings'] = array(
+    'data' => 'full',
   );
-  $handler->display->display_options['fields']['field_object_images']['group_rows'] = FALSE;
-  $handler->display->display_options['fields']['field_object_images']['delta_offset'] = '0';
-  /* Field: Content: Pictures */
-  $handler->display->display_options['fields']['field_apart_pictures']['id'] = 'field_apart_pictures';
-  $handler->display->display_options['fields']['field_apart_pictures']['table'] = 'field_data_field_apart_pictures';
-  $handler->display->display_options['fields']['field_apart_pictures']['field'] = 'field_apart_pictures';
-  $handler->display->display_options['fields']['field_apart_pictures']['label'] = '';
-  $handler->display->display_options['fields']['field_apart_pictures']['alter']['text'] = '[field_object_images][field_apart_pictures]';
-  $handler->display->display_options['fields']['field_apart_pictures']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_apart_pictures']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_apart_pictures']['hide_alter_empty'] = FALSE;
-  $handler->display->display_options['fields']['field_apart_pictures']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_apart_pictures']['type'] = 'picture';
-  $handler->display->display_options['fields']['field_apart_pictures']['settings'] = array(
-    'picture_mapping' => 'flexthumb_mapping',
-    'fallback_image_style' => '',
-    'image_link' => '',
-    'colorbox_settings' => array(
-      'colorbox_group' => 'flexthumb_mapping',
-      'colorbox_gallery' => 'post',
-      'colorbox_gallery_custom' => '',
-      'colorbox_caption' => 'auto',
-      'colorbox_caption_custom' => '',
-    ),
-  );
-  $handler->display->display_options['fields']['field_apart_pictures']['group_rows'] = FALSE;
-  $handler->display->display_options['fields']['field_apart_pictures']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_apart_pictures']['multi_type'] = 'ul';
+  /* Field: Content: Schattenobjekt? */
+  $handler->display->display_options['fields']['field_obj_schattenobjekt']['id'] = 'field_obj_schattenobjekt';
+  $handler->display->display_options['fields']['field_obj_schattenobjekt']['table'] = 'field_data_field_obj_schattenobjekt';
+  $handler->display->display_options['fields']['field_obj_schattenobjekt']['field'] = 'field_obj_schattenobjekt';
+  $handler->display->display_options['fields']['field_obj_schattenobjekt']['label'] = '';
+  $handler->display->display_options['fields']['field_obj_schattenobjekt']['element_label_colon'] = FALSE;
 
   /* Display: Details */
   $handler = $view->new_display('panel_pane', 'Details', 'details');
@@ -422,7 +365,7 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Objekt ID */
+  /* Field: Content: Object ID */
   $handler->display->display_options['fields']['field_objektid_nunumeric']['id'] = 'field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['table'] = 'field_data_field_objektid_nunumeric';
   $handler->display->display_options['fields']['field_objektid_nunumeric']['field'] = 'field_objektid_nunumeric';
@@ -480,14 +423,6 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_lage']['id'] = 'field_lage';
-  $handler->display->display_options['fields']['field_lage']['table'] = 'field_data_field_lage';
-  $handler->display->display_options['fields']['field_lage']['field'] = 'field_lage';
-  $handler->display->display_options['fields']['field_lage']['relationship'] = 'field_object_ref_target_id';
-  $handler->display->display_options['fields']['field_lage']['label'] = '';
-  $handler->display->display_options['fields']['field_lage']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_lage']['element_label_colon'] = FALSE;
   /* Field: Content: Apartment location */
   $handler->display->display_options['fields']['field_apart_location']['id'] = 'field_apart_location';
   $handler->display->display_options['fields']['field_apart_location']['table'] = 'field_data_field_apart_location';
@@ -532,6 +467,20 @@ function hk_ct_views_default_views() {
 
   /* Display: Objektadresse */
   $handler = $view->new_display('panel_pane', 'Objektadresse', 'objektadresse');
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'apartaddress';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['style_options']['default_row_class'] = FALSE;
+  $handler->display->display_options['style_options']['row_class_special'] = FALSE;
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Field: Content: Address - Thoroughfare (i.e. Street address) */
   $handler->display->display_options['fields']['field_address_thoroughfare']['id'] = 'field_address_thoroughfare';
@@ -608,40 +557,61 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
-  /* Field: Content: Object images */
-  $handler->display->display_options['fields']['field_object_images']['id'] = 'field_object_images';
-  $handler->display->display_options['fields']['field_object_images']['table'] = 'field_data_field_object_images';
-  $handler->display->display_options['fields']['field_object_images']['field'] = 'field_object_images';
-  $handler->display->display_options['fields']['field_object_images']['relationship'] = 'field_object_ref_target_id';
-  $handler->display->display_options['fields']['field_object_images']['label'] = '';
-  $handler->display->display_options['fields']['field_object_images']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_object_images']['element_class'] = 'flex-control-thumbs colorbox';
-  $handler->display->display_options['fields']['field_object_images']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_object_images']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_object_images']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_object_images']['settings'] = array(
-    'image_style' => 'flexslider_full',
-    'image_link' => 'file',
+  /* Field: Content: Galerie */
+  $handler->display->display_options['fields']['field_apart_gallery']['id'] = 'field_apart_gallery';
+  $handler->display->display_options['fields']['field_apart_gallery']['table'] = 'field_data_field_apart_gallery';
+  $handler->display->display_options['fields']['field_apart_gallery']['field'] = 'field_apart_gallery';
+  $handler->display->display_options['fields']['field_apart_gallery']['label'] = '';
+  $handler->display->display_options['fields']['field_apart_gallery']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_apart_gallery']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_apart_gallery']['type'] = 'picture';
+  $handler->display->display_options['fields']['field_apart_gallery']['settings'] = array(
+    'picture_mapping' => 'flexfull_mapping',
+    'fallback_image_style' => '',
+    'image_link' => 'colorbox',
+    'colorbox_settings' => array(
+      'colorbox_group' => 'colorbox_mapping',
+      'colorbox_gallery' => 'post',
+      'colorbox_gallery_custom' => '',
+      'colorbox_caption' => 'auto',
+      'colorbox_caption_custom' => '',
+    ),
   );
-  $handler->display->display_options['fields']['field_object_images']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_object_images']['multi_type'] = 'ul';
-  /* Field: Content: Pictures */
-  $handler->display->display_options['fields']['field_apart_pictures']['id'] = 'field_apart_pictures';
-  $handler->display->display_options['fields']['field_apart_pictures']['table'] = 'field_data_field_apart_pictures';
-  $handler->display->display_options['fields']['field_apart_pictures']['field'] = 'field_apart_pictures';
-  $handler->display->display_options['fields']['field_apart_pictures']['label'] = '';
-  $handler->display->display_options['fields']['field_apart_pictures']['alter']['text'] = '[field_object_images][field_apart_pictures]';
-  $handler->display->display_options['fields']['field_apart_pictures']['element_class'] = 'colorbox';
-  $handler->display->display_options['fields']['field_apart_pictures']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_apart_pictures']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_apart_pictures']['hide_alter_empty'] = FALSE;
-  $handler->display->display_options['fields']['field_apart_pictures']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_apart_pictures']['settings'] = array(
-    'image_style' => 'flexslider_full',
-    'image_link' => 'content',
+  $handler->display->display_options['fields']['field_apart_gallery']['delta_offset'] = '0';
+
+  /* Display: Thumbslider */
+  $handler = $view->new_display('panel_pane', 'Thumbslider', 'thumbslider');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Thumbslider';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'flexslider';
+  $handler->display->display_options['style_options']['optionset'] = 'thumbslider';
+  $handler->display->display_options['style_options']['id'] = 'thumbslide';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: Content: Galerie */
+  $handler->display->display_options['fields']['field_apart_gallery']['id'] = 'field_apart_gallery';
+  $handler->display->display_options['fields']['field_apart_gallery']['table'] = 'field_data_field_apart_gallery';
+  $handler->display->display_options['fields']['field_apart_gallery']['field'] = 'field_apart_gallery';
+  $handler->display->display_options['fields']['field_apart_gallery']['label'] = '';
+  $handler->display->display_options['fields']['field_apart_gallery']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_apart_gallery']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_apart_gallery']['settings'] = array(
+    'image_style' => 'flexslider_thumbnail',
+    'image_link' => '',
   );
-  $handler->display->display_options['fields']['field_apart_pictures']['delta_offset'] = '0';
-  $handler->display->display_options['fields']['field_apart_pictures']['multi_type'] = 'ul';
+  $handler->display->display_options['fields']['field_apart_gallery']['group_rows'] = FALSE;
+  $handler->display->display_options['fields']['field_apart_gallery']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_apart_gallery']['multi_type'] = 'ul';
+  $handler->display->display_options['pane_category']['name'] = 'Panel-Ansichten';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $export['apartment'] = $view;
 
   $view = new view();

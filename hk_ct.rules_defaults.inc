@@ -61,12 +61,12 @@ function hk_ct_default_rules_configuration() {
         { "entity_has_field" : { "entity" : [ "entity:field-object-ref" ], "field" : "field_bezirk" } }
       ],
       "DO" : [
+        { "entity_save" : { "data" : [ "entity" ], "immediate" : "1" } },
         { "data_set" : {
-            "data" : [ "entity:field-kategorie" ],
+            "data" : [ "entity:field-bezirk" ],
             "value" : [ "entity:field-object-ref:field-bezirk" ]
           }
-        },
-        { "entity_save" : { "data" : [ "entity" ], "immediate" : "1" } }
+        }
       ],
       "PROVIDES VARIABLES" : [ "continue" ]
     }
@@ -264,8 +264,8 @@ function hk_ct_default_rules_configuration() {
       ],
       "DO" : [
         { "data_set" : {
-            "data" : [ "entity:field-apart-location" ],
-            "value" : [ "entity:field-object-ref:field-object-location" ]
+            "data" : [ "entity:field-apart-location:value" ],
+            "value" : [ "entity:field-object-ref:field-object-location:value" ]
           }
         },
         { "entity_save" : { "data" : [ "entity" ] } }

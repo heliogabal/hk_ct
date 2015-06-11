@@ -54,6 +54,54 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
+      'weight' => 54,
+    ),
+  );
+
+  // Exported field_instance: 'node-apartment-field_apart_ceiling_height'
+  $field_instances['node-apartment-field_apart_ceiling_height'] = array(
+    'bundle' => 'apartment',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 40,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'tile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_apart_ceiling_height',
+    'label' => 'Ceiling height',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => ' m',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
       'weight' => 53,
     ),
   );
@@ -114,7 +162,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 45,
+      'weight' => 44,
     ),
   );
 
@@ -191,6 +239,7 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 1,
+      'tmgmt_translate' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -217,7 +266,7 @@ function hk_ct_field_default_field_instances() {
           'file_view_mode' => 'expose_link',
         ),
         'type' => 'file_rendered',
-        'weight' => 15,
+        'weight' => 14,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -321,6 +370,7 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 0,
+      'tmgmt_translate' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -440,7 +490,100 @@ function hk_ct_field_default_field_instances() {
         'manualcrop_thumblist' => 0,
       ),
       'type' => 'media_generic',
-      'weight' => 45,
+      'weight' => 47,
+    ),
+  );
+
+  // Exported field_instance: 'node-apartment-field_apart_gallery'
+  $field_instances['node-apartment-field_apart_gallery'] = array(
+    'bundle' => 'apartment',
+    'default_value' => array(),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'flexslider_picture',
+        'settings' => array(
+          'caption' => 0,
+          'image_style' => 'flexslider_full',
+          'optionset' => 'wohnungsansicht',
+        ),
+        'type' => 'flexslider',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'tile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_apart_gallery',
+    'label' => 'Galerie',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 1,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'filefield_paths' => array(
+        'active_updating' => 0,
+        'file_name' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
+        ),
+        'file_path' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => '',
+        ),
+        'retroactive_update' => 0,
+      ),
+      'filefield_paths_enabled' => 1,
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 1,
+        'manualcrop_inline_crop' => 1,
+        'manualcrop_instant_crop' => 0,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_keyboard' => 1,
+        'manualcrop_maximize_default_crop_area' => 0,
+        'manualcrop_require_cropping' => array(),
+        'manualcrop_styles_list' => array(
+          'colorbox_full' => 'colorbox_full',
+        ),
+        'manualcrop_styles_mode' => 'include',
+        'manualcrop_thumblist' => 0,
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 48,
     ),
   );
 
@@ -540,7 +683,7 @@ function hk_ct_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_apart_living_space',
     'label' => 'Living space',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'max' => '',
@@ -631,6 +774,7 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 1,
+      'tmgmt_translate' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -655,7 +799,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 34,
+        'weight' => 35,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -688,7 +832,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 43,
+      'weight' => 44,
     ),
   );
 
@@ -769,6 +913,7 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 0,
+      'tmgmt_translate' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -855,6 +1000,7 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 1,
+      'tmgmt_translate' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -871,19 +1017,15 @@ function hk_ct_field_default_field_instances() {
   // Exported field_instance: 'node-apartment-field_apart_pictures'
   $field_instances['node-apartment-field_apart_pictures'] = array(
     'bundle' => 'apartment',
+    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'flexslider_picture',
-        'settings' => array(
-          'caption' => 0,
-          'image_style' => 'flexslider_full',
-          'optionset' => 'wohnungsansicht',
-        ),
-        'type' => 'flexslider',
-        'weight' => 1,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 28,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -924,7 +1066,7 @@ function hk_ct_field_default_field_instances() {
             'pathauto' => 1,
             'transliterate' => 1,
           ),
-          'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
+          'value' => '[node:field-object-ref:field_objektid_nunumeric]-[node:title_field].[file:ffp-extension-original]',
         ),
         'file_path' => array(
           'options' => array(
@@ -938,7 +1080,7 @@ function hk_ct_field_default_field_instances() {
       'filefield_paths_enabled' => 1,
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '',
+      'min_resolution' => '1200x750',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -958,7 +1100,7 @@ function hk_ct_field_default_field_instances() {
         ),
         'browser_plugins' => array(
           'media_default--media_browser_1' => 'media_default--media_browser_1',
-          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'media_default--media_browser_my_files' => 0,
           'upload' => 'upload',
         ),
         'manualcrop_crop_info' => 1,
@@ -970,8 +1112,10 @@ function hk_ct_field_default_field_instances() {
         'manualcrop_keyboard' => 1,
         'manualcrop_maximize_default_crop_area' => 0,
         'manualcrop_require_cropping' => array(),
-        'manualcrop_styles_list' => array(),
-        'manualcrop_styles_mode' => 'exclude',
+        'manualcrop_styles_list' => array(
+          'colorbox_full' => 'colorbox_full',
+        ),
+        'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
       ),
       'type' => 'media_generic',
@@ -1089,7 +1233,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 44,
+      'weight' => 43,
     ),
   );
 
@@ -1104,7 +1248,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 36,
+        'weight' => 37,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1137,7 +1281,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 44,
+      'weight' => 45,
     ),
   );
 
@@ -1260,7 +1404,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 35,
+        'weight' => 36,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1316,7 +1460,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 17,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1359,7 +1503,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 54,
+      'weight' => 55,
     ),
   );
 
@@ -1374,7 +1518,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 38,
+        'weight' => 39,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1410,7 +1554,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -1425,7 +1569,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 32,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -1466,7 +1610,7 @@ function hk_ct_field_default_field_instances() {
         'use_select2' => FALSE,
       ),
       'type' => 'options_select',
-      'weight' => 2,
+      'weight' => -3,
     ),
   );
 
@@ -1508,6 +1652,7 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 0,
+      'tmgmt_translate' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1533,7 +1678,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 29,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1560,7 +1705,7 @@ function hk_ct_field_default_field_instances() {
         'prepopulate' => array(
           'action' => 'disable',
           'action_on_edit' => 0,
-          'fallback' => 'hide',
+          'fallback' => 'none',
           'providers' => array(
             'og_context' => FALSE,
             'url' => 1,
@@ -1585,7 +1730,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 4,
+      'weight' => 2,
     ),
   );
 
@@ -1600,7 +1745,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 33,
+        'weight' => 34,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1629,7 +1774,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'geofield',
       'settings' => array(),
       'type' => 'geofield_wkt',
-      'weight' => 4,
+      'weight' => 8,
     ),
   );
 
@@ -1670,46 +1815,13 @@ function hk_ct_field_default_field_instances() {
     'label' => 'Objekt ID',
     'required' => 0,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'ds_code' => 'ds_code',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 'php_code',
-          'plain_text' => 'plain_text',
-          'redhen_activity_message' => 'redhen_activity_message',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'ds_code' => array(
-              'weight' => 12,
-            ),
-            'filtered_html' => array(
-              'weight' => -10,
-            ),
-            'full_html' => array(
-              'weight' => -9,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-            'redhen_activity_message' => array(
-              'weight' => 0,
-            ),
-          ),
-        ),
-      ),
       'entity_translation_sync' => FALSE,
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
       ),
       'text_processing' => 0,
+      'tmgmt_translate' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1719,7 +1831,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -3,
+      'weight' => 6,
     ),
   );
 
@@ -1734,7 +1846,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 30,
+        'weight' => 31,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1760,6 +1872,7 @@ function hk_ct_field_default_field_instances() {
         'page' => 0,
       ),
       'text_processing' => 0,
+      'tmgmt_translate' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1775,7 +1888,9 @@ function hk_ct_field_default_field_instances() {
   // Exported field_instance: 'node-objekt-field_address'
   $field_instances['node-objekt-field_address'] = array(
     'bundle' => 'objekt',
-    'default_value' => NULL,
+    'default_value' => array(
+      0 => array(),
+    ),
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -1795,7 +1910,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 22,
+        'weight' => 37,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -1867,14 +1982,89 @@ function hk_ct_field_default_field_instances() {
         'visible_markers' => 1,
       ),
       'type' => 'addressfield_autocomplete',
-      'weight' => 50,
+      'weight' => 51,
+    ),
+  );
+
+  // Exported field_instance: 'node-objekt-field_address_shadow_object'
+  $field_instances['node-objekt-field_address_shadow_object'] = array(
+    'bundle' => 'objekt',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_address_shadow_object',
+    'label' => 'Address Shadow Object',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'addressfield_autocomplete',
+      'settings' => array(
+        'available_countries' => array(
+          'DE' => 'DE',
+        ),
+        'default_country' => 'DE',
+        'draggable' => 1,
+        'format_handlers' => array(
+          'address' => 'address',
+          'address-hide-street' => 'address-hide-street',
+          'address-hide-country' => 'address-hide-country',
+          'address-optional' => 'address-optional',
+          'address-hide-postal-code' => 0,
+          'organisation' => 0,
+          'name-oneline' => 0,
+          'name-full' => 0,
+        ),
+        'geolocation' => TRUE,
+        'html5_geocode' => 1,
+        'manual_text' => 'Enter one manually',
+        'map' => 1,
+        'restrict_country' => array(),
+        'reveal' => 1,
+        'reverse_geocode' => 1,
+        'types' => 'geocode',
+        'visible_markers' => 1,
+      ),
+      'type' => 'addressfield_autocomplete',
+      'weight' => 52,
     ),
   );
 
   // Exported field_instance: 'node-objekt-field_ansprechpartner'
   $field_instances['node-objekt-field_ansprechpartner'] = array(
     'bundle' => 'objekt',
-    'default_value' => NULL,
+    'default_value' => array(),
     'default_value_function' => '',
     'deleted' => 0,
     'description' => '',
@@ -1883,13 +2073,13 @@ function hk_ct_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 17,
       ),
       'map_popup' => array(
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 25,
+        'weight' => 40,
       ),
       'mlt_image' => array(
         'label' => 'hidden',
@@ -1937,11 +2127,11 @@ function hk_ct_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'options',
+      'module' => 'multiselect',
       'settings' => array(
         'use_select2' => FALSE,
       ),
-      'type' => 'options_select',
+      'type' => 'multiselect',
       'weight' => 0,
     ),
   );
@@ -1970,7 +2160,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 23,
+        'weight' => 38,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -2058,7 +2248,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 30,
+        'weight' => 45,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -2093,6 +2283,7 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 0,
+      'tmgmt_translate' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2124,7 +2315,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 34,
+        'weight' => 49,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -2170,7 +2361,7 @@ function hk_ct_field_default_field_instances() {
         'use_select2' => FALSE,
       ),
       'type' => 'options_select',
-      'weight' => 45,
+      'weight' => 46,
     ),
   );
 
@@ -2192,7 +2383,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 36,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -2261,7 +2452,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 32,
+        'weight' => 47,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -2291,6 +2482,7 @@ function hk_ct_field_default_field_instances() {
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'text_processing' => 0,
+      'tmgmt_translate' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2322,7 +2514,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 33,
+        'weight' => 48,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -2357,6 +2549,7 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 0,
+      'tmgmt_translate' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2386,7 +2579,7 @@ function hk_ct_field_default_field_instances() {
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 5,
+        'weight' => 4,
       ),
       'map_popup' => array(
         'label' => 'hidden',
@@ -2396,7 +2589,7 @@ function hk_ct_field_default_field_instances() {
           'view_mode' => 'search_result',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 21,
+        'weight' => 3,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -2454,6 +2647,690 @@ function hk_ct_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-objekt-field_obj_enev_date'
+  $field_instances['node-objekt-field_obj_enev_date'] = array(
+    'bundle' => 'objekt',
+    'default_value' => array(),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_obj_enev_date',
+    'label' => 'Ausstelldatum',
+    'required' => 0,
+    'settings' => array(
+      'default_value' => 'now',
+      'default_value2' => 'same',
+      'default_value_code' => '',
+      'default_value_code2' => '',
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'date',
+      'settings' => array(
+        'increment' => 15,
+        'input_format' => 'm/d/Y - g:i:sa',
+        'input_format_custom' => '',
+        'label_position' => 'above',
+        'text_parts' => array(),
+        'year_range' => '-3:+3',
+      ),
+      'type' => 'date_popup',
+      'weight' => 50,
+    ),
+  );
+
+  // Exported field_instance: 'node-objekt-field_obj_enev_file'
+  $field_instances['node-objekt-field_obj_enev_file'] = array(
+    'bundle' => 'objekt',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 26,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_obj_enev_file',
+    'label' => 'Energy Performance Certificate',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => '',
+      'file_extensions' => 'pdf',
+      'filefield_paths' => array(
+        'active_updating' => 0,
+        'file_name' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
+        ),
+        'file_path' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => '',
+        ),
+        'retroactive_update' => 0,
+      ),
+      'filefield_paths_enabled' => 1,
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'private' => 0,
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 'document',
+          'image' => 0,
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 'upload',
+        ),
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 0,
+        'manualcrop_inline_crop' => 0,
+        'manualcrop_instant_crop' => FALSE,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_keyboard' => 1,
+        'manualcrop_maximize_default_crop_area' => 0,
+        'manualcrop_require_cropping' => array(),
+        'manualcrop_styles_list' => array(),
+        'manualcrop_styles_mode' => 'include',
+        'manualcrop_thumblist' => 0,
+      ),
+      'type' => 'media_generic',
+      'weight' => 44,
+    ),
+  );
+
+  // Exported field_instance: 'node-objekt-field_obj_enev_haustyp'
+  $field_instances['node-objekt-field_obj_enev_haustyp'] = array(
+    'bundle' => 'objekt',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 25,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 4,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_obj_enev_haustyp',
+    'label' => 'House type',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'select2_integration' => array(
+        'styling' => array(
+          'dropdownAutoWidth' => 0,
+          'placeholder' => '',
+        ),
+        'use_select2' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'use_select2' => FALSE,
+      ),
+      'type' => 'options_select',
+      'weight' => 51,
+    ),
+  );
+
+  // Exported field_instance: 'node-objekt-field_obj_gemeinschaftsgeschaeft'
+  $field_instances['node-objekt-field_obj_gemeinschaftsgeschaeft'] = array(
+    'bundle' => 'objekt',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 32,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_obj_gemeinschaftsgeschaeft',
+    'label' => 'Gemeinschaftsgeschäft',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'select2_integration' => array(
+        'styling' => array(
+          'dropdownAutoWidth' => 0,
+          'placeholder' => '',
+        ),
+        'use_select2' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'use_select2' => FALSE,
+      ),
+      'type' => 'options_select',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-objekt-field_obj_kond_gemeingesch'
+  $field_instances['node-objekt-field_obj_kond_gemeingesch'] = array(
+    'bundle' => 'objekt',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 31,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 24,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_obj_kond_gemeingesch',
+    'label' => 'Konditionen Gemeinschaftsgeschäft',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 1,
+      'tmgmt_translate' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-objekt-field_obj_konditionen_tipp'
+  $field_instances['node-objekt-field_obj_konditionen_tipp'] = array(
+    'bundle' => 'objekt',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Hier können die jeweiligen Vereinbarungen mit dem Tippgeber hinterlegt werden.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 30,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_obj_konditionen_tipp',
+    'label' => 'Konditionen Tipp',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 0,
+      'tmgmt_translate' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-objekt-field_obj_schattenobjekt'
+  $field_instances['node-objekt-field_obj_schattenobjekt'] = array(
+    'bundle' => 'objekt',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_obj_schattenobjekt',
+    'label' => 'Schattenobjekt?',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'select2_integration' => array(
+        'styling' => array(
+          'dropdownAutoWidth' => 0,
+          'placeholder' => '',
+        ),
+        'use_select2' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'use_select2' => FALSE,
+      ),
+      'type' => 'options_select',
+      'weight' => 50,
+    ),
+  );
+
+  // Exported field_instance: 'node-objekt-field_obj_standort_schatten'
+  $field_instances['node-objekt-field_obj_standort_schatten'] = array(
+    'bundle' => 'objekt',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'leaflet',
+        'settings' => array(
+          'height' => 400,
+          'icon' => array(
+            'html' => '',
+            'htmlClass' => '',
+            'iconAnchor' => array(
+              'x' => '',
+              'y' => '',
+            ),
+            'iconImageStyle' => '',
+            'iconSize' => array(
+              'x' => '',
+              'y' => '',
+            ),
+            'iconType' => 'marker',
+            'iconUrl' => '',
+            'popupAnchor' => array(
+              'x' => '',
+              'y' => '',
+            ),
+            'shadowAnchor' => array(
+              'x' => '',
+              'y' => '',
+            ),
+            'shadowUrl' => '',
+          ),
+          'leaflet_map' => 'leaflet-mapbox',
+          'popup' => array(
+            'show' => 0,
+            'text' => '',
+          ),
+          'vector_display' => array(
+            'clickable' => 0,
+            'color' => '',
+            'dashArray' => '',
+            'fill' => 0,
+            'fillColor' => '',
+            'fillOpacity' => '',
+            'opacity' => '',
+            'stroke' => 0,
+            'stroke_override' => 0,
+            'weight' => '',
+          ),
+          'zoom' => array(
+            'initialZoom' => -1,
+            'maxZoom' => -1,
+            'minZoom' => -1,
+          ),
+        ),
+        'type' => 'geofield_leaflet',
+        'weight' => 6,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_obj_standort_schatten',
+    'label' => 'Standort Schattenobjekt',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'addressfield_autocomplete',
+      'settings' => array(
+        'addressfield_autocomplete_field' => 'field_address_shadow_object',
+        'delta_handling' => 'default',
+      ),
+      'type' => 'addressfield_autocomplete_latlng',
+      'weight' => 54,
+    ),
+  );
+
+  // Exported field_instance: 'node-objekt-field_obj_tippgeber'
+  $field_instances['node-objekt-field_obj_tippgeber'] = array(
+    'bundle' => 'objekt',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => 'Wenn dieses Objekt von einem Tippgeber kommt, den Namen hier eintragen.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 29,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 23,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_obj_tippgeber',
+    'label' => 'Tippgeber',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 1,
+        'references_dialog_edit' => 1,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-objekt-field_obj_verkaeufer'
+  $field_instances['node-objekt-field_obj_verkaeufer'] = array(
+    'bundle' => 'objekt',
+    'default_value' => array(),
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 28,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 11,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_obj_verkaeufer',
+    'label' => 'Verkäufer',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'select2_integration' => array(
+        'styling' => array(
+          'dropdownAutoWidth' => 0,
+          'placeholder' => '',
+        ),
+        'use_select2' => 0,
+      ),
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'multiselect',
+      'settings' => array(
+        'use_select2' => FALSE,
+      ),
+      'type' => 'multiselect',
+      'weight' => 1,
+    ),
+  );
+
   // Exported field_instance: 'node-objekt-field_object_desc_commercial'
   $field_instances['node-objekt-field_object_desc_commercial'] = array(
     'bundle' => 'objekt',
@@ -2472,7 +3349,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 35,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -2540,6 +3417,7 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 1,
+      'tmgmt_translate' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2571,7 +3449,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 42,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -2640,6 +3518,7 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 1,
+      'tmgmt_translate' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2671,7 +3550,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 31,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -2739,6 +3618,7 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 1,
+      'tmgmt_translate' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2878,6 +3758,7 @@ function hk_ct_field_default_field_instances() {
         'manualcrop_require_cropping' => array(),
         'manualcrop_styles_list' => array(
           'makler_thumbnail' => 'makler_thumbnail',
+          'map-popup' => 'map-popup',
         ),
         'manualcrop_styles_mode' => 'exclude',
         'manualcrop_thumblist' => 0,
@@ -2905,7 +3786,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 26,
+        'weight' => 41,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -2974,6 +3855,7 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 1,
+      'tmgmt_translate' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2998,13 +3880,13 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 16,
       ),
       'map_popup' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 5,
+        'weight' => 29,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -3068,7 +3950,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 29,
+        'weight' => 44,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -3103,6 +3985,7 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 1,
+      'tmgmt_translate' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3135,7 +4018,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'mlt_image' => array(
         'label' => 'hidden',
@@ -3170,6 +4053,7 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 1,
+      'tmgmt_translate' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3200,7 +4084,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 14,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -3235,7 +4119,7 @@ function hk_ct_field_default_field_instances() {
         'use_select2' => FALSE,
       ),
       'type' => 'options_select',
-      'weight' => 47,
+      'weight' => 48,
     ),
   );
 
@@ -3256,7 +4140,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 13,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -3295,7 +4179,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 46,
+      'weight' => 47,
     ),
   );
 
@@ -3316,7 +4200,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 15,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -3374,7 +4258,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 12,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -3402,6 +4286,13 @@ function hk_ct_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
+      'select2_integration' => array(
+        'styling' => array(
+          'dropdownAutoWidth' => 0,
+          'placeholder' => '',
+        ),
+        'use_select2' => 0,
+      ),
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3411,7 +4302,7 @@ function hk_ct_field_default_field_instances() {
         'use_select2' => FALSE,
       ),
       'type' => 'options_select',
-      'weight' => 44,
+      'weight' => 45,
     ),
   );
 
@@ -3475,7 +4366,7 @@ function hk_ct_field_default_field_instances() {
           ),
         ),
         'type' => 'geofield_leaflet',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'full' => array(
         'label' => 'above',
@@ -3488,7 +4379,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 43,
       ),
       'mlt_image' => array(
         'label' => 'hidden',
@@ -3646,7 +4537,7 @@ function hk_ct_field_default_field_instances() {
         'delta_handling' => 'default',
       ),
       'type' => 'addressfield_autocomplete_latlng',
-      'weight' => 51,
+      'weight' => 53,
     ),
     'widget_type' => 'geofield_wkt',
   );
@@ -3676,7 +4567,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 24,
+        'weight' => 39,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -3766,6 +4657,7 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 0,
+      'tmgmt_translate' => 0,
       'user_register_form' => FALSE,
     ),
     'weight' => 0,
@@ -3799,7 +4691,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 38,
+        'weight' => 53,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -3834,6 +4726,7 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 0,
+      'tmgmt_translate' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3865,7 +4758,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 36,
+        'weight' => 51,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -3899,6 +4792,7 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 0,
+      'tmgmt_translate' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3909,68 +4803,6 @@ function hk_ct_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 30,
-    ),
-  );
-
-  // Exported field_instance: 'node-objekt-field_schattenobjekt'
-  $field_instances['node-objekt-field_schattenobjekt'] = array(
-    'bundle' => 'objekt',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => 'Ein Schattenobjekt wird nicht an der genauen Adresse angezeigt und der Marker verschwindet von der Karte, wenn man hineinzoomt. Daher darf keine Strasse und Hausnummer eingegeben werden.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 62,
-      ),
-      'map_popup' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'mlt_image' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 62,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_schattenobjekt',
-    'label' => 'Schattenobjekt?',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 48,
     ),
   );
 
@@ -3992,7 +4824,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 46,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -4042,133 +4874,6 @@ function hk_ct_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-objekt-field_topobjekt'
-  $field_instances['node-objekt-field_topobjekt'] = array(
-    'bundle' => 'objekt',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '1 Satz zur Beschreibung des Topobjekts, das auf der Startseite angezeigt wird. Beschränkt auf 100 Zeichen.',
-    'display' => array(
-      'default' => array(
-        'label' => 'inline',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 17,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 6,
-      ),
-      'map_popup' => array(
-        'label' => 'inline',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 37,
-      ),
-      'mlt_image' => array(
-        'label' => 'inline',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 17,
-      ),
-      'print' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 6,
-      ),
-      'rss' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 6,
-      ),
-      'search_result' => array(
-        'label' => 'inline',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 21,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 31,
-      ),
-      'token' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 6,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_topobjekt',
-    'label' => 'Topobjekt',
-    'required' => 0,
-    'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'ds_code' => 'ds_code',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 'php_code',
-          'plain_text' => 'plain_text',
-          'redhen_activity_message' => 'redhen_activity_message',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'ds_code' => array(
-              'weight' => 12,
-            ),
-            'filtered_html' => array(
-              'weight' => -10,
-            ),
-            'full_html' => array(
-              'weight' => -9,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-            'redhen_activity_message' => array(
-              'weight' => 0,
-            ),
-          ),
-        ),
-      ),
-      'entity_translation_sync' => FALSE,
-      'linkit' => array(
-        'enable' => 0,
-        'insert_plugin' => '',
-      ),
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'weight' => 6,
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 3,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 5,
-    ),
-    'widget_type' => 'text_textarea',
-  );
-
   // Exported field_instance: 'node-objekt-field_wug_act_rent'
   $field_instances['node-objekt-field_wug_act_rent'] = array(
     'bundle' => 'objekt',
@@ -4192,7 +4897,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 34,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -4264,7 +4969,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 33,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -4336,7 +5041,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 32,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -4408,7 +5113,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 28,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -4474,7 +5179,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 6,
+        'weight' => 30,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -4546,7 +5251,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 35,
+        'weight' => 50,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -4597,7 +5302,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 48,
+      'weight' => 49,
     ),
   );
 
@@ -4616,14 +5321,9 @@ function hk_ct_field_default_field_instances() {
       ),
       'map_popup' => array(
         'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'title_class' => '',
-          'title_link' => '',
-          'title_style' => 'h2',
-        ),
-        'type' => 'title_linked',
-        'weight' => 1,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
       ),
       'mlt_image' => array(
         'label' => 'above',
@@ -4660,6 +5360,7 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 0,
+      'tmgmt_translate' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5041,38 +5742,46 @@ function hk_ct_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('1 Satz zur Beschreibung des Topobjekts, das auf der Startseite angezeigt wird. Beschränkt auf 100 Zeichen.');
   t('3 Großbuchstaben plus Hausnummer');
   t('A <em>page</em>, similar in form to a <em>story</em>, is a simple method for creating and displaying information that rarely changes, such as an "About us" section of a website. By default, a <em>page</em> entry does not allow visitor comments and is not featured on the site\'s initial home page.');
   t('Actual net rental income p.a.');
   t('Address');
+  t('Address Shadow Object');
   t('Ansprechpartner');
   t('Apartment No.');
   t('Apartment description');
   t('Apartment location');
   t('Apartment other');
   t('Apartments');
+  t('Ausstelldatum');
   t('Bathrooms');
   t('Body');
   t('Borough');
   t('Category');
+  t('Ceiling height');
   t('Commission');
   t('Commission (Rent)');
   t('Description');
   t('Description Commercial');
   t('Description Investment');
   t('Developer');
-  t('Ein Schattenobjekt wird nicht an der genauen Adresse angezeigt und der Marker verschwindet von der Karte, wenn man hineinzoomt. Daher darf keine Strasse und Hausnummer eingegeben werden.');
   t('Endenergiebedarf');
   t('Energieausweistyp');
   t('Energieeffizienzklasse');
   t('Energieträger');
+  t('Energy Performance Certificate');
   t('Exposé');
   t('Fittings');
   t('Floor');
   t('Floor plan');
+  t('Galerie');
+  t('Gemeinschaftsgeschäft');
   t('HOA fee');
   t('Heating type');
+  t('Hier können die jeweiligen Vereinbarungen mit dem Tippgeber hinterlegt werden.');
+  t('House type');
+  t('Konditionen Gemeinschaftsgeschäft');
+  t('Konditionen Tipp');
   t('Living space');
   t('Location');
   t('Moving in from');
@@ -5097,12 +5806,15 @@ function hk_ct_field_default_field_instances() {
   t('Schattenobjekt?');
   t('Sleeping rooms');
   t('Standort');
+  t('Standort Schattenobjekt');
   t('Status quo');
   t('Text Karten-Popup');
+  t('Tippgeber');
   t('Titel');
-  t('Topobjekt');
   t('Total space');
   t('Type');
+  t('Verkäufer');
+  t('Wenn dieses Objekt von einem Tippgeber kommt, den Namen hier eintragen.');
   t('Wenn in einem Objekt mehrere Wohnungstypen vorkommen (bezugsfrei, vermietet, gewerblich), können hier zusätzliche Beschreibungtexte eingegeben werden.');
   t('Year built');
 

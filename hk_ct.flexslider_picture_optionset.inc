@@ -24,7 +24,7 @@ function hk_ct_default_flexslider_picture_optionset() {
   $flexslider_picture_optionset->api_version = 1;
   $flexslider_picture_optionset->flexslider_optionset = 'thumbslider';
   $flexslider_picture_optionset->imagestyle_type = 'image_style';
-  $flexslider_picture_optionset->mapping = 'bear_default_picture_mappings';
+  $flexslider_picture_optionset->mapping = 'colorbox_mapping';
   $flexslider_picture_optionset->fallback = '';
   $export['thumbslider'] = $flexslider_picture_optionset;
 
@@ -33,7 +33,7 @@ function hk_ct_default_flexslider_picture_optionset() {
   $flexslider_picture_optionset->api_version = 1;
   $flexslider_picture_optionset->flexslider_optionset = 'wohnungsansicht';
   $flexslider_picture_optionset->imagestyle_type = 'image_style';
-  $flexslider_picture_optionset->mapping = 'bear_default_picture_mappings';
+  $flexslider_picture_optionset->mapping = 'colorbox_mapping';
   $flexslider_picture_optionset->fallback = '';
   $export['wohnungsansicht'] = $flexslider_picture_optionset;
 
