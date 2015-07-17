@@ -91,7 +91,7 @@ function hk_ct_field_default_field_bases() {
   // Exported field_base: 'field_ansprechpartner'
   $field_bases['field_ansprechpartner'] = array(
     'active' => 1,
-    'cardinality' => 3,
+    'cardinality' => 5,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_ansprechpartner',
@@ -122,6 +122,26 @@ function hk_ct_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'entityreference',
+  );
+
+  // Exported field_base: 'field_apart_alloc_incident_costs'
+  $field_bases['field_apart_alloc_incident_costs'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_apart_alloc_incident_costs',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'number',
+    'settings' => array(
+      'decimal_separator' => ',',
+      'entity_translation_sync' => FALSE,
+      'precision' => 10,
+      'scale' => 2,
+    ),
+    'translatable' => 0,
+    'type' => 'number_decimal',
   );
 
   // Exported field_base: 'field_apart_bathrooms'
@@ -320,6 +340,37 @@ function hk_ct_field_default_field_bases() {
     'type' => 'number_decimal',
   );
 
+  // Exported field_base: 'field_apart_incidental_cost'
+  $field_bases['field_apart_incidental_cost'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_apart_incidental_cost',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'computed_field',
+    'settings' => array(
+      'code' => '//$entity_field[0][\'value\'] = array_pop(array_pop(field_get_items($entity_type, $entity, \'field_apart_alloc_incident_costs\'))) + array_pop(array_pop(field_get_items($entity_type, $entity, \'field_apart_nalloc_incid_costs\')));
+$entity_field[0][\'value\'] = $entity->field_apart_alloc_incident_costs[\'und\'][0][\'value\']+ $entity->field_apart_nalloc_incid_cost[\'und\'][0][\'value\'];',
+      'database' => array(
+        'data_default' => '',
+        'data_index' => 0,
+        'data_length' => 32,
+        'data_not_NULL' => 0,
+        'data_precision' => 10,
+        'data_scale' => 2,
+        'data_size' => 'normal',
+        'data_type' => 'numeric',
+      ),
+      'display_format' => '$display_output = $entity_field_item[\'value\'];',
+      'entity_translation_sync' => FALSE,
+      'store' => 1,
+    ),
+    'translatable' => 0,
+    'type' => 'computed',
+  );
+
   // Exported field_base: 'field_apart_living_space'
   $field_bases['field_apart_living_space'] = array(
     'active' => 1,
@@ -359,6 +410,70 @@ function hk_ct_field_default_field_bases() {
     ),
     'translatable' => 1,
     'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_apart_maint_reserve_value'
+  $field_bases['field_apart_maint_reserve_value'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_apart_maint_reserve_value',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
+  // Exported field_base: 'field_apart_maintenance_reserve'
+  $field_bases['field_apart_maintenance_reserve'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_apart_maintenance_reserve',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
+  // Exported field_base: 'field_apart_nalloc_incid_cost'
+  $field_bases['field_apart_nalloc_incid_cost'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_apart_nalloc_incid_cost',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'number',
+    'settings' => array(
+      'decimal_separator' => ',',
+      'entity_translation_sync' => FALSE,
+      'precision' => 10,
+      'scale' => 2,
+    ),
+    'translatable' => 0,
+    'type' => 'number_decimal',
   );
 
   // Exported field_base: 'field_apart_net_rent'
@@ -509,6 +624,23 @@ function hk_ct_field_default_field_bases() {
     'type' => 'number_decimal',
   );
 
+  // Exported field_base: 'field_apart_regionbound_counter'
+  $field_bases['field_apart_regionbound_counter'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_apart_regionbound_counter',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'number',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'number_integer',
+  );
+
   // Exported field_base: 'field_apart_rooms'
   $field_bases['field_apart_rooms'] = array(
     'active' => 1,
@@ -628,6 +760,74 @@ function hk_ct_field_default_field_bases() {
     'type_name' => 'residential_commercial_building',
   );
 
+  // Exported field_base: 'field_bezirk_geokoordinaten'
+  $field_bases['field_bezirk_geokoordinaten'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_bezirk_geokoordinaten',
+    'indexes' => array(
+      'bbox' => array(
+        0 => 'top',
+        1 => 'bottom',
+        2 => 'left',
+        3 => 'right',
+      ),
+      'bottom' => array(
+        0 => 'bottom',
+      ),
+      'centroid' => array(
+        0 => 'lat',
+        1 => 'lon',
+      ),
+      'geohash' => array(
+        0 => 'geohash',
+      ),
+      'lat' => array(
+        0 => 'lat',
+      ),
+      'left' => array(
+        0 => 'left',
+      ),
+      'lon' => array(
+        0 => 'lon',
+      ),
+      'right' => array(
+        0 => 'right',
+      ),
+      'top' => array(
+        0 => 'top',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'geofield',
+    'settings' => array(
+      'backend' => 'default',
+      'entity_translation_sync' => FALSE,
+      'srid' => 4326,
+    ),
+    'translatable' => 0,
+    'type' => 'geofield',
+  );
+
+  // Exported field_base: 'field_bezirk_postleitzahlen'
+  $field_bases['field_bezirk_postleitzahlen'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_bezirk_postleitzahlen',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'addressfield',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'addressfield',
+  );
+
   // Exported field_base: 'field_developer'
   $field_bases['field_developer'] = array(
     'active' => 1,
@@ -676,6 +876,7 @@ function hk_ct_field_default_field_bases() {
         'Air / water heat pump' => 'Air / water heat pump',
         'Stove heating' => 'Stove heating',
         'Fireplace' => 'Fireplace',
+        'N/A' => 'N/A',
       ),
       'allowed_values_function' => '',
       'allowed_values_no_localization' => 0,
@@ -755,6 +956,43 @@ function hk_ct_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'text',
+  );
+
+  // Exported field_base: 'field_obj_acquise'
+  $field_bases['field_obj_acquise'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_obj_acquise',
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'individual' => 'individual',
+          'mitarbeiter' => 'mitarbeiter',
+        ),
+      ),
+      'target_type' => 'crm_core_contact',
+    ),
+    'translatable' => 0,
+    'type' => 'entityreference',
   );
 
   // Exported field_base: 'field_obj_apartments'
@@ -872,6 +1110,7 @@ function hk_ct_field_default_field_bases() {
         'Minergie Bauweise' => 'Minergie construction',
         'Minergie zertifiziert' => 'Minergie certified',
         'Neubaustandard' => 'New standard',
+        'N/A' => 'N/A',
       ),
       'allowed_values_function' => '',
       'allowed_values_no_localization' => 0,
@@ -899,6 +1138,7 @@ function hk_ct_field_default_field_bases() {
       'allowed_values' => array(
         'Gemeinschaftgeschäft' => 'Dieses Objekt ist ein Gemeinschaftsgeschäft',
         'Gemeinschaftsgeschäftsfähig' => 'Dieses Objekt ist für Gemeinschaftsgeschäfte freigegeben',
+        'kein Gemeinschaftsgeschäft' => 'kein Gemeinschaftsgeschäft',
       ),
       'allowed_values_function' => '',
       'allowed_values_no_localization' => 0,
@@ -906,6 +1146,27 @@ function hk_ct_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'list_text',
+  );
+
+  // Exported field_base: 'field_obj_kond_acquise'
+  $field_bases['field_obj_kond_acquise'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_obj_kond_acquise',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'text_long',
   );
 
   // Exported field_base: 'field_obj_kond_gemeingesch'
@@ -968,6 +1229,7 @@ function hk_ct_field_default_field_bases() {
       'allowed_values' => array(
         0 => 'nein',
         1 => 'ja',
+        2 => 'nicht auf Karte zeigen',
       ),
       'allowed_values_function' => '',
       'allowed_values_no_localization' => 1,
@@ -1056,6 +1318,7 @@ function hk_ct_field_default_field_bases() {
         ),
         'target_bundles' => array(
           'individual' => 'individual',
+          'mitarbeiter' => 'mitarbeiter',
         ),
       ),
       'target_type' => 'crm_core_contact',
@@ -1067,7 +1330,7 @@ function hk_ct_field_default_field_bases() {
   // Exported field_base: 'field_obj_verkaeufer'
   $field_bases['field_obj_verkaeufer'] = array(
     'active' => 1,
-    'cardinality' => 2,
+    'cardinality' => 5,
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_obj_verkaeufer',
@@ -1339,8 +1602,10 @@ function hk_ct_field_default_field_bases() {
         'F' => 'F',
         'G' => 'G',
         'H' => 'H',
+        'N/A' => 'N/A',
       ),
       'allowed_values_function' => '',
+      'allowed_values_no_localization' => 0,
       'entity_translation_sync' => FALSE,
     ),
     'translatable' => 0,
@@ -1385,6 +1650,7 @@ function hk_ct_field_default_field_bases() {
       'allowed_values' => array(
         'Bedarfsausweis' => 'Bedarfsausweis',
         'Verbrauchsausweis' => 'Verbrauchsausweis',
+        'N/A' => 'liegt noch nicht vor',
       ),
       'allowed_values_function' => '',
       'allowed_values_no_localization' => 0,
@@ -1421,6 +1687,7 @@ function hk_ct_field_default_field_bases() {
         'District Heating' => 'District Heating',
         'Electricity' => 'Electricity',
         'Geothermal' => 'Geothermal',
+        'N/A' => 'N/A',
       ),
       'allowed_values_function' => '',
       'allowed_values_no_localization' => 0,
@@ -1631,7 +1898,10 @@ function hk_ct_field_default_field_bases() {
         'Completely Refurbished' => 'Completely Refurbished',
         'Partially restored' => 'Partially restored',
         'Renovated' => 'Renovated',
+        'In need of renovation' => 'In need of renovation',
+        'In need of modernization' => 'In need of modernization',
         'No Information' => 'No Information',
+        'N/A' => 'N/A',
       ),
       'allowed_values_function' => '',
       'allowed_values_no_localization' => 0,

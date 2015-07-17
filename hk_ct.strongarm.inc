@@ -155,7 +155,7 @@ function hk_ct_strongarm() {
           'weight' => '1',
         ),
         'redirect' => array(
-          'weight' => '5',
+          'weight' => '4',
         ),
         'language' => array(
           'weight' => '-4',

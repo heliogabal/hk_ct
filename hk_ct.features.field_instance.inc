@@ -10,6 +10,54 @@
 function hk_ct_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'node-apartment-field_apart_alloc_incident_costs'
+  $field_instances['node-apartment-field_apart_alloc_incident_costs'] = array(
+    'bundle' => 'apartment',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 44,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'tile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_apart_alloc_incident_costs',
+    'label' => 'Allocable incidental costs',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => ' €/month',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 46,
+    ),
+  );
+
   // Exported field_instance: 'node-apartment-field_apart_bathrooms'
   $field_instances['node-apartment-field_apart_bathrooms'] = array(
     'bundle' => 'apartment',
@@ -54,7 +102,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 54,
+      'weight' => 55,
     ),
   );
 
@@ -102,7 +150,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 53,
+      'weight' => 54,
     ),
   );
 
@@ -162,7 +210,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 44,
+      'weight' => 51,
     ),
   );
 
@@ -380,7 +428,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 51,
+      'weight' => 52,
     ),
   );
 
@@ -397,7 +445,7 @@ function hk_ct_field_default_field_instances() {
           'colorbox_settings' => array(
             'colorbox_caption' => 'auto',
             'colorbox_caption_custom' => '',
-            'colorbox_gallery' => 'field_page',
+            'colorbox_gallery' => 'field_post',
             'colorbox_gallery_custom' => '',
             'colorbox_group' => 'colorbox_mapping',
           ),
@@ -503,13 +551,8 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'flexslider_picture',
-        'settings' => array(
-          'caption' => 0,
-          'image_style' => 'flexslider_full',
-          'optionset' => 'wohnungsansicht',
-        ),
-        'type' => 'flexslider',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -635,6 +678,49 @@ function hk_ct_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-apartment-field_apart_incidental_cost'
+  $field_instances['node-apartment-field_apart_incidental_cost'] = array(
+    'bundle' => 'apartment',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 47,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'tile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_apart_incidental_cost',
+    'label' => 'Incidental cost',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'computed_field',
+      'settings' => array(),
+      'type' => 'computed',
+      'weight' => 48,
+    ),
+  );
+
   // Exported field_instance: 'node-apartment-field_apart_living_space'
   $field_instances['node-apartment-field_apart_living_space'] = array(
     'bundle' => 'apartment',
@@ -697,7 +783,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => -1,
+      'weight' => 0,
     ),
   );
 
@@ -710,9 +796,8 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'text',
         'settings' => array(),
-        'type' => 'text_default',
+        'type' => 'hidden',
         'weight' => 28,
       ),
       'teaser' => array(
@@ -734,47 +819,13 @@ function hk_ct_field_default_field_instances() {
     'label' => 'Apartment location',
     'required' => 0,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'ds_code' => 'ds_code',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 'php_code',
-          'plain_text' => 'plain_text',
-          'redhen_activity_message' => 'redhen_activity_message',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'ds_code' => array(
-              'weight' => 12,
-            ),
-            'filtered_html' => array(
-              'weight' => -10,
-            ),
-            'full_html' => array(
-              'weight' => -9,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-            'redhen_activity_message' => array(
-              'weight' => 0,
-            ),
-          ),
-        ),
-      ),
       'entity_translation_sync' => FALSE,
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
       ),
       'text_processing' => 1,
-      'tmgmt_translate' => 0,
+      'tmgmt_translate' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -785,6 +836,158 @@ function hk_ct_field_default_field_instances() {
       ),
       'type' => 'text_textarea',
       'weight' => 38,
+    ),
+  );
+
+  // Exported field_instance: 'node-apartment-field_apart_maint_reserve_value'
+  $field_instances['node-apartment-field_apart_maint_reserve_value'] = array(
+    'bundle' => 'apartment',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 43,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'tile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_apart_maint_reserve_value',
+    'label' => 'Maintenance reserve value',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 0,
+      'tmgmt_translate' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 44,
+    ),
+  );
+
+  // Exported field_instance: 'node-apartment-field_apart_maintenance_reserve'
+  $field_instances['node-apartment-field_apart_maintenance_reserve'] = array(
+    'bundle' => 'apartment',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 42,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'tile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_apart_maintenance_reserve',
+    'label' => 'Maintenance reserve',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 0,
+      'tmgmt_translate' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 43,
+    ),
+  );
+
+  // Exported field_instance: 'node-apartment-field_apart_nalloc_incid_cost'
+  $field_instances['node-apartment-field_apart_nalloc_incid_cost'] = array(
+    'bundle' => 'apartment',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 45,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'tile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_apart_nalloc_incid_cost',
+    'label' => 'Not allocable incidental costs',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => ' €/month',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 47,
     ),
   );
 
@@ -832,7 +1035,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 44,
+      'weight' => 45,
     ),
   );
 
@@ -923,7 +1126,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -2,
+      'weight' => -1,
     ),
   );
 
@@ -1185,7 +1388,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -1233,7 +1436,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 43,
+      'weight' => 50,
     ),
   );
 
@@ -1281,7 +1484,59 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 45,
+      'weight' => 49,
+    ),
+  );
+
+  // Exported field_instance: 'node-apartment-field_apart_regionbound_counter'
+  $field_instances['node-apartment-field_apart_regionbound_counter'] = array(
+    'bundle' => 'apartment',
+    'default_value' => array(
+      0 => array(
+        'value' => 1,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 41,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'tile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_apart_regionbound_counter',
+    'label' => 'Wohnungszahl Regionbound Zähler',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 56,
     ),
   );
 
@@ -1341,7 +1596,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 0,
+      'weight' => 1,
     ),
   );
 
@@ -1389,7 +1644,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 52,
+      'weight' => 53,
     ),
   );
 
@@ -1503,7 +1758,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 55,
+      'weight' => 56,
     ),
   );
 
@@ -1662,7 +1917,51 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 50,
+      'weight' => 51,
+    ),
+  );
+
+  // Exported field_instance: 'node-apartment-field_obj_schattenobjekt'
+  $field_instances['node-apartment-field_obj_schattenobjekt'] = array(
+    'bundle' => 'apartment',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 48,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'tile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_obj_schattenobjekt',
+    'label' => 'Schattenwohnung?',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => -2,
     ),
   );
 
@@ -1704,7 +2003,7 @@ function hk_ct_field_default_field_instances() {
       'behaviors' => array(
         'prepopulate' => array(
           'action' => 'disable',
-          'action_on_edit' => 0,
+          'action_on_edit' => 1,
           'fallback' => 'none',
           'providers' => array(
             'og_context' => FALSE,
@@ -1730,7 +2029,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -1832,6 +2131,50 @@ function hk_ct_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-apartment-field_status_quo'
+  $field_instances['node-apartment-field_status_quo'] = array(
+    'bundle' => 'apartment',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 46,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'tile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_status_quo',
+    'label' => 'Status quo',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 50,
     ),
   );
 
@@ -1997,7 +2340,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 7,
+        'weight' => 16,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -2057,7 +2400,7 @@ function hk_ct_field_default_field_instances() {
         'visible_markers' => 1,
       ),
       'type' => 'addressfield_autocomplete',
-      'weight' => 52,
+      'weight' => 5,
     ),
   );
 
@@ -2073,7 +2416,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 17,
+        'weight' => 18,
       ),
       'map_popup' => array(
         'label' => 'hidden',
@@ -2116,21 +2459,12 @@ function hk_ct_field_default_field_instances() {
         ),
       ),
       'entity_translation_sync' => FALSE,
-      'select2_integration' => array(
-        'styling' => array(
-          'dropdownAutoWidth' => 0,
-          'placeholder' => '',
-        ),
-        'use_select2' => 0,
-      ),
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
+      'active' => 0,
       'module' => 'multiselect',
-      'settings' => array(
-        'use_select2' => FALSE,
-      ),
+      'settings' => array(),
       'type' => 'multiselect',
       'weight' => 0,
     ),
@@ -2357,9 +2691,7 @@ function hk_ct_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'use_select2' => FALSE,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 46,
     ),
@@ -2563,13 +2895,77 @@ function hk_ct_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-objekt-field_obj_apartments'
-  $field_instances['node-objekt-field_obj_apartments'] = array(
+  // Exported field_instance: 'node-objekt-field_obj_acquise'
+  $field_instances['node-objekt-field_obj_acquise'] = array(
     'bundle' => 'objekt',
-    'default_value' => array(),
+    'default_value' => NULL,
     'default_value_function' => '',
     'deleted' => 0,
     'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 57,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_obj_acquise',
+    'label' => 'Acquise',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 1,
+        'references_dialog_edit' => 1,
+        'references_dialog_search' => 0,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-objekt-field_obj_apartments'
+  $field_instances['node-objekt-field_obj_apartments'] = array(
+    'bundle' => 'objekt',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => 'Vorsicht! Bevor die erste Wohnung angelegt werden kann, muss das Objekt einmal abgespeichert werden, da sont noch keine Objekt-ID vorliegt, mit der die Wohnung verknüpft werden kann.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -2656,9 +3052,16 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 24,
+        'module' => 'date',
+        'settings' => array(
+          'format_type' => 'datum_ohne_uhrzeit',
+          'fromto' => 'both',
+          'multiple_from' => '',
+          'multiple_number' => '',
+          'multiple_to' => '',
+        ),
+        'type' => 'date_default',
+        'weight' => 47,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -2696,12 +3099,12 @@ function hk_ct_field_default_field_instances() {
       'active' => 1,
       'module' => 'date',
       'settings' => array(
-        'increment' => 15,
-        'input_format' => 'm/d/Y - g:i:sa',
+        'increment' => 30,
+        'input_format' => 'd.m.Y - H:i:s',
         'input_format_custom' => '',
-        'label_position' => 'above',
+        'label_position' => 'none',
         'text_parts' => array(),
-        'year_range' => '-3:+3',
+        'year_range' => '-10:+3',
       ),
       'type' => 'date_popup',
       'weight' => 50,
@@ -2716,9 +3119,12 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 26,
+        'module' => 'file_entity',
+        'settings' => array(
+          'text' => 'Download',
+        ),
+        'type' => 'file_download_link',
+        'weight' => 53,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -2817,9 +3223,10 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 25,
+        'type' => 'list_default',
+        'weight' => 51,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -2859,9 +3266,7 @@ function hk_ct_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'use_select2' => FALSE,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 51,
     ),
@@ -2878,7 +3283,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 32,
+        'weight' => 33,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -2918,11 +3323,67 @@ function hk_ct_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'use_select2' => FALSE,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-objekt-field_obj_kond_acquise'
+  $field_instances['node-objekt-field_obj_kond_acquise'] = array(
+    'bundle' => 'objekt',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 58,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_obj_kond_acquise',
+    'label' => 'Konditionen Acquise',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 1,
+      'tmgmt_translate' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 5,
     ),
   );
 
@@ -2937,7 +3398,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 32,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -2995,7 +3456,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 30,
+        'weight' => 31,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -3038,7 +3499,7 @@ function hk_ct_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 5,
+      'weight' => 7,
     ),
   );
 
@@ -3053,7 +3514,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 27,
+        'weight' => 28,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -3093,9 +3554,7 @@ function hk_ct_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'use_select2' => FALSE,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 50,
     ),
@@ -3125,7 +3584,7 @@ function hk_ct_field_default_field_instances() {
               'y' => '',
             ),
             'iconType' => 'marker',
-            'iconUrl' => '',
+            'iconUrl' => 'sites/all/themes/hk_theme/icons/markers/Icon_House2.png',
             'popupAnchor' => array(
               'x' => '',
               'y' => '',
@@ -3198,7 +3657,7 @@ function hk_ct_field_default_field_instances() {
         'delta_handling' => 'default',
       ),
       'type' => 'addressfield_autocomplete_latlng',
-      'weight' => 54,
+      'weight' => 6,
     ),
   );
 
@@ -3214,7 +3673,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 29,
+        'weight' => 30,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -3257,12 +3716,12 @@ function hk_ct_field_default_field_instances() {
         'path' => '',
         'references_dialog_add' => 1,
         'references_dialog_edit' => 1,
-        'references_dialog_search' => 0,
+        'references_dialog_search' => 1,
         'references_dialog_search_view' => '',
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 4,
+      'weight' => 6,
     ),
   );
 
@@ -3278,7 +3737,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 29,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -3311,21 +3770,12 @@ function hk_ct_field_default_field_instances() {
         ),
       ),
       'entity_translation_sync' => FALSE,
-      'select2_integration' => array(
-        'styling' => array(
-          'dropdownAutoWidth' => 0,
-          'placeholder' => '',
-        ),
-        'use_select2' => 0,
-      ),
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
+      'active' => 0,
       'module' => 'multiselect',
-      'settings' => array(
-        'use_select2' => FALSE,
-      ),
+      'settings' => array(),
       'type' => 'multiselect',
       'weight' => 1,
     ),
@@ -3427,7 +3877,7 @@ function hk_ct_field_default_field_instances() {
         'rows' => 10,
       ),
       'type' => 'text_textarea',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -3628,7 +4078,7 @@ function hk_ct_field_default_field_instances() {
         'rows' => 10,
       ),
       'type' => 'text_textarea',
-      'weight' => 0,
+      'weight' => 1,
     ),
   );
 
@@ -3641,14 +4091,9 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'flexslider_picture',
-        'settings' => array(
-          'caption' => 0,
-          'image_style' => 'flexslider_full',
-          'optionset' => 'wohnungsansicht',
-        ),
-        'type' => 'flexslider',
-        'weight' => 0,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
       ),
       'map_popup' => array(
         'label' => 'hidden',
@@ -3872,7 +4317,11 @@ function hk_ct_field_default_field_instances() {
   // Exported field_instance: 'node-objekt-field_object_multi_apart_types'
   $field_instances['node-objekt-field_object_multi_apart_types'] = array(
     'bundle' => 'objekt',
-    'default_value' => array(),
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
     'deleted' => 0,
     'description' => 'Wenn in einem Objekt mehrere Wohnungstypen vorkommen (bezugsfrei, vermietet, gewerblich), können hier zusätzliche Beschreibungtexte eingegeben werden.',
     'display' => array(
@@ -3880,7 +4329,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 17,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -3920,10 +4369,10 @@ function hk_ct_field_default_field_instances() {
       'active' => 1,
       'module' => 'options',
       'settings' => array(
-        'display_label' => 0,
+        'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => -1,
+      'weight' => 0,
     ),
   );
 
@@ -4076,9 +4525,10 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 22,
+        'type' => 'list_default',
+        'weight' => 50,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -4105,19 +4555,26 @@ function hk_ct_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
+    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_objekt_effizienzklasse',
     'label' => 'Energieeffizienzklasse',
-    'required' => FALSE,
+    'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
+      'select2_integration' => array(
+        'styling' => array(
+          'dropdownAutoWidth' => 0,
+          'placeholder' => '',
+        ),
+        'use_select2' => 0,
+      ),
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'use_select2' => FALSE,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 48,
     ),
@@ -4132,9 +4589,15 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 21,
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => 1,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 49,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -4192,9 +4655,10 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 19,
+        'type' => 'list_default',
+        'weight' => 46,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -4228,14 +4692,19 @@ function hk_ct_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
+      'select2_integration' => array(
+        'styling' => array(
+          'dropdownAutoWidth' => 0,
+          'placeholder' => '',
+        ),
+        'use_select2' => 0,
+      ),
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'use_select2' => FALSE,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 43,
     ),
@@ -4250,9 +4719,10 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 20,
+        'type' => 'list_default',
+        'weight' => 48,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -4298,9 +4768,7 @@ function hk_ct_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(
-        'use_select2' => FALSE,
-      ),
+      'settings' => array(),
       'type' => 'options_select',
       'weight' => 45,
     ),
@@ -4331,7 +4799,7 @@ function hk_ct_field_default_field_instances() {
               'y' => '',
             ),
             'iconType' => 'marker',
-            'iconUrl' => '',
+            'iconUrl' => '/sites/all/themes/hk_theme/icons/markers/Icon_House2.png',
             'popupAnchor' => array(
               'x' => '',
               'y' => '',
@@ -4537,7 +5005,7 @@ function hk_ct_field_default_field_instances() {
         'delta_handling' => 'default',
       ),
       'type' => 'addressfield_autocomplete_latlng',
-      'weight' => 53,
+      'weight' => 52,
     ),
     'widget_type' => 'geofield_wkt',
   );
@@ -4685,7 +5153,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 47,
+        'weight' => 54,
       ),
       'map_popup' => array(
         'label' => 'inline',
@@ -4752,7 +5220,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 48,
+        'weight' => 55,
       ),
       'map_popup' => array(
         'label' => 'inline',
@@ -4806,74 +5274,6 @@ function hk_ct_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-objekt-field_status_quo'
-  $field_instances['node-objekt-field_status_quo'] = array(
-    'bundle' => 'objekt',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 38,
-      ),
-      'map_popup' => array(
-        'label' => 'inline',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 46,
-      ),
-      'mlt_image' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 38,
-      ),
-      'search_result' => array(
-        'label' => 'inline',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 39,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 16,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_status_quo',
-    'label' => 'Status quo',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'select2_integration' => array(
-        'styling' => array(
-          'dropdownAutoWidth' => 0,
-          'placeholder' => '',
-        ),
-        'use_select2' => 0,
-      ),
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'use_select2' => FALSE,
-      ),
-      'type' => 'options_select',
-      'weight' => 32,
-    ),
-  );
-
   // Exported field_instance: 'node-objekt-field_wug_act_rent'
   $field_instances['node-objekt-field_wug_act_rent'] = array(
     'bundle' => 'objekt',
@@ -4891,7 +5291,7 @@ function hk_ct_field_default_field_instances() {
           'thousand_separator' => ' ',
         ),
         'type' => 'number_decimal',
-        'weight' => 49,
+        'weight' => 56,
       ),
       'map_popup' => array(
         'label' => 'above',
@@ -5245,7 +5645,7 @@ function hk_ct_field_default_field_instances() {
           'thousand_separator' => '',
         ),
         'type' => 'number_integer',
-        'weight' => 46,
+        'weight' => 52,
       ),
       'map_popup' => array(
         'label' => 'inline',
@@ -5317,7 +5717,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 18,
+        'weight' => 19,
       ),
       'map_popup' => array(
         'label' => 'hidden',
@@ -5583,6 +5983,102 @@ function hk_ct_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'taxonomy_term-vocabulary_3-field_bezirk_geokoordinaten'
+  $field_instances['taxonomy_term-vocabulary_3-field_bezirk_geokoordinaten'] = array(
+    'bundle' => 'vocabulary_3',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'geofield',
+        'settings' => array(
+          'data' => 'bounding',
+        ),
+        'type' => 'geofield_wkt',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_bezirk_geokoordinaten',
+    'label' => 'Geokoordinaten',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'addressfield_autocomplete',
+      'settings' => array(
+        'addressfield_autocomplete_field' => 'field_bezirk_postleitzahlen',
+        'delta_handling' => 'm_to_s',
+      ),
+      'type' => 'addressfield_autocomplete_latlng',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'taxonomy_term-vocabulary_3-field_bezirk_postleitzahlen'
+  $field_instances['taxonomy_term-vocabulary_3-field_bezirk_postleitzahlen'] = array(
+    'bundle' => 'vocabulary_3',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'taxonomy_term',
+    'field_name' => 'field_bezirk_postleitzahlen',
+    'label' => 'Postleitzahlen',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'addressfield_autocomplete',
+      'settings' => array(
+        'available_countries' => array(
+          'DE' => 'DE',
+        ),
+        'default_country' => 'DE',
+        'draggable' => 1,
+        'format_handlers' => array(
+          'address' => 'address',
+          'address-hide-street' => 'address-hide-street',
+          'address-hide-country' => 'address-hide-country',
+          'address-optional' => 'address-optional',
+          'address-hide-postal-code' => 0,
+          'organisation' => 0,
+          'name-oneline' => 0,
+          'name-full' => 0,
+        ),
+        'geolocation' => TRUE,
+        'html5_geocode' => 1,
+        'manual_text' => 'Enter one manually',
+        'map' => 1,
+        'restrict_country' => array(),
+        'reveal' => 1,
+        'reverse_geocode' => 0,
+        'types' => 'geocode',
+        'visible_markers' => 1,
+      ),
+      'type' => 'addressfield_autocomplete',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-vocabulary_5-description_field'
   $field_instances['taxonomy_term-vocabulary_5-description_field'] = array(
     'bundle' => 'vocabulary_5',
@@ -5744,9 +6240,11 @@ function hk_ct_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('3 Großbuchstaben plus Hausnummer');
   t('A <em>page</em>, similar in form to a <em>story</em>, is a simple method for creating and displaying information that rarely changes, such as an "About us" section of a website. By default, a <em>page</em> entry does not allow visitor comments and is not featured on the site\'s initial home page.');
+  t('Acquise');
   t('Actual net rental income p.a.');
   t('Address');
   t('Address Shadow Object');
+  t('Allocable incidental costs');
   t('Ansprechpartner');
   t('Apartment No.');
   t('Apartment description');
@@ -5776,20 +6274,26 @@ function hk_ct_field_default_field_instances() {
   t('Floor plan');
   t('Galerie');
   t('Gemeinschaftsgeschäft');
+  t('Geokoordinaten');
   t('HOA fee');
   t('Heating type');
   t('Hier können die jeweiligen Vereinbarungen mit dem Tippgeber hinterlegt werden.');
   t('House type');
+  t('Incidental cost');
+  t('Konditionen Acquise');
   t('Konditionen Gemeinschaftsgeschäft');
   t('Konditionen Tipp');
   t('Living space');
   t('Location');
+  t('Maintenance reserve');
+  t('Maintenance reserve value');
   t('Moving in from');
   t('Multiple Apartment Types');
   t('Name');
   t('Net rent');
   t('No. of floors');
   t('No. of units');
+  t('Not allocable incidental costs');
   t('Object');
   t('Object ID');
   t('Object images');
@@ -5798,12 +6302,14 @@ function hk_ct_field_default_field_instances() {
   t('Optional construction site');
   t('Other');
   t('Pictures');
+  t('Postleitzahlen');
   t('Prozentzahl ohne Prozentzeichen mit Komma getrennt eingeben: z.B. 7,14');
   t('Purchasing price');
   t('Purchasing price parking lot');
   t('Rate Of Return');
   t('Rooms');
   t('Schattenobjekt?');
+  t('Schattenwohnung?');
   t('Sleeping rooms');
   t('Standort');
   t('Standort Schattenobjekt');
@@ -5814,8 +6320,10 @@ function hk_ct_field_default_field_instances() {
   t('Total space');
   t('Type');
   t('Verkäufer');
+  t('Vorsicht! Bevor die erste Wohnung angelegt werden kann, muss das Objekt einmal abgespeichert werden, da sont noch keine Objekt-ID vorliegt, mit der die Wohnung verknüpft werden kann.');
   t('Wenn dieses Objekt von einem Tippgeber kommt, den Namen hier eintragen.');
   t('Wenn in einem Objekt mehrere Wohnungstypen vorkommen (bezugsfrei, vermietet, gewerblich), können hier zusätzliche Beschreibungtexte eingegeben werden.');
+  t('Wohnungszahl Regionbound Zähler');
   t('Year built');
 
   return $field_instances;

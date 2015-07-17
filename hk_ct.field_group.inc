@@ -25,6 +25,7 @@ function hk_ct_field_group_info() {
     'children' => array(
       0 => 'group_lage',
       1 => 'group_sonstiges',
+      2 => 'group_house',
     ),
     'format_type' => 'accordion',
     'format_settings' => array(
@@ -53,10 +54,12 @@ function hk_ct_field_group_info() {
     'children' => array(
       0 => 'field_obj_verkaeufer',
       1 => 'field_ansprechpartner',
-      2 => 'field_obj_gemeinschaftsgeschaeft',
-      3 => 'field_obj_konditionen_tipp',
-      4 => 'field_obj_tippgeber',
-      5 => 'field_obj_kond_gemeingesch',
+      2 => 'field_obj_kond_acquise',
+      3 => 'field_obj_gemeinschaftsgeschaeft',
+      4 => 'field_obj_konditionen_tipp',
+      5 => 'field_obj_tippgeber',
+      6 => 'field_obj_kond_gemeingesch',
+      7 => 'field_obj_acquise',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -117,7 +120,8 @@ function hk_ct_field_group_info() {
       4 => 'field_kategorie',
       5 => 'field_object_ref',
       6 => 'title_field',
-      7 => 'language',
+      7 => 'field_obj_schattenobjekt',
+      8 => 'language',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -219,7 +223,14 @@ function hk_ct_field_group_info() {
     'children' => array(
       0 => 'field_apart_commission',
       1 => 'field_apart_hoa_fee',
-      2 => 'field_apart_price_parking',
+      2 => 'field_apart_net_rent',
+      3 => 'field_apart_price_parking',
+      4 => 'field_apart_rate_of_return',
+      5 => 'field_apart_maintenance_reserve',
+      6 => 'field_apart_maint_reserve_value',
+      7 => 'field_apart_alloc_incident_costs',
+      8 => 'field_apart_nalloc_incid_cost',
+      9 => 'field_apart_incidental_cost',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -319,6 +330,7 @@ function hk_ct_field_group_info() {
       4 => 'field_ausstattung',
       5 => 'field_moving_in_from',
       6 => 'field_apart_ceiling_height',
+      7 => 'field_status_quo',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -473,12 +485,11 @@ function hk_ct_field_group_info() {
       2 => 'field_no_of_floors',
       3 => 'field_rent_commission',
       4 => 'field_sale_commission',
-      5 => 'field_status_quo',
-      6 => 'field_wug_act_rent',
-      7 => 'field_wug_no_of_units',
-      8 => 'field_wug_occupancy',
-      9 => 'field_wug_opt_constrruct',
-      10 => 'field_wug_total_space',
+      5 => 'field_wug_act_rent',
+      6 => 'field_wug_no_of_units',
+      7 => 'field_wug_occupancy',
+      8 => 'field_wug_opt_constrruct',
+      9 => 'field_wug_total_space',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -506,13 +517,11 @@ function hk_ct_field_group_info() {
     'label' => 'Texte',
     'weight' => '3',
     'children' => array(
-      0 => 'field_object_desc_commercial',
-      1 => 'field_object_description',
-      2 => 'field_object_description_invest',
-      3 => 'field_object_location',
-      4 => 'field_object_multi_apart_types',
-      5 => 'field_object_other',
-      6 => 'field_object_txt_map_popup',
+      0 => 'field_object_description',
+      1 => 'field_object_location',
+      2 => 'field_object_other',
+      3 => 'field_object_txt_map_popup',
+      4 => 'group_multiapart',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -567,9 +576,9 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = 'group_akkordeon';
   $field_group->data = array(
     'label' => 'Location',
-    'weight' => '7',
+    'weight' => '51',
     'children' => array(
-      0 => 'field_apart_location',
+      0 => 'conditional_location',
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(
@@ -627,7 +636,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Merkmale',
-    'weight' => '2',
+    'weight' => '1',
     'children' => array(
       0 => 'field_address',
       1 => 'field_bezirk',
@@ -639,13 +648,19 @@ function hk_ct_field_group_info() {
       7 => 'field_objektid_nunumeric',
       8 => 'field_rent_commission',
       9 => 'field_sale_commission',
-      10 => 'field_status_quo',
-      11 => 'field_wug_act_rent',
-      12 => 'field_wug_no_of_units',
-      13 => 'field_wug_occupancy',
-      14 => 'field_wug_opt_constrruct',
-      15 => 'field_wug_total_space',
-      16 => 'field_year_built',
+      10 => 'field_wug_act_rent',
+      11 => 'field_wug_no_of_units',
+      12 => 'field_wug_occupancy',
+      13 => 'field_wug_opt_constrruct',
+      14 => 'field_wug_total_space',
+      15 => 'field_year_built',
+      16 => 'field_objekt_energieausweistyp',
+      17 => 'field_objekt_energietraeger',
+      18 => 'field_objekt_endenergiebedarf',
+      19 => 'field_objekt_effizienzklasse',
+      20 => 'field_obj_enev_date',
+      21 => 'field_obj_enev_haustyp',
+      22 => 'field_obj_enev_file',
     ),
     'format_type' => 'html5',
     'format_settings' => array(
@@ -667,11 +682,15 @@ function hk_ct_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'objekt';
   $field_group->mode = 'form';
-  $field_group->parent_name = '';
+  $field_group->parent_name = 'group_ht_texte';
   $field_group->data = array(
     'label' => 'Mehrere Apartmenttypen im Objekt',
-    'weight' => '4',
-    'children' => array(),
+    'weight' => '-1',
+    'children' => array(
+      0 => 'field_object_desc_commercial',
+      1 => 'field_object_description_invest',
+      2 => 'field_object_multi_apart_types',
+    ),
     'format_type' => 'fieldset',
     'format_settings' => array(
       'formatter' => 'collapsible',
@@ -728,8 +747,7 @@ function hk_ct_field_group_info() {
       0 => 'field_address',
       1 => 'field_bezirk',
       2 => 'field_objekt_wkt',
-      3 => 'field_address_shadow_object',
-      4 => 'field_obj_schattenobjekt',
+      3 => 'field_obj_schattenobjekt',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -841,9 +859,9 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = 'group_akkordeon';
   $field_group->data = array(
     'label' => 'Other',
-    'weight' => '8',
+    'weight' => '52',
     'children' => array(
-      0 => 'field_apart_other',
+      0 => 'conditional_other',
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(
