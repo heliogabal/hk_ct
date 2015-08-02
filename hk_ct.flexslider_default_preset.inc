@@ -177,8 +177,6 @@ function hk_ct_flexslider_default_presets() {
     'randomize' => 0,
     'thumbCaptions' => 0,
     'thumbCaptionsBoth' => 0,
-    'carouselNavOptionset' => 'thumbslider',
-    'carouselNavImageStyle' => 'flexslider_thumbnail',
     'animationLoop' => 1,
     'pauseOnAction' => 0,
     'pauseOnHover' => 0,
@@ -187,8 +185,8 @@ function hk_ct_flexslider_default_presets() {
     'colorboxImageStyle' => 'colorbox_mapping',
     'colorboxFallbackImageStyle' => 'colorbox_full',
   );
-  $preset->imagestyle_type = 'image_style';
-  $preset->mapping = 'colorbox_mapping';
+  $preset->imagestyle_type = 'picture_mapping';
+  $preset->mapping = 'flexfull_mapping';
   $preset->fallback = '';
   $export['wohnungsansicht'] = $preset;
 

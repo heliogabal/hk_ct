@@ -21,7 +21,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = 'group_text';
   $field_group->data = array(
     'label' => 'Akkordeon',
-    'weight' => '30',
+    'weight' => '54',
     'children' => array(
       0 => 'group_lage',
       1 => 'group_sonstiges',
@@ -121,7 +121,8 @@ function hk_ct_field_group_info() {
       5 => 'field_object_ref',
       6 => 'title_field',
       7 => 'field_obj_schattenobjekt',
-      8 => 'language',
+      8 => 'field_apart_kiez_schattenobjekt',
+      9 => 'language',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -747,7 +748,10 @@ function hk_ct_field_group_info() {
       0 => 'field_address',
       1 => 'field_bezirk',
       2 => 'field_objekt_wkt',
-      3 => 'field_obj_schattenobjekt',
+      3 => 'field_address_shadow_object',
+      4 => 'field_obj_schattenobjekt',
+      5 => 'field_obj_geb_schatten_eref',
+      6 => 'field_obj_gebiet_schattenobjekt',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -918,7 +922,8 @@ function hk_ct_field_group_info() {
     'weight' => '4',
     'children' => array(
       0 => 'field_apart_description',
-      1 => 'group_akkordeon',
+      1 => 'field_apart_schattengebiet_wkt',
+      2 => 'group_akkordeon',
     ),
     'format_type' => 'html5',
     'format_settings' => array(

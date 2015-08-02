@@ -226,7 +226,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 29,
+        'weight' => 52,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -445,7 +445,7 @@ function hk_ct_field_default_field_instances() {
           'colorbox_settings' => array(
             'colorbox_caption' => 'auto',
             'colorbox_caption_custom' => '',
-            'colorbox_gallery' => 'field_post',
+            'colorbox_gallery' => 'field_page',
             'colorbox_gallery_custom' => '',
             'colorbox_group' => 'colorbox_mapping',
           ),
@@ -721,6 +721,64 @@ function hk_ct_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-apartment-field_apart_kiez_schattenobjekt'
+  $field_instances['node-apartment-field_apart_kiez_schattenobjekt'] = array(
+    'bundle' => 'apartment',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 50,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'tile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_apart_kiez_schattenobjekt',
+    'label' => 'Kiez Schattenobjekt',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 1,
+        'references_dialog_edit' => 1,
+        'references_dialog_search' => 1,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => -1,
+    ),
+  );
+
   // Exported field_instance: 'node-apartment-field_apart_living_space'
   $field_instances['node-apartment-field_apart_living_space'] = array(
     'bundle' => 'apartment',
@@ -783,7 +841,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 0,
+      'weight' => 1,
     ),
   );
 
@@ -1126,7 +1184,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => -1,
+      'weight' => 0,
     ),
   );
 
@@ -1388,7 +1446,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -1596,7 +1654,52 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 1,
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-apartment-field_apart_schattengebiet_wkt'
+  $field_instances['node-apartment-field_apart_schattengebiet_wkt'] = array(
+    'bundle' => 'apartment',
+    'default_value' => array(),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'geofield',
+        'settings' => array(
+          'data' => 'full',
+        ),
+        'type' => 'geofield_wkt',
+        'weight' => 55,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'tile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_apart_schattengebiet_wkt',
+    'label' => 'Schattengebiet WKT',
+    'required' => FALSE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'geofield',
+      'settings' => array(),
+      'type' => 'geofield_wkt',
+      'weight' => 58,
     ),
   );
 
@@ -1810,6 +1913,50 @@ function hk_ct_field_default_field_instances() {
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
       'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-apartment-field_geodaten_schattenwohnung'
+  $field_instances['node-apartment-field_geodaten_schattenwohnung'] = array(
+    'bundle' => 'apartment',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 49,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'tile' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_geodaten_schattenwohnung',
+    'label' => 'Geodaten Schattenwohnung',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'geofield',
+      'settings' => array(),
+      'type' => 'geofield_wkt',
+      'weight' => 57,
     ),
   );
 
@@ -2029,7 +2176,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -2228,6 +2375,105 @@ function hk_ct_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'node-kieze_schattenobjekte-field_kiez_gebiet_schattenobjekt'
+  $field_instances['node-kieze_schattenobjekte-field_kiez_gebiet_schattenobjekt'] = array(
+    'bundle' => 'kieze_schattenobjekte',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'geofield',
+        'settings' => array(
+          'data' => 'full',
+        ),
+        'type' => 'geofield_wkt',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_kiez_gebiet_schattenobjekt',
+    'label' => 'Gebiet Schattenobjekt neu',
+    'required' => 1,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'leaflet_widget',
+      'settings' => array(
+        'geocoder' => array(
+          'enabled' => 0,
+          'handler' => 'google',
+        ),
+        'map' => array(
+          'auto_center' => 0,
+          'base_url' => 'http://{s}.tiles.mapbox.com/v3/heliogabal23.l8fho93p/{z}/{x}/{y}.png',
+          'center' => array(
+            'lat' => 53.5,
+            'lng' => 13.4,
+          ),
+          'zoom' => 12,
+        ),
+      ),
+      'type' => 'leaflet_widget_widget',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-kieze_schattenobjekte-title_field'
+  $field_instances['node-kieze_schattenobjekte-title_field'] = array(
+    'bundle' => 'kieze_schattenobjekte',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'title_field',
+    'label' => 'Titel',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'tmgmt_translate' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
+    ),
+  );
+
   // Exported field_instance: 'node-objekt-field_address'
   $field_instances['node-objekt-field_address'] = array(
     'bundle' => 'objekt',
@@ -2400,7 +2646,7 @@ function hk_ct_field_default_field_instances() {
         'visible_markers' => 1,
       ),
       'type' => 'addressfield_autocomplete',
-      'weight' => 5,
+      'weight' => 52,
     ),
   );
 
@@ -3272,6 +3518,80 @@ function hk_ct_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-objekt-field_obj_geb_schatten_eref'
+  $field_instances['node-objekt-field_obj_geb_schatten_eref'] = array(
+    'bundle' => 'objekt',
+    'default_value' => NULL,
+    'default_value_function' => '',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'colorbox_node_classes' => '',
+          'colorbox_node_height' => 600,
+          'colorbox_node_link' => FALSE,
+          'colorbox_node_width' => 600,
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 60,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_obj_geb_schatten_eref',
+    'label' => 'Gebiet Schattenobjekt 2',
+    'required' => 0,
+    'settings' => array(
+      'behaviors' => array(
+        'prepopulate' => array(
+          'status' => 0,
+        ),
+        'taxonomy-index' => array(
+          'status' => TRUE,
+        ),
+      ),
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'references_dialog_add' => 1,
+        'references_dialog_edit' => 1,
+        'references_dialog_search' => 1,
+        'references_dialog_search_view' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 54,
+    ),
+  );
+
   // Exported field_instance: 'node-objekt-field_obj_gemeinschaftsgeschaeft'
   $field_instances['node-objekt-field_obj_gemeinschaftsgeschaeft'] = array(
     'bundle' => 'objekt',
@@ -3560,107 +3880,6 @@ function hk_ct_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-objekt-field_obj_standort_schatten'
-  $field_instances['node-objekt-field_obj_standort_schatten'] = array(
-    'bundle' => 'objekt',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'leaflet',
-        'settings' => array(
-          'height' => 400,
-          'icon' => array(
-            'html' => '',
-            'htmlClass' => '',
-            'iconAnchor' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'iconImageStyle' => '',
-            'iconSize' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'iconType' => 'marker',
-            'iconUrl' => 'sites/all/themes/hk_theme/icons/markers/Icon_House2.png',
-            'popupAnchor' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'shadowAnchor' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'shadowUrl' => '',
-          ),
-          'leaflet_map' => 'leaflet-mapbox',
-          'popup' => array(
-            'show' => 0,
-            'text' => '',
-          ),
-          'vector_display' => array(
-            'clickable' => 0,
-            'color' => '',
-            'dashArray' => '',
-            'fill' => 0,
-            'fillColor' => '',
-            'fillOpacity' => '',
-            'opacity' => '',
-            'stroke' => 0,
-            'stroke_override' => 0,
-            'weight' => '',
-          ),
-          'zoom' => array(
-            'initialZoom' => -1,
-            'maxZoom' => -1,
-            'minZoom' => -1,
-          ),
-        ),
-        'type' => 'geofield_leaflet',
-        'weight' => 6,
-      ),
-      'map_popup' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'search_result' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_obj_standort_schatten',
-    'label' => 'Standort Schattenobjekt',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'addressfield_autocomplete',
-      'settings' => array(
-        'addressfield_autocomplete_field' => 'field_address_shadow_object',
-        'delta_handling' => 'default',
-      ),
-      'type' => 'addressfield_autocomplete_latlng',
-      'weight' => 6,
-    ),
-  );
-
   // Exported field_instance: 'node-objekt-field_obj_tippgeber'
   $field_instances['node-objekt-field_obj_tippgeber'] = array(
     'bundle' => 'objekt',
@@ -3824,50 +4043,15 @@ function hk_ct_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_object_desc_commercial',
-    'label' => 'Description Commercial',
+    'label' => 'House Description Commercial',
     'required' => 0,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'ds_code' => 'ds_code',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 'php_code',
-          'plain_text' => 'plain_text',
-          'redhen_activity_message' => 'redhen_activity_message',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'ds_code' => array(
-              'weight' => 12,
-            ),
-            'filtered_html' => array(
-              'weight' => -10,
-            ),
-            'full_html' => array(
-              'weight' => -9,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-            'redhen_activity_message' => array(
-              'weight' => 0,
-            ),
-          ),
-        ),
-      ),
       'entity_translation_sync' => FALSE,
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
       ),
       'text_processing' => 1,
-      'tmgmt_translate' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3925,50 +4109,15 @@ function hk_ct_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_object_description',
-    'label' => 'Description',
+    'label' => 'House description',
     'required' => 0,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'ds_code' => 'ds_code',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 'php_code',
-          'plain_text' => 'plain_text',
-          'redhen_activity_message' => 'redhen_activity_message',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'ds_code' => array(
-              'weight' => 12,
-            ),
-            'filtered_html' => array(
-              'weight' => -10,
-            ),
-            'full_html' => array(
-              'weight' => -9,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-            'redhen_activity_message' => array(
-              'weight' => 0,
-            ),
-          ),
-        ),
-      ),
       'entity_translation_sync' => FALSE,
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
       ),
       'text_processing' => 1,
-      'tmgmt_translate' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4025,50 +4174,15 @@ function hk_ct_field_default_field_instances() {
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_object_description_invest',
-    'label' => 'Description Investment',
+    'label' => 'House Description Investment',
     'required' => 0,
     'settings' => array(
-      'better_formats' => array(
-        'allowed_formats' => array(
-          'ds_code' => 'ds_code',
-          'filtered_html' => 'filtered_html',
-          'full_html' => 'full_html',
-          'php_code' => 'php_code',
-          'plain_text' => 'plain_text',
-          'redhen_activity_message' => 'redhen_activity_message',
-        ),
-        'allowed_formats_toggle' => 0,
-        'default_order_toggle' => 0,
-        'default_order_wrapper' => array(
-          'formats' => array(
-            'ds_code' => array(
-              'weight' => 12,
-            ),
-            'filtered_html' => array(
-              'weight' => -10,
-            ),
-            'full_html' => array(
-              'weight' => -9,
-            ),
-            'php_code' => array(
-              'weight' => 11,
-            ),
-            'plain_text' => array(
-              'weight' => -8,
-            ),
-            'redhen_activity_message' => array(
-              'weight' => 0,
-            ),
-          ),
-        ),
-      ),
       'entity_translation_sync' => FALSE,
       'linkit' => array(
         'enable' => 0,
         'insert_plugin' => '',
       ),
       'text_processing' => 1,
-      'tmgmt_translate' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -5005,7 +5119,7 @@ function hk_ct_field_default_field_instances() {
         'delta_handling' => 'default',
       ),
       'type' => 'addressfield_autocomplete_latlng',
-      'weight' => 52,
+      'weight' => 55,
     ),
     'widget_type' => 'geofield_wkt',
   );
@@ -5788,6 +5902,13 @@ function hk_ct_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
+      'print' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
@@ -5829,14 +5950,15 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'title',
-        'settings' => array(
-          'title_class' => '',
-          'title_link' => '',
-          'title_style' => 'h1',
-        ),
-        'type' => 'title_linked',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
+      ),
+      'print' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
       ),
     ),
     'entity_type' => 'node',
@@ -6260,8 +6382,6 @@ function hk_ct_field_default_field_instances() {
   t('Commission');
   t('Commission (Rent)');
   t('Description');
-  t('Description Commercial');
-  t('Description Investment');
   t('Developer');
   t('Endenergiebedarf');
   t('Energieausweistyp');
@@ -6273,13 +6393,20 @@ function hk_ct_field_default_field_instances() {
   t('Floor');
   t('Floor plan');
   t('Galerie');
+  t('Gebiet Schattenobjekt 2');
+  t('Gebiet Schattenobjekt neu');
   t('Gemeinschaftsgeschäft');
+  t('Geodaten Schattenwohnung');
   t('Geokoordinaten');
   t('HOA fee');
   t('Heating type');
   t('Hier können die jeweiligen Vereinbarungen mit dem Tippgeber hinterlegt werden.');
+  t('House Description Commercial');
+  t('House Description Investment');
+  t('House description');
   t('House type');
   t('Incidental cost');
+  t('Kiez Schattenobjekt');
   t('Konditionen Acquise');
   t('Konditionen Gemeinschaftsgeschäft');
   t('Konditionen Tipp');
@@ -6308,11 +6435,11 @@ function hk_ct_field_default_field_instances() {
   t('Purchasing price parking lot');
   t('Rate Of Return');
   t('Rooms');
+  t('Schattengebiet WKT');
   t('Schattenobjekt?');
   t('Schattenwohnung?');
   t('Sleeping rooms');
   t('Standort');
-  t('Standort Schattenobjekt');
   t('Status quo');
   t('Text Karten-Popup');
   t('Tippgeber');

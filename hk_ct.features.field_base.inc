@@ -371,6 +371,42 @@ $entity_field[0][\'value\'] = $entity->field_apart_alloc_incident_costs[\'und\']
     'type' => 'computed',
   );
 
+  // Exported field_base: 'field_apart_kiez_schattenobjekt'
+  $field_bases['field_apart_kiez_schattenobjekt'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_apart_kiez_schattenobjekt',
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'kieze_schattenobjekte' => 'kieze_schattenobjekte',
+        ),
+      ),
+      'target_type' => 'node',
+    ),
+    'translatable' => 0,
+    'type' => 'entityreference',
+  );
+
   // Exported field_base: 'field_apart_living_space'
   $field_bases['field_apart_living_space'] = array(
     'active' => 1,
@@ -658,6 +694,57 @@ $entity_field[0][\'value\'] = $entity->field_apart_alloc_incident_costs[\'und\']
     'type' => 'number_integer',
   );
 
+  // Exported field_base: 'field_apart_schattengebiet_wkt'
+  $field_bases['field_apart_schattengebiet_wkt'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_apart_schattengebiet_wkt',
+    'indexes' => array(
+      'bbox' => array(
+        0 => 'top',
+        1 => 'bottom',
+        2 => 'left',
+        3 => 'right',
+      ),
+      'bottom' => array(
+        0 => 'bottom',
+      ),
+      'centroid' => array(
+        0 => 'lat',
+        1 => 'lon',
+      ),
+      'geohash' => array(
+        0 => 'geohash',
+      ),
+      'lat' => array(
+        0 => 'lat',
+      ),
+      'left' => array(
+        0 => 'left',
+      ),
+      'lon' => array(
+        0 => 'lon',
+      ),
+      'right' => array(
+        0 => 'right',
+      ),
+      'top' => array(
+        0 => 'top',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'geofield',
+    'settings' => array(
+      'backend' => 'default',
+      'entity_translation_sync' => FALSE,
+      'srid' => 4326,
+    ),
+    'translatable' => 0,
+    'type' => 'geofield',
+  );
+
   // Exported field_base: 'field_apart_sleeping_rooms'
   $field_bases['field_apart_sleeping_rooms'] = array(
     'active' => 1,
@@ -850,6 +937,57 @@ $entity_field[0][\'value\'] = $entity->field_apart_alloc_incident_costs[\'und\']
     'type' => 'text',
   );
 
+  // Exported field_base: 'field_geodaten_schattenwohnung'
+  $field_bases['field_geodaten_schattenwohnung'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_geodaten_schattenwohnung',
+    'indexes' => array(
+      'bbox' => array(
+        0 => 'top',
+        1 => 'bottom',
+        2 => 'left',
+        3 => 'right',
+      ),
+      'bottom' => array(
+        0 => 'bottom',
+      ),
+      'centroid' => array(
+        0 => 'lat',
+        1 => 'lon',
+      ),
+      'geohash' => array(
+        0 => 'geohash',
+      ),
+      'lat' => array(
+        0 => 'lat',
+      ),
+      'left' => array(
+        0 => 'left',
+      ),
+      'lon' => array(
+        0 => 'lon',
+      ),
+      'right' => array(
+        0 => 'right',
+      ),
+      'top' => array(
+        0 => 'top',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'geofield',
+    'settings' => array(
+      'backend' => 'default',
+      'entity_translation_sync' => FALSE,
+      'srid' => 4326,
+    ),
+    'translatable' => 0,
+    'type' => 'geofield',
+  );
+
   // Exported field_base: 'field_heating_type'
   $field_bases['field_heating_type'] = array(
     'active' => 1,
@@ -912,6 +1050,57 @@ $entity_field[0][\'value\'] = $entity->field_apart_alloc_incident_costs[\'und\']
     ),
     'translatable' => 0,
     'type' => 'taxonomy_term_reference',
+  );
+
+  // Exported field_base: 'field_kiez_gebiet_schattenobjekt'
+  $field_bases['field_kiez_gebiet_schattenobjekt'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_kiez_gebiet_schattenobjekt',
+    'indexes' => array(
+      'bbox' => array(
+        0 => 'top',
+        1 => 'bottom',
+        2 => 'left',
+        3 => 'right',
+      ),
+      'bottom' => array(
+        0 => 'bottom',
+      ),
+      'centroid' => array(
+        0 => 'lat',
+        1 => 'lon',
+      ),
+      'geohash' => array(
+        0 => 'geohash',
+      ),
+      'lat' => array(
+        0 => 'lat',
+      ),
+      'left' => array(
+        0 => 'left',
+      ),
+      'lon' => array(
+        0 => 'lon',
+      ),
+      'right' => array(
+        0 => 'right',
+      ),
+      'top' => array(
+        0 => 'top',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'geofield',
+    'settings' => array(
+      'backend' => 'default',
+      'entity_translation_sync' => FALSE,
+      'srid' => 4326,
+    ),
+    'translatable' => 0,
+    'type' => 'geofield',
   );
 
   // Exported field_base: 'field_moving_in_from'
@@ -1120,6 +1309,42 @@ $entity_field[0][\'value\'] = $entity->field_apart_alloc_incident_costs[\'und\']
     'type' => 'list_text',
   );
 
+  // Exported field_base: 'field_obj_geb_schatten_eref'
+  $field_bases['field_obj_geb_schatten_eref'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_obj_geb_schatten_eref',
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'schattenobjekte' => 'schattenobjekte',
+        ),
+      ),
+      'target_type' => 'taxonomy_term',
+    ),
+    'translatable' => 0,
+    'type' => 'entityreference',
+  );
+
   // Exported field_base: 'field_obj_gemeinschaftsgeschaeft'
   $field_bases['field_obj_gemeinschaftsgeschaeft'] = array(
     'active' => 1,
@@ -1237,57 +1462,6 @@ $entity_field[0][\'value\'] = $entity->field_apart_alloc_incident_costs[\'und\']
     ),
     'translatable' => 0,
     'type' => 'list_text',
-  );
-
-  // Exported field_base: 'field_obj_standort_schatten'
-  $field_bases['field_obj_standort_schatten'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_obj_standort_schatten',
-    'indexes' => array(
-      'bbox' => array(
-        0 => 'top',
-        1 => 'bottom',
-        2 => 'left',
-        3 => 'right',
-      ),
-      'bottom' => array(
-        0 => 'bottom',
-      ),
-      'centroid' => array(
-        0 => 'lat',
-        1 => 'lon',
-      ),
-      'geohash' => array(
-        0 => 'geohash',
-      ),
-      'lat' => array(
-        0 => 'lat',
-      ),
-      'left' => array(
-        0 => 'left',
-      ),
-      'lon' => array(
-        0 => 'lon',
-      ),
-      'right' => array(
-        0 => 'right',
-      ),
-      'top' => array(
-        0 => 'top',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'geofield',
-    'settings' => array(
-      'backend' => 'default',
-      'entity_translation_sync' => FALSE,
-      'srid' => 4326,
-    ),
-    'translatable' => 0,
-    'type' => 'geofield',
   );
 
   // Exported field_base: 'field_obj_tippgeber'
@@ -1605,7 +1779,7 @@ $entity_field[0][\'value\'] = $entity->field_apart_alloc_incident_costs[\'und\']
         'N/A' => 'N/A',
       ),
       'allowed_values_function' => '',
-      'allowed_values_no_localization' => 0,
+      'allowed_values_no_localization' => 1,
       'entity_translation_sync' => FALSE,
     ),
     'translatable' => 0,

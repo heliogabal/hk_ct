@@ -208,6 +208,12 @@ function hk_ct_strongarm() {
       'map_popup' => array(
         'custom_settings' => FALSE,
       ),
+      'print' => array(
+        'custom_settings' => TRUE,
+      ),
+      'workflow_tab' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

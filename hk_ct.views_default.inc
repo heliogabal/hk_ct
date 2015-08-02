@@ -178,17 +178,13 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_address_thoroughfare']['field'] = 'field_address_thoroughfare';
   $handler->display->display_options['fields']['field_address_thoroughfare']['label'] = '';
   $handler->display->display_options['fields']['field_address_thoroughfare']['element_label_colon'] = FALSE;
-  /* Feld: Inhalt: Standort Schattenobjekt */
+  /* Feld: Beschädigte/fehlende Behandlungsroutine */
   $handler->display->display_options['fields']['field_obj_standort_schatten']['id'] = 'field_obj_standort_schatten';
   $handler->display->display_options['fields']['field_obj_standort_schatten']['table'] = 'field_data_field_obj_standort_schatten';
   $handler->display->display_options['fields']['field_obj_standort_schatten']['field'] = 'field_obj_standort_schatten';
   $handler->display->display_options['fields']['field_obj_standort_schatten']['relationship'] = 'field_object_ref_target_id';
   $handler->display->display_options['fields']['field_obj_standort_schatten']['label'] = '';
   $handler->display->display_options['fields']['field_obj_standort_schatten']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_obj_standort_schatten']['click_sort_column'] = 'geom';
-  $handler->display->display_options['fields']['field_obj_standort_schatten']['settings'] = array(
-    'data' => 'full',
-  );
   /* Feld: Inhalt: Schattenwohnung? */
   $handler->display->display_options['fields']['field_obj_schattenobjekt']['id'] = 'field_obj_schattenobjekt';
   $handler->display->display_options['fields']['field_obj_schattenobjekt']['table'] = 'field_data_field_obj_schattenobjekt';
@@ -478,8 +474,8 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_objektid_nunumeric']['element_default_classes'] = FALSE;
   $handler->display->display_options['pane_category']['name'] = 'Panel-Ansichten';
 
-  /* Display: Description */
-  $handler = $view->new_display('panel_pane', 'Description', 'description');
+  /* Display: House description */
+  $handler = $view->new_display('panel_pane', 'House description', 'description');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Beschreibung';
   $handler->display->display_options['defaults']['css_class'] = FALSE;
@@ -499,7 +495,7 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_kategorie']['label'] = 'Kategorie';
   $handler->display->display_options['fields']['field_kategorie']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_kategorie']['type'] = 'taxonomy_term_reference_plain';
-  /* Feld: Inhalt: Description */
+  /* Feld: Inhalt: House description */
   $handler->display->display_options['fields']['field_object_description']['id'] = 'field_object_description';
   $handler->display->display_options['fields']['field_object_description']['table'] = 'field_data_field_object_description';
   $handler->display->display_options['fields']['field_object_description']['field'] = 'field_object_description';
@@ -507,14 +503,14 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_object_description']['label'] = '';
   $handler->display->display_options['fields']['field_object_description']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_object_description']['element_label_colon'] = FALSE;
-  /* Feld: Inhalt: Description Commercial */
+  /* Feld: Inhalt: House Description Commercial */
   $handler->display->display_options['fields']['field_object_desc_commercial']['id'] = 'field_object_desc_commercial';
   $handler->display->display_options['fields']['field_object_desc_commercial']['table'] = 'field_data_field_object_desc_commercial';
   $handler->display->display_options['fields']['field_object_desc_commercial']['field'] = 'field_object_desc_commercial';
   $handler->display->display_options['fields']['field_object_desc_commercial']['relationship'] = 'field_object_ref_target_id';
   $handler->display->display_options['fields']['field_object_desc_commercial']['label'] = 'Beschreibung Gewerbe ';
   $handler->display->display_options['fields']['field_object_desc_commercial']['exclude'] = TRUE;
-  /* Feld: Inhalt: Description Investment */
+  /* Feld: Inhalt: House Description Investment */
   $handler->display->display_options['fields']['field_object_description_invest']['id'] = 'field_object_description_invest';
   $handler->display->display_options['fields']['field_object_description_invest']['table'] = 'field_data_field_object_description_invest';
   $handler->display->display_options['fields']['field_object_description_invest']['field'] = 'field_object_description_invest';
@@ -531,8 +527,8 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['views_conditional']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['views_conditional']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['views_conditional']['if'] = 'field_kategorie';
-  $handler->display->display_options['fields']['views_conditional']['condition'] = '1';
-  $handler->display->display_options['fields']['views_conditional']['equalto'] = 'capital-investment';
+  $handler->display->display_options['fields']['views_conditional']['condition'] = '7';
+  $handler->display->display_options['fields']['views_conditional']['equalto'] = 'capital';
   $handler->display->display_options['fields']['views_conditional']['then'] = '[field_object_description_invest]';
   $handler->display->display_options['fields']['views_conditional']['or'] = '0';
   $handler->display->display_options['fields']['views_conditional']['strip_tags'] = 0;
@@ -547,7 +543,7 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['views_conditional_1']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['views_conditional_1']['if'] = 'field_kategorie';
   $handler->display->display_options['fields']['views_conditional_1']['condition'] = '7';
-  $handler->display->display_options['fields']['views_conditional_1']['equalto'] = 'commercial-property';
+  $handler->display->display_options['fields']['views_conditional_1']['equalto'] = 'commercial';
   $handler->display->display_options['fields']['views_conditional_1']['then'] = '[field_object_desc_commercial]';
   $handler->display->display_options['fields']['views_conditional_1']['or'] = '0';
   $handler->display->display_options['fields']['views_conditional_1']['strip_tags'] = 0;
@@ -561,8 +557,8 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['views_conditional_2']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['views_conditional_2']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['views_conditional_2']['if'] = 'field_kategorie';
-  $handler->display->display_options['fields']['views_conditional_2']['condition'] = '1';
-  $handler->display->display_options['fields']['views_conditional_2']['equalto'] = 'freehold-apartments';
+  $handler->display->display_options['fields']['views_conditional_2']['condition'] = '7';
+  $handler->display->display_options['fields']['views_conditional_2']['equalto'] = 'freehold';
   $handler->display->display_options['fields']['views_conditional_2']['then'] = '[field_object_description]';
   $handler->display->display_options['fields']['views_conditional_2']['or'] = '0';
   $handler->display->display_options['fields']['views_conditional_2']['strip_tags'] = 0;
@@ -576,11 +572,39 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['views_conditional_3']['empty_zero'] = TRUE;
   $handler->display->display_options['fields']['views_conditional_3']['hide_alter_empty'] = FALSE;
   $handler->display->display_options['fields']['views_conditional_3']['if'] = 'field_kategorie';
-  $handler->display->display_options['fields']['views_conditional_3']['condition'] = '1';
-  $handler->display->display_options['fields']['views_conditional_3']['equalto'] = 'commercial-property-rent';
+  $handler->display->display_options['fields']['views_conditional_3']['condition'] = '7';
+  $handler->display->display_options['fields']['views_conditional_3']['equalto'] = 'gewerbe';
   $handler->display->display_options['fields']['views_conditional_3']['then'] = '[field_object_desc_commercial]';
   $handler->display->display_options['fields']['views_conditional_3']['or'] = '0';
   $handler->display->display_options['fields']['views_conditional_3']['strip_tags'] = 0;
+  /* Feld: Ansichten: Views Conditional */
+  $handler->display->display_options['fields']['views_conditional_4']['id'] = 'views_conditional_4';
+  $handler->display->display_options['fields']['views_conditional_4']['table'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional_4']['field'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional_4']['label'] = '';
+  $handler->display->display_options['fields']['views_conditional_4']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['views_conditional_4']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['views_conditional_4']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['views_conditional_4']['if'] = 'field_kategorie';
+  $handler->display->display_options['fields']['views_conditional_4']['condition'] = '7';
+  $handler->display->display_options['fields']['views_conditional_4']['equalto'] = 'bezugsfreie';
+  $handler->display->display_options['fields']['views_conditional_4']['then'] = '[field_object_description]';
+  $handler->display->display_options['fields']['views_conditional_4']['or'] = '0';
+  $handler->display->display_options['fields']['views_conditional_4']['strip_tags'] = 0;
+  /* Feld: Ansichten: Views Conditional */
+  $handler->display->display_options['fields']['views_conditional_5']['id'] = 'views_conditional_5';
+  $handler->display->display_options['fields']['views_conditional_5']['table'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional_5']['field'] = 'views_conditional';
+  $handler->display->display_options['fields']['views_conditional_5']['label'] = '';
+  $handler->display->display_options['fields']['views_conditional_5']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['views_conditional_5']['hide_empty'] = TRUE;
+  $handler->display->display_options['fields']['views_conditional_5']['empty_zero'] = TRUE;
+  $handler->display->display_options['fields']['views_conditional_5']['if'] = 'field_kategorie';
+  $handler->display->display_options['fields']['views_conditional_5']['condition'] = '7';
+  $handler->display->display_options['fields']['views_conditional_5']['equalto'] = 'vermietet';
+  $handler->display->display_options['fields']['views_conditional_5']['then'] = '[field_object_description_invest]';
+  $handler->display->display_options['fields']['views_conditional_5']['or'] = '0';
+  $handler->display->display_options['fields']['views_conditional_5']['strip_tags'] = 0;
   $handler->display->display_options['pane_category']['name'] = 'Panel-Ansichten';
 
   /* Display: Location */
@@ -851,6 +875,7 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_object_images']['table'] = 'field_data_field_object_images';
   $handler->display->display_options['fields']['field_object_images']['field'] = 'field_object_images';
   $handler->display->display_options['fields']['field_object_images']['label'] = '';
+  $handler->display->display_options['fields']['field_object_images']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_object_images']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_object_images']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_object_images']['hide_empty'] = TRUE;

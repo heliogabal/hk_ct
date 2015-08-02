@@ -53,6 +53,11 @@ function hk_ct_filter_default_formats() {
         'status' => 1,
         'settings' => array(),
       ),
+      'emptyparagraphkiller' => array(
+        'weight' => 0,
+        'status' => 1,
+        'settings' => array(),
+      ),
     ),
   );
 

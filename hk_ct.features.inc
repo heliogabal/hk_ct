@@ -51,44 +51,6 @@ function hk_ct_views_api($module = NULL, $api = NULL) {
 }
 
 /**
- * Implements hook_default_entity_rule_setting().
- */
-function hk_ct_default_entity_rule_setting() {
-  $items = array();
-  $items['3'] = entity_import('entity_rule_setting', '{
-    "id" : "3",
-    "entity_type" : "node",
-    "bundle" : "apartment",
-    "op" : "update",
-    "rules_config" : "rules_kopiere_objekt_id_vom_objekt_update",
-    "weight" : "0",
-    "args" : null,
-    "false_msg" : null
-  }');
-  $items['4'] = entity_import('entity_rule_setting', '{
-    "id" : "4",
-    "entity_type" : "node",
-    "bundle" : "apartment",
-    "op" : "update",
-    "rules_config" : "rules_kopiere_standort_vom_objekt",
-    "weight" : "1",
-    "args" : null,
-    "false_msg" : null
-  }');
-  $items['7'] = entity_import('entity_rule_setting', '{
-    "id" : "7",
-    "entity_type" : "node",
-    "bundle" : "apartment",
-    "op" : "create",
-    "rules_config" : "rules_kopiere_objekt_id_vom_objekt",
-    "weight" : "-7",
-    "args" : null,
-    "false_msg" : null
-  }');
-  return $items;
-}
-
-/**
  * Implements hook_flag_default_flags().
  */
 function hk_ct_flag_default_flags() {
@@ -176,14 +138,22 @@ function hk_ct_image_default_styles() {
   $styles['colorboxbreakpoints_theme_hk_theme_desk_1x'] = array(
     'label' => 'colorboxbreakpoints_theme_hk_theme_desk_1x',
     'effects' => array(
-      27 => array(
+      18 => array(
+        'name' => 'manualcrop_reuse',
+        'data' => array(
+          'reuse_crop_style' => 'colorbox_full',
+          'apply_all_effects' => 1,
+        ),
+        'weight' => -10,
+      ),
+      17 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 900,
           'height' => '',
           'upscale' => 0,
         ),
-        'weight' => 1,
+        'weight' => -9,
       ),
     ),
   );
@@ -192,7 +162,15 @@ function hk_ct_image_default_styles() {
   $styles['colorboxbreakpoints_theme_hk_theme_mobile_1x'] = array(
     'label' => 'colorboxbreakpoints_theme_hk_theme_mobile_1x',
     'effects' => array(
-      29 => array(
+      22 => array(
+        'name' => 'manualcrop_reuse',
+        'data' => array(
+          'reuse_crop_style' => 'colorbox_full',
+          'apply_all_effects' => 1,
+        ),
+        'weight' => 0,
+      ),
+      21 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 500,
@@ -208,7 +186,15 @@ function hk_ct_image_default_styles() {
   $styles['colorboxbreakpoints_theme_hk_theme_narrow_1x'] = array(
     'label' => 'colorboxbreakpoints_theme_hk_theme_narrow_1x',
     'effects' => array(
-      28 => array(
+      20 => array(
+        'name' => 'manualcrop_reuse',
+        'data' => array(
+          'reuse_crop_style' => 'colorbox_full',
+          'apply_all_effects' => 1,
+        ),
+        'weight' => 0,
+      ),
+      19 => array(
         'name' => 'image_scale',
         'data' => array(
           'width' => 750,
@@ -224,6 +210,14 @@ function hk_ct_image_default_styles() {
   $styles['colorboxbreakpoints_theme_hk_theme_wide_1x'] = array(
     'label' => 'colorboxbreakpoints_theme_hk_theme_wide_1x',
     'effects' => array(
+      16 => array(
+        'name' => 'manualcrop_reuse',
+        'data' => array(
+          'reuse_crop_style' => 'colorbox_full',
+          'apply_all_effects' => 1,
+        ),
+        'weight' => 0,
+      ),
       9 => array(
         'name' => 'image_scale',
         'data' => array(
@@ -269,7 +263,15 @@ function hk_ct_image_default_styles() {
   $styles['flexfullbreakpoints_theme_hk_theme_mobile_1x'] = array(
     'label' => 'flexfullbreakpoints_theme_hk_theme_mobile_1x',
     'effects' => array(
-      25 => array(
+      24 => array(
+        'name' => 'manualcrop_reuse',
+        'data' => array(
+          'reuse_crop_style' => 'colorbox_full',
+          'apply_all_effects' => 0,
+        ),
+        'weight' => 1,
+      ),
+      23 => array(
         'name' => 'smartcrop_scale_and_crop',
         'data' => array(
           'width' => 439,
@@ -285,7 +287,15 @@ function hk_ct_image_default_styles() {
   $styles['flexfullbreakpoints_theme_hk_theme_narrow_1x'] = array(
     'label' => 'flexfullbreakpoints_theme_hk_theme_narrow_1x',
     'effects' => array(
-      21 => array(
+      26 => array(
+        'name' => 'manualcrop_reuse',
+        'data' => array(
+          'reuse_crop_style' => 'colorbox_full',
+          'apply_all_effects' => 1,
+        ),
+        'weight' => -1,
+      ),
+      25 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 800,
