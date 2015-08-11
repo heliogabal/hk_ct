@@ -117,17 +117,15 @@ function hk_ct_views_default_views() {
       'rendered_strip' => 0,
     ),
   );
-  $handler->display->display_options['style_options']['map'] = 'leaflet-mapbox';
+  $handler->display->display_options['style_options']['map'] = 'leaflet-mapbox-0';
   $handler->display->display_options['style_options']['map_height'] = '300';
   $handler->display->display_options['style_options']['ip_geoloc_views_plugin_latitude'] = array(
     'field_objekt_wkt' => 'field_objekt_wkt',
-    'field_obj_standort_schatten' => 'field_obj_standort_schatten',
   );
   $handler->display->display_options['style_options']['ip_geoloc_views_plugin_longitude'] = '';
   $handler->display->display_options['style_options']['default_marker']['default_marker_color'] = 'Icon_House2';
   $handler->display->display_options['style_options']['visitor_marker']['visitor_marker_color'] = 'none';
   $handler->display->display_options['style_options']['center_option'] = '0';
-  $handler->display->display_options['style_options']['tooltips']['marker_tooltip'] = 'field_address_thoroughfare';
   $handler->display->display_options['style_options']['sync']['2'] = 0;
   $handler->display->display_options['style_options']['sync']['4'] = 0;
   $handler->display->display_options['style_options']['sync']['8'] = 1;
@@ -147,6 +145,11 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['style_options']['cluster_differentiator']['cluster_differentiator_fields'] = array(
     '' => '',
   );
+  $handler->display->display_options['style_options']['cluster_differentiator']['zoom_ranges'] = array(
+    1 => '',
+  );
+  $handler->display->display_options['style_options']['cluster_differentiator']['cluster_tooltips'] = 1;
+  $handler->display->display_options['style_options']['cluster_differentiator']['cluster_outline'] = '0';
   $handler->display->display_options['style_options']['cluster_aggregation']['aggregation_function'] = 'average';
   $handler->display->display_options['style_options']['cluster_aggregation']['ranges']['small'] = '10';
   $handler->display->display_options['style_options']['cluster_aggregation']['ranges']['medium'] = '100';
@@ -176,21 +179,29 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['fields']['field_address_thoroughfare']['id'] = 'field_address_thoroughfare';
   $handler->display->display_options['fields']['field_address_thoroughfare']['table'] = 'field_data_field_address';
   $handler->display->display_options['fields']['field_address_thoroughfare']['field'] = 'field_address_thoroughfare';
+  $handler->display->display_options['fields']['field_address_thoroughfare']['relationship'] = 'field_object_ref_target_id';
   $handler->display->display_options['fields']['field_address_thoroughfare']['label'] = '';
+  $handler->display->display_options['fields']['field_address_thoroughfare']['alter']['text'] = '[field_object_ref]';
   $handler->display->display_options['fields']['field_address_thoroughfare']['element_label_colon'] = FALSE;
-  /* Feld: Beschädigte/fehlende Behandlungsroutine */
-  $handler->display->display_options['fields']['field_obj_standort_schatten']['id'] = 'field_obj_standort_schatten';
-  $handler->display->display_options['fields']['field_obj_standort_schatten']['table'] = 'field_data_field_obj_standort_schatten';
-  $handler->display->display_options['fields']['field_obj_standort_schatten']['field'] = 'field_obj_standort_schatten';
-  $handler->display->display_options['fields']['field_obj_standort_schatten']['relationship'] = 'field_object_ref_target_id';
-  $handler->display->display_options['fields']['field_obj_standort_schatten']['label'] = '';
-  $handler->display->display_options['fields']['field_obj_standort_schatten']['element_label_colon'] = FALSE;
   /* Feld: Inhalt: Schattenwohnung? */
   $handler->display->display_options['fields']['field_obj_schattenobjekt']['id'] = 'field_obj_schattenobjekt';
   $handler->display->display_options['fields']['field_obj_schattenobjekt']['table'] = 'field_data_field_obj_schattenobjekt';
   $handler->display->display_options['fields']['field_obj_schattenobjekt']['field'] = 'field_obj_schattenobjekt';
   $handler->display->display_options['fields']['field_obj_schattenobjekt']['label'] = '';
+  $handler->display->display_options['fields']['field_obj_schattenobjekt']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_obj_schattenobjekt']['element_label_colon'] = FALSE;
+  /* Feld: Inhalt: Beitrags-ID */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['relationship'] = 'field_object_ref_target_id';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['nid']['alter']['text'] = '<a href="[nid]">View whole object</a>';
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nid']['node_in_colorbox_width'] = '600';
+  $handler->display->display_options['fields']['nid']['node_in_colorbox_height'] = '600';
+  $handler->display->display_options['fields']['nid']['node_in_colorbox_rel'] = '';
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filterkriterium: Inhalt: Typ */
@@ -487,7 +498,26 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
   $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['footer'] = FALSE;
+  /* Fußbereich: Global: Textbereich */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<a href="/node/[nid]">View house with all offers</a>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
+  $handler->display->display_options['footer']['area']['tokenize'] = TRUE;
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Feld: Inhalt: Beitrags-ID */
+  $handler->display->display_options['fields']['nid']['id'] = 'nid';
+  $handler->display->display_options['fields']['nid']['table'] = 'node';
+  $handler->display->display_options['fields']['nid']['field'] = 'nid';
+  $handler->display->display_options['fields']['nid']['relationship'] = 'field_object_ref_target_id';
+  $handler->display->display_options['fields']['nid']['label'] = '';
+  $handler->display->display_options['fields']['nid']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['nid']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nid']['node_in_colorbox_width'] = '600';
+  $handler->display->display_options['fields']['nid']['node_in_colorbox_height'] = '600';
+  $handler->display->display_options['fields']['nid']['node_in_colorbox_rel'] = '';
   /* Feld: Inhalt: Category */
   $handler->display->display_options['fields']['field_kategorie']['id'] = 'field_kategorie';
   $handler->display->display_options['fields']['field_kategorie']['table'] = 'field_data_field_kategorie';
@@ -870,12 +900,70 @@ function hk_ct_views_default_views() {
   );
   $handler->display->display_options['fields']['field_apart_gallery']['group_rows'] = FALSE;
   $handler->display->display_options['fields']['field_apart_gallery']['delta_offset'] = '0';
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Kontextfilter: Inhalt: Beitrags-ID */
+  $handler->display->display_options['arguments']['nid_1']['id'] = 'nid_1';
+  $handler->display->display_options['arguments']['nid_1']['table'] = 'node';
+  $handler->display->display_options['arguments']['nid_1']['field'] = 'nid';
+  $handler->display->display_options['arguments']['nid_1']['default_action'] = 'default';
+  $handler->display->display_options['arguments']['nid_1']['exception']['title'] = 'Alle';
+  $handler->display->display_options['arguments']['nid_1']['default_argument_type'] = 'node';
+  $handler->display->display_options['arguments']['nid_1']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['nid_1']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['nid_1']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['nid_1']['specify_validation'] = TRUE;
+  $handler->display->display_options['arguments']['nid_1']['validate']['type'] = 'node';
+  $handler->display->display_options['arguments']['nid_1']['validate_options']['types'] = array(
+    'apartment' => 'apartment',
+    'objekt' => 'objekt',
+  );
+  $handler->display->display_options['arguments']['nid_1']['validate']['fail'] = 'access denied';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterium: Inhalt: Typ */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'apartment' => 'apartment',
+  );
+  $handler->display->display_options['pane_category']['name'] = 'Panel-Ansichten';
+  $handler->display->display_options['argument_input'] = array(
+    'nid_1' => array(
+      'type' => 'none',
+      'context' => 'entity:crm_core_activity.activity-id',
+      'context_optional' => 0,
+      'panel' => '0',
+      'fixed' => '',
+      'label' => 'Content: Nid',
+    ),
+  );
+
+  /* Display: Slideshow Objekt */
+  $handler = $view->new_display('panel_pane', 'Slideshow Objekt', 'panel_pane_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Slideshow';
+  $handler->display->display_options['defaults']['css_class'] = FALSE;
+  $handler->display->display_options['css_class'] = 'slideshow';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'flexslider';
+  $handler->display->display_options['style_options']['optionset'] = 'wohnungsansicht';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'fields';
+  $handler->display->display_options['row_options']['hide_empty'] = TRUE;
+  $handler->display->display_options['row_options']['default_field_elements'] = FALSE;
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  $handler->display->display_options['defaults']['fields'] = FALSE;
   /* Feld: Inhalt: Object images */
   $handler->display->display_options['fields']['field_object_images']['id'] = 'field_object_images';
   $handler->display->display_options['fields']['field_object_images']['table'] = 'field_data_field_object_images';
   $handler->display->display_options['fields']['field_object_images']['field'] = 'field_object_images';
   $handler->display->display_options['fields']['field_object_images']['label'] = '';
-  $handler->display->display_options['fields']['field_object_images']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_object_images']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_object_images']['element_default_classes'] = FALSE;
   $handler->display->display_options['fields']['field_object_images']['hide_empty'] = TRUE;
@@ -922,7 +1010,6 @@ function hk_ct_views_default_views() {
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
     'objekt' => 'objekt',
-    'apartment' => 'apartment',
   );
   $handler->display->display_options['pane_category']['name'] = 'Panel-Ansichten';
   $handler->display->display_options['argument_input'] = array(

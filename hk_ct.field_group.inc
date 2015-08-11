@@ -42,6 +42,34 @@ function hk_ct_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_akkordeon|node|objekt|default';
+  $field_group->group_name = 'group_akkordeon';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'objekt';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_text';
+  $field_group->data = array(
+    'label' => 'Akkordeon',
+    'weight' => '4',
+    'children' => array(
+      0 => 'group_lage',
+    ),
+    'format_type' => 'accordion',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-akkordeon field-group-accordion',
+        'effect' => 'bounceslide',
+        'id' => '',
+      ),
+    ),
+  );
+  $export['group_akkordeon|node|objekt|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_ansprechpartner|node|objekt|form';
   $field_group->group_name = 'group_ansprechpartner';
   $field_group->entity_type = 'node';
@@ -184,12 +212,12 @@ function hk_ct_field_group_info() {
     'weight' => '0',
     'children' => array(
       0 => 'field_apart_living_space',
-      1 => 'field_apart_price',
-      2 => 'field_apart_pictures',
+      1 => 'field_apart_pictures',
+      2 => 'field_apart_price',
       3 => 'field_kategorie',
       4 => 'flag_merken',
-      5 => 'adresse',
-      6 => 'neu_label',
+      5 => 'neu_label',
+      6 => 'adresse',
       7 => 'title',
     ),
     'format_type' => 'div',
@@ -411,6 +439,33 @@ function hk_ct_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_house|node|objekt|default';
+  $field_group->group_name = 'group_house';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'objekt';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Haus',
+    'weight' => '66',
+    'children' => array(
+      0 => 'field_object_desc_commercial',
+      1 => 'field_object_description',
+      2 => 'field_object_description_invest',
+    ),
+    'format_type' => 'accordion-item',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'classes' => 'group-house field-group-accordion-item',
+      ),
+    ),
+  );
+  $export['group_house|node|objekt|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_ht_basis|node|objekt|form';
   $field_group->group_name = 'group_ht_basis';
   $field_group->entity_type = 'node';
@@ -591,6 +646,31 @@ function hk_ct_field_group_info() {
     ),
   );
   $export['group_lage|node|apartment|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_lage|node|objekt|default';
+  $field_group->group_name = 'group_lage';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'objekt';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_akkordeon';
+  $field_group->data = array(
+    'label' => 'Lage',
+    'weight' => '68',
+    'children' => array(
+      0 => 'field_object_location',
+    ),
+    'format_type' => 'accordion-item',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'classes' => 'group-lage field-group-accordion-item',
+      ),
+    ),
+  );
+  $export['group_lage|node|objekt|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -777,7 +857,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Card',
-    'weight' => '0',
+    'weight' => '1',
     'children' => array(
       0 => 'field_object_images',
       1 => 'title',
@@ -881,6 +961,31 @@ function hk_ct_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_sonstiges|node|objekt|default';
+  $field_group->group_name = 'group_sonstiges';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'objekt';
+  $field_group->mode = 'default';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Sonstiges',
+    'weight' => '69',
+    'children' => array(
+      0 => 'field_object_other',
+    ),
+    'format_type' => 'accordion-item',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'classes' => 'group-sonstiges field-group-accordion-item',
+      ),
+    ),
+  );
+  $export['group_sonstiges|node|objekt|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_texte|node|apartment|form';
   $field_group->group_name = 'group_texte';
   $field_group->entity_type = 'node';
@@ -950,12 +1055,8 @@ function hk_ct_field_group_info() {
     'label' => 'Text',
     'weight' => '3',
     'children' => array(
-      0 => 'field_object_desc_commercial',
-      1 => 'field_object_description',
-      2 => 'field_object_description_invest',
-      3 => 'field_object_location',
-      4 => 'field_object_other',
-      5 => 'field_object_txt_map_popup',
+      0 => 'field_object_txt_map_popup',
+      1 => 'group_akkordeon',
     ),
     'format_type' => 'html5',
     'format_settings' => array(
