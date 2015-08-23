@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function hk_ct_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -37,7 +37,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_akkordeon|node|apartment|default'] = $field_group;
+  $field_groups['group_akkordeon|node|apartment|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -65,7 +65,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_akkordeon|node|objekt|default'] = $field_group;
+  $field_groups['group_akkordeon|node|objekt|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -101,7 +101,7 @@ function hk_ct_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_ansprechpartner|node|objekt|form'] = $field_group;
+  $field_groups['group_ansprechpartner|node|objekt|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -126,7 +126,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_apart_publish|node|apartment|form'] = $field_group;
+  $field_groups['group_apart_publish|node|apartment|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -163,7 +163,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_basic|node|apartment|form'] = $field_group;
+  $field_groups['group_basic|node|apartment|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -196,7 +196,7 @@ function hk_ct_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card_content|node|objekt|teaser'] = $field_group;
+  $field_groups['group_card_content|node|objekt|teaser'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -235,7 +235,7 @@ function hk_ct_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_card|node|apartment|teaser'] = $field_group;
+  $field_groups['group_card|node|apartment|teaser'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -259,7 +259,6 @@ function hk_ct_field_group_info() {
       6 => 'field_apart_maint_reserve_value',
       7 => 'field_apart_alloc_incident_costs',
       8 => 'field_apart_nalloc_incid_cost',
-      9 => 'field_apart_incidental_cost',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -273,7 +272,7 @@ function hk_ct_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_costs|node|apartment|form'] = $field_group;
+  $field_groups['group_costs|node|apartment|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -297,6 +296,7 @@ function hk_ct_field_group_info() {
       6 => 'field_obj_enev_date',
       7 => 'field_obj_enev_haustyp',
       8 => 'field_obj_enev_file',
+      9 => 'field_obj_enev_consumption_value',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -309,7 +309,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_energieausweis|node|objekt|form'] = $field_group;
+  $field_groups['group_energieausweis|node|objekt|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -337,7 +337,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_expose|node|apartment|form'] = $field_group;
+  $field_groups['group_expose|node|apartment|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -372,7 +372,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_features|node|apartment|form'] = $field_group;
+  $field_groups['group_features|node|apartment|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -402,7 +402,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_horizontal|node|apartment|form'] = $field_group;
+  $field_groups['group_horizontal|node|apartment|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -434,7 +434,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_horizontal|node|objekt|form'] = $field_group;
+  $field_groups['group_horizontal|node|objekt|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -461,7 +461,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_house|node|objekt|default'] = $field_group;
+  $field_groups['group_house|node|objekt|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -493,7 +493,7 @@ function hk_ct_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_ht_basis|node|objekt|form'] = $field_group;
+  $field_groups['group_ht_basis|node|objekt|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -521,7 +521,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_ht_bilder|node|objekt|form'] = $field_group;
+  $field_groups['group_ht_bilder|node|objekt|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -558,7 +558,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_ht_merkmale|node|objekt|form'] = $field_group;
+  $field_groups['group_ht_merkmale|node|objekt|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -590,7 +590,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_ht_texte|node|objekt|form'] = $field_group;
+  $field_groups['group_ht_texte|node|objekt|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -619,7 +619,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_images|node|apartment|form'] = $field_group;
+  $field_groups['group_images|node|apartment|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -645,7 +645,7 @@ function hk_ct_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_lage|node|apartment|default'] = $field_group;
+  $field_groups['group_lage|node|apartment|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -670,7 +670,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_lage|node|objekt|default'] = $field_group;
+  $field_groups['group_lage|node|objekt|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -683,7 +683,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Merkmale',
-    'weight' => '30',
+    'weight' => '35',
     'children' => array(
       0 => 'field_apart_bathrooms',
       1 => 'field_apart_floor',
@@ -704,7 +704,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_merkmale|node|apartment|default'] = $field_group;
+  $field_groups['group_merkmale|node|apartment|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -753,7 +753,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_merkmale|node|objekt|default'] = $field_group;
+  $field_groups['group_merkmale|node|objekt|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -782,7 +782,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_multiapart|node|objekt|form'] = $field_group;
+  $field_groups['group_multiapart|node|objekt|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -810,7 +810,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_obj_apartments|node|objekt|form'] = $field_group;
+  $field_groups['group_obj_apartments|node|objekt|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -831,7 +831,6 @@ function hk_ct_field_group_info() {
       3 => 'field_address_shadow_object',
       4 => 'field_obj_schattenobjekt',
       5 => 'field_obj_geb_schatten_eref',
-      6 => 'field_obj_gebiet_schattenobjekt',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -844,7 +843,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_ort|node|objekt|form'] = $field_group;
+  $field_groups['group_ort|node|objekt|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -875,7 +874,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_project_card|node|objekt|teaser'] = $field_group;
+  $field_groups['group_project_card|node|objekt|teaser'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -901,7 +900,7 @@ function hk_ct_field_group_info() {
       'formatter' => 'closed',
     ),
   );
-  $export['group_publish|node|objekt|form'] = $field_group;
+  $field_groups['group_publish|node|objekt|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -930,7 +929,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_returns|node|apartment|form'] = $field_group;
+  $field_groups['group_returns|node|apartment|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -956,7 +955,7 @@ function hk_ct_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_sonstiges|node|apartment|default'] = $field_group;
+  $field_groups['group_sonstiges|node|apartment|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -981,7 +980,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_sonstiges|node|objekt|default'] = $field_group;
+  $field_groups['group_sonstiges|node|objekt|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1011,7 +1010,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_texte|node|apartment|form'] = $field_group;
+  $field_groups['group_texte|node|apartment|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1040,7 +1039,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_text|node|apartment|default'] = $field_group;
+  $field_groups['group_text|node|apartment|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1068,7 +1067,7 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_text|node|objekt|default'] = $field_group;
+  $field_groups['group_text|node|objekt|default'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1092,7 +1091,38 @@ function hk_ct_field_group_info() {
       ),
     ),
   );
-  $export['group_wrapper|node|apartment|teaser'] = $field_group;
+  $field_groups['group_wrapper|node|apartment|teaser'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Akkordeon');
+  t('Apartments');
+  t('Basic fields');
+  t('Basisdaten');
+  t('Bilder');
+  t('Card');
+  t('Costs and returns');
+  t('Energieausweis');
+  t('Exposé');
+  t('Features');
+  t('Haus');
+  t('Horizontal Menu');
+  t('Images');
+  t('Lage');
+  t('Location');
+  t('Mehrere Apartmenttypen im Objekt');
+  t('Merkmale');
+  t('Objektverwaltung');
+  t('Ort');
+  t('Other');
+  t('Returns');
+  t('Sonstiges');
+  t('Status');
+  t('Text');
+  t('Texte');
+  t('Veröffentlichen');
+  t('Wrapper');
+  t('card-content');
+
+  return $field_groups;
 }

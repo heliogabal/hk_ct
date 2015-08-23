@@ -347,19 +347,22 @@ function hk_ct_field_default_field_bases() {
     'deleted' => 0,
     'entity_types' => array(),
     'field_name' => 'field_apart_incidental_cost',
-    'indexes' => array(),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
     'locked' => 0,
     'module' => 'computed_field',
     'settings' => array(
-      'code' => '//$entity_field[0][\'value\'] = array_pop(array_pop(field_get_items($entity_type, $entity, \'field_apart_alloc_incident_costs\'))) + array_pop(array_pop(field_get_items($entity_type, $entity, \'field_apart_nalloc_incid_costs\')));
-$entity_field[0][\'value\'] = $entity->field_apart_alloc_incident_costs[\'und\'][0][\'value\']+ $entity->field_apart_nalloc_incid_cost[\'und\'][0][\'value\'];',
+      'code' => '$entity_field[0][\'value\'] = $entity->field_apart_alloc_incident_costs[\'und\'][0][\'value\']+ $entity->field_apart_nalloc_incid_cost[\'und\'][0][\'value\'];',
       'database' => array(
-        'data_default' => '',
-        'data_index' => 0,
+        'data_default' => 0,
+        'data_index' => 1,
         'data_length' => 32,
         'data_not_NULL' => 0,
         'data_precision' => 10,
-        'data_scale' => 2,
+        'data_scale' => 0,
         'data_size' => 'normal',
         'data_type' => 'numeric',
       ),
@@ -1218,6 +1221,26 @@ $entity_field[0][\'value\'] = $entity->field_apart_alloc_incident_costs[\'und\']
     ),
     'translatable' => 0,
     'type' => 'entityreference',
+  );
+
+  // Exported field_base: 'field_obj_enev_consumption_value'
+  $field_bases['field_obj_enev_consumption_value'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_obj_enev_consumption_value',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'number',
+    'settings' => array(
+      'decimal_separator' => ',',
+      'entity_translation_sync' => FALSE,
+      'precision' => 10,
+      'scale' => 0,
+    ),
+    'translatable' => 0,
+    'type' => 'number_decimal',
   );
 
   // Exported field_base: 'field_obj_enev_date'

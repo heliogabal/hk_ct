@@ -21,7 +21,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 44,
+        'weight' => 49,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -102,7 +102,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 55,
+      'weight' => 59,
     ),
   );
 
@@ -117,7 +117,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 40,
+        'weight' => 45,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -150,7 +150,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 54,
+      'weight' => 65,
     ),
   );
 
@@ -428,7 +428,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 52,
+      'weight' => 64,
     ),
   );
 
@@ -553,7 +553,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 1,
+        'weight' => 31,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -686,9 +686,10 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
+        'module' => 'computed_field',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 47,
+        'type' => 'computed_field_plain',
+        'weight' => 56,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -703,21 +704,19 @@ function hk_ct_field_default_field_instances() {
         'weight' => 0,
       ),
     ),
-    'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_apart_incidental_cost',
     'label' => 'Incidental cost',
-    'required' => 0,
+    'required' => FALSE,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 0,
       'module' => 'computed_field',
       'settings' => array(),
       'type' => 'computed',
-      'weight' => 48,
+      'weight' => 67,
     ),
   );
 
@@ -733,7 +732,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 50,
+        'weight' => 55,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -856,7 +855,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 33,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -908,7 +907,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 43,
+        'weight' => 48,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -960,7 +959,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 42,
+        'weight' => 47,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1012,7 +1011,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 45,
+        'weight' => 50,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1060,7 +1059,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 35,
+        'weight' => 40,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1200,7 +1199,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 30,
+        'weight' => 18,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1286,7 +1285,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 28,
+        'weight' => 32,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -1509,7 +1508,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 37,
+        'weight' => 42,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1561,7 +1560,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 41,
+        'weight' => 46,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1747,7 +1746,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 53,
+      'weight' => 60,
     ),
   );
 
@@ -1762,7 +1761,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 36,
+        'weight' => 41,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1802,7 +1801,7 @@ function hk_ct_field_default_field_instances() {
         'use_select2' => FALSE,
       ),
       'type' => 'options_select',
-      'weight' => 49,
+      'weight' => 61,
     ),
   );
 
@@ -1818,7 +1817,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 16,
+        'weight' => 17,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1861,7 +1860,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 56,
+      'weight' => 66,
     ),
   );
 
@@ -1876,7 +1875,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 39,
+        'weight' => 44,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1927,7 +1926,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 49,
+        'weight' => 54,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1971,7 +1970,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 32,
+        'weight' => 37,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -2064,7 +2063,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 51,
+      'weight' => 63,
     ),
   );
 
@@ -2079,7 +2078,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 48,
+        'weight' => 53,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2124,7 +2123,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 29,
+        'weight' => 34,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2150,7 +2149,7 @@ function hk_ct_field_default_field_instances() {
       'behaviors' => array(
         'prepopulate' => array(
           'action' => 'disable',
-          'action_on_edit' => 1,
+          'action_on_edit' => 0,
           'fallback' => 'none',
           'providers' => array(
             'og_context' => FALSE,
@@ -2191,7 +2190,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 34,
+        'weight' => 39,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2292,7 +2291,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 46,
+        'weight' => 51,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2321,7 +2320,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 50,
+      'weight' => 62,
     ),
   );
 
@@ -2336,7 +2335,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 36,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2567,6 +2566,7 @@ function hk_ct_field_default_field_instances() {
         'restrict_country' => array(),
         'reveal' => 1,
         'reverse_geocode' => 0,
+        'street_number_placement' => 'before-street-name',
         'types' => 'geocode',
         'visible_markers' => 1,
       ),
@@ -2642,6 +2642,7 @@ function hk_ct_field_default_field_instances() {
         'restrict_country' => array(),
         'reveal' => 1,
         'reverse_geocode' => 1,
+        'street_number_placement' => 'before-street-name',
         'types' => 'geocode',
         'visible_markers' => 1,
       ),
@@ -2939,7 +2940,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 46,
+      'weight' => 48,
     ),
   );
 
@@ -3211,7 +3212,9 @@ function hk_ct_field_default_field_instances() {
     'default_value' => NULL,
     'default_value_function' => '',
     'deleted' => 0,
-    'description' => 'Vorsicht! Bevor die erste Wohnung angelegt werden kann, muss das Objekt einmal abgespeichert werden, da sont noch keine Objekt-ID vorliegt, mit der die Wohnung verknüpft werden kann.',
+    'description' => 'Vorsicht! Bevor die erste Wohnung von hier aus angelegt werden kann, muss das Objekt einmal abgespeichert werden, da sont noch keine Objekt-ID vorliegt, mit der die Wohnung verknüpft werden kann.
+
+Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das Objekt noch einmal gespeichert werden, damit die Verknüpfung erstellt wird.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -3289,6 +3292,66 @@ function hk_ct_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-objekt-field_obj_enev_consumption_value'
+  $field_instances['node-objekt-field_obj_enev_consumption_value'] = array(
+    'bundle' => 'objekt',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 70,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'search_result' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_obj_enev_consumption_value',
+    'label' => 'Consumption value',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => 'kWh/(m²*a) ',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 45,
+    ),
+  );
+
   // Exported field_instance: 'node-objekt-field_obj_enev_date'
   $field_instances['node-objekt-field_obj_enev_date'] = array(
     'bundle' => 'objekt',
@@ -3353,7 +3416,7 @@ function hk_ct_field_default_field_instances() {
         'year_range' => '-10:+3',
       ),
       'type' => 'date_popup',
-      'weight' => 50,
+      'weight' => 52,
     ),
   );
 
@@ -3456,7 +3519,7 @@ function hk_ct_field_default_field_instances() {
         'manualcrop_thumblist' => 0,
       ),
       'type' => 'media_generic',
-      'weight' => 44,
+      'weight' => 51,
     ),
   );
 
@@ -3514,7 +3577,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 51,
+      'weight' => 50,
     ),
   );
 
@@ -4045,6 +4108,7 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 1,
+      'tmgmt_translate' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4111,6 +4175,7 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 1,
+      'tmgmt_translate' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4176,6 +4241,7 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 1,
+      'tmgmt_translate' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4682,7 +4748,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 48,
+      'weight' => 47,
     ),
   );
 
@@ -4748,7 +4814,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 47,
+      'weight' => 44,
     ),
   );
 
@@ -4876,7 +4942,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 45,
+      'weight' => 46,
     ),
   );
 
@@ -6185,6 +6251,7 @@ function hk_ct_field_default_field_instances() {
         'restrict_country' => array(),
         'reveal' => 1,
         'reverse_geocode' => 0,
+        'street_number_placement' => 'before-street-name',
         'types' => 'geocode',
         'visible_markers' => 1,
       ),
@@ -6373,6 +6440,7 @@ function hk_ct_field_default_field_instances() {
   t('Ceiling height');
   t('Commission');
   t('Commission (Rent)');
+  t('Consumption value');
   t('Description');
   t('Developer');
   t('Endenergiebedarf');
@@ -6439,7 +6507,9 @@ function hk_ct_field_default_field_instances() {
   t('Total space');
   t('Type');
   t('Verkäufer');
-  t('Vorsicht! Bevor die erste Wohnung angelegt werden kann, muss das Objekt einmal abgespeichert werden, da sont noch keine Objekt-ID vorliegt, mit der die Wohnung verknüpft werden kann.');
+  t('Vorsicht! Bevor die erste Wohnung von hier aus angelegt werden kann, muss das Objekt einmal abgespeichert werden, da sont noch keine Objekt-ID vorliegt, mit der die Wohnung verknüpft werden kann.
+
+Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das Objekt noch einmal gespeichert werden, damit die Verknüpfung erstellt wird.');
   t('Wenn dieses Objekt von einem Tippgeber kommt, den Namen hier eintragen.');
   t('Wenn in einem Objekt mehrere Wohnungstypen vorkommen (bezugsfrei, vermietet, gewerblich), können hier zusätzliche Beschreibungtexte eingegeben werden.');
   t('Wohnungszahl Regionbound Zähler');
