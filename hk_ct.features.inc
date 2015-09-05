@@ -122,14 +122,14 @@ function hk_ct_image_default_styles() {
         ),
         'weight' => 0,
       ),
-      5 => array(
-        'name' => 'image_scale',
+      30 => array(
+        'name' => 'smartcrop_scale_and_crop',
         'data' => array(
           'width' => 1200,
-          'height' => '',
+          'height' => 750,
           'upscale' => 0,
         ),
-        'weight' => 1,
+        'weight' => 3,
       ),
     ),
   );
@@ -314,9 +314,9 @@ function hk_ct_image_default_styles() {
         'name' => 'manualcrop_auto_reuse',
         'data' => array(
           'style_priority' => array(
-            0 => 'map-popup',
-            1 => 'makler_thumbnail',
-            2 => 'colorbox_full',
+            0 => 'colorbox_full',
+            1 => 'map-popup',
+            2 => 'makler_thumbnail',
           ),
           'apply_all_effects' => 0,
           'fallback_style' => '',

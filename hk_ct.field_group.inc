@@ -50,7 +50,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = 'group_text';
   $field_group->data = array(
     'label' => 'Akkordeon',
-    'weight' => '4',
+    'weight' => '3',
     'children' => array(
       0 => 'group_lage',
     ),
@@ -114,7 +114,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Veröffentlichen',
-    'weight' => '1',
+    'weight' => '5',
     'children' => array(),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -173,10 +173,10 @@ function hk_ct_field_group_info() {
   $field_group->entity_type = 'node';
   $field_group->bundle = 'objekt';
   $field_group->mode = 'teaser';
-  $field_group->parent_name = 'group_project_card';
+  $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'card-content',
-    'weight' => '4',
+    'weight' => '2',
     'children' => array(
       0 => 'field_object_txt_map_popup',
       1 => 'node_link',
@@ -325,6 +325,7 @@ function hk_ct_field_group_info() {
     'weight' => '6',
     'children' => array(
       0 => 'field_apart_expose',
+      1 => 'field_apart_erweitertes_expose',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -447,7 +448,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Haus',
-    'weight' => '66',
+    'weight' => '37',
     'children' => array(
       0 => 'field_object_desc_commercial',
       1 => 'field_object_description',
@@ -658,7 +659,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = 'group_akkordeon';
   $field_group->data = array(
     'label' => 'Lage',
-    'weight' => '68',
+    'weight' => '67',
     'children' => array(
       0 => 'field_object_location',
     ),
@@ -717,31 +718,24 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Merkmale',
-    'weight' => '1',
+    'weight' => '14',
     'children' => array(
-      0 => 'field_address',
-      1 => 'field_bezirk',
-      2 => 'field_developer',
-      3 => 'field_heating_type',
-      4 => 'field_kategorie',
-      5 => 'field_moving_in_from',
-      6 => 'field_no_of_floors',
-      7 => 'field_objektid_nunumeric',
-      8 => 'field_rent_commission',
-      9 => 'field_sale_commission',
-      10 => 'field_wug_act_rent',
-      11 => 'field_wug_no_of_units',
-      12 => 'field_wug_occupancy',
-      13 => 'field_wug_opt_constrruct',
-      14 => 'field_wug_total_space',
-      15 => 'field_year_built',
-      16 => 'field_objekt_energieausweistyp',
-      17 => 'field_objekt_energietraeger',
-      18 => 'field_objekt_endenergiebedarf',
-      19 => 'field_objekt_effizienzklasse',
-      20 => 'field_obj_enev_date',
-      21 => 'field_obj_enev_haustyp',
-      22 => 'field_obj_enev_file',
+      0 => 'field_heating_type',
+      1 => 'field_rent_commission',
+      2 => 'field_sale_commission',
+      3 => 'field_wug_act_rent',
+      4 => 'field_wug_no_of_units',
+      5 => 'field_wug_occupancy',
+      6 => 'field_wug_opt_constrruct',
+      7 => 'field_wug_total_space',
+      8 => 'field_year_built',
+      9 => 'field_objekt_energieausweistyp',
+      10 => 'field_objekt_energietraeger',
+      11 => 'field_objekt_endenergiebedarf',
+      12 => 'field_objekt_effizienzklasse',
+      13 => 'field_obj_enev_date',
+      14 => 'field_obj_enev_haustyp',
+      15 => 'field_obj_enev_file',
     ),
     'format_type' => 'html5',
     'format_settings' => array(
@@ -856,11 +850,14 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Card',
-    'weight' => '1',
+    'weight' => '0',
     'children' => array(
-      0 => 'field_object_images',
-      1 => 'title',
-      2 => 'group_card_content',
+      0 => 'field_address',
+      1 => 'field_object_images',
+      2 => 'field_objektid_nunumeric',
+      3 => 'field_save_workflow',
+      4 => 'edit_translate_link',
+      5 => 'title',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -968,7 +965,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Sonstiges',
-    'weight' => '69',
+    'weight' => '38',
     'children' => array(
       0 => 'field_object_other',
     ),
@@ -1052,7 +1049,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Text',
-    'weight' => '3',
+    'weight' => '1',
     'children' => array(
       0 => 'field_object_txt_map_popup',
       1 => 'group_akkordeon',

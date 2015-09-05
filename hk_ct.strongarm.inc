@@ -58,6 +58,9 @@ function hk_ct_strongarm() {
       'print' => array(
         'custom_settings' => FALSE,
       ),
+      'exposekarte' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -65,10 +68,10 @@ function hk_ct_strongarm() {
           'weight' => '1',
         ),
         'path' => array(
-          'weight' => '3',
+          'weight' => '2',
         ),
         'redirect' => array(
-          'weight' => '7',
+          'weight' => '6',
         ),
         'language' => array(
           'weight' => '-4',
@@ -122,7 +125,7 @@ function hk_ct_strongarm() {
         'custom_settings' => FALSE,
       ),
       'search_result' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'project' => array(
         'custom_settings' => FALSE,
@@ -143,6 +146,9 @@ function hk_ct_strongarm() {
         'custom_settings' => FALSE,
       ),
       'mlt_image' => array(
+        'custom_settings' => TRUE,
+      ),
+      'exposekarte' => array(
         'custom_settings' => TRUE,
       ),
     ),

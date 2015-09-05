@@ -222,6 +222,42 @@ function hk_ct_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_apart_erweitertes_expose'
+  $field_bases['field_apart_erweitertes_expose'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_apart_erweitertes_expose',
+    'indexes' => array(
+      'target_id' => array(
+        0 => 'target_id',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'entityreference',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'expose' => 'expose',
+        ),
+      ),
+      'target_type' => 'node',
+    ),
+    'translatable' => 0,
+    'type' => 'entityreference',
+  );
+
   // Exported field_base: 'field_apart_expose'
   $field_bases['field_apart_expose'] = array(
     'active' => 1,
@@ -338,40 +374,6 @@ function hk_ct_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'number_decimal',
-  );
-
-  // Exported field_base: 'field_apart_incidental_cost'
-  $field_bases['field_apart_incidental_cost'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_apart_incidental_cost',
-    'indexes' => array(
-      'value' => array(
-        0 => 'value',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'computed_field',
-    'settings' => array(
-      'code' => '$entity_field[0][\'value\'] = $entity->field_apart_alloc_incident_costs[\'und\'][0][\'value\']+ $entity->field_apart_nalloc_incid_cost[\'und\'][0][\'value\'];',
-      'database' => array(
-        'data_default' => 0,
-        'data_index' => 1,
-        'data_length' => 32,
-        'data_not_NULL' => 0,
-        'data_precision' => 10,
-        'data_scale' => 0,
-        'data_size' => 'normal',
-        'data_type' => 'numeric',
-      ),
-      'display_format' => '$display_output = $entity_field_item[\'value\'];',
-      'entity_translation_sync' => FALSE,
-      'store' => 1,
-    ),
-    'translatable' => 0,
-    'type' => 'computed',
   );
 
   // Exported field_base: 'field_apart_kiez_schattenobjekt'
@@ -1770,7 +1772,7 @@ function hk_ct_field_default_field_bases() {
     'settings' => array(
       'entity_translation_sync' => FALSE,
     ),
-    'translatable' => 0,
+    'translatable' => 1,
     'type' => 'text_long',
   );
 
@@ -2100,9 +2102,10 @@ function hk_ct_field_default_field_bases() {
         'No Information' => 'No Information',
         'N/A' => 'N/A',
       ),
-      'allowed_values_function' => '',
+      'allowed_values_function' => 'values_field_content_allowed_values',
       'allowed_values_no_localization' => 0,
       'entity_translation_sync' => FALSE,
+      'values_field' => 'status_quo',
     ),
     'translatable' => 1,
     'type' => 'list_text',
