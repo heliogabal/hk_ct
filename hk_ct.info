@@ -31,6 +31,7 @@ dependencies[] = media_wysiwyg
 dependencies[] = multiselect
 dependencies[] = number
 dependencies[] = office_hours
+dependencies[] = rules
 dependencies[] = strongarm
 dependencies[] = title
 dependencies[] = typogrify
