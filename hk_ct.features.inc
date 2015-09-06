@@ -504,6 +504,14 @@ function hk_ct_node_info() {
       'title_label' => t('Überschrift Objekt'),
       'help' => '',
     ),
+    'oeffnungszeit' => array(
+      'name' => t('Öffnungszeit'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'page' => array(
       'name' => t('Einfache Seite'),
       'base' => 'node_content',

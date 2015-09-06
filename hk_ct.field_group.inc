@@ -440,6 +440,31 @@ function hk_ct_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_house|node|apartment|default';
+  $field_group->group_name = 'group_house';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'apartment';
+  $field_group->mode = 'default';
+  $field_group->parent_name = 'group_akkordeon';
+  $field_group->data = array(
+    'label' => 'House',
+    'weight' => '50',
+    'children' => array(
+      0 => 'haus_beschreibung',
+    ),
+    'format_type' => 'accordion-item',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'classes' => 'group-house field-group-accordion-item',
+      ),
+    ),
+  );
+  $field_groups['group_house|node|apartment|default'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_house|node|objekt|default';
   $field_group->group_name = 'group_house';
   $field_group->entity_type = 'node';
@@ -1104,6 +1129,7 @@ function hk_ct_field_group_info() {
   t('Features');
   t('Haus');
   t('Horizontal Menu');
+  t('House');
   t('Images');
   t('Lage');
   t('Location');

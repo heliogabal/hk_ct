@@ -2029,6 +2029,29 @@ function hk_ct_field_default_field_bases() {
     'type_name' => 'wohnung',
   );
 
+  // Exported field_base: 'field_oeffnungszeiten'
+  $field_bases['field_oeffnungszeiten'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_oeffnungszeiten',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'office_hours',
+    'settings' => array(
+      'cardinality' => 2,
+      'entity_translation_sync' => FALSE,
+      'granularity' => 60,
+      'hoursformat' => 0,
+      'limitend' => 2000,
+      'limitstart' => 700,
+      'valhrs' => 1,
+    ),
+    'translatable' => 0,
+    'type' => 'office_hours',
+  );
+
   // Exported field_base: 'field_rent_commission'
   $field_bases['field_rent_commission'] = array(
     'active' => 1,
