@@ -110,26 +110,28 @@ function hk_ct_image_default_styles() {
   $styles['colorbox_full'] = array(
     'label' => 'Wohnungsbilder Galerie',
     'effects' => array(
-      6 => array(
-        'name' => 'manualcrop_crop_and_scale',
+      57 => array(
+        'name' => 'manualcrop_auto_reuse',
         'data' => array(
-          'width' => 1200,
-          'height' => 750,
-          'upscale' => 0,
-          'respectminimum' => 1,
-          'onlyscaleifcrop' => 1,
-          'style_name' => 'colorbox_full',
+          'style_priority' => array(
+            0 => 'expose',
+            1 => 'expos__portrait',
+            2 => 'makler_thumbnail',
+            3 => 'map-popup',
+          ),
+          'apply_all_effects' => 0,
+          'fallback_style' => '',
         ),
-        'weight' => 0,
+        'weight' => 2,
       ),
-      30 => array(
-        'name' => 'smartcrop_scale_and_crop',
+      58 => array(
+        'name' => 'image_scale',
         'data' => array(
           'width' => 1200,
-          'height' => 750,
+          'height' => '',
           'upscale' => 0,
         ),
-        'weight' => 3,
+        'weight' => 2,
       ),
     ),
   );
@@ -138,11 +140,18 @@ function hk_ct_image_default_styles() {
   $styles['colorboxbreakpoints_theme_hk_theme_desk_1x'] = array(
     'label' => 'colorboxbreakpoints_theme_hk_theme_desk_1x',
     'effects' => array(
-      18 => array(
-        'name' => 'manualcrop_reuse',
+      44 => array(
+        'name' => 'manualcrop_auto_reuse',
         'data' => array(
-          'reuse_crop_style' => 'colorbox_full',
-          'apply_all_effects' => 1,
+          'style_priority' => array(
+            0 => 'expose',
+            1 => 'expos__portrait',
+            2 => 'colorbox_full',
+            3 => 'makler_thumbnail',
+            4 => 'map-popup',
+          ),
+          'apply_all_effects' => 0,
+          'fallback_style' => '',
         ),
         'weight' => -10,
       ),
@@ -162,11 +171,18 @@ function hk_ct_image_default_styles() {
   $styles['colorboxbreakpoints_theme_hk_theme_mobile_1x'] = array(
     'label' => 'colorboxbreakpoints_theme_hk_theme_mobile_1x',
     'effects' => array(
-      22 => array(
-        'name' => 'manualcrop_reuse',
+      43 => array(
+        'name' => 'manualcrop_auto_reuse',
         'data' => array(
-          'reuse_crop_style' => 'colorbox_full',
-          'apply_all_effects' => 1,
+          'style_priority' => array(
+            0 => 'expose',
+            1 => 'expos__portrait',
+            2 => 'colorbox_full',
+            3 => 'makler_thumbnail',
+            4 => 'map-popup',
+          ),
+          'apply_all_effects' => 0,
+          'fallback_style' => '',
         ),
         'weight' => 0,
       ),
@@ -186,11 +202,18 @@ function hk_ct_image_default_styles() {
   $styles['colorboxbreakpoints_theme_hk_theme_narrow_1x'] = array(
     'label' => 'colorboxbreakpoints_theme_hk_theme_narrow_1x',
     'effects' => array(
-      20 => array(
-        'name' => 'manualcrop_reuse',
+      41 => array(
+        'name' => 'manualcrop_auto_reuse',
         'data' => array(
-          'reuse_crop_style' => 'colorbox_full',
-          'apply_all_effects' => 1,
+          'style_priority' => array(
+            0 => 'expose',
+            1 => 'expos__portrait',
+            2 => 'colorbox_full',
+            3 => 'makler_thumbnail',
+            4 => 'map-popup',
+          ),
+          'apply_all_effects' => 0,
+          'fallback_style' => '',
         ),
         'weight' => 0,
       ),
@@ -210,11 +233,18 @@ function hk_ct_image_default_styles() {
   $styles['colorboxbreakpoints_theme_hk_theme_wide_1x'] = array(
     'label' => 'colorboxbreakpoints_theme_hk_theme_wide_1x',
     'effects' => array(
-      16 => array(
-        'name' => 'manualcrop_reuse',
+      42 => array(
+        'name' => 'manualcrop_auto_reuse',
         'data' => array(
-          'reuse_crop_style' => 'colorbox_full',
-          'apply_all_effects' => 1,
+          'style_priority' => array(
+            0 => 'expose',
+            1 => 'expos__portrait',
+            2 => 'colorbox_full',
+            3 => 'makler_thumbnail',
+            4 => 'map-popup',
+          ),
+          'apply_all_effects' => 0,
+          'fallback_style' => '',
         ),
         'weight' => 0,
       ),
@@ -238,9 +268,10 @@ function hk_ct_image_default_styles() {
         'name' => 'manualcrop_auto_reuse',
         'data' => array(
           'style_priority' => array(
-            0 => 'map-popup',
-            1 => 'makler_thumbnail',
-            2 => 'colorbox_full',
+            0 => 'expose',
+            1 => 'expos__portrait',
+            2 => 'map-popup',
+            3 => 'makler_thumbnail',
           ),
           'apply_all_effects' => 0,
           'fallback_style' => '',
@@ -263,11 +294,17 @@ function hk_ct_image_default_styles() {
   $styles['flexfullbreakpoints_theme_hk_theme_mobile_1x'] = array(
     'label' => 'flexfullbreakpoints_theme_hk_theme_mobile_1x',
     'effects' => array(
-      24 => array(
-        'name' => 'manualcrop_reuse',
+      62 => array(
+        'name' => 'manualcrop_auto_reuse',
         'data' => array(
-          'reuse_crop_style' => 'colorbox_full',
+          'style_priority' => array(
+            0 => 'expose',
+            1 => 'expos__portrait',
+            2 => 'makler_thumbnail',
+            3 => 'map-popup',
+          ),
           'apply_all_effects' => 0,
+          'fallback_style' => '',
         ),
         'weight' => 1,
       ),
@@ -287,21 +324,28 @@ function hk_ct_image_default_styles() {
   $styles['flexfullbreakpoints_theme_hk_theme_narrow_1x'] = array(
     'label' => 'flexfullbreakpoints_theme_hk_theme_narrow_1x',
     'effects' => array(
-      26 => array(
-        'name' => 'manualcrop_reuse',
+      61 => array(
+        'name' => 'manualcrop_auto_reuse',
         'data' => array(
-          'reuse_crop_style' => 'colorbox_full',
-          'apply_all_effects' => 1,
+          'style_priority' => array(
+            0 => 'expose',
+            1 => 'expos__portrait',
+            2 => 'makler_thumbnail',
+            3 => 'map-popup',
+          ),
+          'apply_all_effects' => 0,
+          'fallback_style' => '',
         ),
-        'weight' => -1,
+        'weight' => 2,
       ),
-      25 => array(
-        'name' => 'image_scale_and_crop',
+      56 => array(
+        'name' => 'smartcrop_scale_and_crop',
         'data' => array(
           'width' => 800,
           'height' => 500,
+          'upscale' => 0,
         ),
-        'weight' => 0,
+        'weight' => 3,
       ),
     ),
   );
@@ -310,13 +354,14 @@ function hk_ct_image_default_styles() {
   $styles['flexfullbreakpoints_theme_hk_theme_wide_1x'] = array(
     'label' => 'flexfullbreakpoints_theme_hk_theme_wide_1x',
     'effects' => array(
-      15 => array(
+      60 => array(
         'name' => 'manualcrop_auto_reuse',
         'data' => array(
           'style_priority' => array(
-            0 => 'colorbox_full',
-            1 => 'map-popup',
+            0 => 'expose',
+            1 => 'expos__portrait',
             2 => 'makler_thumbnail',
+            3 => 'map-popup',
           ),
           'apply_all_effects' => 0,
           'fallback_style' => '',
@@ -339,13 +384,14 @@ function hk_ct_image_default_styles() {
   $styles['flexthumbbreakpoints_theme_hk_theme_desk_1x'] = array(
     'label' => 'flexthumbbreakpoints_theme_hk_theme_desk_1x',
     'effects' => array(
-      16 => array(
-        'name' => 'image_scale_and_crop',
+      55 => array(
+        'name' => 'smartcrop_scale_and_crop',
         'data' => array(
           'width' => 135,
           'height' => 135,
+          'upscale' => 0,
         ),
-        'weight' => 0,
+        'weight' => 2,
       ),
     ),
   );
@@ -354,13 +400,14 @@ function hk_ct_image_default_styles() {
   $styles['flexthumbbreakpoints_theme_hk_theme_mobile_1x'] = array(
     'label' => 'flexthumbbreakpoints_theme_hk_theme_mobile_1x',
     'effects' => array(
-      18 => array(
-        'name' => 'image_scale_and_crop',
+      51 => array(
+        'name' => 'smartcrop_scale_and_crop',
         'data' => array(
           'width' => 100,
           'height' => 100,
+          'upscale' => 0,
         ),
-        'weight' => 0,
+        'weight' => 2,
       ),
     ),
   );
@@ -369,13 +416,14 @@ function hk_ct_image_default_styles() {
   $styles['flexthumbbreakpoints_theme_hk_theme_narrow_1x'] = array(
     'label' => 'flexthumbbreakpoints_theme_hk_theme_narrow_1x',
     'effects' => array(
-      17 => array(
-        'name' => 'image_scale_and_crop',
+      49 => array(
+        'name' => 'smartcrop_scale_and_crop',
         'data' => array(
           'width' => 115,
           'height' => 115,
+          'upscale' => 0,
         ),
-        'weight' => 0,
+        'weight' => 2,
       ),
     ),
   );
@@ -384,13 +432,14 @@ function hk_ct_image_default_styles() {
   $styles['flexthumbbreakpoints_theme_hk_theme_wide_1x'] = array(
     'label' => 'flexthumbbreakpoints_theme_hk_theme_wide_1x',
     'effects' => array(
-      15 => array(
-        'name' => 'image_scale_and_crop',
+      47 => array(
+        'name' => 'smartcrop_scale_and_crop',
         'data' => array(
           'width' => 150,
           'height' => 150,
+          'upscale' => 0,
         ),
-        'weight' => 0,
+        'weight' => 2,
       ),
     ),
   );

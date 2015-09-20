@@ -498,20 +498,18 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'picture',
+        'module' => 'colorbox',
         'settings' => array(
-          'colorbox_settings' => array(
-            'colorbox_caption' => 'auto',
-            'colorbox_caption_custom' => '',
-            'colorbox_gallery' => 'field_page',
-            'colorbox_gallery_custom' => '',
-            'colorbox_group' => 'colorbox_mapping',
-          ),
-          'fallback_image_style' => '',
-          'image_link' => 'colorbox',
-          'picture_mapping' => 'flexthumb_mapping',
+          'colorbox_caption' => 'auto',
+          'colorbox_caption_custom' => '',
+          'colorbox_gallery' => 'field_page',
+          'colorbox_gallery_custom' => '',
+          'colorbox_image_style' => '',
+          'colorbox_multivalue_index' => NULL,
+          'colorbox_node_style' => 'flexslider_thumbnail',
+          'colorbox_node_style_first' => '',
         ),
-        'type' => 'picture',
+        'type' => 'colorbox',
         'weight' => 3,
       ),
       'teaser' => array(
@@ -539,13 +537,13 @@ function hk_ct_field_default_field_instances() {
       'file_directory' => 'floorplans',
       'file_extensions' => 'png gif jpg jpeg',
       'filefield_paths' => array(
-        'active_updating' => 1,
+        'active_updating' => 0,
         'file_name' => array(
           'options' => array(
             'pathauto' => 1,
             'transliterate' => 1,
           ),
-          'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
+          'value' => '[node:field-object-ref:field_objektid_nunumeric]-[node:field-apart-no]-[node:title_field]-grundriss.[file:ffp-extension-original]',
         ),
         'file_path' => array(
           'options' => array(
@@ -557,7 +555,7 @@ function hk_ct_field_default_field_instances() {
         'retroactive_update' => 0,
       ),
       'filefield_paths_enabled' => 1,
-      'max_filesize' => '',
+      'max_filesize' => '2 MB',
       'max_resolution' => '',
       'min_resolution' => '',
       'title_field' => 0,
@@ -641,24 +639,24 @@ function hk_ct_field_default_field_instances() {
         'active_updating' => 0,
         'file_name' => array(
           'options' => array(
-            'pathauto' => 0,
-            'transliterate' => 0,
+            'pathauto' => 1,
+            'transliterate' => 1,
           ),
-          'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
+          'value' => '[node:field-object-ref:field_objektid_nunumeric]-[node:field-apart-no]-[node:title_field].[file:ffp-extension-original]',
         ),
         'file_path' => array(
           'options' => array(
-            'pathauto' => 0,
-            'transliterate' => 0,
+            'pathauto' => 1,
+            'transliterate' => 1,
           ),
-          'value' => '',
+          'value' => 'objekt/[node:field-object-ref:field_objektid_nunumeric]/[node:field_apart_no]/galerie',
         ),
         'retroactive_update' => 0,
       ),
       'filefield_paths_enabled' => 1,
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
+      'max_filesize' => '3 MB',
+      'max_resolution' => '2480x3702',
+      'min_resolution' => '800x1675',
       'title_field' => 1,
       'user_register_form' => FALSE,
     ),
@@ -668,7 +666,7 @@ function hk_ct_field_default_field_instances() {
       'settings' => array(
         'manualcrop_crop_info' => 1,
         'manualcrop_default_crop_area' => 1,
-        'manualcrop_enable' => 1,
+        'manualcrop_enable' => 0,
         'manualcrop_inline_crop' => 1,
         'manualcrop_instant_crop' => 0,
         'manualcrop_instant_preview' => 1,
@@ -676,7 +674,8 @@ function hk_ct_field_default_field_instances() {
         'manualcrop_maximize_default_crop_area' => 0,
         'manualcrop_require_cropping' => array(),
         'manualcrop_styles_list' => array(
-          'colorbox_full' => 'colorbox_full',
+          'expos__portrait' => 'expos__portrait',
+          'expose' => 'expose',
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
@@ -1292,15 +1291,14 @@ function hk_ct_field_default_field_instances() {
   // Exported field_instance: 'node-apartment-field_apart_pictures'
   $field_instances['node-apartment-field_apart_pictures'] = array(
     'bundle' => 'apartment',
-    'default_value' => array(),
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 32,
+        'weight' => 329,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -1313,13 +1311,9 @@ function hk_ct_field_default_field_instances() {
         'weight' => 0,
       ),
       'tile' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => 'map-popup',
-        ),
-        'type' => 'image',
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
@@ -1353,9 +1347,9 @@ function hk_ct_field_default_field_instances() {
         'retroactive_update' => 0,
       ),
       'filefield_paths_enabled' => 1,
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '1200x750',
+      'max_filesize' => '3 MB',
+      'max_resolution' => '2480x3702',
+      'min_resolution' => '800x1675',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1385,10 +1379,10 @@ function hk_ct_field_default_field_instances() {
         'manualcrop_instant_crop' => FALSE,
         'manualcrop_instant_preview' => 1,
         'manualcrop_keyboard' => 1,
-        'manualcrop_maximize_default_crop_area' => 0,
+        'manualcrop_maximize_default_crop_area' => 1,
         'manualcrop_require_cropping' => array(),
         'manualcrop_styles_list' => array(
-          'colorbox_full' => 'colorbox_full',
+          'expose' => 'expose',
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
@@ -1681,11 +1675,8 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'geofield',
-        'settings' => array(
-          'data' => 'full',
-        ),
-        'type' => 'geofield_wkt',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 55,
       ),
       'teaser' => array(
@@ -1926,7 +1917,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -2291,7 +2282,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 6,
     ),
   );
 
@@ -2477,10 +2468,10 @@ function hk_ct_field_default_field_instances() {
         ),
         'map' => array(
           'auto_center' => 0,
-          'base_url' => 'http://{s}.tiles.mapbox.com/v3/heliogabal23.l8fho93p/{z}/{x}/{y}.png',
+          'base_url' => '//{s}.tiles.mapbox.com/v3/heliogabal23.l8fho93p/{z}/{x}/{y}.png',
           'center' => array(
-            'lat' => 53.5,
-            'lng' => 13.4,
+            'lat' => '52.493922961852434',
+            'lng' => '13.396797180175781',
           ),
           'zoom' => 12,
         ),
@@ -2666,10 +2657,16 @@ function hk_ct_field_default_field_instances() {
         'weight' => 9,
       ),
       'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 13,
+        'label' => 'hidden',
+        'module' => 'addressfield',
+        'settings' => array(
+          'format_handlers' => array(
+            0 => 'address',
+          ),
+          'use_widget_handlers' => 1,
+        ),
+        'type' => 'addressfield_default',
+        'weight' => 44,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -3319,13 +3316,9 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'links' => 0,
-          'view_mode' => 'teaser',
-        ),
-        'type' => 'entityreference_entity_view',
-        'weight' => 2,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 1,
       ),
       'exposekarte' => array(
         'label' => 'above',
@@ -3556,25 +3549,25 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
       'file_directory' => '',
       'file_extensions' => 'pdf',
       'filefield_paths' => array(
-        'active_updating' => 0,
+        'active_updating' => 1,
         'file_name' => array(
           'options' => array(
-            'pathauto' => 0,
-            'transliterate' => 0,
+            'pathauto' => 1,
+            'transliterate' => 1,
           ),
-          'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
+          'value' => '[node:field_objektid_nunumeric]-energieausweis.[file:ffp-extension-original]',
         ),
         'file_path' => array(
           'options' => array(
-            'pathauto' => 0,
-            'transliterate' => 0,
+            'pathauto' => 1,
+            'transliterate' => 1,
           ),
-          'value' => '',
+          'value' => 'objekt/[node:field_objektid_nunumeric]',
         ),
-        'retroactive_update' => 0,
+        'retroactive_update' => 1,
       ),
       'filefield_paths_enabled' => 1,
-      'max_filesize' => '',
+      'max_filesize' => '5 MB',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4469,9 +4462,9 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'retroactive_update' => 0,
       ),
       'filefield_paths_enabled' => 1,
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
+      'max_filesize' => '3 MB',
+      'max_resolution' => '2480x3702',
+      'min_resolution' => '800x1675',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -4501,13 +4494,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'manualcrop_instant_crop' => FALSE,
         'manualcrop_instant_preview' => 1,
         'manualcrop_keyboard' => 1,
-        'manualcrop_maximize_default_crop_area' => 0,
+        'manualcrop_maximize_default_crop_area' => 1,
         'manualcrop_require_cropping' => array(),
         'manualcrop_styles_list' => array(
-          'makler_thumbnail' => 'makler_thumbnail',
-          'map-popup' => 'map-popup',
+          'expose' => 'expose',
         ),
-        'manualcrop_styles_mode' => 'exclude',
+        'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
       ),
       'type' => 'media_generic',
@@ -4695,7 +4687,8 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
     'bundle' => 'objekt',
     'default_value' => array(
       0 => array(
-        'value' => '<p>Dieses Angebot ist provisionspflichtig. Bei Zustandekommen eines Kaufvertrages berechnet die Herbert + Kohlmeyer Immobilien GmbH dem Erwerber eine Provision in Höhe von <strong>7,14 %</strong> des beurkundeten Kaufpreises inkl. der gesetzlichen MwSt., sofern nicht anders vereinbart. Über die steuerlichen Aspekte informiert Sie Ihr Steuerberater. Auf Wunsch sind wir Ihnen auch gerne bei Ihrer Finanzierung behilflich. Besichtigungen sind kurzfristig möglich. Alle Angaben beruhen auf den uns vom Eigentümer zur Verfügung gestellten Informationen. Eine Haftung für die Richtigkeit bzw. Vollständigkeit können wir nicht übernehmen. Irrtum und Zwischenverkauf vorbehalten. Es gelten unsere AGB. Bitte informieren Sie sich über deren Inhalt auf unserer Homepage unter <a href="http://www.herbert-kohlmeyer.de/agb" title="www.herbert-kohlmeyer.de">www.herbert-kohlmeyer.de/agb</a>.</p>',
+        'value' => '<p>This offer is subject to commission. Upon the final sales agreement Herbert &amp; Kohlmeyer Immobilien GmbH charges a commission of 7.14 % on the final sales price including VAT, unless otherwise agreed. Your tax advisor can inform you of relevant tax considerations. If you should so desire we can be of assistance with the financing of the property. All details are based on information provided to us by the owner. We assume no liability for accuracy and completeness. This offer is subject to error and prior sale. This offer is subject to our General Terms and Conditions (AGB/Allgemeine Geschäftsbedingungen). Please refer to the content of our <a href="http://herbert-kohmeyer.com/general-terms-and-conditions" target="_blank">General Terms and Conditions</a> on our website (www.herbert-kohlmeyer.com).</p>
+',
         'format' => 'full_html',
       ),
     ),
@@ -5021,7 +5014,7 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
     'field_name' => 'field_objekt_energieausweistyp',
-    'label' => 'Energieausweistyp',
+    'label' => 'Energy Consumption Certificate Type',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -6856,9 +6849,9 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
   t('Consumption value');
   t('Description');
   t('Developer');
-  t('Energieausweistyp');
   t('Energieeffizienzklasse');
   t('Energieträger');
+  t('Energy Consumption Certificate Type');
   t('Energy Performance Certificate');
   t('Erweitertes Expose');
   t('Exposé');

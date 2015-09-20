@@ -1847,13 +1847,14 @@ function hk_ct_field_default_field_bases() {
     'module' => 'list',
     'settings' => array(
       'allowed_values' => array(
-        'Bedarfsausweis' => 'Bedarfsausweis',
-        'Verbrauchsausweis' => 'Verbrauchsausweis',
-        'N/A' => 'liegt noch nicht vor',
+        'Bedarfsausweis' => 'performance certificate',
+        'Verbrauchsausweis' => 'consumption certificate',
+        'N/A' => 'not yet available',
       ),
       'allowed_values_function' => '',
       'allowed_values_no_localization' => 0,
       'entity_translation_sync' => FALSE,
+      'values_field' => '',
     ),
     'translatable' => 0,
     'type' => 'list_text',

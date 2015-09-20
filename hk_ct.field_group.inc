@@ -114,7 +114,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Veröffentlichen',
-    'weight' => '5',
+    'weight' => '3',
     'children' => array(),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -683,17 +683,18 @@ function hk_ct_field_group_info() {
   $field_group->mode = 'default';
   $field_group->parent_name = 'group_akkordeon';
   $field_group->data = array(
-    'label' => 'Lage',
+    'label' => 'Location',
     'weight' => '67',
     'children' => array(
       0 => 'field_object_location',
     ),
     'format_type' => 'accordion-item',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Location',
       'instance_settings' => array(
         'classes' => 'group-lage field-group-accordion-item',
       ),
+      'formatter' => 'closed',
     ),
   );
   $field_groups['group_lage|node|objekt|default'] = $field_group;
@@ -881,8 +882,9 @@ function hk_ct_field_group_info() {
       1 => 'field_object_images',
       2 => 'field_objektid_nunumeric',
       3 => 'field_save_workflow',
-      4 => 'edit_translate_link',
-      5 => 'title',
+      4 => 'field_address_shadow_object',
+      5 => 'edit_translate_link',
+      6 => 'title',
     ),
     'format_type' => 'html-element',
     'format_settings' => array(
@@ -1048,8 +1050,7 @@ function hk_ct_field_group_info() {
     'weight' => '4',
     'children' => array(
       0 => 'field_apart_description',
-      1 => 'field_apart_schattengebiet_wkt',
-      2 => 'group_akkordeon',
+      1 => 'group_akkordeon',
     ),
     'format_type' => 'html5',
     'format_settings' => array(
@@ -1074,7 +1075,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Text',
-    'weight' => '1',
+    'weight' => '0',
     'children' => array(
       0 => 'field_object_txt_map_popup',
       1 => 'group_akkordeon',
@@ -1131,7 +1132,6 @@ function hk_ct_field_group_info() {
   t('Horizontal Menu');
   t('House');
   t('Images');
-  t('Lage');
   t('Location');
   t('Mehrere Apartmenttypen im Objekt');
   t('Merkmale');
