@@ -18,34 +18,10 @@ function hk_ct_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
     'ds_flag_merken' => array(
-      'weight' => '13',
+      'weight' => '12',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
-    'thumbslider' => array(
-      'weight' => '2',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'show_title' => 0,
-        'title_wrapper' => '',
-        'ctools' => 'a:3:{s:4:"conf";a:0:{}s:4:"type";s:11:"views_panes";s:7:"subtype";s:21:"apartment-thumbslider";}',
-        'load_terms' => 0,
-        'ft' => array(),
-      ),
-    ),
-    'slideshow' => array(
-      'weight' => '1',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'show_title' => 0,
-        'title_wrapper' => '',
-        'ctools' => 'a:3:{s:4:"conf";a:0:{}s:4:"type";s:11:"views_panes";s:7:"subtype";s:19:"apartment-slideshow";}',
-        'load_terms' => 0,
         'ft' => array(),
       ),
     ),
@@ -86,7 +62,7 @@ function hk_ct_ds_field_settings_info() {
       ),
     ),
     'anfrage_button' => array(
-      'weight' => '12',
+      'weight' => '10',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -94,7 +70,7 @@ function hk_ct_ds_field_settings_info() {
       ),
     ),
     'energieausweis' => array(
-      'weight' => '15',
+      'weight' => '14',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -120,7 +96,7 @@ function hk_ct_ds_field_settings_info() {
       ),
     ),
     'apartment_characteristics' => array(
-      'weight' => '14',
+      'weight' => '13',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -135,7 +111,7 @@ function hk_ct_ds_field_settings_info() {
       ),
     ),
     'apartmentkarte' => array(
-      'weight' => '5',
+      'weight' => '4',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -230,6 +206,11 @@ function hk_ct_ds_field_settings_info() {
         ),
       ),
     ),
+    'field_apart_gallery' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
   );
   $export['node|apartment|default'] = $ds_fieldsetting;
 
@@ -314,6 +295,26 @@ function hk_ct_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|objekt|map_popup';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'objekt';
+  $ds_fieldsetting->view_mode = 'map_popup';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'field_object_images' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+  );
+  $export['node|objekt|map_popup'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|objekt|teaser';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'objekt';
@@ -340,19 +341,61 @@ function hk_ct_ds_field_settings_info() {
 
   $ds_fieldsetting = new stdClass();
   $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|objekt|wohn_und_geschaeftshaus';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'objekt';
+  $ds_fieldsetting->view_mode = 'wohn_und_geschaeftshaus';
+  $ds_fieldsetting->settings = array(
+    'thumbslider' => array(
+      'weight' => '2',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'show_title' => 0,
+        'title_wrapper' => '',
+        'ctools' => 'a:3:{s:4:"conf";a:0:{}s:4:"type";s:11:"views_panes";s:7:"subtype";s:28:"apartment-thumbslider_objekt";}',
+        'load_terms' => 0,
+        'ft' => array(),
+      ),
+    ),
+    'slideshow' => array(
+      'weight' => '1',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'show_title' => 0,
+        'title_wrapper' => '',
+        'ctools' => 'a:3:{s:4:"conf";a:0:{}s:4:"type";s:11:"views_panes";s:7:"subtype";s:26:"apartment-slideshow_object";}',
+        'load_terms' => 0,
+        'ft' => array(),
+      ),
+    ),
+    'field_address' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'fi' => TRUE,
+          'fi-el' => 'div',
+          'fi-cl' => 'apartaddress',
+          'fi-at' => '',
+          'fi-def-at' => FALSE,
+          'fi-odd-even' => FALSE,
+          'fi-first-last' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['node|objekt|wohn_und_geschaeftshaus'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
   $ds_fieldsetting->id = 'node|oeffnungszeit|default';
   $ds_fieldsetting->entity_type = 'node';
   $ds_fieldsetting->bundle = 'oeffnungszeit';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'title' => array(
-      'weight' => '0',
-      'label' => 'hidden',
-      'format' => 'default',
+    'title_field' => array(
       'formatter_settings' => array(
-        'link' => '0',
-        'wrapper' => 'h1',
-        'class' => 'page-title',
         'ft' => array(),
       ),
     ),
@@ -373,6 +416,83 @@ function hk_ct_ds_field_settings_info() {
     ),
   );
   $export['node|oeffnungszeit|teaser'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|page|default';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'page';
+  $ds_fieldsetting->view_mode = 'default';
+  $ds_fieldsetting->settings = array(
+    'body' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'pdf',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['node|page|default'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|page|print';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'page';
+  $ds_fieldsetting->view_mode = 'print';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'link' => '0',
+        'wrapper' => 'h3',
+        'class' => '',
+        'ft' => array(),
+      ),
+    ),
+    'body' => array(
+      'formatter_settings' => array(
+        'ft' => array(
+          'func' => 'theme_ds_field_expert',
+          'ow' => TRUE,
+          'ow-el' => 'div',
+          'ow-cl' => 'pdf',
+          'ow-def-cl' => FALSE,
+          'ow-at' => '',
+          'ow-def-at' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $export['node|page|print'] = $ds_fieldsetting;
+
+  $ds_fieldsetting = new stdClass();
+  $ds_fieldsetting->api_version = 1;
+  $ds_fieldsetting->id = 'node|referenz|default';
+  $ds_fieldsetting->entity_type = 'node';
+  $ds_fieldsetting->bundle = 'referenz';
+  $ds_fieldsetting->view_mode = 'default';
+  $ds_fieldsetting->settings = array(
+    'title' => array(
+      'weight' => '0',
+      'label' => 'hidden',
+      'format' => 'default',
+    ),
+    'field_ref_adresse' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
+      ),
+    ),
+  );
+  $export['node|referenz|default'] = $ds_fieldsetting;
 
   return $export;
 }
@@ -590,7 +710,7 @@ function hk_ct_ds_custom_fields_info() {
   if (!empty($entity->created)) {
     $now = new DateTime();
     $interval = ($now->format(\'U\') - $entity->created) / 86400;
-    if ($interval <= 40) print t(\'<span class="new">New!&nbsp;</span>\');
+    if ($interval <= 30) print t(\'<span class="new">New!&nbsp;</span>\');
   }
 ?>',
       'format' => 'ds_code',
@@ -670,47 +790,45 @@ function hk_ct_ds_layout_settings_info() {
   $ds_layout->layout = 'ds_2col_stacked_fluid';
   $ds_layout->settings = array(
     'regions' => array(
-      'header' => array(
-        0 => 'adresse',
-      ),
       'left' => array(
-        1 => 'conditional_other',
+        0 => 'conditional_other',
         2 => 'conditional_location',
-        3 => 'slideshow',
-        4 => 'thumbslider',
-        5 => 'field_apart_floor_plan',
-        6 => 'group_text',
-        20 => 'group_house',
-        21 => 'group_lage',
-        22 => 'field_apart_description',
-        23 => 'group_sonstiges',
-        24 => 'haus_beschreibung',
-        25 => 'group_akkordeon',
+        3 => 'field_apart_gallery',
+        4 => 'field_apart_floor_plan',
+        5 => 'group_text',
+        19 => 'group_house',
+        20 => 'group_lage',
+        21 => 'field_apart_description',
+        22 => 'group_sonstiges',
+        23 => 'haus_beschreibung',
+        24 => 'group_akkordeon',
+      ),
+      'header' => array(
+        1 => 'adresse',
       ),
       'right' => array(
-        7 => 'apartmentkarte',
-        8 => 'field_objektid_nunumeric',
-        9 => 'field_apart_no',
-        10 => 'field_apart_living_space',
-        11 => 'field_apart_rooms',
-        12 => 'field_apart_price',
+        6 => 'apartmentkarte',
+        7 => 'field_objektid_nunumeric',
+        8 => 'field_apart_no',
+        9 => 'field_apart_living_space',
+        10 => 'field_apart_rooms',
+        11 => 'field_apart_price',
+        12 => 'anfrage_button',
         13 => 'field_apart_commission',
-        14 => 'anfrage_button',
-        15 => 'ds_flag_merken',
-        16 => 'apartment_characteristics',
-        17 => 'energieausweis',
-        18 => 'field_ausstattung',
+        14 => 'ds_flag_merken',
+        15 => 'apartment_characteristics',
+        16 => 'energieausweis',
+        17 => 'field_ausstattung',
       ),
       'ds_hidden' => array(
-        19 => 'field_apart_expose',
+        18 => 'field_apart_expose',
       ),
     ),
     'fields' => array(
-      'adresse' => 'header',
       'conditional_other' => 'left',
+      'adresse' => 'header',
       'conditional_location' => 'left',
-      'slideshow' => 'left',
-      'thumbslider' => 'left',
+      'field_apart_gallery' => 'left',
       'field_apart_floor_plan' => 'left',
       'group_text' => 'left',
       'apartmentkarte' => 'right',
@@ -719,8 +837,8 @@ function hk_ct_ds_layout_settings_info() {
       'field_apart_living_space' => 'right',
       'field_apart_rooms' => 'right',
       'field_apart_price' => 'right',
-      'field_apart_commission' => 'right',
       'anfrage_button' => 'right',
+      'field_apart_commission' => 'right',
       'ds_flag_merken' => 'right',
       'apartment_characteristics' => 'right',
       'energieausweis' => 'right',
@@ -770,14 +888,13 @@ function hk_ct_ds_layout_settings_info() {
         7 => 'group_basic',
         8 => 'field_save_workflow',
         9 => 'field_apart_living_space',
-        10 => 'group_costs',
-        11 => 'field_apart_rooms',
-        12 => 'path',
-        13 => 'group_texte',
-        15 => 'field_apart_price',
+        10 => 'field_apart_rooms',
+        11 => 'group_costs',
+        13 => 'field_apart_price',
+        15 => 'group_texte',
         17 => 'field_object_ref',
         18 => 'group_images',
-        20 => 'group_features',
+        19 => 'group_features',
         21 => 'group_expose',
         29 => 'field_apart_description',
         30 => 'field_apart_location',
@@ -805,16 +922,18 @@ function hk_ct_ds_layout_settings_info() {
         52 => 'field_ausstattung',
       ),
       'hidden' => array(
-        14 => 'group_apart_publish',
-        16 => 'redirect',
-        19 => 'field_bezirk',
-        22 => 'field_objektid_nunumeric',
-        23 => 'field_objekt_wkt',
+        12 => 'field_objekt_wkt',
+        14 => 'path',
+        16 => 'group_apart_publish',
+        20 => 'redirect',
+        22 => 'field_bezirk',
+        23 => 'field_objektid_nunumeric',
         24 => 'field_apart_gallery',
         25 => 'field_apart_regionbound_counter',
         26 => 'field_geodaten_schattenwohnung',
         27 => 'field_apart_schattengebiet_wkt',
-        28 => '_add_existing_field',
+        28 => 'xmlsitemap',
+        53 => '_add_existing_field',
       ),
     ),
     'fields' => array(
@@ -828,25 +947,25 @@ function hk_ct_ds_layout_settings_info() {
       'group_basic' => 'ds_content',
       'field_save_workflow' => 'ds_content',
       'field_apart_living_space' => 'ds_content',
-      'group_costs' => 'ds_content',
       'field_apart_rooms' => 'ds_content',
-      'path' => 'ds_content',
+      'group_costs' => 'ds_content',
+      'field_objekt_wkt' => 'hidden',
+      'field_apart_price' => 'ds_content',
+      'path' => 'hidden',
       'group_texte' => 'ds_content',
       'group_apart_publish' => 'hidden',
-      'field_apart_price' => 'ds_content',
-      'redirect' => 'hidden',
       'field_object_ref' => 'ds_content',
       'group_images' => 'ds_content',
-      'field_bezirk' => 'hidden',
       'group_features' => 'ds_content',
+      'redirect' => 'hidden',
       'group_expose' => 'ds_content',
+      'field_bezirk' => 'hidden',
       'field_objektid_nunumeric' => 'hidden',
-      'field_objekt_wkt' => 'hidden',
       'field_apart_gallery' => 'hidden',
       'field_apart_regionbound_counter' => 'hidden',
       'field_geodaten_schattenwohnung' => 'hidden',
       'field_apart_schattengebiet_wkt' => 'hidden',
-      '_add_existing_field' => 'hidden',
+      'xmlsitemap' => 'hidden',
       'field_apart_description' => 'ds_content',
       'field_apart_location' => 'ds_content',
       'field_apart_other' => 'ds_content',
@@ -871,6 +990,7 @@ function hk_ct_ds_layout_settings_info() {
       'field_apart_floor' => 'ds_content',
       'field_apart_ceiling_height' => 'ds_content',
       'field_ausstattung' => 'ds_content',
+      '_add_existing_field' => 'hidden',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -980,28 +1100,8 @@ function hk_ct_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'objekt';
   $ds_layout->view_mode = 'default';
-  $ds_layout->layout = 'ds_1col';
+  $ds_layout->layout = 'ds_reset';
   $ds_layout->settings = array(
-    'regions' => array(
-      'ds_content' => array(
-        0 => 'group_text',
-        1 => 'field_object_txt_map_popup',
-        2 => 'wohnungsliste',
-        3 => 'group_akkordeon',
-        4 => 'field_objekt_wkt',
-        5 => 'field_object_location',
-        6 => 'group_lage',
-      ),
-    ),
-    'fields' => array(
-      'group_text' => 'ds_content',
-      'field_object_txt_map_popup' => 'ds_content',
-      'wohnungsliste' => 'ds_content',
-      'group_akkordeon' => 'ds_content',
-      'field_objekt_wkt' => 'ds_content',
-      'field_object_location' => 'ds_content',
-      'group_lage' => 'ds_content',
-    ),
     'classes' => array(),
     'wrappers' => array(
       'ds_content' => 'div',
@@ -1012,6 +1112,27 @@ function hk_ct_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'group_text',
+        1 => 'wohnungsliste',
+        2 => 'field_object_txt_map_popup',
+        3 => 'group_akkordeon',
+        4 => 'field_objekt_wkt',
+        5 => 'field_object_location',
+        6 => 'group_lage',
+      ),
+    ),
+    'fields' => array(
+      'group_text' => 'ds_content',
+      'wohnungsliste' => 'ds_content',
+      'field_object_txt_map_popup' => 'ds_content',
+      'group_akkordeon' => 'ds_content',
+      'field_objekt_wkt' => 'ds_content',
+      'field_object_location' => 'ds_content',
+      'group_lage' => 'ds_content',
+    ),
   );
   $export['node|objekt|default'] = $ds_layout;
 
@@ -1029,65 +1150,70 @@ function hk_ct_ds_layout_settings_info() {
         1 => 'language',
         2 => 'field_object_txt_map_popup',
         3 => 'field_objektid_nunumeric',
-        4 => 'field_kategorie',
-        5 => 'field_object_description',
-        6 => 'group_multiapart',
+        4 => 'field_object_description',
+        5 => 'field_kategorie',
+        6 => 'field_apart_price',
         7 => 'field_ansprechpartner',
         8 => 'field_object_multi_apart_types',
         9 => 'group_horizontal',
-        10 => 'field_object_description_invest',
-        11 => 'path',
-        12 => 'field_obj_verkaeufer',
-        13 => 'group_ht_basis',
-        14 => 'field_object_desc_commercial',
-        15 => 'field_save_workflow',
-        16 => 'field_obj_gemeinschaftsgeschaeft',
-        17 => 'group_ort',
-        18 => 'field_object_location',
-        19 => 'field_obj_kond_gemeingesch',
-        20 => 'group_ht_texte',
+        10 => 'path',
+        11 => 'field_obj_verkaeufer',
+        12 => 'field_object_desc_freehold',
+        13 => 'field_object_description_invest',
+        14 => 'group_ht_basis',
+        15 => 'field_obj_gemeinschaftsgeschaeft',
+        16 => 'group_ort',
+        17 => 'field_object_desc_commercial',
+        18 => 'field_save_workflow',
+        19 => 'group_ht_texte',
+        20 => 'field_object_location',
+        21 => 'field_obj_kond_gemeingesch',
         22 => 'group_ht_bilder',
-        23 => 'field_object_other',
-        24 => 'field_obj_acquise',
-        25 => 'field_obj_kond_acquise',
-        26 => 'group_ht_merkmale',
-        27 => 'field_obj_tippgeber',
-        28 => 'group_energieausweis',
-        29 => 'field_object_images',
-        30 => 'field_obj_konditionen_tipp',
+        24 => 'field_object_other',
+        25 => 'field_obj_acquise',
+        26 => 'field_obj_kond_acquise',
+        27 => 'group_ht_merkmale',
+        28 => 'field_object_images',
+        29 => 'group_energieausweis',
+        30 => 'field_obj_tippgeber',
         31 => 'group_ansprechpartner',
-        32 => 'group_obj_apartments',
-        33 => 'field_obj_apartments',
-        34 => 'field_sale_commission',
-        35 => 'field_rent_commission',
-        36 => 'field_no_of_floors',
-        37 => 'field_moving_in_from',
-        38 => 'field_developer',
-        39 => 'field_wug_total_space',
-        40 => 'field_wug_opt_constrruct',
-        41 => 'field_wug_no_of_units',
-        42 => 'field_wug_occupancy',
-        43 => 'field_wug_act_rent',
-        44 => 'field_objekt_energieausweistyp',
-        45 => 'field_objekt_endenergiebedarf',
-        46 => 'field_obj_enev_consumption_value',
-        47 => 'field_objekt_energietraeger',
-        48 => 'field_objekt_effizienzklasse',
-        49 => 'field_heating_type',
-        50 => 'field_year_built',
-        51 => 'field_bezirk',
-        52 => 'field_obj_schattenobjekt',
-        53 => 'field_obj_enev_haustyp',
-        54 => 'field_obj_enev_file',
-        55 => 'field_address',
-        56 => 'field_address_shadow_object',
-        57 => 'field_obj_enev_date',
-        58 => 'field_obj_geb_schatten_eref',
-        59 => 'field_objekt_wkt',
+        32 => 'field_obj_konditionen_tipp',
+        33 => 'field_apart_floor_plan',
+        34 => 'group_obj_apartments',
+        35 => 'field_obj_apartments',
+        36 => 'field_sale_commission',
+        38 => 'field_rent_commission',
+        39 => 'field_no_of_floors',
+        40 => 'field_moving_in_from',
+        41 => 'field_developer',
+        42 => 'field_wug_total_space',
+        43 => 'field_wug_opt_constrruct',
+        44 => 'field_wug_no_of_units',
+        45 => 'field_wug_occupancy',
+        46 => 'field_wug_act_rent',
+        47 => 'field_objekt_energieausweistyp',
+        48 => 'field_objekt_endenergiebedarf',
+        49 => 'field_obj_enev_consumption_value',
+        50 => 'field_objekt_energietraeger',
+        51 => 'field_objekt_effizienzklasse',
+        52 => 'field_heating_type',
+        53 => 'field_year_built',
+        54 => 'field_bezirk',
+        55 => 'field_obj_enev_haustyp',
+        56 => 'field_obj_schattenobjekt',
+        57 => 'field_address',
+        58 => 'field_obj_enev_file',
+        59 => 'field_address_shadow_object',
+        60 => 'field_obj_enev_date',
+        61 => 'field_objekt_wkt',
+        62 => 'field_object_text_schattenobjekt',
+        63 => 'group_multiapart',
       ),
       'hidden' => array(
-        21 => 'redirect',
-        60 => '_add_existing_field',
+        23 => 'redirect',
+        37 => 'xmlsitemap',
+        64 => 'field_cvm_cvm',
+        65 => '_add_existing_field',
       ),
     ),
     'fields' => array(
@@ -1095,37 +1221,40 @@ function hk_ct_ds_layout_settings_info() {
       'language' => 'ds_content',
       'field_object_txt_map_popup' => 'ds_content',
       'field_objektid_nunumeric' => 'ds_content',
-      'field_kategorie' => 'ds_content',
       'field_object_description' => 'ds_content',
-      'group_multiapart' => 'ds_content',
+      'field_kategorie' => 'ds_content',
+      'field_apart_price' => 'ds_content',
       'field_ansprechpartner' => 'ds_content',
       'field_object_multi_apart_types' => 'ds_content',
       'group_horizontal' => 'ds_content',
-      'field_object_description_invest' => 'ds_content',
       'path' => 'ds_content',
       'field_obj_verkaeufer' => 'ds_content',
+      'field_object_desc_freehold' => 'ds_content',
+      'field_object_description_invest' => 'ds_content',
       'group_ht_basis' => 'ds_content',
-      'field_object_desc_commercial' => 'ds_content',
-      'field_save_workflow' => 'ds_content',
       'field_obj_gemeinschaftsgeschaeft' => 'ds_content',
       'group_ort' => 'ds_content',
+      'field_object_desc_commercial' => 'ds_content',
+      'field_save_workflow' => 'ds_content',
+      'group_ht_texte' => 'ds_content',
       'field_object_location' => 'ds_content',
       'field_obj_kond_gemeingesch' => 'ds_content',
-      'group_ht_texte' => 'ds_content',
-      'redirect' => 'hidden',
       'group_ht_bilder' => 'ds_content',
+      'redirect' => 'hidden',
       'field_object_other' => 'ds_content',
       'field_obj_acquise' => 'ds_content',
       'field_obj_kond_acquise' => 'ds_content',
       'group_ht_merkmale' => 'ds_content',
-      'field_obj_tippgeber' => 'ds_content',
-      'group_energieausweis' => 'ds_content',
       'field_object_images' => 'ds_content',
-      'field_obj_konditionen_tipp' => 'ds_content',
+      'group_energieausweis' => 'ds_content',
+      'field_obj_tippgeber' => 'ds_content',
       'group_ansprechpartner' => 'ds_content',
+      'field_obj_konditionen_tipp' => 'ds_content',
+      'field_apart_floor_plan' => 'ds_content',
       'group_obj_apartments' => 'ds_content',
       'field_obj_apartments' => 'ds_content',
       'field_sale_commission' => 'ds_content',
+      'xmlsitemap' => 'hidden',
       'field_rent_commission' => 'ds_content',
       'field_no_of_floors' => 'ds_content',
       'field_moving_in_from' => 'ds_content',
@@ -1143,14 +1272,16 @@ function hk_ct_ds_layout_settings_info() {
       'field_heating_type' => 'ds_content',
       'field_year_built' => 'ds_content',
       'field_bezirk' => 'ds_content',
-      'field_obj_schattenobjekt' => 'ds_content',
       'field_obj_enev_haustyp' => 'ds_content',
-      'field_obj_enev_file' => 'ds_content',
+      'field_obj_schattenobjekt' => 'ds_content',
       'field_address' => 'ds_content',
+      'field_obj_enev_file' => 'ds_content',
       'field_address_shadow_object' => 'ds_content',
       'field_obj_enev_date' => 'ds_content',
-      'field_obj_geb_schatten_eref' => 'ds_content',
       'field_objekt_wkt' => 'ds_content',
+      'field_object_text_schattenobjekt' => 'ds_content',
+      'group_multiapart' => 'ds_content',
+      'field_cvm_cvm' => 'hidden',
       '_add_existing_field' => 'hidden',
     ),
     'classes' => array(),
@@ -1252,6 +1383,109 @@ function hk_ct_ds_layout_settings_info() {
 
   $ds_layout = new stdClass();
   $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|objekt|wohn_und_geschaeftshaus';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'objekt';
+  $ds_layout->view_mode = 'wohn_und_geschaeftshaus';
+  $ds_layout->layout = 'ds_2col_stacked_fluid';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'header' => array(
+        0 => 'field_address',
+      ),
+      'left' => array(
+        1 => 'slideshow',
+        2 => 'thumbslider',
+        3 => 'field_apart_floor_plan',
+        4 => 'field_object_txt_map_popup',
+        5 => 'group_akkordion',
+        28 => 'group_haus',
+        29 => 'group_lage',
+        30 => 'field_object_description',
+        31 => 'group_sonstiges',
+        32 => 'field_object_location',
+        33 => 'field_object_other',
+      ),
+      'right' => array(
+        6 => 'field_objekt_wkt',
+        7 => 'field_objektid_nunumeric',
+        8 => 'field_apart_price',
+        9 => 'field_sale_commission',
+        10 => 'group_details',
+        11 => 'field_no_of_floors',
+        12 => 'field_wug_total_space',
+        13 => 'field_wug_opt_constrruct',
+        14 => 'field_wug_no_of_units',
+        15 => 'field_wug_act_rent',
+        16 => 'group_energieausweis',
+        17 => 'field_wug_occupancy',
+        18 => 'field_objekt_energieausweistyp',
+        19 => 'field_obj_enev_date',
+        20 => 'field_objekt_energietraeger',
+        21 => 'field_heating_type',
+        22 => 'field_obj_enev_consumption_value',
+        23 => 'field_objekt_endenergiebedarf',
+        24 => 'field_objekt_effizienzklasse',
+        25 => 'field_obj_enev_haustyp',
+        26 => 'field_year_built',
+        27 => 'field_obj_enev_file',
+      ),
+    ),
+    'fields' => array(
+      'field_address' => 'header',
+      'slideshow' => 'left',
+      'thumbslider' => 'left',
+      'field_apart_floor_plan' => 'left',
+      'field_object_txt_map_popup' => 'left',
+      'group_akkordion' => 'left',
+      'field_objekt_wkt' => 'right',
+      'field_objektid_nunumeric' => 'right',
+      'field_apart_price' => 'right',
+      'field_sale_commission' => 'right',
+      'group_details' => 'right',
+      'field_no_of_floors' => 'right',
+      'field_wug_total_space' => 'right',
+      'field_wug_opt_constrruct' => 'right',
+      'field_wug_no_of_units' => 'right',
+      'field_wug_act_rent' => 'right',
+      'group_energieausweis' => 'right',
+      'field_wug_occupancy' => 'right',
+      'field_objekt_energieausweistyp' => 'right',
+      'field_obj_enev_date' => 'right',
+      'field_objekt_energietraeger' => 'right',
+      'field_heating_type' => 'right',
+      'field_obj_enev_consumption_value' => 'right',
+      'field_objekt_endenergiebedarf' => 'right',
+      'field_objekt_effizienzklasse' => 'right',
+      'field_obj_enev_haustyp' => 'right',
+      'field_year_built' => 'right',
+      'field_obj_enev_file' => 'right',
+      'group_haus' => 'left',
+      'group_lage' => 'left',
+      'field_object_description' => 'left',
+      'group_sonstiges' => 'left',
+      'field_object_location' => 'left',
+      'field_object_other' => 'left',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'header' => 'div',
+      'left' => 'div',
+      'right' => 'div',
+      'footer' => 'div',
+      'ds_hidden' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => 0,
+  );
+  $export['node|objekt|wohn_und_geschaeftshaus'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
   $ds_layout->id = 'node|oeffnungszeit|default';
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'oeffnungszeit';
@@ -1260,13 +1494,13 @@ function hk_ct_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'title',
+        0 => 'title_field',
         1 => 'body',
         2 => 'field_oeffnungszeiten',
       ),
     ),
     'fields' => array(
-      'title' => 'ds_content',
+      'title_field' => 'ds_content',
       'body' => 'ds_content',
       'field_oeffnungszeiten' => 'ds_content',
     ),
@@ -1426,6 +1660,76 @@ function hk_ct_ds_layout_settings_info() {
   );
   $export['node|page|form'] = $ds_layout;
 
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|page|print';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'page';
+  $ds_layout->view_mode = 'print';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'title',
+        1 => 'body',
+      ),
+    ),
+    'fields' => array(
+      'title' => 'ds_content',
+      'body' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+      'ds_hidden' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['node|page|print'] = $ds_layout;
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'node|referenz|default';
+  $ds_layout->entity_type = 'node';
+  $ds_layout->bundle = 'referenz';
+  $ds_layout->view_mode = 'default';
+  $ds_layout->layout = 'ds_reset';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'title',
+        1 => 'body',
+        2 => 'field_ref_foto',
+        3 => 'field_ref_adresse',
+        4 => 'field_ref_typ',
+        5 => 'field_ref_anzahl_wohnungen',
+      ),
+    ),
+    'fields' => array(
+      'title' => 'ds_content',
+      'body' => 'ds_content',
+      'field_ref_foto' => 'ds_content',
+      'field_ref_adresse' => 'ds_content',
+      'field_ref_typ' => 'ds_content',
+      'field_ref_anzahl_wohnungen' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+      'ds_hidden' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => TRUE,
+    'layout_link_attribute' => FALSE,
+    'layout_link_custom' => '',
+  );
+  $export['node|referenz|default'] = $ds_layout;
+
   return $export;
 }
 
@@ -1461,6 +1765,15 @@ function hk_ct_ds_view_modes_info() {
     'node' => 'node',
   );
   $export['tile'] = $ds_view_mode;
+
+  $ds_view_mode = new stdClass();
+  $ds_view_mode->api_version = 1;
+  $ds_view_mode->view_mode = 'wohn_und_geschaeftshaus';
+  $ds_view_mode->label = 'Wohn- und Geschäftshaus';
+  $ds_view_mode->entities = array(
+    'node' => 'node',
+  );
+  $export['wohn_und_geschaeftshaus'] = $ds_view_mode;
 
   return $export;
 }

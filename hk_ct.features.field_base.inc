@@ -852,72 +852,32 @@ function hk_ct_field_default_field_bases() {
     'type_name' => 'residential_commercial_building',
   );
 
-  // Exported field_base: 'field_bezirk_geokoordinaten'
-  $field_bases['field_bezirk_geokoordinaten'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_bezirk_geokoordinaten',
-    'indexes' => array(
-      'bbox' => array(
-        0 => 'top',
-        1 => 'bottom',
-        2 => 'left',
-        3 => 'right',
-      ),
-      'bottom' => array(
-        0 => 'bottom',
-      ),
-      'centroid' => array(
-        0 => 'lat',
-        1 => 'lon',
-      ),
-      'geohash' => array(
-        0 => 'geohash',
-      ),
-      'lat' => array(
-        0 => 'lat',
-      ),
-      'left' => array(
-        0 => 'left',
-      ),
-      'lon' => array(
-        0 => 'lon',
-      ),
-      'right' => array(
-        0 => 'right',
-      ),
-      'top' => array(
-        0 => 'top',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'geofield',
-    'settings' => array(
-      'backend' => 'default',
-      'entity_translation_sync' => FALSE,
-      'srid' => 4326,
-    ),
-    'translatable' => 0,
-    'type' => 'geofield',
-  );
-
-  // Exported field_base: 'field_bezirk_postleitzahlen'
-  $field_bases['field_bezirk_postleitzahlen'] = array(
+  // Exported field_base: 'field_cvm_cvm'
+  $field_bases['field_cvm_cvm'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_bezirk_postleitzahlen',
-    'indexes' => array(),
+    'field_name' => 'field_cvm_cvm',
+    'indexes' => array(
+      'context' => array(
+        0 => 'context',
+      ),
+      'view_context' => array(
+        0 => 'view_mode',
+        1 => 'context',
+      ),
+      'view_mode' => array(
+        0 => 'view_mode',
+      ),
+    ),
     'locked' => 0,
-    'module' => 'addressfield',
+    'module' => 'contextual_view_modes',
     'settings' => array(
       'entity_translation_sync' => FALSE,
     ),
     'translatable' => 0,
-    'type' => 'addressfield',
+    'type' => 'contextual_view_modes_cvm',
   );
 
   // Exported field_base: 'field_developer'
@@ -1057,13 +1017,51 @@ function hk_ct_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_kiez_gebiet_schattenobjekt'
-  $field_bases['field_kiez_gebiet_schattenobjekt'] = array(
+  // Exported field_base: 'field_marker_adresse'
+  $field_bases['field_marker_adresse'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_kiez_gebiet_schattenobjekt',
+    'field_name' => 'field_marker_adresse',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'addressfield',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'addressfield',
+  );
+
+  // Exported field_base: 'field_marker_text'
+  $field_bases['field_marker_text'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_marker_text',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 1,
+    'type' => 'text_long',
+  );
+
+  // Exported field_base: 'field_marker_wkt'
+  $field_bases['field_marker_wkt'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_marker_wkt',
     'indexes' => array(
       'bbox' => array(
         0 => 'top',
@@ -1334,42 +1332,6 @@ function hk_ct_field_default_field_bases() {
     'type' => 'list_text',
   );
 
-  // Exported field_base: 'field_obj_geb_schatten_eref'
-  $field_bases['field_obj_geb_schatten_eref'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_obj_geb_schatten_eref',
-    'indexes' => array(
-      'target_id' => array(
-        0 => 'target_id',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'entityreference',
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'handler' => 'base',
-      'handler_settings' => array(
-        'behaviors' => array(
-          'views-select-list' => array(
-            'status' => 0,
-          ),
-        ),
-        'sort' => array(
-          'type' => 'none',
-        ),
-        'target_bundles' => array(
-          'schattenobjekte' => 'schattenobjekte',
-        ),
-      ),
-      'target_type' => 'taxonomy_term',
-    ),
-    'translatable' => 0,
-    'type' => 'entityreference',
-  );
-
   // Exported field_base: 'field_obj_gemeinschaftsgeschaeft'
   $field_bases['field_obj_gemeinschaftsgeschaeft'] = array(
     'active' => 1,
@@ -1583,6 +1545,27 @@ function hk_ct_field_default_field_bases() {
     'type' => 'text_long',
   );
 
+  // Exported field_base: 'field_object_desc_freehold'
+  $field_bases['field_object_desc_freehold'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_object_desc_freehold',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'text_long',
+  );
+
   // Exported field_base: 'field_object_description'
   $field_bases['field_object_description'] = array(
     'active' => 1,
@@ -1753,6 +1736,27 @@ function hk_ct_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'entityreference',
+  );
+
+  // Exported field_base: 'field_object_text_schattenobjekt'
+  $field_bases['field_object_text_schattenobjekt'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_object_text_schattenobjekt',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'text_long',
   );
 
   // Exported field_base: 'field_object_txt_map_popup'
@@ -2051,6 +2055,100 @@ function hk_ct_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'office_hours',
+  );
+
+  // Exported field_base: 'field_ref_adresse'
+  $field_bases['field_ref_adresse'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_ref_adresse',
+    'indexes' => array(),
+    'locked' => 0,
+    'module' => 'addressfield',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 0,
+    'type' => 'addressfield',
+  );
+
+  // Exported field_base: 'field_ref_anzahl_wohnungen'
+  $field_bases['field_ref_anzahl_wohnungen'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_ref_anzahl_wohnungen',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max_length' => 255,
+    ),
+    'translatable' => 0,
+    'type' => 'text',
+  );
+
+  // Exported field_base: 'field_ref_foto'
+  $field_bases['field_ref_foto'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_ref_foto',
+    'indexes' => array(
+      'fid' => array(
+        0 => 'fid',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'image',
+    'settings' => array(
+      'default_image' => 0,
+      'entity_translation_sync' => array(
+        0 => 'fid',
+      ),
+      'uri_scheme' => 'public',
+    ),
+    'translatable' => 0,
+    'type' => 'image',
+  );
+
+  // Exported field_base: 'field_ref_typ'
+  $field_bases['field_ref_typ'] = array(
+    'active' => 1,
+    'cardinality' => -1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_ref_typ',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'Neubauprojekt' => 'New development',
+        'Altbausanierung' => 'Refurbishment',
+        'Bestandswohnungen' => 'Existing homes',
+        'Vertriebskoordination' => 'Sales coordination',
+      ),
+      'allowed_values_function' => '',
+      'allowed_values_no_localization' => 0,
+      'entity_translation_sync' => FALSE,
+      'values_field' => '',
+    ),
+    'translatable' => 1,
+    'type' => 'list_text',
   );
 
   // Exported field_base: 'field_rent_commission'

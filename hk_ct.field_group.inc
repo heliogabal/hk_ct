@@ -70,6 +70,36 @@ function hk_ct_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_akkordion|node|objekt|wohn_und_geschaeftshaus';
+  $field_group->group_name = 'group_akkordion';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'objekt';
+  $field_group->mode = 'wohn_und_geschaeftshaus';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Akkordion',
+    'weight' => '5',
+    'children' => array(
+      0 => 'group_haus',
+      1 => 'group_lage',
+      2 => 'group_sonstiges',
+    ),
+    'format_type' => 'accordion',
+    'format_settings' => array(
+      'formatter' => '',
+      'instance_settings' => array(
+        'description' => '',
+        'classes' => 'group-akkordion field-group-accordion',
+        'effect' => 'bounceslide',
+        'id' => '',
+      ),
+    ),
+  );
+  $field_groups['group_akkordion|node|objekt|wohn_und_geschaeftshaus'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_ansprechpartner|node|objekt|form';
   $field_group->group_name = 'group_ansprechpartner';
   $field_group->entity_type = 'node';
@@ -114,7 +144,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Veröffentlichen',
-    'weight' => '3',
+    'weight' => '4',
     'children' => array(),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -277,6 +307,40 @@ function hk_ct_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_details|node|objekt|wohn_und_geschaeftshaus';
+  $field_group->group_name = 'group_details';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'objekt';
+  $field_group->mode = 'wohn_und_geschaeftshaus';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Details',
+    'weight' => '10',
+    'children' => array(
+      0 => 'field_no_of_floors',
+      1 => 'field_wug_act_rent',
+      2 => 'field_wug_no_of_units',
+      3 => 'field_wug_opt_constrruct',
+      4 => 'field_wug_total_space',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Details',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-details field-group-html-element apartmerkmale',
+        'element' => 'div',
+        'show_label' => '1',
+        'label_element' => 'div',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_details|node|objekt|wohn_und_geschaeftshaus'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_energieausweis|node|objekt|form';
   $field_group->group_name = 'group_energieausweis';
   $field_group->entity_type = 'node';
@@ -310,6 +374,46 @@ function hk_ct_field_group_info() {
     ),
   );
   $field_groups['group_energieausweis|node|objekt|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_energieausweis|node|objekt|wohn_und_geschaeftshaus';
+  $field_group->group_name = 'group_energieausweis';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'objekt';
+  $field_group->mode = 'wohn_und_geschaeftshaus';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Energieausweis',
+    'weight' => '16',
+    'children' => array(
+      0 => 'field_heating_type',
+      1 => 'field_wug_occupancy',
+      2 => 'field_year_built',
+      3 => 'field_objekt_energieausweistyp',
+      4 => 'field_objekt_energietraeger',
+      5 => 'field_objekt_endenergiebedarf',
+      6 => 'field_objekt_effizienzklasse',
+      7 => 'field_obj_enev_date',
+      8 => 'field_obj_enev_haustyp',
+      9 => 'field_obj_enev_file',
+      10 => 'field_obj_enev_consumption_value',
+    ),
+    'format_type' => 'html-element',
+    'format_settings' => array(
+      'label' => 'Energieausweis',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-energieausweis field-group-html-element energy',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => 'div',
+        'attributes' => '',
+      ),
+    ),
+  );
+  $field_groups['group_energieausweis|node|objekt|wohn_und_geschaeftshaus'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -374,6 +478,31 @@ function hk_ct_field_group_info() {
     ),
   );
   $field_groups['group_features|node|apartment|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_haus|node|objekt|wohn_und_geschaeftshaus';
+  $field_group->group_name = 'group_haus';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'objekt';
+  $field_group->mode = 'wohn_und_geschaeftshaus';
+  $field_group->parent_name = 'group_akkordion';
+  $field_group->data = array(
+    'label' => 'Haus',
+    'weight' => '63',
+    'children' => array(
+      0 => 'field_object_description',
+    ),
+    'format_type' => 'accordion-item',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'classes' => 'group-haus field-group-accordion-item',
+      ),
+    ),
+  );
+  $field_groups['group_haus|node|objekt|wohn_und_geschaeftshaus'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -505,7 +634,8 @@ function hk_ct_field_group_info() {
       0 => 'field_kategorie',
       1 => 'field_objektid_nunumeric',
       2 => 'title_field',
-      3 => 'language',
+      3 => 'field_apart_price',
+      4 => 'language',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -535,6 +665,7 @@ function hk_ct_field_group_info() {
     'weight' => '4',
     'children' => array(
       0 => 'field_object_images',
+      1 => 'field_apart_floor_plan',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -603,7 +734,8 @@ function hk_ct_field_group_info() {
       1 => 'field_object_location',
       2 => 'field_object_other',
       3 => 'field_object_txt_map_popup',
-      4 => 'group_multiapart',
+      4 => 'field_object_text_schattenobjekt',
+      5 => 'group_multiapart',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -702,6 +834,31 @@ function hk_ct_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_lage|node|objekt|wohn_und_geschaeftshaus';
+  $field_group->group_name = 'group_lage';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'objekt';
+  $field_group->mode = 'wohn_und_geschaeftshaus';
+  $field_group->parent_name = 'group_akkordion';
+  $field_group->data = array(
+    'label' => 'Lage',
+    'weight' => '64',
+    'children' => array(
+      0 => 'field_object_location',
+    ),
+    'format_type' => 'accordion-item',
+    'format_settings' => array(
+      'formatter' => 'closed',
+      'instance_settings' => array(
+        'classes' => 'group-lage field-group-accordion-item',
+      ),
+    ),
+  );
+  $field_groups['group_lage|node|objekt|wohn_und_geschaeftshaus'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_merkmale|node|apartment|default';
   $field_group->group_name = 'group_merkmale';
   $field_group->entity_type = 'node';
@@ -710,7 +867,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Merkmale',
-    'weight' => '35',
+    'weight' => '33',
     'children' => array(
       0 => 'field_apart_bathrooms',
       1 => 'field_apart_floor',
@@ -786,11 +943,12 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = 'group_ht_texte';
   $field_group->data = array(
     'label' => 'Mehrere Apartmenttypen im Objekt',
-    'weight' => '-1',
+    'weight' => '60',
     'children' => array(
       0 => 'field_object_desc_commercial',
       1 => 'field_object_description_invest',
       2 => 'field_object_multi_apart_types',
+      3 => 'field_object_desc_freehold',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -850,7 +1008,6 @@ function hk_ct_field_group_info() {
       2 => 'field_objekt_wkt',
       3 => 'field_address_shadow_object',
       4 => 'field_obj_schattenobjekt',
-      5 => 'field_obj_geb_schatten_eref',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -1009,6 +1166,32 @@ function hk_ct_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_sonstiges|node|objekt|wohn_und_geschaeftshaus';
+  $field_group->group_name = 'group_sonstiges';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'objekt';
+  $field_group->mode = 'wohn_und_geschaeftshaus';
+  $field_group->parent_name = 'group_akkordion';
+  $field_group->data = array(
+    'label' => 'Sonstiges',
+    'weight' => '65',
+    'children' => array(
+      0 => 'field_object_other',
+    ),
+    'format_type' => 'accordion-item',
+    'format_settings' => array(
+      'label' => 'Sonstiges',
+      'instance_settings' => array(
+        'classes' => 'group-sonstiges field-group-accordion-item',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $field_groups['group_sonstiges|node|objekt|wohn_und_geschaeftshaus'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_texte|node|apartment|form';
   $field_group->group_name = 'group_texte';
   $field_group->entity_type = 'node';
@@ -1047,7 +1230,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Text',
-    'weight' => '4',
+    'weight' => '3',
     'children' => array(
       0 => 'field_apart_description',
       1 => 'group_akkordeon',
@@ -1119,12 +1302,14 @@ function hk_ct_field_group_info() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Akkordeon');
+  t('Akkordion');
   t('Apartments');
   t('Basic fields');
   t('Basisdaten');
   t('Bilder');
   t('Card');
   t('Costs and returns');
+  t('Details');
   t('Energieausweis');
   t('Exposé');
   t('Features');
@@ -1132,6 +1317,7 @@ function hk_ct_field_group_info() {
   t('Horizontal Menu');
   t('House');
   t('Images');
+  t('Lage');
   t('Location');
   t('Mehrere Apartmenttypen im Objekt');
   t('Merkmale');

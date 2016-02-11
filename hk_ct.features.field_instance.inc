@@ -21,7 +21,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 49,
+        'weight' => 48,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -117,7 +117,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 45,
+        'weight' => 44,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -313,7 +313,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 55,
+        'weight' => 54,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -372,7 +372,7 @@ function hk_ct_field_default_field_instances() {
           'file_view_mode' => 'expose_link',
         ),
         'type' => 'file_rendered',
-        'weight' => 17,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -498,19 +498,18 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'colorbox',
+        'module' => 'photobox',
         'settings' => array(
-          'colorbox_caption' => 'auto',
-          'colorbox_caption_custom' => '',
-          'colorbox_gallery' => 'field_page',
-          'colorbox_gallery_custom' => '',
-          'colorbox_image_style' => '',
-          'colorbox_multivalue_index' => NULL,
-          'colorbox_node_style' => 'flexslider_thumbnail',
-          'colorbox_node_style_first' => '',
+          'photobox_caption' => 'auto',
+          'photobox_caption_custom' => '',
+          'photobox_content_image_style' => '',
+          'photobox_content_image_style_first' => '',
+          'photobox_gallery' => 'post',
+          'photobox_gallery_custom' => '',
+          'photobox_image_style' => '',
         ),
-        'type' => 'colorbox',
-        'weight' => 3,
+        'type' => 'photobox',
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -607,9 +606,67 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 30,
+        'module' => 'slick_fields',
+        'settings' => array(
+          'asnavfor_auto' => 1,
+          'asnavfor_main' => '',
+          'asnavfor_thumbnail' => '',
+          'aspect_ratio' => '',
+          'cache' => '',
+          'color_field' => '',
+          'colorbox_style' => '',
+          'current_display' => 'main',
+          'current_view_mode' => 'default',
+          'grid' => '',
+          'grid_medium' => '',
+          'grid_small' => '',
+          'iframe_lazy' => FALSE,
+          'image_style' => 'colorbox_full',
+          'lightbox_ready' => FALSE,
+          'markup' => 0,
+          'media_switch' => 'photobox-switch',
+          'mousewheel' => 0,
+          'nested_optionset' => '',
+          'nested_slick' => FALSE,
+          'nested_style' => '',
+          'optionset' => 'wohnungsgalerie',
+          'optionset_thumbnail' => 'wohnungsgalerie_thumbs',
+          'overridables' => array(
+            'arrows' => 0,
+            'autoplay' => 0,
+            'dots' => 0,
+            'draggable' => 0,
+          ),
+          'override' => 0,
+          'picture' => 0,
+          'picture_fallback' => '',
+          'picture_ready' => FALSE,
+          'picture_style' => '',
+          'preserve_keys' => FALSE,
+          'skin' => 'default',
+          'skin_arrows' => '',
+          'skin_dots' => '',
+          'skin_thumbnail' => 'asnavfor',
+          'slide_caption' => array(
+            'alt_field' => 0,
+            'title_field' => 'title_field',
+          ),
+          'slide_classes' => '',
+          'slide_image' => '',
+          'slide_layout' => '',
+          'slide_link' => '',
+          'slide_overlay' => array(),
+          'slide_title' => '',
+          'thumbnail_caption' => '',
+          'thumbnail_hover' => 0,
+          'thumbnail_style' => 'flexslider_thumbnail',
+          'type' => '',
+          'use_ajax' => FALSE,
+          'view_mode' => '',
+          'visible_slides' => '',
+        ),
+        'type' => 'slick',
+        'weight' => 1,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -747,7 +804,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 54,
+        'weight' => 53,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -810,7 +867,7 @@ function hk_ct_field_default_field_instances() {
           'thousand_separator' => ' ',
         ),
         'type' => 'number_decimal',
-        'weight' => 8,
+        'weight' => 7,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -870,7 +927,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 33,
+        'weight' => 32,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -922,7 +979,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 48,
+        'weight' => 47,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -974,7 +1031,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 47,
+        'weight' => 46,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1026,7 +1083,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 50,
+        'weight' => 49,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1074,7 +1131,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 40,
+        'weight' => 39,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1127,7 +1184,7 @@ function hk_ct_field_default_field_instances() {
           'title_style' => '_none',
         ),
         'type' => 'title_linked',
-        'weight' => 7,
+        'weight' => 6,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1298,7 +1355,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 329,
+        'weight' => 56,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -1409,7 +1466,7 @@ function hk_ct_field_default_field_instances() {
           'thousand_separator' => ' ',
         ),
         'type' => 'number_decimal',
-        'weight' => 10,
+        'weight' => 9,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -1569,7 +1626,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 46,
+        'weight' => 45,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1623,7 +1680,7 @@ function hk_ct_field_default_field_instances() {
           'thousand_separator' => ' ',
         ),
         'type' => 'number_integer',
-        'weight' => 9,
+        'weight' => 8,
       ),
       'teaser' => array(
         'label' => 'inline',
@@ -1823,7 +1880,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_plain',
-        'weight' => 16,
+        'weight' => 15,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1881,7 +1938,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 44,
+        'weight' => 43,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1932,7 +1989,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 53,
+        'weight' => 52,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2084,7 +2141,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 52,
+        'weight' => 51,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2196,7 +2253,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 39,
+        'weight' => 38,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2245,7 +2302,7 @@ function hk_ct_field_default_field_instances() {
           'title_style' => '_none',
         ),
         'type' => 'title_linked',
-        'weight' => 6,
+        'weight' => 5,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2297,7 +2354,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 51,
+        'weight' => 50,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2341,7 +2398,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 36,
+        'weight' => 35,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2380,66 +2437,82 @@ function hk_ct_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance:
-  // 'node-kieze_schattenobjekte-field_kiez_gebiet_schattenobjekt'
-  $field_instances['node-kieze_schattenobjekte-field_kiez_gebiet_schattenobjekt'] = array(
-    'bundle' => 'kieze_schattenobjekte',
+  // Exported field_instance: 'node-kartenmarker-field_marker_adresse'
+  $field_instances['node-kartenmarker-field_marker_adresse'] = array(
+    'bundle' => 'kartenmarker',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'leaflet',
+        'module' => 'addressfield',
         'settings' => array(
-          'height' => 400,
-          'icon' => array(
-            'html' => '',
-            'htmlClass' => '',
-            'iconAnchor' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'iconImageStyle' => '',
-            'iconSize' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'iconType' => 'marker',
-            'iconUrl' => '',
-            'popupAnchor' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'shadowAnchor' => array(
-              'x' => '',
-              'y' => '',
-            ),
-            'shadowUrl' => '',
+          'format_handlers' => array(
+            0 => 'address',
           ),
-          'leaflet_map' => 'leaflet-mapbox-0',
-          'popup' => array(
-            'show' => 0,
-            'text' => '',
-          ),
-          'vector_display' => array(
-            'clickable' => 0,
-            'color' => '',
-            'dashArray' => '',
-            'fill' => 0,
-            'fillColor' => '',
-            'fillOpacity' => '',
-            'opacity' => '',
-            'stroke' => 0,
-            'stroke_override' => 0,
-            'weight' => '',
-          ),
-          'zoom' => array(
-            'initialZoom' => -1,
-            'maxZoom' => -1,
-            'minZoom' => 1,
-          ),
+          'use_widget_handlers' => 1,
         ),
-        'type' => 'geofield_leaflet',
+        'type' => 'addressfield_default',
+        'weight' => 2,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_marker_adresse',
+    'label' => 'Adresse',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'addressfield_autocomplete',
+      'settings' => array(
+        'available_countries' => array(
+          'DE' => 'DE',
+        ),
+        'default_country' => 'DE',
+        'draggable' => 1,
+        'format_handlers' => array(
+          'address' => 'address',
+          'address-hide-country' => 'address-hide-country',
+          'address-hide-postal-code' => 0,
+          'address-hide-street' => 0,
+          'organisation' => 0,
+          'name-oneline' => 0,
+          'name-full' => 0,
+          'address-optional' => 0,
+        ),
+        'geolocation' => TRUE,
+        'html5_geocode' => 1,
+        'manual_text' => 'Enter one manually',
+        'map' => 1,
+        'restrict_country' => array(),
+        'reveal' => 1,
+        'reverse_geocode' => 0,
+        'street_number_placement' => 'after-street-name',
+        'types' => 'geocode',
+        'visible_markers' => 1,
+      ),
+      'type' => 'addressfield_autocomplete',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-kartenmarker-field_marker_text'
+  $field_instances['node-kartenmarker-field_marker_text'] = array(
+    'bundle' => 'kartenmarker',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
         'weight' => 1,
       ),
       'teaser' => array(
@@ -2451,39 +2524,70 @@ function hk_ct_field_default_field_instances() {
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
-    'field_name' => 'field_kiez_gebiet_schattenobjekt',
-    'label' => 'Gebiet Schattenobjekt neu',
-    'required' => 1,
+    'field_name' => 'field_marker_text',
+    'label' => 'Marker Text',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 1,
+      'tmgmt_translate' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-kartenmarker-field_marker_wkt'
+  $field_instances['node-kartenmarker-field_marker_wkt'] = array(
+    'bundle' => 'kartenmarker',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'geofield',
+        'settings' => array(
+          'data' => 'full',
+        ),
+        'type' => 'geofield_wkt',
+        'weight' => 3,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_marker_wkt',
+    'label' => 'Marker WKT',
+    'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'leaflet_widget',
+      'module' => 'addressfield_autocomplete',
       'settings' => array(
-        'geocoder' => array(
-          'enabled' => 0,
-          'handler' => 'google',
-        ),
-        'map' => array(
-          'auto_center' => 0,
-          'base_url' => '//{s}.tiles.mapbox.com/v3/heliogabal23.l8fho93p/{z}/{x}/{y}.png',
-          'center' => array(
-            'lat' => '52.493922961852434',
-            'lng' => '13.396797180175781',
-          ),
-          'zoom' => 12,
-        ),
+        'addressfield_autocomplete_field' => 'field_marker_adresse',
+        'delta_handling' => 'default',
       ),
-      'type' => 'leaflet_widget_widget',
-      'weight' => 1,
+      'type' => 'addressfield_autocomplete_latlng',
+      'weight' => 6,
     ),
   );
 
-  // Exported field_instance: 'node-kieze_schattenobjekte-title_field'
-  $field_instances['node-kieze_schattenobjekte-title_field'] = array(
-    'bundle' => 'kieze_schattenobjekte',
+  // Exported field_instance: 'node-kartenmarker-title_field'
+  $field_instances['node-kartenmarker-title_field'] = array(
+    'bundle' => 'kartenmarker',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -2492,7 +2596,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 11,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2512,7 +2616,7 @@ function hk_ct_field_default_field_instances() {
         'page' => FALSE,
       ),
       'text_processing' => 0,
-      'tmgmt_translate' => 0,
+      'tmgmt_translate' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2585,6 +2689,12 @@ function hk_ct_field_default_field_instances() {
         ),
         'type' => 'addressfield_default',
         'weight' => 43,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -2668,6 +2778,12 @@ function hk_ct_field_default_field_instances() {
         'type' => 'addressfield_default',
         'weight' => 44,
       ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -2750,6 +2866,7 @@ function hk_ct_field_default_field_instances() {
         'module' => 'entityreference',
         'settings' => array(
           'links' => 1,
+          'use_content_language' => TRUE,
           'view_mode' => 'default',
         ),
         'type' => 'entityreference_entity_view',
@@ -2760,6 +2877,12 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 45,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -2782,6 +2905,202 @@ function hk_ct_field_default_field_instances() {
       'settings' => array(),
       'type' => 'multiselect',
       'weight' => 0,
+    ),
+  );
+
+  // Exported field_instance: 'node-objekt-field_apart_floor_plan'
+  $field_instances['node-objekt-field_apart_floor_plan'] = array(
+    'bundle' => 'objekt',
+    'deleted' => 0,
+    'description' => 'ACHTUNG! Nur für Wohn-und-Geschäftshäuser verwenden, sonst gehört der Grundriss immer zur zugehörigen Wohnung. Dieses Feld lässt sich noch nicht verbergen, wenn es nicht relevant ist, also bitte aufpassen.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 73,
+      ),
+      'exposekarte' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'hidden',
+        'module' => 'colorbox',
+        'settings' => array(
+          'colorbox_caption' => 'auto',
+          'colorbox_caption_custom' => '',
+          'colorbox_gallery' => 'field_page',
+          'colorbox_gallery_custom' => '',
+          'colorbox_image_style' => '',
+          'colorbox_multivalue_index' => NULL,
+          'colorbox_node_style' => 'flexslider_thumbnail',
+          'colorbox_node_style_first' => '',
+        ),
+        'type' => 'colorbox',
+        'weight' => 3,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_apart_floor_plan',
+    'label' => 'Grundriss Wohn- und Geschäftshaus',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'filefield_paths' => array(
+        'active_updating' => 0,
+        'file_name' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => '[node:field_objektid_nunumeric]-[node:title_field]-grundriss.[file:ffp-extension-original]',
+        ),
+        'file_path' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => 'objekt/[node:field_objektid_nunumeric]/grundrisse',
+        ),
+        'retroactive_update' => 0,
+      ),
+      'filefield_paths_enabled' => 1,
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'private' => 0,
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 0,
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 0,
+        ),
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 0,
+        'manualcrop_inline_crop' => 0,
+        'manualcrop_instant_crop' => FALSE,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_keyboard' => 1,
+        'manualcrop_maximize_default_crop_area' => 0,
+        'manualcrop_require_cropping' => array(),
+        'manualcrop_styles_list' => array(),
+        'manualcrop_styles_mode' => 'include',
+        'manualcrop_thumblist' => 0,
+      ),
+      'type' => 'media_generic',
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-objekt-field_apart_price'
+  $field_instances['node-objekt-field_apart_price'] = array(
+    'bundle' => 'objekt',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 70,
+      ),
+      'exposekarte' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 2,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_decimal',
+        'weight' => 8,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_apart_price',
+    'label' => 'Purchasing price',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => ' €',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => -1,
     ),
   );
 
@@ -2850,6 +3169,12 @@ function hk_ct_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 1,
       ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -2882,6 +3207,62 @@ function hk_ct_field_default_field_instances() {
       'weight' => 49,
     ),
     'widget_type' => 'options_select',
+  );
+
+  // Exported field_instance: 'node-objekt-field_cvm_cvm'
+  $field_instances['node-objekt-field_cvm_cvm'] = array(
+    'bundle' => 'objekt',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 72,
+      ),
+      'exposekarte' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 55,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 28,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_cvm_cvm',
+    'label' => 'Contextual View Mode',
+    'required' => FALSE,
+    'settings' => array(
+      'cardinality' => -1,
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'contextual_view_modes',
+      'settings' => array(
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'contextual_view_modes_picker',
+      'weight' => 63,
+    ),
   );
 
   // Exported field_instance: 'node-objekt-field_developer'
@@ -2928,6 +3309,12 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 44,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -3001,6 +3388,12 @@ function hk_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 49,
       ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -3070,6 +3463,12 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 34,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -3146,6 +3545,12 @@ function hk_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 53,
       ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_moving_in_from',
@@ -3213,6 +3618,12 @@ function hk_ct_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 52,
       ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -3271,6 +3682,12 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 23,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -3331,6 +3748,7 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'module' => 'entityreference',
         'settings' => array(
           'links' => 1,
+          'use_content_language' => TRUE,
           'view_mode' => 'search_result',
         ),
         'type' => 'entityreference_entity_view',
@@ -3341,6 +3759,7 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'module' => 'entityreference',
         'settings' => array(
           'links' => 1,
+          'use_content_language' => TRUE,
           'view_mode' => 'teaser',
         ),
         'type' => 'entityreference_entity_view',
@@ -3357,6 +3776,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 46,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -3423,6 +3848,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'type' => 'hidden',
         'weight' => 8,
       ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -3476,6 +3907,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 21,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -3536,6 +3973,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 26,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -3638,6 +4081,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'type' => 'hidden',
         'weight' => 22,
       ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -3661,73 +4110,6 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
       'settings' => array(),
       'type' => 'options_select',
       'weight' => 50,
-    ),
-  );
-
-  // Exported field_instance: 'node-objekt-field_obj_geb_schatten_eref'
-  $field_instances['node-objekt-field_obj_geb_schatten_eref'] = array(
-    'bundle' => 'objekt',
-    'default_value' => NULL,
-    'default_value_function' => '',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 36,
-      ),
-      'exposekarte' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 60,
-      ),
-      'map_popup' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 24,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_obj_geb_schatten_eref',
-    'label' => 'Gebiet Schattenobjekt 2',
-    'required' => 0,
-    'settings' => array(
-      'behaviors' => array(
-        'prepopulate' => array(
-          'status' => 0,
-        ),
-        'taxonomy-index' => array(
-          'status' => TRUE,
-        ),
-      ),
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'references_dialog_add' => 1,
-        'references_dialog_edit' => 1,
-        'references_dialog_search' => 1,
-        'references_dialog_search_view' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 54,
     ),
   );
 
@@ -3761,6 +4143,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 14,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -3824,6 +4212,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 39,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -3889,6 +4283,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'type' => 'hidden',
         'weight' => 25,
       ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -3953,6 +4353,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'type' => 'hidden',
         'weight' => 28,
       ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -4011,6 +4417,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'type' => 'hidden',
         'weight' => 27,
       ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -4068,6 +4480,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 29,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -4132,6 +4550,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 18,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -4201,6 +4625,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'type' => 'hidden',
         'weight' => 32,
       ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -4225,6 +4655,71 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
       ),
       'type' => 'text_textarea',
       'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-objekt-field_object_desc_freehold'
+  $field_instances['node-objekt-field_object_desc_freehold'] = array(
+    'bundle' => 'objekt',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Diese Zusatzbeschreibung wird nur für bezugsfreie Wohnungen unter der allgemeinen Hausbeschreibung angezeigt. Diese wird also ERGÄNZT, nicht ersetzt!',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 74,
+      ),
+      'exposekarte' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_object_desc_freehold',
+    'label' => 'House description freehold apartments',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 0,
+      'tmgmt_translate' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 1,
     ),
   );
 
@@ -4272,6 +4767,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 51,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -4343,6 +4844,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 36,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -4430,6 +4937,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         ),
         'type' => 'image',
         'weight' => 42,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -4553,6 +5066,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'type' => 'hidden',
         'weight' => 48,
       ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -4661,6 +5180,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'type' => 'hidden',
         'weight' => 35,
       ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -4733,6 +5258,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'type' => 'hidden',
         'weight' => 47,
       ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -4746,6 +5277,7 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'insert_plugin' => '',
       ),
       'text_processing' => 1,
+      'tmgmt_translate' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -4756,6 +5288,71 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
       ),
       'type' => 'text_textarea',
       'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-objekt-field_object_text_schattenobjekt'
+  $field_instances['node-objekt-field_object_text_schattenobjekt'] = array(
+    'bundle' => 'objekt',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 71,
+      ),
+      'exposekarte' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'map_popup' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 50,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_object_text_schattenobjekt',
+    'label' => 'Text Schattenobjekt',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 0,
+      'tmgmt_translate' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 58,
     ),
   );
 
@@ -4801,6 +5398,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
       ),
       'teaser' => array(
         'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
@@ -4875,6 +5478,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'type' => 'hidden',
         'weight' => 11,
       ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -4944,6 +5553,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'type' => 'hidden',
         'weight' => 15,
       ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -5009,6 +5624,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 20,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -5078,6 +5699,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 16,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -5372,6 +5999,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'type' => 'taxonomy_term_reference_plain',
         'weight' => 28,
       ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -5472,6 +6105,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
+        'weight' => 0,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
@@ -5582,6 +6221,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'type' => 'hidden',
         'weight' => 43,
       ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -5652,6 +6297,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 42,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -5729,6 +6380,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'type' => 'hidden',
         'weight' => 38,
       ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -5800,6 +6457,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 37,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -5873,6 +6536,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'type' => 'hidden',
         'weight' => 31,
       ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -5938,6 +6607,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 30,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -6010,6 +6685,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 17,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -6089,6 +6770,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'type' => 'hidden',
         'weight' => 50,
       ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
     ),
     'ds_extras_field_template' => '',
     'entity_type' => 'node',
@@ -6154,6 +6841,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 19,
+      ),
+      'wohn_und_geschaeftshaus' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
       ),
     ),
     'ds_extras_field_template' => '',
@@ -6447,6 +7140,308 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
     ),
   );
 
+  // Exported field_instance: 'node-referenz-body'
+  $field_instances['node-referenz-body'] = array(
+    'bundle' => 'referenz',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 600,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'body',
+    'label' => 'Body',
+    'required' => FALSE,
+    'settings' => array(
+      'display_summary' => TRUE,
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 1,
+      'tmgmt_translate' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-referenz-field_ref_adresse'
+  $field_instances['node-referenz-field_ref_adresse'] = array(
+    'bundle' => 'referenz',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'addressfield',
+        'settings' => array(
+          'format_handlers' => array(
+            'address' => 'address',
+            'address-hide-country' => 'address-hide-country',
+          ),
+          'use_widget_handlers' => 1,
+        ),
+        'type' => 'addressfield_default',
+        'weight' => 3,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_ref_adresse',
+    'label' => 'Adresse',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'addressfield',
+      'settings' => array(
+        'available_countries' => array(
+          'DE' => 'DE',
+        ),
+        'default_country' => 'DE',
+        'format_handlers' => array(
+          'address' => 'address',
+          'address-hide-country' => 'address-hide-country',
+          'address-hide-postal-code' => 0,
+          'address-hide-street' => 0,
+          'organisation' => 0,
+          'name-oneline' => 0,
+          'name-full' => 0,
+          'address-optional' => 0,
+        ),
+      ),
+      'type' => 'addressfield_standard',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-referenz-field_ref_anzahl_wohnungen'
+  $field_instances['node-referenz-field_ref_anzahl_wohnungen'] = array(
+    'bundle' => 'referenz',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'inline',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_ref_anzahl_wohnungen',
+    'label' => 'Anzahl der Wohnungen',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'linkit' => array(
+        'enable' => 0,
+        'insert_plugin' => '',
+      ),
+      'text_processing' => 0,
+      'tmgmt_translate' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-referenz-field_ref_foto'
+  $field_instances['node-referenz-field_ref_foto'] = array(
+    'bundle' => 'referenz',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => 'referenz',
+        ),
+        'type' => 'image',
+        'weight' => 2,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_ref_foto',
+    'label' => 'Referenzfoto',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'entity_translation_sync' => FALSE,
+      'file_directory' => '',
+      'file_extensions' => 'png gif jpg jpeg',
+      'filefield_paths' => array(
+        'active_updating' => 0,
+        'file_name' => array(
+          'options' => array(
+            'pathauto' => 1,
+            'transliterate' => 1,
+          ),
+          'value' => 'referenz_[file:ffp-name-only-original].[file:ffp-extension-original]',
+        ),
+        'file_path' => array(
+          'options' => array(
+            'pathauto' => 1,
+            'transliterate' => 1,
+          ),
+          'value' => 'referenzen',
+        ),
+        'retroactive_update' => 0,
+      ),
+      'filefield_paths_enabled' => 1,
+      'max_filesize' => '2 MB',
+      'max_resolution' => '1920x2200',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'private' => 0,
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'document' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 0,
+          'upload' => 'upload',
+        ),
+        'manualcrop_crop_info' => 1,
+        'manualcrop_default_crop_area' => 1,
+        'manualcrop_enable' => 1,
+        'manualcrop_inline_crop' => 0,
+        'manualcrop_instant_crop' => FALSE,
+        'manualcrop_instant_preview' => 1,
+        'manualcrop_keyboard' => 1,
+        'manualcrop_maximize_default_crop_area' => 1,
+        'manualcrop_require_cropping' => array(),
+        'manualcrop_styles_list' => array(),
+        'manualcrop_styles_mode' => 'include',
+        'manualcrop_thumblist' => 0,
+      ),
+      'type' => 'media_generic',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-referenz-field_ref_typ'
+  $field_instances['node-referenz-field_ref_typ'] = array(
+    'bundle' => 'referenz',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 4,
+      ),
+    ),
+    'ds_extras_field_template' => '',
+    'entity_type' => 'node',
+    'field_name' => 'field_ref_typ',
+    'label' => 'Referenztyp',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_buttons',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-referenz-title_field'
+  $field_instances['node-referenz-title_field'] = array(
+    'bundle' => 'referenz',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 13,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'title_field',
+    'label' => 'Titel',
+    'required' => TRUE,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'hide_label' => array(
+        'entity' => FALSE,
+        'page' => FALSE,
+      ),
+      'text_processing' => 0,
+      'tmgmt_translate' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
+    ),
+  );
+
   // Exported field_instance: 'taxonomy_term-category-description_field'
   $field_instances['taxonomy_term-category-description_field'] = array(
     'bundle' => 'category',
@@ -6565,103 +7560,6 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
       ),
       'type' => 'text_textfield',
       'weight' => 0,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'taxonomy_term-vocabulary_3-field_bezirk_geokoordinaten'
-  $field_instances['taxonomy_term-vocabulary_3-field_bezirk_geokoordinaten'] = array(
-    'bundle' => 'vocabulary_3',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'geofield',
-        'settings' => array(
-          'data' => 'bounding',
-        ),
-        'type' => 'geofield_wkt',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_bezirk_geokoordinaten',
-    'label' => 'Geokoordinaten',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'addressfield_autocomplete',
-      'settings' => array(
-        'addressfield_autocomplete_field' => 'field_bezirk_postleitzahlen',
-        'delta_handling' => 'm_to_s',
-      ),
-      'type' => 'addressfield_autocomplete_latlng',
-      'weight' => 6,
-    ),
-  );
-
-  // Exported field_instance:
-  // 'taxonomy_term-vocabulary_3-field_bezirk_postleitzahlen'
-  $field_instances['taxonomy_term-vocabulary_3-field_bezirk_postleitzahlen'] = array(
-    'bundle' => 'vocabulary_3',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 1,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'taxonomy_term',
-    'field_name' => 'field_bezirk_postleitzahlen',
-    'label' => 'Postleitzahlen',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'addressfield_autocomplete',
-      'settings' => array(
-        'available_countries' => array(
-          'DE' => 'DE',
-        ),
-        'default_country' => 'DE',
-        'draggable' => 1,
-        'format_handlers' => array(
-          'address' => 'address',
-          'address-hide-street' => 'address-hide-street',
-          'address-hide-country' => 'address-hide-country',
-          'address-optional' => 'address-optional',
-          'address-hide-postal-code' => 0,
-          'organisation' => 0,
-          'name-oneline' => 0,
-          'name-full' => 0,
-        ),
-        'geolocation' => TRUE,
-        'html5_geocode' => 1,
-        'manual_text' => 'Enter one manually',
-        'map' => 1,
-        'restrict_country' => array(),
-        'reveal' => 1,
-        'reverse_geocode' => 0,
-        'street_number_placement' => 'before-street-name',
-        'types' => 'geocode',
-        'visible_markers' => 1,
-      ),
-      'type' => 'addressfield_autocomplete',
-      'weight' => 5,
     ),
   );
 
@@ -6826,13 +7724,16 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
   // Included for use with string extractors like potx.
   t('3 Großbuchstaben plus Hausnummer');
   t('A <em>page</em>, similar in form to a <em>story</em>, is a simple method for creating and displaying information that rarely changes, such as an "About us" section of a website. By default, a <em>page</em> entry does not allow visitor comments and is not featured on the site\'s initial home page.');
+  t('ACHTUNG! Nur für Wohn-und-Geschäftshäuser verwenden, sonst gehört der Grundriss immer zur zugehörigen Wohnung. Dieses Feld lässt sich noch nicht verbergen, wenn es nicht relevant ist, also bitte aufpassen.');
   t('Acquise');
   t('Actual net rental income p.a.');
   t('Address');
   t('Address Shadow Object');
+  t('Adresse');
   t('Allocable incidental costs');
   t('Anrede');
   t('Ansprechpartner');
+  t('Anzahl der Wohnungen');
   t('Apartment No.');
   t('Apartment description');
   t('Apartment location');
@@ -6847,8 +7748,10 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
   t('Commission');
   t('Commission (Rent)');
   t('Consumption value');
+  t('Contextual View Mode');
   t('Description');
   t('Developer');
+  t('Diese Zusatzbeschreibung wird nur für bezugsfreie Wohnungen unter der allgemeinen Hausbeschreibung angezeigt. Diese wird also ERGÄNZT, nicht ersetzt!');
   t('Energieeffizienzklasse');
   t('Energieträger');
   t('Energy Consumption Certificate Type');
@@ -6860,17 +7763,16 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
   t('Floor');
   t('Floor plan');
   t('Galerie');
-  t('Gebiet Schattenobjekt 2');
-  t('Gebiet Schattenobjekt neu');
   t('Gemeinschaftsgeschäft');
   t('Geodaten Schattenwohnung');
-  t('Geokoordinaten');
+  t('Grundriss Wohn- und Geschäftshaus');
   t('HOA fee');
   t('Heating type');
   t('Hier können die jeweiligen Vereinbarungen mit dem Tippgeber hinterlegt werden.');
   t('House Description Commercial');
   t('House Description Investment');
   t('House description');
+  t('House description freehold apartments');
   t('House type');
   t('Kiez Schattenobjekt');
   t('Konditionen Acquise');
@@ -6880,6 +7782,8 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
   t('Location');
   t('Maintenance reserve');
   t('Maintenance reserve value');
+  t('Marker Text');
+  t('Marker WKT');
   t('Moving in from');
   t('Multiple Apartment Types');
   t('Name');
@@ -6895,11 +7799,12 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
   t('Optional construction site');
   t('Other');
   t('Pictures');
-  t('Postleitzahlen');
   t('Prozentzahl ohne Prozentzeichen mit Komma getrennt eingeben: z.B. 7,14');
   t('Purchasing price');
   t('Purchasing price parking lot');
   t('Rate Of Return');
+  t('Referenzfoto');
+  t('Referenztyp');
   t('Rooms');
   t('Schattengebiet WKT');
   t('Schattenobjekt?');
@@ -6908,6 +7813,7 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
   t('Standort');
   t('Status quo');
   t('Text Karten-Popup');
+  t('Text Schattenobjekt');
   t('Tippgeber');
   t('Titel');
   t('Total space');

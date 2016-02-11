@@ -10,7 +10,7 @@
 function hk_ct_default_rules_configuration() {
   $items = array();
   $items['hk_ct_kopiere_bezirk_vom_objekt_create'] = entity_import('rules_config', '{ "hk_ct_kopiere_bezirk_vom_objekt_create" : {
-      "LABEL" : "Kopiere Bezirk vom Objekt, falls leer",
+      "LABEL" : "Kopiere Bezirk vom Objekt",
       "PLUGIN" : "rule",
       "OWNER" : "rules",
       "TAGS" : [ "entity_rules_create" ],
@@ -25,7 +25,6 @@ function hk_ct_default_rules_configuration() {
             "type" : { "value" : { "apartment" : "apartment" } }
           }
         },
-        { "data_is_empty" : { "data" : [ "entity:field-bezirk" ] } },
         { "entity_has_field" : { "entity" : [ "entity" ], "field" : "field_object_ref" } },
         { "entity_has_field" : { "entity" : [ "entity:field-object-ref" ], "field" : "field_bezirk" } }
       ],
@@ -41,7 +40,7 @@ function hk_ct_default_rules_configuration() {
     }
   }');
   $items['hk_ct_kopiere_bezirk_vom_objekt_falls_leer'] = entity_import('rules_config', '{ "hk_ct_kopiere_bezirk_vom_objekt_falls_leer" : {
-      "LABEL" : "Kopiere Bezirk vom Objekt, falls leer (update)",
+      "LABEL" : "Kopiere Bezirk vom Objekt (update)",
       "PLUGIN" : "rule",
       "OWNER" : "rules",
       "TAGS" : [ "entity_rules_update" ],
@@ -56,7 +55,6 @@ function hk_ct_default_rules_configuration() {
             "type" : { "value" : { "apartment" : "apartment" } }
           }
         },
-        { "data_is_empty" : { "data" : [ "entity:field-bezirk" ] } },
         { "entity_has_field" : { "entity" : [ "entity" ], "field" : "field_object_ref" } },
         { "entity_has_field" : { "entity" : [ "entity:field-object-ref" ], "field" : "field_bezirk" } }
       ],
