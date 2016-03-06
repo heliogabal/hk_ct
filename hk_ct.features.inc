@@ -273,26 +273,6 @@ function hk_ct_image_default_styles() {
     ),
   );
 
-  // Exported image style: expose.
-  $styles['expose'] = array(
-    'label' => 'Exposé Landschaft',
-    'effects' => array(
-      38 => array(
-        'name' => 'manualcrop_crop_and_scale',
-        'data' => array(
-          'width' => 2480,
-          'height' => 1675,
-          'upscale' => 1,
-          'respectminimum' => 0,
-          'onlyscaleifcrop' => 1,
-          'style_name' => 'expose',
-          '#imageinfo_cache_effect_callback' => 'manualcrop_crop_and_scale_effect',
-        ),
-        'weight' => 0,
-      ),
-    ),
-  );
-
   // Exported image style: flexfullbreakpoints_theme_hk_theme_desk_1x.
   $styles['flexfullbreakpoints_theme_hk_theme_desk_1x'] = array(
     'label' => 'flexfullbreakpoints_theme_hk_theme_desk_1x',

@@ -354,7 +354,6 @@ features[image][] = colorboxbreakpoints_theme_hk_theme_desk_1x
 features[image][] = colorboxbreakpoints_theme_hk_theme_mobile_1x
 features[image][] = colorboxbreakpoints_theme_hk_theme_narrow_1x
 features[image][] = colorboxbreakpoints_theme_hk_theme_wide_1x
-features[image][] = expose
 features[image][] = flexfullbreakpoints_theme_hk_theme_desk_1x
 features[image][] = flexfullbreakpoints_theme_hk_theme_mobile_1x
 features[image][] = flexfullbreakpoints_theme_hk_theme_narrow_1x
