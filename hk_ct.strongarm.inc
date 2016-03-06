@@ -71,22 +71,22 @@ function hk_ct_strongarm() {
           'weight' => '1',
         ),
         'path' => array(
-          'weight' => '3',
+          'weight' => '4',
         ),
         'redirect' => array(
-          'weight' => '5',
+          'weight' => '6',
         ),
         'language' => array(
           'weight' => '-4',
         ),
         'xmlsitemap' => array(
-          'weight' => '12',
+          'weight' => '9',
         ),
       ),
       'display' => array(
         'flag_merken' => array(
           'default' => array(
-            'weight' => '36',
+            'weight' => '34',
             'visible' => FALSE,
           ),
           'teaser' => array(

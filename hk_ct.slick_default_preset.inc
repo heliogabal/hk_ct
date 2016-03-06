@@ -90,7 +90,7 @@ function hk_ct_slick_default_presets() {
   $preset->options = array(
     'general' => array(
       'normal' => 'flexfullbreakpoints_theme_hk_theme_wide_1x',
-      'thumbnail' => '',
+      'thumbnail' => 'flexslider_thumbnail',
       'template_class' => 'slick--main',
       'goodies' => array(
         'arrow-down' => 0,
@@ -104,7 +104,7 @@ function hk_ct_slick_default_presets() {
       'mobileFirst' => TRUE,
       'asNavFor' => '',
       'accessibility' => TRUE,
-      'adaptiveHeight' => TRUE,
+      'adaptiveHeight' => FALSE,
       'autoplay' => FALSE,
       'autoplaySpeed' => 3000,
       'pauseOnHover' => TRUE,
@@ -122,7 +122,7 @@ function hk_ct_slick_default_presets() {
       'focusOnSelect' => FALSE,
       'infinite' => TRUE,
       'initialSlide' => 0,
-      'lazyLoad' => 'progressive',
+      'lazyLoad' => 'ondemand',
       'respondTo' => 'window',
       'rtl' => FALSE,
       'rows' => 1,

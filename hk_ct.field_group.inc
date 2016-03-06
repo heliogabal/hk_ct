@@ -144,7 +144,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Veröffentlichen',
-    'weight' => '4',
+    'weight' => '5',
     'children' => array(),
     'format_type' => 'tab',
     'format_settings' => array(
@@ -179,8 +179,7 @@ function hk_ct_field_group_info() {
       5 => 'field_object_ref',
       6 => 'title_field',
       7 => 'field_obj_schattenobjekt',
-      8 => 'field_apart_kiez_schattenobjekt',
-      9 => 'language',
+      8 => 'language',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
@@ -867,7 +866,7 @@ function hk_ct_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Merkmale',
-    'weight' => '33',
+    'weight' => '31',
     'children' => array(
       0 => 'field_apart_bathrooms',
       1 => 'field_apart_floor',
@@ -1056,61 +1055,6 @@ function hk_ct_field_group_info() {
     ),
   );
   $field_groups['group_project_card|node|objekt|teaser'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_publish|node|objekt|form';
-  $field_group->group_name = 'group_publish';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'objekt';
-  $field_group->mode = 'form';
-  $field_group->parent_name = '';
-  $field_group->data = array(
-    'label' => 'Status',
-    'weight' => '2',
-    'children' => array(),
-    'format_type' => 'tab',
-    'format_settings' => array(
-      'label' => 'Status',
-      'instance_settings' => array(
-        'required_fields' => 1,
-        'classes' => 'group-publish field-group-tab',
-        'description' => '',
-      ),
-      'formatter' => 'closed',
-    ),
-  );
-  $field_groups['group_publish|node|objekt|form'] = $field_group;
-
-  $field_group = new stdClass();
-  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
-  $field_group->api_version = 1;
-  $field_group->identifier = 'group_returns|node|apartment|form';
-  $field_group->group_name = 'group_returns';
-  $field_group->entity_type = 'node';
-  $field_group->bundle = 'apartment';
-  $field_group->mode = 'form';
-  $field_group->parent_name = 'group_horizontal';
-  $field_group->data = array(
-    'label' => 'Returns',
-    'weight' => '3',
-    'children' => array(
-      0 => 'field_apart_net_rent',
-      1 => 'field_apart_rate_of_return',
-    ),
-    'format_type' => 'htab',
-    'format_settings' => array(
-      'formatter' => 'closed',
-      'instance_settings' => array(
-        'description' => '',
-        'classes' => 'group-returns field-group-htab',
-        'required_fields' => 1,
-        'id' => '',
-      ),
-    ),
-  );
-  $field_groups['group_returns|node|apartment|form'] = $field_group;
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -1324,9 +1268,7 @@ function hk_ct_field_group_info() {
   t('Objektverwaltung');
   t('Ort');
   t('Other');
-  t('Returns');
   t('Sonstiges');
-  t('Status');
   t('Text');
   t('Texte');
   t('Veröffentlichen');

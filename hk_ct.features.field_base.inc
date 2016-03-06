@@ -376,42 +376,6 @@ function hk_ct_field_default_field_bases() {
     'type' => 'number_decimal',
   );
 
-  // Exported field_base: 'field_apart_kiez_schattenobjekt'
-  $field_bases['field_apart_kiez_schattenobjekt'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_apart_kiez_schattenobjekt',
-    'indexes' => array(
-      'target_id' => array(
-        0 => 'target_id',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'entityreference',
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'handler' => 'base',
-      'handler_settings' => array(
-        'behaviors' => array(
-          'views-select-list' => array(
-            'status' => 0,
-          ),
-        ),
-        'sort' => array(
-          'type' => 'none',
-        ),
-        'target_bundles' => array(
-          'kieze_schattenobjekte' => 'kieze_schattenobjekte',
-        ),
-      ),
-      'target_type' => 'node',
-    ),
-    'translatable' => 0,
-    'type' => 'entityreference',
-  );
-
   // Exported field_base: 'field_apart_living_space'
   $field_bases['field_apart_living_space'] = array(
     'active' => 1,
@@ -699,57 +663,6 @@ function hk_ct_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
-  // Exported field_base: 'field_apart_schattengebiet_wkt'
-  $field_bases['field_apart_schattengebiet_wkt'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_apart_schattengebiet_wkt',
-    'indexes' => array(
-      'bbox' => array(
-        0 => 'top',
-        1 => 'bottom',
-        2 => 'left',
-        3 => 'right',
-      ),
-      'bottom' => array(
-        0 => 'bottom',
-      ),
-      'centroid' => array(
-        0 => 'lat',
-        1 => 'lon',
-      ),
-      'geohash' => array(
-        0 => 'geohash',
-      ),
-      'lat' => array(
-        0 => 'lat',
-      ),
-      'left' => array(
-        0 => 'left',
-      ),
-      'lon' => array(
-        0 => 'lon',
-      ),
-      'right' => array(
-        0 => 'right',
-      ),
-      'top' => array(
-        0 => 'top',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'geofield',
-    'settings' => array(
-      'backend' => 'default',
-      'entity_translation_sync' => FALSE,
-      'srid' => 4326,
-    ),
-    'translatable' => 0,
-    'type' => 'geofield',
-  );
-
   // Exported field_base: 'field_apart_sleeping_rooms'
   $field_bases['field_apart_sleeping_rooms'] = array(
     'active' => 1,
@@ -900,57 +813,6 @@ function hk_ct_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'text',
-  );
-
-  // Exported field_base: 'field_geodaten_schattenwohnung'
-  $field_bases['field_geodaten_schattenwohnung'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_geodaten_schattenwohnung',
-    'indexes' => array(
-      'bbox' => array(
-        0 => 'top',
-        1 => 'bottom',
-        2 => 'left',
-        3 => 'right',
-      ),
-      'bottom' => array(
-        0 => 'bottom',
-      ),
-      'centroid' => array(
-        0 => 'lat',
-        1 => 'lon',
-      ),
-      'geohash' => array(
-        0 => 'geohash',
-      ),
-      'lat' => array(
-        0 => 'lat',
-      ),
-      'left' => array(
-        0 => 'left',
-      ),
-      'lon' => array(
-        0 => 'lon',
-      ),
-      'right' => array(
-        0 => 'right',
-      ),
-      'top' => array(
-        0 => 'top',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'geofield',
-    'settings' => array(
-      'backend' => 'default',
-      'entity_translation_sync' => FALSE,
-      'srid' => 4326,
-    ),
-    'translatable' => 0,
-    'type' => 'geofield',
   );
 
   // Exported field_base: 'field_heating_type'

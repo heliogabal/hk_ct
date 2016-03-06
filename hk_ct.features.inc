@@ -93,11 +93,11 @@ function hk_ct_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 1,
+    'api_version' => 3,
     'module' => 'hk_ct',
     'locked' => array(
       0 => 'name',
     ),
-    'api_version' => 3,
   );
   return $flags;
 
@@ -269,6 +269,26 @@ function hk_ct_image_default_styles() {
           '#imageinfo_cache_effect_callback' => 'image_scale_effect',
         ),
         'weight' => 1,
+      ),
+    ),
+  );
+
+  // Exported image style: expose.
+  $styles['expose'] = array(
+    'label' => 'Exposé Landschaft',
+    'effects' => array(
+      38 => array(
+        'name' => 'manualcrop_crop_and_scale',
+        'data' => array(
+          'width' => 2480,
+          'height' => 1675,
+          'upscale' => 1,
+          'respectminimum' => 0,
+          'onlyscaleifcrop' => 1,
+          'style_name' => 'expose',
+          '#imageinfo_cache_effect_callback' => 'manualcrop_crop_and_scale_effect',
+        ),
+        'weight' => 0,
       ),
     ),
   );
@@ -469,34 +489,6 @@ function hk_ct_image_default_styles() {
     ),
   );
 
-  // Exported image style: makler_thumbnail.
-  $styles['makler_thumbnail'] = array(
-    'label' => 'Makler Thumbnail',
-    'effects' => array(
-      4 => array(
-        'name' => 'manualcrop_crop',
-        'data' => array(
-          'width' => 398,
-          'height' => 398,
-          'keepproportions' => 1,
-          'style_name' => 'makler_thumbnail',
-          '#imageinfo_cache_effect_callback' => 'manualcrop_crop_effect',
-        ),
-        'weight' => 0,
-      ),
-      6 => array(
-        'name' => 'smartcrop_scale_and_crop',
-        'data' => array(
-          'width' => 398,
-          'height' => 398,
-          'upscale' => 0,
-          '#imageinfo_cache_effect_callback' => 'smartcrop_scale_effect',
-        ),
-        'weight' => 2,
-      ),
-    ),
-  );
-
   // Exported image style: map-popup.
   $styles['map-popup'] = array(
     'label' => 'map-popup',
@@ -526,34 +518,17 @@ function hk_ct_image_default_styles() {
     ),
   );
 
-  // Exported image style: projektbild.
-  $styles['projektbild'] = array(
-    'label' => 'Projektbild',
+  // Exported image style: referenz.
+  $styles['referenz'] = array(
+    'label' => 'Referenz',
     'effects' => array(
-      8 => array(
-        'name' => 'smartcrop_scale_and_crop',
+      33 => array(
+        'name' => 'image_scale',
         'data' => array(
-          'width' => 478,
-          'height' => 299,
+          'width' => '',
+          'height' => 750,
           'upscale' => 0,
-          '#imageinfo_cache_effect_callback' => 'smartcrop_scale_effect',
-        ),
-        'weight' => 1,
-      ),
-    ),
-  );
-
-  // Exported image style: search_teaser_242.
-  $styles['search_teaser_242'] = array(
-    'label' => 'Search Teaser 242',
-    'effects' => array(
-      3 => array(
-        'name' => 'smartcrop_scale_and_crop',
-        'data' => array(
-          'width' => 248,
-          'height' => 165,
-          'upscale' => 1,
-          '#imageinfo_cache_effect_callback' => 'smartcrop_scale_effect',
+          '#imageinfo_cache_effect_callback' => 'image_scale_effect',
         ),
         'weight' => 1,
       ),

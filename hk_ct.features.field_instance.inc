@@ -21,7 +21,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 48,
+        'weight' => 44,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -117,7 +117,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 44,
+        'weight' => 40,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -313,7 +313,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 54,
+        'weight' => 48,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -367,12 +367,9 @@ function hk_ct_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'file_entity',
-        'settings' => array(
-          'file_view_mode' => 'expose_link',
-        ),
-        'type' => 'file_rendered',
-        'weight' => 16,
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 27,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -502,9 +499,9 @@ function hk_ct_field_default_field_instances() {
         'settings' => array(
           'photobox_caption' => 'auto',
           'photobox_caption_custom' => '',
-          'photobox_content_image_style' => '',
-          'photobox_content_image_style_first' => '',
-          'photobox_gallery' => 'post',
+          'photobox_content_image_style' => 'flexslider_thumbnail',
+          'photobox_content_image_style_first' => 'flexslider_thumbnail',
+          'photobox_gallery' => 'field_post',
           'photobox_gallery_custom' => '',
           'photobox_image_style' => '',
         ),
@@ -612,7 +609,7 @@ function hk_ct_field_default_field_instances() {
           'asnavfor_main' => '',
           'asnavfor_thumbnail' => '',
           'aspect_ratio' => '',
-          'cache' => '',
+          'cache' => 'persistent',
           'color_field' => '',
           'colorbox_style' => '',
           'current_display' => 'main',
@@ -621,7 +618,7 @@ function hk_ct_field_default_field_instances() {
           'grid_medium' => '',
           'grid_small' => '',
           'iframe_lazy' => FALSE,
-          'image_style' => 'colorbox_full',
+          'image_style' => 'flexfullbreakpoints_theme_hk_theme_wide_1x',
           'lightbox_ready' => FALSE,
           'markup' => 0,
           'media_switch' => 'photobox-switch',
@@ -740,7 +737,7 @@ function hk_ct_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 8,
+      'weight' => 7,
     ),
   );
 
@@ -789,64 +786,6 @@ function hk_ct_field_default_field_instances() {
       'settings' => array(),
       'type' => 'number',
       'weight' => 42,
-    ),
-  );
-
-  // Exported field_instance: 'node-apartment-field_apart_kiez_schattenobjekt'
-  $field_instances['node-apartment-field_apart_kiez_schattenobjekt'] = array(
-    'bundle' => 'apartment',
-    'default_value' => NULL,
-    'default_value_function' => '',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 53,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'tile' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_apart_kiez_schattenobjekt',
-    'label' => 'Kiez Schattenobjekt',
-    'required' => 0,
-    'settings' => array(
-      'behaviors' => array(
-        'prepopulate' => array(
-          'status' => 0,
-        ),
-      ),
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'references_dialog_add' => 1,
-        'references_dialog_edit' => 1,
-        'references_dialog_search' => 1,
-        'references_dialog_search_view' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => -1,
     ),
   );
 
@@ -912,7 +851,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -927,7 +866,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 32,
+        'weight' => 29,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -979,7 +918,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 47,
+        'weight' => 43,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1031,7 +970,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 46,
+        'weight' => 42,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1083,7 +1022,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 49,
+        'weight' => 45,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1131,7 +1070,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 39,
+        'weight' => 35,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1255,7 +1194,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 0,
+      'weight' => 1,
     ),
   );
 
@@ -1270,7 +1209,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 31,
+        'weight' => 28,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1355,7 +1294,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 56,
+        'weight' => 49,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -1511,7 +1450,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -1574,7 +1513,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 42,
+        'weight' => 38,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1626,7 +1565,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 45,
+        'weight' => 41,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1659,7 +1598,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 9,
+      'weight' => 8,
     ),
   );
 
@@ -1719,49 +1658,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 2,
-    ),
-  );
-
-  // Exported field_instance: 'node-apartment-field_apart_schattengebiet_wkt'
-  $field_instances['node-apartment-field_apart_schattengebiet_wkt'] = array(
-    'bundle' => 'apartment',
-    'default_value' => array(),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 55,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'tile' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_apart_schattengebiet_wkt',
-    'label' => 'Schattengebiet WKT',
-    'required' => FALSE,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'geofield',
-      'settings' => array(),
-      'type' => 'geofield_wkt',
-      'weight' => 11,
+      'weight' => 3,
     ),
   );
 
@@ -1824,7 +1721,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 41,
+        'weight' => 37,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1938,7 +1835,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 43,
+        'weight' => 39,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1974,51 +1871,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'autocomplete_deluxe_taxonomy',
-      'weight' => 5,
-    ),
-  );
-
-  // Exported field_instance: 'node-apartment-field_geodaten_schattenwohnung'
-  $field_instances['node-apartment-field_geodaten_schattenwohnung'] = array(
-    'bundle' => 'apartment',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 52,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'tile' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'ds_extras_field_template' => '',
-    'entity_type' => 'node',
-    'field_name' => 'field_geodaten_schattenwohnung',
-    'label' => 'Geodaten Schattenwohnung',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'geofield',
-      'settings' => array(),
-      'type' => 'geofield_wkt',
-      'weight' => 10,
+      'weight' => 1,
     ),
   );
 
@@ -2033,7 +1886,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 37,
+        'weight' => 33,
       ),
       'teaser' => array(
         'label' => 'hidden',
@@ -2141,7 +1994,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 51,
+        'weight' => 47,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2186,7 +2039,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 34,
+        'weight' => 30,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2238,7 +2091,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -2250,10 +2103,59 @@ function hk_ct_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 38,
+        'label' => 'hidden',
+        'module' => 'leaflet',
+        'settings' => array(
+          'height' => 350,
+          'icon' => array(
+            'html' => '',
+            'htmlClass' => '',
+            'iconAnchor' => array(
+              'x' => '',
+              'y' => '',
+            ),
+            'iconImageStyle' => '',
+            'iconSize' => array(
+              'x' => '',
+              'y' => '',
+            ),
+            'iconType' => 'marker',
+            'iconUrl' => '/sites/all/themes/hk_theme/icons/markers/Icon_House2.png',
+            'popupAnchor' => array(
+              'x' => '',
+              'y' => '',
+            ),
+            'shadowAnchor' => array(
+              'x' => '',
+              'y' => '',
+            ),
+            'shadowUrl' => '',
+          ),
+          'leaflet_map' => 'leaflet-mapbox-0',
+          'popup' => array(
+            'show' => 0,
+            'text' => '',
+          ),
+          'vector_display' => array(
+            'clickable' => 1,
+            'color' => '',
+            'dashArray' => '',
+            'fill' => 1,
+            'fillColor' => '',
+            'fillOpacity' => '',
+            'opacity' => '',
+            'stroke' => 1,
+            'stroke_override' => 0,
+            'weight' => '',
+          ),
+          'zoom' => array(
+            'initialZoom' => -1,
+            'maxZoom' => -1,
+            'minZoom' => 1,
+          ),
+        ),
+        'type' => 'geofield_leaflet',
+        'weight' => 4,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2282,7 +2184,7 @@ function hk_ct_field_default_field_instances() {
       'module' => 'geofield',
       'settings' => array(),
       'type' => 'geofield_wkt',
-      'weight' => 7,
+      'weight' => 2,
     ),
   );
 
@@ -2329,7 +2231,6 @@ function hk_ct_field_default_field_instances() {
         'insert_plugin' => '',
       ),
       'text_processing' => 0,
-      'tmgmt_translate' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -2339,7 +2240,7 @@ function hk_ct_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 0,
     ),
   );
 
@@ -2354,7 +2255,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 50,
+        'weight' => 46,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -2398,7 +2299,7 @@ function hk_ct_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 35,
+        'weight' => 32,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -5987,7 +5888,7 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
         'weight' => 6,
       ),
       'teaser' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 54,
@@ -7764,7 +7665,6 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
   t('Floor plan');
   t('Galerie');
   t('Gemeinschaftsgeschäft');
-  t('Geodaten Schattenwohnung');
   t('Grundriss Wohn- und Geschäftshaus');
   t('HOA fee');
   t('Heating type');
@@ -7774,7 +7674,6 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
   t('House description');
   t('House description freehold apartments');
   t('House type');
-  t('Kiez Schattenobjekt');
   t('Konditionen Acquise');
   t('Konditionen Gemeinschaftsgeschäft');
   t('Konditionen Tipp');
@@ -7806,7 +7705,6 @@ Nachdem eine Wohnung von hier aus erstellt oder bearbeitet wurde, muss auch das 
   t('Referenzfoto');
   t('Referenztyp');
   t('Rooms');
-  t('Schattengebiet WKT');
   t('Schattenobjekt?');
   t('Schattenwohnung?');
   t('Sleeping rooms');
