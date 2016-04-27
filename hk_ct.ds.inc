@@ -37,16 +37,26 @@ function hk_ct_ds_field_settings_info() {
         'ft' => array(),
       ),
     ),
-    'haus_beschreibung' => array(
-      'weight' => '53',
+    'anfrage_button' => array(
+      'weight' => '10',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
-        'show_title' => 0,
-        'title_wrapper' => '',
-        'ctools' => 'a:3:{s:4:"conf";a:0:{}s:4:"type";s:11:"views_panes";s:7:"subtype";s:21:"apartment-description";}',
-        'load_terms' => 1,
         'ft' => array(),
+      ),
+    ),
+    'apartment_details' => array(
+      'weight' => '13',
+      'label' => 'hidden',
+      'format' => 'default',
+      'formatter_settings' => array(
+        'show_title' => 1,
+        'title_wrapper' => '',
+        'ctools' => 'a:3:{s:4:"conf";a:0:{}s:4:"type";s:11:"views_panes";s:7:"subtype";s:17:"apartment-details";}',
+        'load_terms' => 0,
+        'ft' => array(
+          'func' => 'theme_field',
+        ),
       ),
     ),
     'conditional_location' => array(
@@ -73,14 +83,6 @@ function hk_ct_ds_field_settings_info() {
         'ft' => array(),
       ),
     ),
-    'anfrage_button' => array(
-      'weight' => '10',
-      'label' => 'hidden',
-      'format' => 'default',
-      'formatter_settings' => array(
-        'ft' => array(),
-      ),
-    ),
     'energieausweis' => array(
       'weight' => '14',
       'label' => 'hidden',
@@ -95,18 +97,16 @@ function hk_ct_ds_field_settings_info() {
         ),
       ),
     ),
-    'apartment_details' => array(
-      'weight' => '13',
+    'haus_beschreibung' => array(
+      'weight' => '53',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
-        'show_title' => 1,
+        'show_title' => 0,
         'title_wrapper' => '',
-        'ctools' => 'a:3:{s:4:"conf";a:0:{}s:4:"type";s:11:"views_panes";s:7:"subtype";s:17:"apartment-details";}',
-        'load_terms' => 0,
-        'ft' => array(
-          'func' => 'theme_field',
-        ),
+        'ctools' => 'a:3:{s:4:"conf";a:0:{}s:4:"type";s:11:"views_panes";s:7:"subtype";s:21:"apartment-description";}',
+        'load_terms' => 1,
+        'ft' => array(),
       ),
     ),
     'field_apart_commission' => array(
@@ -162,6 +162,11 @@ function hk_ct_ds_field_settings_info() {
           'fi-odd-even' => FALSE,
           'fi-first-last' => FALSE,
         ),
+      ),
+    ),
+    'field_objekt_wkt' => array(
+      'formatter_settings' => array(
+        'ft' => array(),
       ),
     ),
     'field_objektid_nunumeric' => array(
@@ -674,21 +679,21 @@ function hk_ct_ds_layout_settings_info() {
   $ds_layout->layout = 'ds_2col_stacked_fluid';
   $ds_layout->settings = array(
     'regions' => array(
+      'header' => array(
+        0 => 'adresse',
+      ),
       'left' => array(
-        0 => 'conditional_other',
-        1 => 'conditional_location',
+        1 => 'conditional_other',
+        2 => 'conditional_location',
         3 => 'field_apart_gallery',
         4 => 'field_apart_floor_plan',
         5 => 'group_text',
         18 => 'group_house',
         19 => 'group_lage',
-        20 => 'field_apart_description',
-        21 => 'group_sonstiges',
+        20 => 'group_sonstiges',
+        21 => 'field_apart_description',
         22 => 'haus_beschreibung',
         23 => 'group_akkordeon',
-      ),
-      'header' => array(
-        2 => 'adresse',
       ),
       'right' => array(
         6 => 'field_objekt_wkt',
@@ -706,9 +711,9 @@ function hk_ct_ds_layout_settings_info() {
       ),
     ),
     'fields' => array(
+      'adresse' => 'header',
       'conditional_other' => 'left',
       'conditional_location' => 'left',
-      'adresse' => 'header',
       'field_apart_gallery' => 'left',
       'field_apart_floor_plan' => 'left',
       'group_text' => 'left',
@@ -726,8 +731,8 @@ function hk_ct_ds_layout_settings_info() {
       'field_ausstattung' => 'right',
       'group_house' => 'left',
       'group_lage' => 'left',
-      'field_apart_description' => 'left',
       'group_sonstiges' => 'left',
+      'field_apart_description' => 'left',
       'haus_beschreibung' => 'left',
       'group_akkordeon' => 'left',
     ),
@@ -933,17 +938,6 @@ function hk_ct_ds_layout_settings_info() {
   $ds_layout->view_mode = 'default';
   $ds_layout->layout = 'ds_reset';
   $ds_layout->settings = array(
-    'classes' => array(),
-    'wrappers' => array(
-      'ds_content' => 'div',
-      'ds_hidden' => 'div',
-    ),
-    'layout_wrapper' => 'div',
-    'layout_attributes' => '',
-    'layout_attributes_merge' => 1,
-    'layout_link_attribute' => '',
-    'layout_link_custom' => '',
-    'layout_disable_css' => FALSE,
     'regions' => array(
       'ds_content' => array(
         0 => 'group_text',
@@ -964,6 +958,16 @@ function hk_ct_ds_layout_settings_info() {
       'field_object_location' => 'ds_content',
       'group_lage' => 'ds_content',
     ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => FALSE,
   );
   $export['node|objekt|default'] = $ds_layout;
 

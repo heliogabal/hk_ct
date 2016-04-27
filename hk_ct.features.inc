@@ -70,7 +70,7 @@ function hk_ct_flag_default_flags() {
     'flag_long' => 'add apartment to your personal favorites list',
     'flag_message' => 'apartment added',
     'unflag_short' => 'Remove from favorites',
-    'unflag_long' => '',
+    'unflag_long' => 'remove apartment from your personal favorites list',
     'unflag_message' => 'apartment removed',
     'unflag_denied_text' => '',
     'link_type' => 'toggle',
@@ -82,10 +82,11 @@ function hk_ct_flag_default_flags() {
       'search_index' => 0,
       'search_result' => 0,
       'diff_standard' => 0,
+      'print' => 0,
       'token' => 0,
-      'map_popup' => 0,
-      'project' => 0,
-      'tile' => 0,
+      'workflow_tab' => 0,
+      'exposekarte' => 0,
+      'wohn_und_geschaeftshaus' => 0,
       'revision' => 0,
     ),
     'show_as_field' => 1,
@@ -93,11 +94,11 @@ function hk_ct_flag_default_flags() {
     'access_author' => '',
     'show_contextual_link' => 0,
     'i18n' => 1,
-    'api_version' => 3,
     'module' => 'hk_ct',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   return $flags;
 
