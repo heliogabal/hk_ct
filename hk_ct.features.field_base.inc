@@ -144,6 +144,33 @@ function hk_ct_field_default_field_bases() {
     'type' => 'number_decimal',
   );
 
+  // Exported field_base: 'field_apart_balcony'.
+  $field_bases['field_apart_balcony'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_apart_balcony',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => 'no',
+        1 => 'yes',
+      ),
+      'allowed_values_function' => '',
+      'entity_translation_sync' => FALSE,
+      'values_field' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
+  );
+
   // Exported field_base: 'field_apart_bathrooms'.
   $field_bases['field_apart_bathrooms'] = array(
     'active' => 1,
@@ -374,6 +401,33 @@ function hk_ct_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'number_decimal',
+  );
+
+  // Exported field_base: 'field_apart_lift'.
+  $field_bases['field_apart_lift'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_apart_lift',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        0 => 'no',
+        1 => 'yes',
+      ),
+      'allowed_values_function' => '',
+      'entity_translation_sync' => FALSE,
+      'values_field' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_boolean',
   );
 
   // Exported field_base: 'field_apart_living_space'.
@@ -680,6 +734,27 @@ function hk_ct_field_default_field_bases() {
     'type' => 'number_integer',
   );
 
+  // Exported field_base: 'field_apart_text_shadowapart'.
+  $field_bases['field_apart_text_shadowapart'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_apart_text_shadowapart',
+    'indexes' => array(
+      'format' => array(
+        0 => 'format',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'text',
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+    ),
+    'translatable' => 1,
+    'type' => 'text_long',
+  );
+
   // Exported field_base: 'field_apart_type'.
   $field_bases['field_apart_type'] = array(
     'active' => 1,
@@ -766,32 +841,46 @@ function hk_ct_field_default_field_bases() {
     'type_name' => 'residential_commercial_building',
   );
 
-  // Exported field_base: 'field_cvm_cvm'.
-  $field_bases['field_cvm_cvm'] = array(
+  // Exported field_base: 'field_building_type'.
+  $field_bases['field_building_type'] = array(
     'active' => 1,
-    'cardinality' => -1,
+    'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_cvm_cvm',
-    'indexes' => array(
-      'context' => array(
-        0 => 'context',
-      ),
-      'view_context' => array(
-        0 => 'view_mode',
-        1 => 'context',
-      ),
-      'view_mode' => array(
-        0 => 'view_mode',
-      ),
-    ),
+    'field_name' => 'field_building_type',
+    'indexes' => array(),
     'locked' => 0,
-    'module' => 'contextual_view_modes',
+    'module' => 'computed_field',
     'settings' => array(
+      'code' => '$year = $entity->field_year_built[LANGUAGE_NONE][0][\'value\'];
+$building_type = \'\';
+if($year >= 2009 ) {
+$building_type = \'New Building\';
+}
+if($year <= 2008 && $year >= 1960) {
+$building_type = \'New Old Building\';
+}
+if($year <= 1960 ) {
+$building_type = \'Old Building\';
+}
+$entity_field[0][\'value\'] = $building_type;',
+      'database' => array(
+        'data_default' => '',
+        'data_index' => 0,
+        'data_length' => 32,
+        'data_not_NULL' => 0,
+        'data_precision' => 10,
+        'data_scale' => 2,
+        'data_size' => 'normal',
+        'data_type' => 'varchar',
+      ),
+      'display_format' => '$display_output = $entity_field_item[\'value\'];',
       'entity_translation_sync' => FALSE,
+      'recalculate' => 0,
+      'store' => 1,
     ),
     'translatable' => 0,
-    'type' => 'contextual_view_modes_cvm',
+    'type' => 'computed',
   );
 
   // Exported field_base: 'field_developer'.
@@ -2056,6 +2145,55 @@ function hk_ct_field_default_field_bases() {
     ),
     'translatable' => 0,
     'type' => 'text',
+  );
+
+  // Exported field_base: 'field_save_workflow'.
+  $field_bases['field_save_workflow'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_save_workflow',
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'workflowfield',
+    'settings' => array(
+      'allowed_values_function' => 'workflowfield_allowed_values',
+      'allowed_values_string' => '1 | (creation)
+2 | Draft
+3 | Ready
+4 | Active
+5 | Archived
+6 | Sold',
+      'entity_translation_sync' => FALSE,
+      'history' => array(
+        'history_tab_show' => 1,
+        'roles' => array(
+          -1 => 0,
+          3 => 3,
+          4 => 0,
+          5 => 0,
+          6 => 6,
+          7 => 0,
+        ),
+      ),
+      'watchdog_log' => 1,
+      'wid' => 1,
+      'widget' => array(
+        'comment' => 0,
+        'hide' => 0,
+        'name_as_title' => 0,
+        'options' => 'buttons',
+        'schedule' => 1,
+        'schedule_timezone' => 0,
+      ),
+    ),
+    'translatable' => 0,
+    'type' => 'workflow',
   );
 
   // Exported field_base: 'field_status_quo'.
